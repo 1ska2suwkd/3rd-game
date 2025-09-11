@@ -1,12 +1,14 @@
-[gd_scene load_steps=24 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=28 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="2_bs1ij"]
 [ext_resource type="Texture2D" uid="uid://kq5g4gfoa2x7" path="res://assets/Image/Terrain/Ground/Tilemap_Flat.png" id="3_oej4l"]
 [ext_resource type="Texture2D" uid="uid://cu5e2xm4chvrk" path="res://assets/Image/Terrain/Ground/Tilemap_Elevation.png" id="4_rphby"]
 [ext_resource type="Texture2D" uid="uid://ddqlsre63tbds" path="res://assets/Image/Terrain/Bridge/Bridge_All.png" id="5_fhlmx"]
+[ext_resource type="Texture2D" uid="uid://cgf3a1fkwsg6s" path="res://assets/Image/Terrain/Ground/Shadows.png" id="5_iop1y"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player.tscn" id="7_upeev"]
 [ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree.tscn" id="8_iop1y"]
+[ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 texture = ExtResource("1_tke64")
@@ -153,9 +155,19 @@ texture_region_size = Vector2i(64, 64)
 2:7/0 = 0
 3:7/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvkb0"]
+texture = ExtResource("5_iop1y")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_dw050"]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_1jxqw")
+sources/1 = SubResource("TileSetAtlasSource_uvkb0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hs0m"]
 texture = ExtResource("5_fhlmx")
@@ -174,6 +186,10 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_1jxqw"]
 tile_size = Vector2i(64, 64)
 sources/1 = SubResource("TileSetAtlasSource_2hs0m")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvkb0"]
+radius = 33.2531
+height = 164.501
 
 [node name="startScene" type="Node2D"]
 
@@ -197,7 +213,7 @@ tile_map_data = PackedByteArray("AAD7//z/AAABAAEAAAD8//z/AAABAAEAAAD9//z/AAABAAE
 tile_set = SubResource("TileSet_hqtel")
 
 [node name="Terrain" type="TileMapLayer" parent="Ground"]
-tile_map_data = PackedByteArray("AAD9//j/AAAAAAcAAAD+//j/AAABAAcAAAABAPj/AAABAAcAAAACAPj/AAACAAcAAAD///j/AAABAAcAAAAAAPj/AAABAAcAAAD9//f/AAAAAAcAAAD+//f/AAABAAcAAAD///f/AAABAAcAAAAAAPf/AAABAAcAAAABAPf/AAABAAcAAAACAPf/AAACAAcAAAD9//b/AAAAAAcAAAD+//b/AAABAAcAAAD///b/AAABAAcAAAAAAPb/AAABAAcAAAABAPb/AAABAAcAAAACAPb/AAACAAcAAAD9//X/AAAAAAcAAAD+//X/AAABAAcAAAD///X/AAABAAcAAAAAAPX/AAABAAcAAAABAPX/AAABAAcAAAACAPX/AAACAAcAAAD9//T/AAAAAAcAAAD+//T/AAABAAcAAAD///T/AAABAAcAAAAAAPT/AAABAAcAAAABAPT/AAABAAcAAAACAPT/AAACAAcAAAD+//L/AAABAAEAAAD+//P/AAABAAIAAAD///L/AAABAAEAAAD///P/AAABAAIAAAAAAPL/AAABAAEAAAAAAPP/AAABAAIAAAABAPL/AAABAAEAAAABAPP/AAABAAIAAAD+//D/AAABAAEAAAD+//H/AAABAAIAAAD///D/AAABAAEAAAD///H/AAABAAIAAAAAAPD/AAABAAEAAAAAAPH/AAABAAIAAAABAPD/AAABAAEAAAABAPH/AAABAAIAAAACAPL/AAABAAEAAAACAPP/AAABAAIAAAADAPL/AAACAAEAAAADAPP/AAACAAEAAAD9//L/AAABAAEAAAD9//P/AAABAAIAAAD8//L/AAAAAAEAAAD8//P/AAAAAAIAAAD8//D/AAAAAAEAAAD8//H/AAAAAAEAAAD9//D/AAABAAEAAAD9//H/AAABAAIAAAACAPD/AAABAAEAAAACAPH/AAABAAIAAAADAPD/AAACAAEAAAADAPH/AAACAAEAAAADAO7/AAACAAEAAAADAO//AAACAAEAAAACAO7/AAABAAIAAAACAO//AAABAAIAAAABAO7/AAABAAIAAAABAO//AAABAAIAAAAAAO7/AAABAAIAAAAAAO//AAABAAIAAAD//+7/AAABAAIAAAD//+//AAABAAIAAAD+/+7/AAABAAIAAAD+/+//AAABAAIAAAD9/+7/AAABAAIAAAD9/+//AAABAAIAAAD8/+7/AAAAAAEAAAD8/+//AAAAAAEAAAADAO3/AAACAAAAAAACAO3/AAABAAAAAAABAO3/AAABAAAAAAAAAO3/AAABAAAAAAD//+3/AAABAAAAAAD+/+3/AAABAAAAAAD9/+3/AAABAAAAAAD8/+3/AAAAAAAAAAADAPT/AAACAAMAAAD8//T/AAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAD9//j/AAAAAAcAAAD+//j/AAABAAcAAAABAPj/AAABAAcAAAACAPj/AAACAAcAAAD///j/AAABAAcAAAAAAPj/AAABAAcAAAD9//f/AAAAAAcAAAD+//f/AAABAAcAAAD///f/AAABAAcAAAAAAPf/AAABAAcAAAABAPf/AAABAAcAAAACAPf/AAACAAcAAAD9//b/AAAAAAcAAAD+//b/AAABAAcAAAD///b/AAABAAcAAAAAAPb/AAABAAcAAAABAPb/AAABAAcAAAACAPb/AAACAAcAAAD9//X/AAAAAAcAAAD+//X/AAABAAcAAAD///X/AAABAAcAAAAAAPX/AAABAAcAAAABAPX/AAABAAcAAAACAPX/AAACAAcAAAD9//T/AAAAAAcAAAD+//T/AAABAAcAAAD///T/AAABAAcAAAAAAPT/AAABAAcAAAABAPT/AAABAAcAAAACAPT/AAACAAcAAAD+//L/AAABAAEAAAD+//P/AAABAAIAAAD///L/AAABAAEAAAD///P/AAABAAIAAAAAAPL/AAABAAEAAAAAAPP/AAABAAIAAAABAPL/AAABAAEAAAABAPP/AAABAAIAAAD+//D/AAABAAEAAAD+//H/AAABAAIAAAD///D/AAABAAEAAAD///H/AAABAAIAAAAAAPD/AAABAAEAAAAAAPH/AAABAAIAAAABAPD/AAABAAEAAAABAPH/AAABAAIAAAACAPL/AAABAAEAAAACAPP/AAABAAIAAAADAPL/AAABAAEAAAADAPP/AAABAAEAAAD9//L/AAABAAEAAAD9//P/AAABAAIAAAD8//L/AAABAAEAAAD8//P/AAABAAEAAAD8//D/AAABAAEAAAD8//H/AAABAAEAAAD9//D/AAABAAEAAAD9//H/AAABAAIAAAACAPD/AAABAAEAAAACAPH/AAABAAIAAAADAPD/AAABAAEAAAADAPH/AAABAAEAAAADAO7/AAABAAEAAAADAO//AAABAAEAAAACAO7/AAABAAIAAAACAO//AAABAAIAAAABAO7/AAABAAIAAAABAO//AAABAAIAAAAAAO7/AAABAAIAAAAAAO//AAABAAIAAAD//+7/AAABAAIAAAD//+//AAABAAIAAAD+/+7/AAABAAIAAAD+/+//AAABAAIAAAD9/+7/AAABAAIAAAD9/+//AAABAAIAAAD8/+7/AAABAAEAAAD8/+//AAABAAEAAAADAO3/AAABAAAAAAACAO3/AAABAAAAAAABAO3/AAABAAAAAAAAAO3/AAABAAAAAAD//+3/AAABAAAAAAD+/+3/AAABAAAAAAD9/+3/AAABAAAAAAD8/+3/AAABAAAAAAADAPT/AAABAAUAAAD8//T/AAABAAUAAAD8//X/AAABAAUAAAADAPX/AAABAAUAAAADAPb/AAABAAUAAAD8//b/AAABAAUAAAD8//f/AAABAAUAAAADAPf/AAABAAUAAAAEAPT/AAACAAUAAAAEAPX/AAACAAUAAAAEAPb/AAACAAUAAAAEAPf/AAACAAUAAAD7//T/AAAAAAUAAAD7//X/AAAAAAUAAAD7//b/AAAAAAUAAAD7//f/AAAAAAUAAAD7/+3/AAAAAAAAAAD7/+7/AAAAAAEAAAD7/+//AAAAAAEAAAD7//D/AAAAAAEAAAD7//H/AAAAAAEAAAD7//L/AAAAAAEAAAD7//P/AAAAAAIAAAAEAPP/AAACAAIAAAAEAO3/AAACAAAAAAAEAO7/AAACAAEAAAAEAO//AAACAAEAAAAEAPD/AAACAAEAAAAEAPH/AAACAAEAAAAEAPL/AAACAAEAAAD6//P/AQABAAEAAAD6//T/AQABAAEAAAD6//X/AQABAAEAAAD6//b/AQABAAEAAAD6//f/AQABAAEAAAD5//P/AQABAAEAAAD5//T/AQABAAEAAAD5//X/AQABAAEAAAD5//b/AQABAAEAAAD5//f/AQABAAEAAAD6//L/AQABAAEAAAD6//H/AQABAAEAAAD5//H/AQABAAEAAAD5//L/AQABAAEAAAD6//D/AQABAAEAAAD4//L/AQABAAEAAAD4//P/AQABAAEAAAD4//T/AQABAAEAAAD4//X/AQABAAEAAAD4//b/AQABAAEAAAD4//f/AQABAAEAAAD4//H/AQABAAEAAAD5//D/AQABAAEAAAD6/+//AQABAAAAAAD3//L/AQAAAAEAAAD3//P/AQAAAAEAAAD3//T/AQAAAAEAAAD3//X/AQAAAAEAAAD3//b/AQAAAAEAAAD3//f/AQAAAAEAAAD3//H/AQAAAAEAAAD4//D/AQABAAEAAAD3//D/AQAAAAEAAAD5/+//AQABAAAAAAD4/+//AQABAAAAAAA=")
 tile_set = SubResource("TileSet_dw050")
 
 [node name="Bridge" type="TileMapLayer" parent="Ground"]
@@ -205,6 +221,27 @@ position = Vector2(-31, 17)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD4/wEAAQAAAAAAAAD5/wEAAQABAAAAAAD6/wEAAQABAAAAAAD7/wEAAQACAAAAAAA=")
 tile_set = SubResource("TileSet_1jxqw")
+
+[node name="Deongeon" type="Node2D" parent="."]
+position = Vector2(3, -1162)
+scale = Vector2(1.79938, 1.77427)
+
+[node name="Sprite2D" type="Sprite2D" parent="Deongeon"]
+scale = Vector2(1, 1)
+texture = ExtResource("9_uvkb0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Deongeon"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deongeon/StaticBody2D"]
+position = Vector2(0, 3.38145)
+rotation = -1.5708
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_uvkb0")
+
+[node name="Area2D" type="Area2D" parent="Deongeon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deongeon/Area2D"]
 
 [node name="Ysort" type="Node2D" parent="."]
 y_sort_enabled = true
