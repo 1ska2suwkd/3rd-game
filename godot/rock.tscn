@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqvu7sbn11rav"]
+
+[ext_resource type="Script" uid="uid://5foy5tuwwyxh" path="res://rock.gd" id="1_68h2w"]
+[ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="2_wecdg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fddr8"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oybyf"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajfva"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ef02"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfmca"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76oay"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4uyv"]
+atlas = ExtResource("2_wecdg")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw8ou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fddr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oybyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajfva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ef02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfmca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76oay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4uyv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Rock" type="Node2D"]
+scale = Vector2(1, 0.986045)
+script = ExtResource("1_68h2w")
+
+[node name="Rock_Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1, 1.01415)
+sprite_frames = SubResource("SpriteFrames_tw8ou")
+animation = &"idle"
+frame_progress = 0.591317
