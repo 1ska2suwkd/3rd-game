@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var speed := 400.0
 var attacking := false
+# 공격하면서 이동 시 이동속도 감소
+var slow = 1
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
@@ -16,29 +18,29 @@ func _physics_process(delta):
 		dir.x -= 1
 	if Input.is_action_pressed("move_right"):
 		dir.x += 1
-
-	if not attacking:
+	
+	if attacking:
+		slow = 0.7
 	# 방향 벡터 정규화 후 속도 적용
-		if dir != Vector2.ZERO:
-			velocity = dir.normalized() * speed
+	if dir != Vector2.ZERO:
+		velocity = dir.normalized() * speed * slow
+		if not attacking:
 			$AnimatedSprite2D.play("walk")
 			if velocity.x < 0:
 				$AnimatedSprite2D.flip_h = true
 			elif velocity.x > 0:
 				$AnimatedSprite2D.flip_h = false
-		else:
-			velocity = Vector2.ZERO
-			$AnimatedSprite2D.play("idle")
 	else:
 		velocity = Vector2.ZERO
+		if not attacking:
+			$AnimatedSprite2D.play("idle")
 		
-
+	if Input.is_action_pressed("attack") and not attacking:
+		_do_attack()
+		
 	# 충돌 계산 포함된 이동
 	move_and_slide()
 
-func _input(event):
-	if event.is_action_pressed("attack") and not attacking:
-		_do_attack()
 	
 func _do_attack():
 	attacking = true
@@ -63,3 +65,4 @@ func _do_attack():
 func _on_anim_finished():
 	if $AnimatedSprite2D.animation.ends_with("_attack1"):
 		attacking = false
+		slow = 1
