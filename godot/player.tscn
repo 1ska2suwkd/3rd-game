@@ -388,7 +388,7 @@ height = 28.0
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(1, 0.986045)
-collision_mask = 6
+collision_mask = 255
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
