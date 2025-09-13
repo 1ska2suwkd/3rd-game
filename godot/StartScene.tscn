@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=62 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
 [ext_resource type="Texture2D" uid="uid://d26yvnf7wlpji" path="res://assets/Image/Terrain/Water/Rocks/Rocks_01.png" id="3_hk6ix"]
@@ -14,12 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree.tscn" id="8_iop1y"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]
-[ext_resource type="Texture2D" uid="uid://cp3ssuhqo82so" path="res://assets/Image/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="11_cnj83"]
 [ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://master.gd" id="12_apmjc"]
 [ext_resource type="Texture2D" uid="uid://d4mu0dp2a0ymc" path="res://assets/Image/Deco/01.png" id="13_1fguw"]
 [ext_resource type="Texture2D" uid="uid://c0mmw34u1jbdp" path="res://assets/Image/Deco/02.png" id="14_6bpma"]
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="14_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://i7sj0im1y5oj" path="res://assets/Image/Deco/03.png" id="15_ri4fu"]
+[ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="22_bs1ij"]
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="24_6bpma"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 
@@ -443,50 +443,64 @@ height = 270.093
 radius = 20.0
 height = 40.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_apmjc"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej4l"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yi20g"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rphby"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hk6ix"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhlmx"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e0u6l"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fguw"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwwx1"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bpma"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(768, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mcuyn"]
-atlas = ExtResource("11_cnj83")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri4fu"]
+atlas = ExtResource("22_bs1ij")
 region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjfh1"]
+atlas = ExtResource("22_bs1ij")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peenx"]
+atlas = ExtResource("22_bs1ij")
+region = Rect2(1344, 0, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bifhp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_apmjc")
+"texture": SubResource("AtlasTexture_oej4l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yi20g")
+"texture": SubResource("AtlasTexture_rphby")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hk6ix")
+"texture": SubResource("AtlasTexture_fhlmx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e0u6l")
+"texture": SubResource("AtlasTexture_1fguw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lwwx1")
+"texture": SubResource("AtlasTexture_6bpma")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mcuyn")
+"texture": SubResource("AtlasTexture_ri4fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjfh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peenx")
 }],
 "loop": true,
 "name": &"idle",
@@ -497,7 +511,6 @@ animations = [{
 
 [node name="tilemaplayer" type="Node2D" parent="."]
 position = Vector2(-2.38419e-07, -0.00012207)
-scale = Vector2(1, 1)
 
 [node name="Water" type="TileMapLayer" parent="tilemaplayer"]
 z_index = -1
@@ -609,7 +622,6 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_kgrc2")
 
 [node name="Master_Animation" type="AnimatedSprite2D" parent="Ysort/Master/StaticBody2D"]
-modulate = Color(0.2, 0.1936, 0.176, 1)
 position = Vector2(1, 40)
 sprite_frames = SubResource("SpriteFrames_bifhp")
 animation = &"idle"

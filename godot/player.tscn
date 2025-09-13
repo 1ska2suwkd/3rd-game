@@ -265,8 +265,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pylmc")
 }],
-"loop": true,
-"name": &"downAttack1",
+"loop": false,
+"name": &"down_attack1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -288,8 +288,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jm5j8")
 }],
-"loop": true,
-"name": &"downAttack2",
+"loop": false,
+"name": &"down_attack2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -334,7 +334,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_76oay")
 }],
-"loop": true,
+"loop": false,
 "name": &"left_attack1",
 "speed": 5.0
 }, {
@@ -357,7 +357,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xry5e")
 }],
-"loop": true,
+"loop": false,
 "name": &"left_attack2",
 "speed": 5.0
 }, {
@@ -380,7 +380,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1jxqw")
 }],
-"loop": true,
+"loop": false,
 "name": &"right_attack1",
 "speed": 5.0
 }, {
@@ -403,7 +403,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_urp6f")
 }],
-"loop": true,
+"loop": false,
 "name": &"right_attack2",
 "speed": 5.0
 }, {
@@ -426,8 +426,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_634y6")
 }],
-"loop": true,
-"name": &"upAttack1",
+"loop": false,
+"name": &"up_attack1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -449,8 +449,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_khis8")
 }],
-"loop": true,
-"name": &"upAttack2",
+"loop": false,
+"name": &"up_attack2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -472,7 +472,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ieltc")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -490,8 +490,7 @@ script = ExtResource("1_onrkg")
 texture_filter = 1
 position = Vector2(2, 47.6652)
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"upAttack2"
-frame_progress = 0.748727
+animation = &"right_attack2"
 speed_scale = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="."]

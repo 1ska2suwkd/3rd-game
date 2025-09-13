@@ -33,7 +33,7 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		
 
-	# ❗ 충돌 계산 포함된 이동
+	# 충돌 계산 포함된 이동
 	move_and_slide()
 
 func _input(event):
@@ -51,7 +51,14 @@ func _do_attack():
 	else:
 		dir = "down" if to_mouse.y > 0 else "up"
 		
-	$AnimatedSprite2D.play(dir + "_attack1")
+	if dir == "left" :
+		$AnimatedSprite2D.flip_h = true
+		$AnimatedSprite2D.play(dir + "_attack1")
+	elif dir == "right" :
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play(dir + "_attack1")
+	else:
+		$AnimatedSprite2D.play(dir + "_attack1")
 	
 func _on_anim_finished():
 	if $AnimatedSprite2D.animation.ends_with("_attack1"):
