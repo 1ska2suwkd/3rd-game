@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cgf3a1fkwsg6s" path="res://assets/Image/Terrain/Ground/Shadows.png" id="5_iop1y"]
 [ext_resource type="Texture2D" uid="uid://bwkl7acx7cb02" path="res://assets/Image/Terrain/Water/Rocks/Rocks_03.png" id="5_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="6_bifhp"]
-[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player.tscn" id="7_upeev"]
+[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="7_upeev"]
 [ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree/Tree1.tscn" id="8_iop1y"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]

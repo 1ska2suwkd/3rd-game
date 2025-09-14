@@ -1,0 +1,19 @@
+extends Node
+
+class_name Stat
+
+var speed: int
+var hp: int
+var damage: int
+
+func _init(speed:int, hp:int, damage:int):
+	self.speed = speed
+	self.hp = hp
+	self.damage = damage
+	
+func take_damage(damage:int):
+	hp -= damage
+	if hp <= 0:
+		return true # 사망하면 true 반환
+	else:
+		return false
