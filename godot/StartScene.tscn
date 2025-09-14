@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=63 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
 [ext_resource type="Texture2D" uid="uid://d26yvnf7wlpji" path="res://assets/Image/Terrain/Water/Rocks/Rocks_01.png" id="3_hk6ix"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bwkl7acx7cb02" path="res://assets/Image/Terrain/Water/Rocks/Rocks_03.png" id="5_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="6_bifhp"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player.tscn" id="7_upeev"]
-[ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree.tscn" id="8_iop1y"]
+[ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree/Tree1.tscn" id="8_iop1y"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]
 [ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://master.gd" id="12_apmjc"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="14_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://i7sj0im1y5oj" path="res://assets/Image/Deco/03.png" id="15_ri4fu"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="22_bs1ij"]
+[ext_resource type="PackedScene" uid="uid://d37h83xrvkjy4" path="res://Tree/Tree3.tscn" id="23_oej4l"]
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="24_6bpma"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 
@@ -599,7 +600,7 @@ modulate = Color(0.2, 0.192157, 0.176471, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Store/Area2D"]
 
-[node name="Tree" parent="Ysort" instance=ExtResource("8_iop1y")]
+[node name="Tree1" parent="Ysort" instance=ExtResource("8_iop1y")]
 position = Vector2(365, 297)
 scale = Vector2(1, 0.986045)
 
@@ -608,6 +609,15 @@ position = Vector2(-380, -274)
 
 [node name="Tree3" parent="Ysort" instance=ExtResource("8_iop1y")]
 position = Vector2(338, -321)
+
+[node name="Tree4" parent="Ysort" instance=ExtResource("23_oej4l")]
+position = Vector2(-303, -150)
+
+[node name="Tree5" parent="Ysort" instance=ExtResource("23_oej4l")]
+position = Vector2(281, -177)
+
+[node name="Tree6" parent="Ysort" instance=ExtResource("23_oej4l")]
+position = Vector2(915, -72)
 
 [node name="Master" type="Node2D" parent="Ysort"]
 position = Vector2(-1186, 127)

@@ -4,6 +4,7 @@ extends CharacterBody2D
 var attacking := false
 # 공격하면서 이동 시 이동속도 감소
 var slow = 1
+var combo = "1"
 
 func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
@@ -55,14 +56,18 @@ func _do_attack():
 		
 	if dir == "left" :
 		$AnimatedSprite2D.flip_h = true
-		$AnimatedSprite2D.play(dir + "_attack1")
+		$AnimatedSprite2D.play(dir + "_attack" + combo)
 	elif dir == "right" :
 		$AnimatedSprite2D.flip_h = false
-		$AnimatedSprite2D.play(dir + "_attack1")
+		$AnimatedSprite2D.play(dir + "_attack" + combo)
 	else:
-		$AnimatedSprite2D.play(dir + "_attack1")
+		$AnimatedSprite2D.play(dir + "_attack" + combo)
 	
 func _on_anim_finished():
-	if $AnimatedSprite2D.animation.ends_with("_attack1"):
+	if $AnimatedSprite2D.animation.ends_with("_attack" + combo):
 		attacking = false
 		slow = 1
+		if combo == "1":
+			combo = "2"
+		else:
+			combo = "1"
