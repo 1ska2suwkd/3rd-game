@@ -1,3 +1,4 @@
+# player.gd
 extends CharacterBody2D
 
 var stat: PlayerStat
@@ -6,11 +7,27 @@ var attacking := false
 var slow = 1
 var combo = "1"
 
+const DEFAULT_SPEED = 400
+const DEFAULT_HP = 6
+const DEFAULT_DAMAGE = 2
+const DEFAULT_ATTACK_SPEED = 1.0
+
+var speed := DEFAULT_SPEED
+var damage := DEFAULT_DAMAGE
+var attack_speed := DEFAULT_ATTACK_SPEED
+
+
 func _ready():
-	stat = PlayerStat.new(400, 6, 2, 1)
+	stat = PlayerStat.new(DEFAULT_SPEED, DEFAULT_DAMAGE, DEFAULT_HP,DEFAULT_ATTACK_SPEED) 
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
+# 내일의 나에게: 이 부분 수정해야합니다.
+func _process(delta):
+	if(stat.attack_speed_updated):
+		stat.update_attack_speed()
+	
 func _physics_process(delta):
+	
 	var dir := Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		dir.y -= 1

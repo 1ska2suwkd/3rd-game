@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cgf3a1fkwsg6s" path="res://assets/Image/Terrain/Ground/Shadows.png" id="5_iop1y"]
 [ext_resource type="Texture2D" uid="uid://bwkl7acx7cb02" path="res://assets/Image/Terrain/Water/Rocks/Rocks_03.png" id="5_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="6_bifhp"]
+[ext_resource type="PackedScene" uid="uid://d05f3mdfhdy25" path="res://player.tscn" id="7_upeev"]
 [ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree/Tree1.tscn" id="8_iop1y"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]
@@ -18,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://c0mmw34u1jbdp" path="res://assets/Image/Deco/02.png" id="14_6bpma"]
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="14_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://i7sj0im1y5oj" path="res://assets/Image/Deco/03.png" id="15_ri4fu"]
-[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="18_oej4l"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="22_bs1ij"]
 [ext_resource type="PackedScene" uid="uid://d37h83xrvkjy4" path="res://Tree/Tree3.tscn" id="23_oej4l"]
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="24_6bpma"]
@@ -576,7 +576,9 @@ shape = SubResource("CapsuleShape2D_uvkb0")
 [node name="Ysort" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
+[node name="player" parent="Ysort" instance=ExtResource("7_upeev")]
+scale = Vector2(1, 0.986)
+platform_floor_layers = 4294967041
 
 [node name="Store" type="Node2D" parent="Ysort"]
 position = Vector2(613, -172)
