@@ -600,25 +600,6 @@ modulate = Color(0.2, 0.192157, 0.176471, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Store/Area2D"]
 
-[node name="Tree1" parent="Ysort" instance=ExtResource("8_iop1y")]
-position = Vector2(365, 297)
-scale = Vector2(1, 0.986045)
-
-[node name="Tree2" parent="Ysort" instance=ExtResource("8_iop1y")]
-position = Vector2(-380, -274)
-
-[node name="Tree3" parent="Ysort" instance=ExtResource("8_iop1y")]
-position = Vector2(338, -321)
-
-[node name="Tree4" parent="Ysort" instance=ExtResource("23_oej4l")]
-position = Vector2(-303, -150)
-
-[node name="Tree5" parent="Ysort" instance=ExtResource("23_oej4l")]
-position = Vector2(281, -177)
-
-[node name="Tree6" parent="Ysort" instance=ExtResource("23_oej4l")]
-position = Vector2(915, -72)
-
 [node name="Master" type="Node2D" parent="Ysort"]
 position = Vector2(-1186, 127)
 
@@ -637,3 +618,25 @@ sprite_frames = SubResource("SpriteFrames_bifhp")
 animation = &"idle"
 frame_progress = 0.287592
 speed_scale = 2.0
+
+[node name="Tree" type="Node2D" parent="Ysort"]
+y_sort_enabled = true
+
+[node name="Tree1" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
+position = Vector2(365, 297)
+scale = Vector2(1, 0.986045)
+
+[node name="Tree2" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
+position = Vector2(-380, -274)
+
+[node name="Tree3" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
+position = Vector2(338, -321)
+
+[node name="Tree4" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+position = Vector2(-303, -150)
+
+[node name="Tree5" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+position = Vector2(281, -177)
+
+[node name="Tree6" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+position = Vector2(915, -72)
