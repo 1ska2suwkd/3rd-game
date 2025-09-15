@@ -20,11 +20,19 @@ var attack_speed := DEFAULT_ATTACK_SPEED
 func _ready():
 	stat = PlayerStat.new(DEFAULT_SPEED, DEFAULT_DAMAGE, DEFAULT_HP,DEFAULT_ATTACK_SPEED) 
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
+	attack_speed = 4.0
 
-# 내일의 나에게: 이 부분 수정해야합니다.
 func _process(delta):
-	if(stat.attack_speed_updated):
-		stat.update_attack_speed()
+	if(speed != DEFAULT_SPEED):
+		stat.update_speed(speed)
+	if(damage != DEFAULT_DAMAGE):
+		stat.update_damage(damage)
+	if(attack_speed != DEFAULT_ATTACK_SPEED):
+		stat.update_attack_speed(attack_speed)
+		if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
+			$AnimatedSprite2D.speed_scale = DEFAULT_ATTACK_SPEED
+		else:
+			$AnimatedSprite2D.speed_scale = attack_speed
 	
 func _physics_process(delta):
 	

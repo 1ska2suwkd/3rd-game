@@ -7,9 +7,6 @@ var speed: int
 var hp: int
 var damage: int
 
-var speed_updated: bool = false
-var damage_updated: bool = false
-
 func _init(speed:int, hp:int, damage:int):
 	self.speed = speed
 	self.hp = hp

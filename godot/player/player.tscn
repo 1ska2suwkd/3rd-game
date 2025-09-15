@@ -267,7 +267,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"down_attack1",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -290,7 +290,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"down_attack2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -313,7 +313,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -336,7 +336,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"left_attack1",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -359,7 +359,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"left_attack2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -382,7 +382,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"right_attack1",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -405,7 +405,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"right_attack2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -428,7 +428,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"up_attack1",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -451,7 +451,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"up_attack2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -474,7 +474,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"walk",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fddr8"]
@@ -490,8 +490,7 @@ script = ExtResource("1_onrkg")
 texture_filter = 1
 position = Vector2(2, 47.6652)
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"right_attack2"
-speed_scale = 2.0
+animation = &"down_attack1"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
