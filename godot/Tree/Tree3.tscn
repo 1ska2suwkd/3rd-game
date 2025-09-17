@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dewulilu1163r" path="res://Tree/tree_3.gd" id="4_mhrvj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2aue1"]
-radius = 27.0
-height = 54.0
+radius = 17.0
+height = 34.000004
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhrvj"]
 atlas = ExtResource("3_u5gxv")
@@ -72,17 +72,16 @@ animations = [{
 }]
 
 [node name="Tree1" type="StaticBody2D"]
-position = Vector2(4, -77)
 collision_layer = 4
 script = ExtResource("4_mhrvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 54)
+position = Vector2(1, -9)
 rotation = -3.14159
 shape = SubResource("CapsuleShape2D_2aue1")
 
 [node name="Tree3" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5, 9)
 sprite_frames = SubResource("SpriteFrames_8vopy")
 animation = &"idle"
 frame_progress = 0.506118
+offset = Vector2(0, -60)

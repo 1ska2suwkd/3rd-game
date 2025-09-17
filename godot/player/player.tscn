@@ -482,19 +482,20 @@ radius = 9.12737
 height = 28.0
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 scale = Vector2(1, 0.986045)
 collision_mask = 255
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(2, 47.6652)
 sprite_frames = SubResource("SpriteFrames_h6w8y")
 animation = &"down_attack1"
+offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 69.9765)
+position = Vector2(0, 10.141525)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_fddr8")

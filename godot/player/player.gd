@@ -20,9 +20,8 @@ var attack_speed := DEFAULT_ATTACK_SPEED
 func _ready():
 	stat = PlayerStat.new(DEFAULT_SPEED, DEFAULT_DAMAGE, DEFAULT_HP,DEFAULT_ATTACK_SPEED) 
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
-	attack_speed = 4.0
 
-func _process(delta):
+func _process(_delta):
 	if(speed != DEFAULT_SPEED):
 		stat.update_speed(speed)
 	if(damage != DEFAULT_DAMAGE):
@@ -34,8 +33,7 @@ func _process(delta):
 		else:
 			$AnimatedSprite2D.speed_scale = attack_speed
 	
-func _physics_process(delta):
-	
+func _physics_process(_delta):
 	var dir := Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		dir.y -= 1

@@ -65,17 +65,16 @@ animations = [{
 }]
 
 [node name="Tree1" type="StaticBody2D"]
-position = Vector2(4, -77)
 collision_layer = 4
 script = ExtResource("1_mqent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 54)
+position = Vector2(1, -10)
 rotation = -3.14159
 shape = SubResource("CapsuleShape2D_2aue1")
 
 [node name="Tree1" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, -27)
 sprite_frames = SubResource("SpriteFrames_8vopy")
 animation = &"idle"
 frame_progress = 0.904314
+offset = Vector2(0, -90)

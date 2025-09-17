@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=67 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
 [ext_resource type="Texture2D" uid="uid://d26yvnf7wlpji" path="res://assets/Image/Terrain/Water/Rocks/Rocks_01.png" id="3_hk6ix"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="14_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://i7sj0im1y5oj" path="res://assets/Image/Deco/03.png" id="15_ri4fu"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="18_oej4l"]
+[ext_resource type="Texture2D" uid="uid://7s3u03fm5w32" path="res://assets/Image/Deco/16.png" id="19_rphby"]
+[ext_resource type="Texture2D" uid="uid://bpcsx4g45tdsc" path="res://assets/Image/Deco/17.png" id="20_fhlmx"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="22_bs1ij"]
 [ext_resource type="PackedScene" uid="uid://d37h83xrvkjy4" path="res://Tree/Tree3.tscn" id="23_oej4l"]
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="24_6bpma"]
@@ -419,30 +421,50 @@ sources/2 = SubResource("TileSetAtlasSource_y64wd")
 sources/9 = SubResource("TileSetAtlasSource_rphby")
 sources/10 = SubResource("TileSetAtlasSource_oej4l")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvkb0"]
+radius = 33.2531
+height = 164.501
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhlmx"]
 texture = ExtResource("11_bs1ij")
 texture_region_size = Vector2i(64, 64)
 0:0/size_in_atlas = Vector2i(2, 4)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-41.4888, 81.002, -26.8125, 93.9849, 20.0388, 91.727, 40.3599, 80.4375, 35.8441, 46.5691, -1.41118, 38.102, -40.9243, 57.8586)
+0:0/0/y_sort_origin = 50
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-41.4888, 81.002, -26.8125, 93.9849, 24.836853, 93.70267, 40.3599, 80.4375, 40.077667, 47.415817, -1.41118, 38.102, -38.9487, 46.851334)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6bpma"]
+texture = ExtResource("19_rphby")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+0:0/0/y_sort_origin = 20
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 10.725006, -16.36972, 16.934212, -18.627625, 32, 1.6934204, 36.690804, 22.014496, 32, 20.321075, 15.805267)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ri4fu"]
+texture = ExtResource("20_fhlmx")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(60, 25)
+0:0/0/y_sort_origin = -5
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-68.55316, -4.1349525, -71.68817, 4.515793, -65.47894, 10.16053, -51.360466, 9.793306, -44.831596, 6.5288715, -42.00242, -0.8705158, -48.31366, -5.875984, -60.718513, -6.9641304)
 
 [sub_resource type="TileSet" id="TileSet_1fguw"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_fhlmx")
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvkb0"]
-radius = 33.2531
-height = 164.501
+sources/1 = SubResource("TileSetAtlasSource_6bpma")
+sources/2 = SubResource("TileSetAtlasSource_ri4fu")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcuyn"]
-radius = 38.3256
+radius = 33.253098
 height = 270.093
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgrc2"]
-radius = 20.0
-height = 40.0
+radius = 14.0
+height = 42.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oej4l"]
 atlas = ExtResource("22_bs1ij")
@@ -546,13 +568,8 @@ tile_map_data = PackedByteArray("AADj/wQAAAAIAAwAAADj/wUAAAAIAA0AAADj/wYAAAAIAA4
 tile_set = SubResource("TileSet_jtbcu")
 
 [node name="Deco" type="TileMapLayer" parent="tilemaplayer"]
-tile_map_data = PackedByteArray("AAD7//3/AAAAAAAAAAACAAQAAAAAAAAAAAD5/wEAAgAAAAAAAAAGAAUACQAAAAAAAAD5//3/CQAAAAAAAAD3/wMACQAAAAAAAAD3/wUACQAAAAAAAAAFAP3/CQAAAAAAAAAFAP7/CQAAAAAAAAANAP3/CQAAAAAAAAANAP7/CQAAAAAAAAAMAAAACQAAAAAAAAAGAAAACQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD7//3/AAAAAAAAAAACAAQAAAAAAAAAAAD5/wEAAgAAAAAAAAAGAAUACQAAAAAAAAD5//3/CQAAAAAAAAAFAP3/CQAAAAAAAAAFAP7/CQAAAAAAAAANAP3/CQAAAAAAAAANAP7/CQAAAAAAAAAMAAAACQAAAAAAAAAGAAAACQAAAAAAAAA=")
 tile_set = SubResource("TileSet_h7d43")
-
-[node name="Collision" type="TileMapLayer" parent="tilemaplayer"]
-position = Vector2(-18, -4.00012)
-tile_map_data = PackedByteArray("AADs/wAAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_1fguw")
 
 [node name="Deongeon" type="Node2D" parent="."]
 position = Vector2(3, -1162)
@@ -578,63 +595,78 @@ y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
 
+[node name="Collision" type="TileMapLayer" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(-18, -4.000242)
+tile_map_data = PackedByteArray("AADs/wAAAAAAAAAAAAADAPn/AQAAAAAAAAD4/wMAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_1fguw")
+
 [node name="Store" type="Node2D" parent="Ysort"]
-position = Vector2(613, -172)
+y_sort_enabled = true
+position = Vector2(613, -17.999985)
 scale = Vector2(1.79938, 1.77427)
 
 [node name="store" type="Sprite2D" parent="Ysort/Store"]
+position = Vector2(0, -13.526697)
 texture = ExtResource("14_mcuyn")
+offset = Vector2(0, -80)
 
 [node name="Store" type="StaticBody2D" parent="Ysort/Store"]
+y_sort_enabled = true
+position = Vector2(-1.1114941, 1.6908264)
 collision_layer = 4
 
 [node name="Store" type="CollisionShape2D" parent="Ysort/Store/Store"]
-position = Vector2(0.555747, 68.1971)
+position = Vector2(1.6672411, -16.908371)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_mcuyn")
 
 [node name="Area2D" type="Area2D" parent="Ysort/Store"]
 modulate = Color(0.2, 0.192157, 0.176471, 1)
+position = Vector2(0, -13.526695)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Store/Area2D"]
 
 [node name="Master" type="Node2D" parent="Ysort"]
+y_sort_enabled = true
 position = Vector2(-1186, 127)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ysort/Master"]
+y_sort_enabled = true
 collision_layer = 4
 script = ExtResource("12_apmjc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Master/StaticBody2D"]
-position = Vector2(0, 53)
+position = Vector2(0, 84)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_kgrc2")
 
 [node name="Master_Animation" type="AnimatedSprite2D" parent="Ysort/Master/StaticBody2D"]
-position = Vector2(1, 40)
+position = Vector2(1, 69)
 sprite_frames = SubResource("SpriteFrames_bifhp")
 animation = &"idle"
 frame_progress = 0.287592
 speed_scale = 2.0
+offset = Vector2(0, -10)
 
-[node name="Tree" type="Node2D" parent="Ysort"]
+[node name="collision" type="Node2D" parent="Ysort"]
 y_sort_enabled = true
 
-[node name="Tree1" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
-position = Vector2(365, 297)
+[node name="Tree1" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
+position = Vector2(-287, 350.00003)
 scale = Vector2(1, 0.986045)
 
-[node name="Tree2" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
+[node name="Tree2" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
 position = Vector2(-380, -274)
 
-[node name="Tree3" parent="Ysort/Tree" instance=ExtResource("8_iop1y")]
+[node name="Tree3" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
 position = Vector2(338, -321)
 
-[node name="Tree4" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+[node name="Tree4" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
 position = Vector2(-303, -150)
 
-[node name="Tree5" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+[node name="Tree5" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
 position = Vector2(281, -177)
 
-[node name="Tree6" parent="Ysort/Tree" instance=ExtResource("23_oej4l")]
+[node name="Tree6" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
 position = Vector2(915, -72)
