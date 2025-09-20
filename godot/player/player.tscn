@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=68 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
@@ -481,6 +481,15 @@ animations = [{
 radius = 9.12737
 height = 28.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
+size = Vector2(117, 54.764236)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
+size = Vector2(56, 84.033134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
+size = Vector2(116, 61.72178)
+
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
 scale = Vector2(1, 0.986045)
@@ -490,7 +499,8 @@ script = ExtResource("1_onrkg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"down_attack1"
+animation = &"left_attack1"
+frame = 3
 offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -499,3 +509,25 @@ offset = Vector2(0, -20)
 position = Vector2(0, 10.141525)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_fddr8")
+
+[node name="AttackCollision" type="Area2D" parent="." groups=["Player_attack"]]
+
+[node name="DownAttack" type="CollisionShape2D" parent="AttackCollision"]
+position = Vector2(9, 35.49534)
+shape = SubResource("RectangleShape2D_rkbax")
+disabled = true
+
+[node name="RightAttack" type="CollisionShape2D" parent="AttackCollision"]
+position = Vector2(60, -14.634453)
+shape = SubResource("RectangleShape2D_g1dw6")
+disabled = true
+
+[node name="LeftAttack" type="CollisionShape2D" parent="AttackCollision"]
+position = Vector2(-60, -14.198135)
+shape = SubResource("RectangleShape2D_g1dw6")
+disabled = true
+
+[node name="UpAttack" type="CollisionShape2D" parent="AttackCollision"]
+position = Vector2(8, -56.79254)
+shape = SubResource("RectangleShape2D_yw30f")
+disabled = true

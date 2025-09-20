@@ -6,15 +6,16 @@ var attacking := false
 # 공격하면서 이동 시 이동속도 감소
 var slow = 1
 var combo = "1"
+var attackDir = ""
 
 const DEFAULT_SPEED = 400
 const DEFAULT_HP = 6
 const DEFAULT_DAMAGE = 2
 const DEFAULT_ATTACK_SPEED = 1.0
 
-var speed := DEFAULT_SPEED
-var damage := DEFAULT_DAMAGE
-var attack_speed := DEFAULT_ATTACK_SPEED
+@export var speed := DEFAULT_SPEED
+@export var damage := DEFAULT_DAMAGE
+@export var attack_speed := DEFAULT_ATTACK_SPEED
 
 
 func _ready():
@@ -70,24 +71,38 @@ func _do_attack():
 	attacking = true
 	var mouse_pos = get_global_mouse_position()
 	var to_mouse = mouse_pos - global_position
-	var dir = ""
+
 	
 	if abs(to_mouse.x) > abs(to_mouse.y):
-		dir = "right" if to_mouse.x > 0 else "left"
+		attackDir = "right" if to_mouse.x > 0 else "left"
 	else:
-		dir = "down" if to_mouse.y > 0 else "up"
+		attackDir = "down" if to_mouse.y > 0 else "up"
 		
-	if dir == "left" :
-		$AnimatedSprite2D.flip_h = true
-		$AnimatedSprite2D.play(dir + "_attack" + combo)
-	elif dir == "right" :
+	if attackDir == "up":
+		$AttackCollision/UpAttack.disabled = false
+		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
+	elif attackDir == "down":
+		$AttackCollision/DownAttack.disabled = false
+		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
+	elif attackDir == "right" :
 		$AnimatedSprite2D.flip_h = false
-		$AnimatedSprite2D.play(dir + "_attack" + combo)
-	else:
-		$AnimatedSprite2D.play(dir + "_attack" + combo)
+		$AttackCollision/RightAttack.disabled = false
+		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
+	elif attackDir == "left" :
+		$AnimatedSprite2D.flip_h = true
+		$AttackCollision/LeftAttack.disabled = false
+		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
 	
 func _on_anim_finished():
 	if $AnimatedSprite2D.animation.ends_with("_attack" + combo):
+		if attackDir == "up":
+			$AttackCollision/UpAttack.disabled = true
+		elif attackDir == "down":
+			$AttackCollision/DownAttack.disabled = true
+		elif attackDir == "right":
+			$AttackCollision/RightAttack.disabled = true
+		elif attackDir == "left":
+			$AttackCollision/LeftAttack.disabled = true
 		attacking = false
 		slow = 1
 		if combo == "1":

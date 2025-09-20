@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 mouse_cursor/custom_image="uid://yojvp06umfqn"
 
+[global_group]
+
+Player_attack="플레이어의 공격"
+
 [input]
 
 move_up={
