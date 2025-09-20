@@ -7,6 +7,7 @@ var attacking := false
 var slow = 1
 var combo = "1"
 var attackDir = ""
+var hit_active_token := 0
 
 const DEFAULT_SPEED = 400
 const DEFAULT_HP = 6
@@ -17,6 +18,10 @@ const DEFAULT_ATTACK_SPEED = 1.0
 @export var damage := DEFAULT_DAMAGE
 @export var attack_speed := DEFAULT_ATTACK_SPEED
 
+@onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
+@onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
+@onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
+@onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
 func _ready():
 	stat = PlayerStat.new(DEFAULT_SPEED, DEFAULT_DAMAGE, DEFAULT_HP,DEFAULT_ATTACK_SPEED) 
@@ -71,41 +76,48 @@ func _do_attack():
 	attacking = true
 	var mouse_pos = get_global_mouse_position()
 	var to_mouse = mouse_pos - global_position
-
 	
 	if abs(to_mouse.x) > abs(to_mouse.y):
 		attackDir = "right" if to_mouse.x > 0 else "left"
 	else:
 		attackDir = "down" if to_mouse.y > 0 else "up"
-		
-	if attackDir == "up":
-		$AttackCollision/UpAttack.disabled = false
-		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
-	elif attackDir == "down":
-		$AttackCollision/DownAttack.disabled = false
-		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
-	elif attackDir == "right" :
-		$AnimatedSprite2D.flip_h = false
-		$AttackCollision/RightAttack.disabled = false
-		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
-	elif attackDir == "left" :
+	
+	if attackDir == "left":
 		$AnimatedSprite2D.flip_h = true
-		$AttackCollision/LeftAttack.disabled = false
-		$AnimatedSprite2D.play(attackDir + "_attack" + combo)
+	elif attackDir == "right":
+		$AnimatedSprite2D.flip_h = false
+	
+	$AnimatedSprite2D.play(attackDir + "_attack" + combo)
 	
 func _on_anim_finished():
-	if $AnimatedSprite2D.animation.ends_with("_attack" + combo):
-		if attackDir == "up":
-			$AttackCollision/UpAttack.disabled = true
-		elif attackDir == "down":
-			$AttackCollision/DownAttack.disabled = true
-		elif attackDir == "right":
-			$AttackCollision/RightAttack.disabled = true
-		elif attackDir == "left":
-			$AttackCollision/LeftAttack.disabled = true
 		attacking = false
 		slow = 1
 		if combo == "1":
 			combo = "2"
 		else:
 			combo = "1"
+
+func _on_animated_sprite_2d_frame_changed():
+	var anim = $AnimatedSprite2D.animation
+	var frame = $AnimatedSprite2D.frame
+	
+	if anim == "up_attack1" or anim == "up_attack2":
+		if frame == 3:  # 타격 시작 프레임
+			$AttackCollision/UpAttack.disabled = false
+		elif frame == 5:  # 타격 종료 프레임
+			$AttackCollision/UpAttack.disabled = true
+	elif anim == "down_attack1" or anim == "down_attack2":
+		if frame == 3:  # 타격 시작 프레임
+			$AttackCollision/DownAttack.disabled = false
+		elif frame == 5:  # 타격 종료 프레임
+			$AttackCollision/DownAttack.disabled = true
+	elif anim == "left_attack1" or anim == "left_attack2":
+		if frame == 3:  # 타격 시작 프레임
+			$AttackCollision/LeftAttack.disabled = false
+		elif frame == 5:  # 타격 종료 프레임
+			$AttackCollision/LeftAttack.disabled = true
+	elif anim == "right_attack1" or anim == "right_attack2":
+		if frame == 3:  # 타격 시작 프레임
+			$AttackCollision/RightAttack.disabled = false
+		elif frame == 5:  # 타격 종료 프레임
+			$AttackCollision/RightAttack.disabled = true

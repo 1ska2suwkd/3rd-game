@@ -495,11 +495,14 @@ y_sort_enabled = true
 scale = Vector2(1, 0.986045)
 collision_mask = 255
 script = ExtResource("1_onrkg")
+speed = null
+damage = null
+attack_speed = 3.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"left_attack2"
+animation = &"down_attack2"
 offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="."]
