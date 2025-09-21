@@ -1104,6 +1104,6 @@ tile_set = SubResource("TileSet_p832w")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("5_4p0qp")]
+position = Vector2(0, 469)
 
 [node name="enemy" parent="Ysort" instance=ExtResource("6_igk3i")]
-position = Vector2(176, 2)
