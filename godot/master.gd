@@ -1,4 +1,4 @@
 extends StaticBody2D
 
-func _process(delta):
+func _process(_delta):
 	$Master_Animation.play("idle")

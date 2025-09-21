@@ -490,7 +490,7 @@ size = Vector2(56, 84.033134)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
 size = Vector2(116, 61.72178)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 scale = Vector2(1, 0.986045)
 collision_mask = 255
@@ -531,8 +531,4 @@ position = Vector2(8, -56.79254)
 shape = SubResource("RectangleShape2D_yw30f")
 disabled = true
 
-[node name="AttackTimer" type="Timer" parent="."]
-one_shot = true
-
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

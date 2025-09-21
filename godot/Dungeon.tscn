@@ -1106,4 +1106,4 @@ y_sort_enabled = true
 [node name="player" parent="Ysort" instance=ExtResource("5_4p0qp")]
 
 [node name="enemy" parent="Ysort" instance=ExtResource("6_igk3i")]
-position = Vector2(-0.4449768, 17.663193)
+position = Vector2(176, 2)

@@ -12,9 +12,17 @@ script = ExtResource("1_ofsxj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ppra6")
+offset = Vector2(0, -40)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 37)
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_p200p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 255
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_p200p")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
