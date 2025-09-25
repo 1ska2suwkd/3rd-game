@@ -41,7 +41,8 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_b26j0"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_dw050")
 sources/1 = SubResource("TileSetAtlasSource_1fguw")
 
@@ -224,7 +225,8 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_dw050"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_1jxqw")
 sources/1 = SubResource("TileSetAtlasSource_uvkb0")
 
@@ -582,6 +584,7 @@ scale = Vector2(1.79938, 1.77427)
 texture = ExtResource("9_uvkb0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dungeon"]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dungeon/StaticBody2D"]
 position = Vector2(0, 3.38145)
@@ -599,8 +602,8 @@ shape = SubResource("RectangleShape2D_fhlmx")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
-collision_layer = 3
-collision_mask = 1
+speed = null
+damage = null
 attack_speed = 2.0
 
 [node name="Collision" type="TileMapLayer" parent="Ysort"]
@@ -622,6 +625,7 @@ offset = Vector2(0, -80)
 [node name="Store" type="StaticBody2D" parent="Ysort/Store"]
 y_sort_enabled = true
 position = Vector2(-1.1114941, 1.6908264)
+collision_layer = 4
 
 [node name="Store" type="CollisionShape2D" parent="Ysort/Store/Store"]
 position = Vector2(1.6672411, -16.908371)

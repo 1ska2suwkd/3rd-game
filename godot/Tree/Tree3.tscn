@@ -72,7 +72,6 @@ animations = [{
 }]
 
 [node name="Tree1" type="StaticBody2D"]
-collision_layer = 4
 script = ExtResource("4_mhrvj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -24,7 +24,7 @@ const DEFAULT_ATTACK_SPEED = 1.0
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
 func _ready():
-	stat = PlayerStat.new(DEFAULT_SPEED, DEFAULT_DAMAGE, DEFAULT_HP,DEFAULT_ATTACK_SPEED) 
+	stat = PlayerStat.new() 
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
 func _process(_delta):

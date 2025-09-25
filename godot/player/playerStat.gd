@@ -5,7 +5,7 @@ class_name PlayerStat
 
 var attack_speed: float
 
-func _init(speed: int, hp: int, damage: int, attack_speed: float):
+func _init(speed: int = 400, hp: int = 6, damage: int = 2, attack_speed: float = 1.0):
 	super._init(speed, hp, damage)
 	self.attack_speed = attack_speed
 
