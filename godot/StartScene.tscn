@@ -599,8 +599,6 @@ shape = SubResource("RectangleShape2D_fhlmx")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
-collision_layer = 3
-collision_mask = 1
 attack_speed = 2.0
 
 [node name="Collision" type="TileMapLayer" parent="Ysort"]
