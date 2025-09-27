@@ -7,7 +7,7 @@ var player_chase = false
 var player = null
 
 func _ready():
-	stat = Stat.new(200,6, 2)
+	stat = Stat.new(200, 10, 2) # speed, hp, damage
 	
 func _physics_process(_delta):
 	var dir := Vector2.ZERO

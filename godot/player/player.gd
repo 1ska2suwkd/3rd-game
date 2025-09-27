@@ -11,7 +11,7 @@ var hit_active_token := 0
 
 const DEFAULT_SPEED = 400
 const DEFAULT_HP = 6
-const DEFAULT_DAMAGE = 2
+const DEFAULT_DAMAGE = 1
 const DEFAULT_ATTACK_SPEED = 1.0
 
 @export var speed := DEFAULT_SPEED

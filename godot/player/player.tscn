@@ -502,8 +502,6 @@ sprite_frames = SubResource("SpriteFrames_h6w8y")
 animation = &"left_attack2"
 offset = Vector2(0, -20)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10.141525)
 rotation = -1.5708
