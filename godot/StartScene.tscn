@@ -599,7 +599,9 @@ shape = SubResource("RectangleShape2D_fhlmx")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
-attack_speed = 2.0
+attack_speed = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="Ysort/player"]
 
 [node name="Collision" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
