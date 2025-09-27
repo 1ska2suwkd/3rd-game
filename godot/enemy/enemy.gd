@@ -7,16 +7,20 @@ var player_chase = false
 var player = null
 
 func _ready():
-	stat = Stat.new(100,6, 2)
+	stat = Stat.new(200,6, 2)
 	
 func _physics_process(_delta):
-	if player_chase:
-		position += (player.position - position) / stat.speed
+	var dir := Vector2.ZERO
+	if player_chase and player:
+		dir = (player.global_position - global_position).normalized()
+
+	velocity = dir * stat.speed
+	move_and_slide()  # ← 물리 이동 (충돌 적용)
+
+	# 애니메이션 & 좌우 반전
+	if velocity.length() > 1.0:
 		$AnimatedSprite2D.play("walk")
-		if (player.position.x - position.x) < 0:
-			$AnimatedSprite2D.flip_h = true
-		else:
-			$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.play("idle")
 
