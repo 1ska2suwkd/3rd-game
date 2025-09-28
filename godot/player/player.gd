@@ -14,6 +14,9 @@ const DEFAULT_HP = 6
 const DEFAULT_DAMAGE = 1
 const DEFAULT_ATTACK_SPEED = 1.0
 
+var knockback_vel: Vector2 = Vector2.ZERO
+var knockback_time := 0.0 
+
 @export var speed := DEFAULT_SPEED
 @export var damage := DEFAULT_DAMAGE
 @export var attack_speed := DEFAULT_ATTACK_SPEED
@@ -40,36 +43,41 @@ func _process(_delta):
 			$AnimatedSprite2D.speed_scale = attack_speed
 	
 func _physics_process(_delta):
-	var dir := Vector2.ZERO
-	if Input.is_action_pressed("move_up"):
-		dir.y -= 1
-	if Input.is_action_pressed("move_down"):
-		dir.y += 1
-	if Input.is_action_pressed("move_left"):
-		dir.x -= 1
-	if Input.is_action_pressed("move_right"):
-		dir.x += 1
-	
-	if attacking:
-		slow = 0.7
-	# 방향 벡터 정규화 후 속도 적용
-	if dir != Vector2.ZERO:
-		velocity = dir.normalized() * stat.speed * slow
-		if not attacking:
-			$AnimatedSprite2D.play("walk")
-			if velocity.x < 0:
-				$AnimatedSprite2D.flip_h = true
-			elif velocity.x > 0:
-				$AnimatedSprite2D.flip_h = false
-	else:
-		velocity = Vector2.ZERO
-		if not attacking:
-			$AnimatedSprite2D.play("idle")
+	if knockback_time > 0.0:
+		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
+		velocity = knockback_vel
+		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 3000.0 * _delta)  # 감속량 조절
+		knockback_time -= _delta
+	else:	
+		var dir := Vector2.ZERO
+		if Input.is_action_pressed("move_up"):
+			dir.y -= 1
+		if Input.is_action_pressed("move_down"):
+			dir.y += 1
+		if Input.is_action_pressed("move_left"):
+			dir.x -= 1
+		if Input.is_action_pressed("move_right"):
+			dir.x += 1
 		
-	if Input.is_action_pressed("attack") and not attacking:
-		_do_attack()
-		
-	# 충돌 계산 포함된 이동
+		if attacking:
+			slow = 0.7
+		# 방향 벡터 정규화 후 속도 적용
+		if dir != Vector2.ZERO:
+			velocity = dir.normalized() * stat.speed * slow
+			if not attacking:
+				$AnimatedSprite2D.play("walk")
+				if velocity.x < 0:
+					$AnimatedSprite2D.flip_h = true
+				elif velocity.x > 0:
+					$AnimatedSprite2D.flip_h = false
+		else:
+			velocity = Vector2.ZERO
+			if not attacking:
+				$AnimatedSprite2D.play("idle")
+			
+		if Input.is_action_pressed("attack") and not attacking:
+			_do_attack()
+		# 충돌 계산 포함된 이동
 	move_and_slide()
 	
 func _do_attack():
@@ -121,3 +129,14 @@ func _on_animated_sprite_2d_frame_changed():
 			$AttackCollision/RightAttack.disabled = false
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
+
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
+	# 타격 원점(from) → 플레이어 방향으로 밀려남
+	var dir := (global_position - from).normalized()
+	knockback_vel = dir * strength
+	knockback_time = duration
+	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
+	$HitFlashTimer.start()
+
+func _on_hit_flash_timer_timeout() -> void:
+	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)

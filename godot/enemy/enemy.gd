@@ -12,6 +12,9 @@ var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 var dash_speed = 400
 
+@onready var anim = $AnimatedSprite2D.animation
+@onready var frame = $AnimatedSprite2D.frame
+
 func _ready():
 	stat = Stat.new(200, 10, 2) # speed, hp, damage
 	$cooldown.start()
@@ -38,10 +41,10 @@ func _physics_process(_delta):
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack"):
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
-	playerstat = PlayerStat.new()
-	stat.take_damage(playerstat.damage)
-	if stat.dead:
-		queue_free()# Replace with function body.
+		playerstat = PlayerStat.new()
+		stat.take_damage(playerstat.damage)
+		if stat.dead:
+			queue_free()# Replace with function body.
 
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("Player_attack"):
@@ -80,3 +83,13 @@ func play_n_times(anim_name: String, n: int) -> void:
 		await $AnimatedSprite2D.animation_finished
 	is_attack = false
 	$cooldown.start()
+
+func _on_animated_sprite_2d_animation_changed() -> void:
+	if $AnimatedSprite2D.animation == "attack":
+		$Attack_hitbox/attack_hitbox.disabled = false
+	else:
+		$Attack_hitbox/attack_hitbox.disabled = true
+
+func _on_attack_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.apply_knockback(global_position, 1000.0, 0.5)

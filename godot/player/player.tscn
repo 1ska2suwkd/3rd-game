@@ -529,4 +529,9 @@ position = Vector2(8, -56.79254)
 shape = SubResource("RectangleShape2D_yw30f")
 disabled = true
 
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
