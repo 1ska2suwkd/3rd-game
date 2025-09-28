@@ -40,13 +40,11 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xduhl")
 }],
-"loop": true,
-"name": &"idle",
+"loop": false,
+"name": &"heart_loss",
 "speed": 5.0
 }]
 
 [node name="heart" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_4xpdv")
-animation = &"idle"
-frame = 3
-frame_progress = 0.6036378
+animation = &"heart_loss"

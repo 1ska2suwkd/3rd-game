@@ -158,5 +158,6 @@ func dead():
 	$AnimatedSprite2D.play("dead")
 
 func update_heart_display():
+	#hearts_list[stat.hp - 1].get_child(stat.hp - 1).play("heart_loss")
 	for i in range(hearts_list.size()):
 		hearts_list[i].visible = i < stat.hp
