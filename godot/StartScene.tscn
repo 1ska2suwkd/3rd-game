@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=75 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://StartScene.gd" id="1_1fguw"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cgf3a1fkwsg6s" path="res://assets/Image/Terrain/Ground/Shadows.png" id="5_iop1y"]
 [ext_resource type="Texture2D" uid="uid://bwkl7acx7cb02" path="res://assets/Image/Terrain/Water/Rocks/Rocks_03.png" id="5_mcuyn"]
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="6_bifhp"]
-[ext_resource type="PackedScene" uid="uid://d37x31223chav" path="res://Tree/Tree1.tscn" id="8_iop1y"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]
 [ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://master.gd" id="12_apmjc"]
@@ -23,8 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://7s3u03fm5w32" path="res://assets/Image/Deco/16.png" id="19_rphby"]
 [ext_resource type="Texture2D" uid="uid://bpcsx4g45tdsc" path="res://assets/Image/Deco/17.png" id="20_fhlmx"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="22_bs1ij"]
-[ext_resource type="PackedScene" uid="uid://d37h83xrvkjy4" path="res://Tree/Tree3.tscn" id="23_oej4l"]
+[ext_resource type="Texture2D" uid="uid://or5feijlrt8b" path="res://assets/Image/Resources/Trees/Tree1.png" id="22_ri4fu"]
+[ext_resource type="Texture2D" uid="uid://dvbm8opr1mvkf" path="res://assets/Image/Resources/Trees/Tree2.png" id="23_hjfh1"]
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="24_6bpma"]
+[ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_peenx"]
+[ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_03fdb"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
@@ -49,6 +51,7 @@ sources/1 = SubResource("TileSetAtlasSource_1fguw")
 texture = ExtResource("3_yi20g")
 texture_region_size = Vector2i(192, 192)
 0:0/animation_columns = 8
+0:0/animation_speed = 0.8
 0:0/animation_frame_0/duration = 0.1
 0:0/animation_frame_1/duration = 0.1
 0:0/animation_frame_2/duration = 0.1
@@ -67,6 +70,8 @@ sources/3 = SubResource("TileSetAtlasSource_hk6ix")
 texture = ExtResource("3_hk6ix")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_columns = 8
+0:0/animation_speed = 0.5
+0:0/animation_mode = 1
 0:0/animation_frame_0/duration = 0.1
 0:0/animation_frame_1/duration = 0.1
 0:0/animation_frame_2/duration = 0.1
@@ -81,6 +86,8 @@ texture_region_size = Vector2i(128, 128)
 texture = ExtResource("4_lwwx1")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_columns = 8
+0:0/animation_speed = 0.5
+0:0/animation_mode = 1
 0:0/animation_frame_0/duration = 0.1
 0:0/animation_frame_1/duration = 0.1
 0:0/animation_frame_2/duration = 0.1
@@ -95,6 +102,8 @@ texture_region_size = Vector2i(128, 128)
 texture = ExtResource("5_mcuyn")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_columns = 8
+0:0/animation_speed = 0.5
+0:0/animation_mode = 1
 0:0/animation_frame_0/duration = 0.1
 0:0/animation_frame_1/duration = 0.1
 0:0/animation_frame_2/duration = 0.1
@@ -109,6 +118,8 @@ texture_region_size = Vector2i(128, 128)
 texture = ExtResource("6_bifhp")
 texture_region_size = Vector2i(128, 128)
 0:0/animation_columns = 8
+0:0/animation_speed = 0.5
+0:0/animation_mode = 1
 0:0/animation_frame_0/duration = 0.1
 0:0/animation_frame_1/duration = 0.1
 0:0/animation_frame_2/duration = 0.1
@@ -452,6 +463,79 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/y_sort_origin = -5
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-68.55316, -4.1349525, -71.68817, 4.515793, -65.47894, 10.16053, -51.360466, 9.793306, -44.831596, 6.5288715, -42.00242, -0.8705158, -48.31366, -5.875984, -60.718513, -6.9641304)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tks2"]
+texture = ExtResource("22_ri4fu")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 4)
+0:0/next_alternative_id = 2
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 85
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 78.46187, 14.676331, 82.97768, 22.014496, 96.52504, 1.6934204, 106.12108, -18.627625, 98.78294, -13.547363, 82.97768)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iscmb"]
+texture = ExtResource("23_hjfh1")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 4)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 90
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.1289673, 77.897385, 12.4184265, 85.23555, 18.063171, 104.42766, 2.257904, 110.0724, -14.111847, 104.42766, -10.725006, 85.80003)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2hon"]
+texture = ExtResource("24_peenx")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 60
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.080261, 50.802658, 6.773712, 51.367126, 6.773712, 66.607925, -6.209198, 66.04344)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da12c"]
+texture = ExtResource("25_03fdb")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 58
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.3868408, 50.802658, 8.467133, 50.238174, 9.031586, 64.35002, -5.080261, 63.221085)
+
 [sub_resource type="TileSet" id="TileSet_1fguw"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
@@ -459,6 +543,10 @@ physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_fhlmx")
 sources/1 = SubResource("TileSetAtlasSource_6bpma")
 sources/2 = SubResource("TileSetAtlasSource_ri4fu")
+sources/3 = SubResource("TileSetAtlasSource_7tks2")
+sources/4 = SubResource("TileSetAtlasSource_iscmb")
+sources/5 = SubResource("TileSetAtlasSource_i2hon")
+sources/6 = SubResource("TileSetAtlasSource_da12c")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcuyn"]
 radius = 33.253098
@@ -606,7 +694,7 @@ attack_speed = 3.0
 [node name="Collision" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
 position = Vector2(-18, -4.000242)
-tile_map_data = PackedByteArray("AADs/wAAAAAAAAAAAAADAPn/AQAAAAAAAAD4/wMAAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AADs/wAAAAAAAAAAAAADAPn/AQAAAAAAAAD4/wMAAgAAAAAAAAD7//r/AwAAAAAAAAD9//z/BAAAAAAAAAAOAP7/BQAAAAAAAAAGAPn/BQAAAAAAAAAFAAMABAAAAAAAAAAEAPr/AwAAAAAAAAD5//j/AwAAAAAAAAD5//7/BAAAAAAAAAD7//3/BQAAAAAAAAAEAP3/BQAAAAAAAAD6/wUABQAAAAAAAAD8/wEABQAAAAAAAAAEAAEAAwAAAAAAAAAMAAEAAwAAAAAAAAAGAAIABQAAAAAAAAD5//v/BQAAAAAAAAA=")
 tile_set = SubResource("TileSet_1fguw")
 
 [node name="Store" type="Node2D" parent="Ysort"]
@@ -655,28 +743,6 @@ animation = &"idle"
 frame_progress = 0.287592
 speed_scale = 2.0
 offset = Vector2(0, -10)
-
-[node name="collision" type="Node2D" parent="Ysort"]
-y_sort_enabled = true
-
-[node name="Tree1" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
-position = Vector2(-287, 350.00003)
-scale = Vector2(1, 0.986045)
-
-[node name="Tree2" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
-position = Vector2(-380, -274)
-
-[node name="Tree3" parent="Ysort/collision" instance=ExtResource("8_iop1y")]
-position = Vector2(338, -321)
-
-[node name="Tree4" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
-position = Vector2(-303, -150)
-
-[node name="Tree5" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
-position = Vector2(281, -177)
-
-[node name="Tree6" parent="Ysort/collision" instance=ExtResource("23_oej4l")]
-position = Vector2(915, -72)
 
 [connection signal="body_entered" from="Dungeon/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dungeon/Area2D" to="." method="_on_area_2d_body_exited"]

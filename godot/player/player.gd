@@ -17,6 +17,8 @@ const DEFAULT_ATTACK_SPEED = 1.0
 var knockback_vel: Vector2 = Vector2.ZERO
 var knockback_time := 0.0 
 
+var hearts_list : Array[TextureRect]
+
 @export var speed := DEFAULT_SPEED
 @export var damage := DEFAULT_DAMAGE
 @export var attack_speed := DEFAULT_ATTACK_SPEED
@@ -28,6 +30,10 @@ var knockback_time := 0.0
 
 func _ready():
 	stat = PlayerStat.new() 
+	var hearts_parent = $heart_bar/HBoxContainer
+	for child in hearts_parent.get_children():
+		hearts_list.append(child)
+	print(hearts_list)
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
 func _process(_delta):
@@ -43,6 +49,8 @@ func _process(_delta):
 			$AnimatedSprite2D.speed_scale = attack_speed
 	
 func _physics_process(_delta):
+	if stat.dead: return
+	
 	if knockback_time > 0.0:
 		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
 		velocity = knockback_vel
@@ -130,13 +138,25 @@ func _on_animated_sprite_2d_frame_changed():
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
 
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
-	# 타격 원점(from) → 플레이어 방향으로 밀려남
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, damage: int = 1) -> void:
+	if stat.dead: return
+	
 	var dir := (global_position - from).normalized()
 	knockback_vel = dir * strength
 	knockback_time = duration
 	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	$HitFlashTimer.start()
+	stat.take_damage(damage)
+	update_heart_display()
+	if stat.dead:
+		dead()
 
 func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
+	
+func dead():
+	$AnimatedSprite2D.play("dead")
+
+func update_heart_display():
+	for i in range(hearts_list.size()):
+		hearts_list[i].visible = i < stat.hp

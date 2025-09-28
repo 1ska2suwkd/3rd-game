@@ -16,7 +16,7 @@ var dash_speed = 400
 @onready var frame = $AnimatedSprite2D.frame
 
 func _ready():
-	stat = Stat.new(200, 10, 2) # speed, hp, damage
+	stat = Stat.new(200, 10, 1) # speed, hp, damage
 	$cooldown.start()
 	
 func _physics_process(_delta):
@@ -92,4 +92,4 @@ func _on_animated_sprite_2d_animation_changed() -> void:
 
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.apply_knockback(global_position, 1000.0, 0.5)
+		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
