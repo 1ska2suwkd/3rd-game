@@ -12,6 +12,8 @@ var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 var dash_speed = 400
 
+var _dead_handled := false
+
 @onready var anim = $AnimatedSprite2D.animation
 @onready var frame = $AnimatedSprite2D.frame
 
@@ -20,6 +22,8 @@ func _ready():
 	$cooldown.start()
 	
 func _physics_process(_delta):
+	if stat.dead: return
+	
 	if is_dash:
 		_dash_t += _delta
 		velocity = dash_dir * dash_speed
@@ -39,12 +43,12 @@ func _physics_process(_delta):
 		$AnimatedSprite2D.play("idle")
 
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("Player_attack"):
+	if area.is_in_group("Player_attack") and not stat.dead:
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 		playerstat = PlayerStat.new()
 		stat.take_damage(playerstat.damage)
 		if stat.dead:
-			queue_free()# Replace with function body.
+			die()
 
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("Player_attack"):
@@ -61,7 +65,7 @@ func _on_detection_area_body_exited(body):
 		player_chase = false
 
 func _on_cooldown_timeout():
-	if not is_attack:
+	if not is_attack and not stat.dead:
 		is_attack = true
 		$AnimatedSprite2D.play("windup")
 		dash_dir = (player.global_position - global_position).normalized()
@@ -74,10 +78,14 @@ func _on_windup_timeout():
 
 func play_n_times(anim_name: String, n: int) -> void:
 	for i in range(n):
+		if stat.dead:  
+			return
 		$AnimatedSprite2D.play(anim_name)
 		await $AnimatedSprite2D.animation_finished
 	is_dash = false
 	for i in range(n):
+		if stat.dead:  
+			return
 		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("recover")
 		await $AnimatedSprite2D.animation_finished
@@ -93,3 +101,31 @@ func _on_animated_sprite_2d_animation_changed() -> void:
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+
+func die():
+	if _dead_handled: return
+	_dead_handled = true
+	
+	stat.dead = true
+	is_attack = false
+	is_dash = false
+	player_chase = false
+	velocity = Vector2.ZERO
+	
+	$cooldown.stop()
+	$windup.stop()
+	
+	$hitbox/hitbox.disabled = true
+	$hitbox.monitoring = false
+	$detection_area.monitoring = false
+	$detection_area/CollisionShape2D.disabled = true
+	$attack_area.monitoring = false
+	$attack_area/CollisionShape2D.disabled = true
+	$Attack_hitbox.monitoring = false
+	$Attack_hitbox/attack_hitbox.disabled = true
+	
+	# 애니메이션 고정
+	$AnimatedSprite2D.play("dead")
+
+	# 이후 동작 안 하게
+	set_physics_process(false)
