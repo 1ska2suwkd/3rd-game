@@ -138,7 +138,7 @@ func _on_animated_sprite_2d_frame_changed():
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
 
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, damage: int = 1) -> void:
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, p_damage: int = 1) -> void:
 	if stat.dead: return
 	
 	var dir := (global_position - from).normalized()
@@ -146,7 +146,7 @@ func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0
 	knockback_time = duration
 	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	$HitFlashTimer.start()
-	stat.take_damage(damage)
+	stat.take_damage(p_damage)
 	update_heart_display()
 	if stat.dead:
 		dead()

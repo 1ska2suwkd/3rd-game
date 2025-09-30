@@ -8,18 +8,18 @@ var hp: int
 var damage: int
 var dead = false
 
-func _init(speed:int, hp:int, damage:int):
-	self.speed = speed
-	self.hp = hp
-	self.damage = damage
+func _init(p_speed:int, p_hp:int, p_damage:int):
+	self.speed = p_speed
+	self.hp = p_hp
+	self.damage = p_damage
 	
-func take_damage(damage:int):
-	hp -= damage
-	if hp <= 0:
+func take_damage(p_damage:int):
+	self.hp -= p_damage
+	if self.hp <= 0:
 		dead = true # 사망하면 true 반환
 
 func update_speed(new_speed: int):
-	speed = new_speed
+	self.speed = new_speed
 
 func update_damage(new_damage: int):
-	damage = new_damage
+	self.damage = new_damage

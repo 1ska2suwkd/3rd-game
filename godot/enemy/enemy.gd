@@ -18,7 +18,7 @@ var _dead_handled := false
 @onready var frame = $AnimatedSprite2D.frame
 
 func _ready():
-	stat = Stat.new(200, 10, 1) # speed, hp, damage
+	stat = Stat.new(300, 10, 1) # speed, hp, damage
 	$cooldown.start()
 	
 func _physics_process(_delta):
@@ -28,19 +28,17 @@ func _physics_process(_delta):
 		_dash_t += _delta
 		velocity = dash_dir * dash_speed
 		move_and_slide()
-	else:
+	elif not is_attack:
 		var dir := Vector2.ZERO
 		if player_chase and player and not is_attack:
 			dir = (player.global_position - global_position).normalized()
 		velocity = dir * stat.speed
 		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
-	if velocity.length() > 1.0 :
-		if not is_dash:
+		if velocity.length() > 1.0 :
 			$AnimatedSprite2D.play("walk")
-		$AnimatedSprite2D.flip_h = velocity.x < 0
-	elif not is_attack:
-		$AnimatedSprite2D.play("idle")
+			if abs(velocity.x) > 1.0: # 임계점 설정
+				$AnimatedSprite2D.flip_h = velocity.x < 0
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not stat.dead:
@@ -96,7 +94,7 @@ func _on_animated_sprite_2d_animation_changed() -> void:
 	if $AnimatedSprite2D.animation == "attack":
 		$Attack_hitbox/attack_hitbox.disabled = false
 	else:
-		$Attack_hitbox/attack_hitbox.disabled = true
+		$Attack_hitbox/attack_hitbox.set_deferred("disabled", true)
 
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -115,17 +113,4 @@ func die():
 	$cooldown.stop()
 	$windup.stop()
 	
-	$hitbox/hitbox.disabled = true
-	$hitbox.monitoring = false
-	$detection_area.monitoring = false
-	$detection_area/CollisionShape2D.disabled = true
-	$attack_area.monitoring = false
-	$attack_area/CollisionShape2D.disabled = true
-	$Attack_hitbox.monitoring = false
-	$Attack_hitbox/attack_hitbox.disabled = true
-	
-	# 애니메이션 고정
 	$AnimatedSprite2D.play("dead")
-
-	# 이후 동작 안 하게
-	set_physics_process(false)
