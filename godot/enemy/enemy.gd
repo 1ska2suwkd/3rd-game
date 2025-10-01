@@ -4,24 +4,23 @@ var stat: Stat
 var playerstat : PlayerStat
 
 var player_chase = false
-var player = null
-
 var is_attack = false
 var is_dash = false
 var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 var dash_speed = 400
-
 var _dead_handled := false
 
+@export var player: Node2D
+
 @onready var anim = $AnimatedSprite2D.animation
-@onready var frame = $AnimatedSprite2D.frame
+@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _ready():
 	stat = Stat.new(300, 10, 1) # speed, hp, damage
 	$cooldown.start()
 	
-func _physics_process(_delta):
+func _physics_process(_delta: float) -> void:
 	if stat.dead: return
 	
 	if is_dash:
@@ -29,16 +28,23 @@ func _physics_process(_delta):
 		velocity = dash_dir * dash_speed
 		move_and_slide()
 	elif not is_attack:
-		var dir := Vector2.ZERO
+		var dir = to_local(nav_agent.get_next_path_position()).normalized()
 		if player_chase and player and not is_attack:
-			dir = (player.global_position - global_position).normalized()
-		velocity = dir * stat.speed
+			velocity = dir * stat.speed
 		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
 		if velocity.length() > 1.0 :
 			$AnimatedSprite2D.play("walk")
 			if abs(velocity.x) > 1.0: # 임계점 설정
 				$AnimatedSprite2D.flip_h = velocity.x < 0
+		else:
+			$AnimatedSprite2D.play("idle")
+
+func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
+	nav_agent.target_position = player.global_position
+
+func _on_pathfinding_timeout() -> void:
+	makepath()
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not stat.dead:
@@ -99,6 +105,10 @@ func _on_animated_sprite_2d_animation_changed() -> void:
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+		
+func _on_contact_damage_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and not is_attack:
+		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
 
 func die():
 	if _dead_handled: return
