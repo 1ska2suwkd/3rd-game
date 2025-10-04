@@ -15,10 +15,12 @@ var _dead_handled := false
 
 @onready var anim = $AnimatedSprite2D.animation
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+@onready var healthbar = $CanvasLayer/Healthbar
 
 func _ready():
 	stat = Stat.new(300, 10, 1) # speed, hp, damage
 	$cooldown.start()
+	healthbar.init_health(stat.hp)
 	
 func _physics_process(_delta: float) -> void:
 	if stat.dead: return
@@ -51,6 +53,7 @@ func _on_area_2d_area_entered(area):
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 		playerstat = PlayerStat.new()
 		stat.take_damage(playerstat.damage)
+		healthbar.health = stat.hp
 		if stat.dead:
 			die()
 
@@ -109,6 +112,8 @@ func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 func _on_contact_damage_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not is_attack:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
+		
+	
 
 func die():
 	if _dead_handled: return

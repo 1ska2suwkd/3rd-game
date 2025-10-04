@@ -604,9 +604,7 @@ script = ExtResource("1_onrkg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"dead"
-frame = 13
-frame_progress = 1.0
+animation = &"idle"
 offset = Vector2(0, -20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -654,24 +652,18 @@ custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
 [node name="heart" parent="heart_bar/HBoxContainer/Heart" instance=ExtResource("4_yw30f")]
-frame = 0
-frame_progress = 0.0
 
 [node name="Heart2" type="TextureRect" parent="heart_bar/HBoxContainer"]
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
 [node name="heart" parent="heart_bar/HBoxContainer/Heart2" instance=ExtResource("4_yw30f")]
-frame = 0
-frame_progress = 0.0
 
 [node name="Heart3" type="TextureRect" parent="heart_bar/HBoxContainer"]
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
 [node name="heart" parent="heart_bar/HBoxContainer/Heart3" instance=ExtResource("4_yw30f")]
-frame = 0
-frame_progress = 0.0
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
