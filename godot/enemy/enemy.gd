@@ -15,10 +15,10 @@ var _dead_handled := false
 
 @onready var anim = $AnimatedSprite2D.animation
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
-@onready var healthbar = $CanvasLayer/Healthbar
+@onready var healthbar = $Buta/Healthbar
 
 func _ready():
-	stat = Stat.new(300, 10, 1) # speed, hp, damage
+	stat = Stat.new(300, 50, 1) # speed, hp, damage
 	$cooldown.start()
 	healthbar.init_health(stat.hp)
 	

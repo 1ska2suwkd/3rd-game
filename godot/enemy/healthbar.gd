@@ -2,8 +2,13 @@ extends ProgressBar
 
 @onready var timer = $Timer
 @onready var damage_bar = $DamageBar
+@onready var label = $Label
 
 var health = 0 : set = _set_health
+
+func _ready() -> void:
+	var parent_node = get_parent()
+	label.text = parent_node.get_name()
 
 func _set_health(new_health):
 	var prev_health = health
@@ -12,6 +17,8 @@ func _set_health(new_health):
 	
 	if health <= 0:
 		queue_free()
+		label.queue_free()
+		
 
 	if health < prev_health:
 		timer.start()

@@ -33,7 +33,6 @@ func _ready():
 	var hearts_parent = $heart_bar/HBoxContainer
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
-	print(hearts_list)
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
 func _process(_delta):
@@ -158,6 +157,10 @@ func dead():
 	$AnimatedSprite2D.play("dead")
 
 func update_heart_display():
-	#hearts_list[stat.hp - 1].get_child(stat.hp - 1).play("heart_loss")
-	for i in range(hearts_list.size()):
-		hearts_list[i].visible = i < stat.hp
+	var target_hp = max(stat.hp, 0) # 인덱스 언더플로우 방지
+	
+	while hearts_list.size() > target_hp:
+		var heart = hearts_list[-1].get_node("heart")
+		if heart.animation != "heart_loss":
+			heart.play("heart_loss")
+		hearts_list.pop_back()
