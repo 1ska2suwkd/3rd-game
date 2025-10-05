@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgh2cpd6snbu7"]
+
+[ext_resource type="Texture2D" uid="uid://boifh0e3rq8cr" path="res://assets/Image/UI/Banners/Carved_9Slides.png" id="1_fyqef"]
+[ext_resource type="Texture2D" uid="uid://ilaqimmd4up0" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_27fn8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nltto"]
+texture = ExtResource("3_27fn8")
+
+[sub_resource type="Theme" id="Theme_m6e0p"]
+Button/styles/focus = SubResource("StyleBoxTexture_nltto")
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="menu" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fyqef")
+patch_margin_left = 29
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New Game" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m6e0p")
+text = "New Game"
+flat = true
+icon_alignment = 1
+
+[node name="Continue" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m6e0p")
+text = "Continue"
+flat = true
+icon_alignment = 1
+
+[node name="Exit" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m6e0p")
+text = "Exit"
+flat = true
+icon_alignment = 1
