@@ -28,6 +28,7 @@ var hearts_list : Array[TextureRect]
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
+
 func _ready():
 	stat = PlayerStat.new() 
 	var hearts_parent = $heart_bar/HBoxContainer

@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=4 uid="uid://3ifj8lh5foid"]
+[gd_scene load_steps=40 format=4 uid="uid://3ifj8lh5foid"]
 
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="1_axinb"]
+[ext_resource type="Script" uid="uid://btq443e0aw3a0" path="res://Dungeon/dungeon.gd" id="1_sj2ks"]
 [ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/Image/Dungeon/decorative_cracks_floor.png" id="2_y5wl5"]
 [ext_resource type="Texture2D" uid="uid://bx473x3dv8nce" path="res://assets/Image/Dungeon/water_detilazation_v2.png" id="3_ubgug"]
 [ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="4_sj2ks"]
@@ -4770,7 +4771,14 @@ texture = ExtResource("6_kfmqm")
 sources/0 = SubResource("TileSetAtlasSource_dgg64")
 sources/1 = SubResource("TileSetAtlasSource_i83dt")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubgug"]
+size = Vector2(71, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj2ks"]
+size = Vector2(71, 87)
+
 [node name="Dungeon" type="Node2D"]
+script = ExtResource("1_sj2ks")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -4796,3 +4804,34 @@ tile_set = SubResource("TileSet_sj2ks")
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAADAPn/AAAAAAAAAAADAAYAAAAAAAAAACAMAAIAAAAAAAAAAFDz//z/AAAAAAAAAED8//n/AAAAAAAAAAAMAPz/AAAAAAAAAFD8/wYAAAAAAAAAACDz/wIAAAAAAAAAAEA=")
 tile_set = SubResource("TileSet_8bn0n")
+
+[node name="North_Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="North_Door"]
+position = Vector2(0, -396)
+shape = SubResource("RectangleShape2D_ubgug")
+
+[node name="South_Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="South_Door"]
+position = Vector2(0, 415)
+shape = SubResource("RectangleShape2D_ubgug")
+
+[node name="East_Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="East_Door"]
+position = Vector2(753, -19)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_sj2ks")
+
+[node name="West_Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="West_Door"]
+position = Vector2(-758, -19)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_sj2ks")
+
+[connection signal="body_entered" from="North_Door" to="." method="_on_north_door_body_entered"]
+[connection signal="body_entered" from="South_Door" to="." method="_on_south_door_body_entered"]
+[connection signal="body_entered" from="East_Door" to="." method="_on_east_door_body_entered"]
+[connection signal="body_entered" from="West_Door" to="." method="_on_west_door_body_entered"]
