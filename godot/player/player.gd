@@ -1,7 +1,8 @@
 # player.gd
 extends CharacterBody2D
 
-var stat: PlayerStat
+var dead = false
+
 var attacking := false
 # 공격하면서 이동 시 이동속도 감소
 var slow = 1
@@ -19,10 +20,9 @@ var knockback_time := 0.0
 
 var hearts_list : Array[TextureRect]
 
-@export var speed := DEFAULT_SPEED
-@export var damage := DEFAULT_DAMAGE
-@export var attack_speed := DEFAULT_ATTACK_SPEED
-
+@onready var speed = PlayerStat.speed
+@onready var damage = PlayerStat.damage
+@onready var attack_speed = PlayerStat.attack_speed
 @onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
 @onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
@@ -30,26 +30,25 @@ var hearts_list : Array[TextureRect]
 
 
 func _ready():
-	stat = PlayerStat.new() 
 	var hearts_parent = $heart_bar/HBoxContainer
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
 func _process(_delta):
-	if(speed != DEFAULT_SPEED):
-		stat.update_speed(speed)
-	if(damage != DEFAULT_DAMAGE):
-		stat.update_damage(damage)
-	if(attack_speed != DEFAULT_ATTACK_SPEED):
-		stat.update_attack_speed(attack_speed)
+	if(attack_speed != PlayerStat.attack_speed):
 		if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
-			$AnimatedSprite2D.speed_scale = DEFAULT_ATTACK_SPEED
-		else:
 			$AnimatedSprite2D.speed_scale = attack_speed
+		else:
+			$AnimatedSprite2D.speed_scale = PlayerStat.attack_speed
+			
+func take_damage(p_damage:int):
+	self.hp -= p_damage
+	if self.hp <= 0:
+		dead = true # 사망하면 true 반환
 	
 func _physics_process(_delta):
-	if stat.dead: return
+	if dead: return
 	
 	if knockback_time > 0.0:
 		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
@@ -71,7 +70,7 @@ func _physics_process(_delta):
 			slow = 0.7
 		# 방향 벡터 정규화 후 속도 적용
 		if dir != Vector2.ZERO:
-			velocity = dir.normalized() * stat.speed * slow
+			velocity = dir.normalized() * PlayerStat.speed * slow
 			if not attacking:
 				$AnimatedSprite2D.play("walk")
 				if velocity.x < 0:
@@ -139,26 +138,26 @@ func _on_animated_sprite_2d_frame_changed():
 			$AttackCollision/RightAttack.disabled = true
 
 func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, p_damage: int = 1) -> void:
-	if stat.dead: return
+	if dead: return
 	
 	var dir := (global_position - from).normalized()
 	knockback_vel = dir * strength
 	knockback_time = duration
 	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	$HitFlashTimer.start()
-	stat.take_damage(p_damage)
+	take_damage(p_damage)
 	update_heart_display()
-	if stat.dead:
-		dead()
+	if dead:
+		is_dead()
 
 func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	
-func dead():
+func is_dead():
 	$AnimatedSprite2D.play("dead")
 
 func update_heart_display():
-	var target_hp = max(stat.hp, 0) # 인덱스 언더플로우 방지
+	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
 	
 	while hearts_list.size() > target_hp:
 		var heart = hearts_list[-1].get_node("heart")

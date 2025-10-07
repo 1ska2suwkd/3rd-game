@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=4 uid="uid://di1cg30e8i3jn"]
 
-[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/Image/Dungeon/walls_floor.png" id="1_d2uyg"]
-[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_7nydw"]
-[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/Image/Dungeon/decorative_cracks_floor.png" id="3_ihc62"]
-[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="4_6a0v0"]
-[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="5_8x4hd"]
-[ext_resource type="PackedScene" uid="uid://pm5gdcak0xg8" path="res://enemy/enemy.tscn" id="6_ic80l"]
+[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/assets/Image/Dungeon/walls_floor.png" id="1_xkj2b"]
+[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_v5c3d"]
+[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/assets/Image/Dungeon/decorative_cracks_floor.png" id="3_7a5kw"]
+[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/assets/Image/Dungeon/decorative_cracks_walls.png" id="4_ktghn"]
+[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="5_tbde7"]
+[ext_resource type="PackedScene" uid="uid://pm5gdcak0xg8" path="res://enemy/Boss/Buta.tscn" id="6_q4ajs"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_igk3i"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -32,7 +32,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8
 agent_radius = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mbj2"]
-texture = ExtResource("1_d2uyg")
+texture = ExtResource("1_xkj2b")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -342,7 +342,7 @@ texture = ExtResource("1_d2uyg")
 12:22/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_6h3ij")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dqayi"]
-texture = ExtResource("2_7nydw")
+texture = ExtResource("2_v5c3d")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -681,7 +681,7 @@ texture = ExtResource("2_7nydw")
 15:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dgn0p"]
-texture = ExtResource("3_ihc62")
+texture = ExtResource("3_7a5kw")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -868,7 +868,7 @@ texture = ExtResource("3_ihc62")
 7:14/0/z_index = -1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vdva"]
-texture = ExtResource("4_6a0v0")
+texture = ExtResource("4_ktghn")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1135,7 +1135,7 @@ sources/4 = SubResource("TileSetAtlasSource_dgn0p")
 sources/5 = SubResource("TileSetAtlasSource_1vdva")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_igk3i"]
-texture = ExtResource("1_d2uyg")
+texture = ExtResource("1_xkj2b")
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -1425,10 +1425,10 @@ tile_set = SubResource("TileSet_p832w")
 [node name="Ysort" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="player" parent="Ysort" instance=ExtResource("5_8x4hd")]
+[node name="player" parent="Ysort" instance=ExtResource("5_tbde7")]
 position = Vector2(11, 558)
 
-[node name="enemy" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_ic80l")]
+[node name="enemy" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_q4ajs")]
 position = Vector2(-6, -2)
 player = NodePath("../player")
 

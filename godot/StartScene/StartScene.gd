@@ -6,7 +6,7 @@ func _process(_delta):
 func change_scene():
 	if global.transition_scene == true:
 		if global.current_scene == "StartScene" and Input.is_action_just_pressed("Interaction"):
-			get_tree().change_scene_to_file("res://Dungeon/Dungeon.tscn")
+			get_tree().change_scene_to_file("res://Dungeon/Room/Room0.tscn")
 			global.finish_change_scenes()
  
 func _on_area_2d_body_entered(body):

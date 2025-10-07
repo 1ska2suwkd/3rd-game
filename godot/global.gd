@@ -6,14 +6,15 @@ var transition_scene = false
 func _ready():
 	randomize()
 
+func get_random_dungeon_scene() -> String:
+	var num = randi_range(1, 2)
+	current_scene = "Room" + str(num)
+	return "res://Dungeon/Room/Room" + str(num) + ".tscn"
+
 func finish_change_scenes():
 	if transition_scene == true:
 		transition_scene = false
 		
-		if current_scene == "StartScene":
-			current_scene = "Dungeon"
-		else:
-			var num = randi_range(1, 5)
-			#current_scene = "Dungeon" + num
-			current_scene = "StartScene"
-			
+		match current_scene:
+			"StartScene":
+				current_scene = "Room0"
