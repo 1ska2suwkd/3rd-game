@@ -1,19 +1,19 @@
 [gd_scene load_steps=40 format=4 uid="uid://3ifj8lh5foid"]
 
-[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="1_axinb"]
-[ext_resource type="Script" uid="uid://btq443e0aw3a0" path="res://Dungeon/dungeon.gd" id="1_sj2ks"]
-[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/Image/Dungeon/decorative_cracks_floor.png" id="2_y5wl5"]
-[ext_resource type="Texture2D" uid="uid://bx473x3dv8nce" path="res://assets/Image/Dungeon/water_detilazation_v2.png" id="3_ubgug"]
-[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="4_sj2ks"]
-[ext_resource type="Texture2D" uid="uid://bssx4b33d2oai" path="res://assets/Image/Dungeon/doors_lever_chest_animation.png" id="5_2ghk0"]
-[ext_resource type="Texture2D" uid="uid://b5cd03fgua417" path="res://assets/Image/Dungeon/fire_animation2.png" id="6_kfmqm"]
-[ext_resource type="Texture2D" uid="uid://cpqj4jik848j2" path="res://assets/Image/Dungeon/fire_animation.png" id="7_01q05"]
-[ext_resource type="Texture2D" uid="uid://be0a4yhrakqrv" path="res://assets/Image/Dungeon/Objects.png" id="8_dgg64"]
-[ext_resource type="Texture2D" uid="uid://cc2g7qqggms8n" path="res://assets/Image/Dungeon/trap_animation.png" id="9_i83dt"]
-[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/Image/Dungeon/walls_floor.png" id="10_8bn0n"]
-[ext_resource type="Texture2D" uid="uid://b8foafr5msqyn" path="res://assets/Image/Dungeon/Water_coasts_animation.png" id="11_f0g37"]
+[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="1_axinb"]
+[ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Dungeon/Room.gd" id="1_sj2ks"]
+[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/assets/Image/Dungeon/decorative_cracks_floor.png" id="2_y5wl5"]
+[ext_resource type="Texture2D" uid="uid://bx473x3dv8nce" path="res://assets/assets/Image/Dungeon/water_detilazation_v2.png" id="3_ubgug"]
+[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/assets/Image/Dungeon/decorative_cracks_walls.png" id="4_sj2ks"]
+[ext_resource type="Texture2D" uid="uid://bssx4b33d2oai" path="res://assets/assets/Image/Dungeon/doors_lever_chest_animation.png" id="5_2ghk0"]
+[ext_resource type="Texture2D" uid="uid://b5cd03fgua417" path="res://assets/assets/Image/Dungeon/fire_animation2.png" id="6_kfmqm"]
+[ext_resource type="Texture2D" uid="uid://cpqj4jik848j2" path="res://assets/assets/Image/Dungeon/fire_animation.png" id="7_01q05"]
+[ext_resource type="Texture2D" uid="uid://be0a4yhrakqrv" path="res://assets/assets/Image/Dungeon/Objects.png" id="8_dgg64"]
+[ext_resource type="Texture2D" uid="uid://cc2g7qqggms8n" path="res://assets/assets/Image/Dungeon/trap_animation.png" id="9_i83dt"]
+[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/assets/Image/Dungeon/walls_floor.png" id="10_8bn0n"]
+[ext_resource type="Texture2D" uid="uid://b8foafr5msqyn" path="res://assets/assets/Image/Dungeon/Water_coasts_animation.png" id="11_f0g37"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="12_y5wl5"]
-[ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="13_ubgug"]
+[ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/assets/Image/Deco/scarecrow.png" id="13_ubgug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("1_axinb")
@@ -4805,33 +4805,28 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAADAPn/AAAAAAAAAAADAAYAAAAAAAAAACAMAAIAAAAAAAAAAFDz//z/AAAAAAAAAED8//n/AAAAAAAAAAAMAPz/AAAAAAAAAFD8/wYAAAAAAAAAACDz/wIAAAAAAAAAAEA=")
 tile_set = SubResource("TileSet_8bn0n")
 
-[node name="North_Door" type="Area2D" parent="."]
+[node name="NorthDoor" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="North_Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthDoor"]
 position = Vector2(0, -396)
 shape = SubResource("RectangleShape2D_ubgug")
 
-[node name="South_Door" type="Area2D" parent="."]
+[node name="SouthDoor" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="South_Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthDoor"]
 position = Vector2(0, 415)
 shape = SubResource("RectangleShape2D_ubgug")
 
-[node name="East_Door" type="Area2D" parent="."]
+[node name="EastDoor" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="East_Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EastDoor"]
 position = Vector2(753, -19)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_sj2ks")
 
-[node name="West_Door" type="Area2D" parent="."]
+[node name="WestDoor" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="West_Door"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WestDoor"]
 position = Vector2(-758, -19)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_sj2ks")
-
-[connection signal="body_entered" from="North_Door" to="." method="_on_north_door_body_entered"]
-[connection signal="body_entered" from="South_Door" to="." method="_on_south_door_body_entered"]
-[connection signal="body_entered" from="East_Door" to="." method="_on_east_door_body_entered"]
-[connection signal="body_entered" from="West_Door" to="." method="_on_west_door_body_entered"]
