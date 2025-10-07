@@ -11,7 +11,6 @@ func _init(p_speed:int, p_hp:int, p_damage:int):
 	self.speed = p_speed
 	self.hp = p_hp
 	self.damage = p_damage
-	
 
 
 func update_speed(new_speed: int):

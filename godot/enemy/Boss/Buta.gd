@@ -2,15 +2,14 @@
 extends CharacterBody2D
 
 var stat: Stat
-var playerstat : PlayerStat
 
+var dead = false
 var player_chase = false
 var is_attack = false
 var is_dash = false
 var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 var dash_speed = 500
-var _dead_handled := false
 
 @export var player: Node2D
 
@@ -24,7 +23,7 @@ func _ready():
 	healthbar.init_health(stat.hp)
 	
 func _physics_process(_delta: float) -> void:
-	if stat.dead: return
+	if dead: return
 	
 	if is_dash:
 		_dash_t += _delta
@@ -32,7 +31,7 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 	elif not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()
-		if player_chase and player and not is_attack:
+		if player_chase and player:
 			velocity = dir * stat.speed
 		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
@@ -43,6 +42,11 @@ func _physics_process(_delta: float) -> void:
 		else:
 			$AnimatedSprite2D.play("idle")
 
+func take_damage(p_damage:int):
+	stat.hp -= p_damage
+	if stat.hp <= 0:
+		die()
+
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
 	nav_agent.target_position = player.global_position
 
@@ -50,13 +54,10 @@ func _on_pathfinding_timeout() -> void:
 	makepath()
 
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("Player_attack") and not stat.dead:
+	if area.is_in_group("Player_attack") and not dead:
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
-		playerstat = PlayerStat.new()
-		stat.take_damage(playerstat.damage)
+		take_damage(PlayerStat.damage)
 		healthbar.health = stat.hp
-		if stat.dead:
-			die()
 
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("Player_attack"):
@@ -73,7 +74,7 @@ func _on_detection_area_body_exited(body):
 		player_chase = false
 
 func _on_cooldown_timeout():
-	if not is_attack and not stat.dead:
+	if not is_attack and not dead:
 		is_attack = true
 		$AnimatedSprite2D.play("windup")
 		dash_dir = (player.global_position - global_position).normalized()
@@ -86,13 +87,13 @@ func _on_windup_timeout():
 
 func play_n_times(anim_name: String, n: int) -> void:
 	for i in range(n):
-		if stat.dead:  
+		if dead:  
 			return
 		$AnimatedSprite2D.play(anim_name)
 		await $AnimatedSprite2D.animation_finished
 	is_dash = false
 	for i in range(n):
-		if stat.dead:  
+		if dead:  
 			return
 		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("recover")
@@ -111,16 +112,14 @@ func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
 		
 func _on_contact_damage_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and not is_attack:
+	if body.is_in_group("player") and not is_attack and not dead:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
-		
 	
 
 func die():
-	if _dead_handled: return
-	_dead_handled = true
+	if dead: return
 	
-	stat.dead = true
+	dead = true
 	is_attack = false
 	is_dash = false
 	player_chase = false

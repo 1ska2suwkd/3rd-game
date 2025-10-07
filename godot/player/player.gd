@@ -20,9 +20,6 @@ var knockback_time := 0.0
 
 var hearts_list : Array[TextureRect]
 
-@onready var speed = PlayerStat.speed
-@onready var damage = PlayerStat.damage
-@onready var attack_speed = PlayerStat.attack_speed
 @onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
 @onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
@@ -36,15 +33,14 @@ func _ready():
 	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
 
 func _process(_delta):
-	if(attack_speed != PlayerStat.attack_speed):
-		if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
-			$AnimatedSprite2D.speed_scale = attack_speed
-		else:
-			$AnimatedSprite2D.speed_scale = PlayerStat.attack_speed
+	if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
+		$AnimatedSprite2D.speed_scale = 1.0
+	else:
+		$AnimatedSprite2D.speed_scale = PlayerStat.attack_speed
 			
 func take_damage(p_damage:int):
-	self.hp -= p_damage
-	if self.hp <= 0:
+	PlayerStat.hp -= p_damage
+	if PlayerStat.hp <= 0:
 		dead = true # 사망하면 true 반환
 	
 func _physics_process(_delta):

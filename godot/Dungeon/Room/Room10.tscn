@@ -1428,7 +1428,7 @@ y_sort_enabled = true
 [node name="player" parent="Ysort" instance=ExtResource("5_tbde7")]
 position = Vector2(11, 558)
 
-[node name="enemy" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_q4ajs")]
+[node name="Buta" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_q4ajs")]
 position = Vector2(-6, -2)
 player = NodePath("../player")
 

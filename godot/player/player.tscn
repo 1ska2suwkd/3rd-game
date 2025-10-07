@@ -1,8 +1,8 @@
 [gd_scene load_steps=84 format=3 uid="uid://2khegxjt2sge"]
 
-[ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
