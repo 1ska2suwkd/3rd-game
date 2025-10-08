@@ -7,6 +7,8 @@ var stat: Stat = null
 var dead: bool = false
 var player_chase: bool = false
 var is_attack: bool = false
+var knockback_vel: Vector2 = Vector2.ZERO
+var knockback_time := 0.0 
 
 @export var player: Node2D
 
@@ -24,11 +26,15 @@ func init_stat(p_speed: int = 350, p_hp: int = 4, p_damage: int = 1):
 func _physics_process(_delta: float) -> void:
 	if dead: return
 	
-	if not is_attack:
+	if knockback_time > 0.0:
+		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
+		velocity = knockback_vel
+		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 3000.0 * _delta)  # 감속량 조절
+		knockback_time -= _delta
+	elif not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()
 		if player_chase and player:
 			velocity = dir * stat.speed
-		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
 		if velocity.length() > 1.0 :
 			$AnimatedSprite2D.play("walk")
@@ -36,9 +42,22 @@ func _physics_process(_delta: float) -> void:
 				$AnimatedSprite2D.flip_h = velocity.x < 0
 		else:
 			$AnimatedSprite2D.play("idle")
+			
+	move_and_slide()
+			
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
+	if dead: return
+	
+	var dir := (global_position - from).normalized()
+	knockback_vel = dir * strength
+	knockback_time = duration
+	
 
-func take_damage(p_damage:int):
+func take_damage(p_damage:int, from: Vector2):
+	apply_knockback(from, 500.0, 0.15)
+	
 	stat.hp -= p_damage
+	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	if stat.hp <= 0:
 		die()
 		
@@ -54,8 +73,7 @@ func _on_pathfinding_timeout() -> void:
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
-		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
-		take_damage(PlayerStat.damage)
+		take_damage(PlayerStat.damage, player.global_position)
 
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("Player_attack"):
@@ -91,4 +109,4 @@ func die():
 	velocity = Vector2.ZERO
 	
 	
-	$AnimatedSprite2D.play("dead")
+	queue_free()

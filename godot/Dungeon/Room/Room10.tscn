@@ -1,9 +1,9 @@
 [gd_scene load_steps=18 format=4 uid="uid://di1cg30e8i3jn"]
 
-[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/assets/Image/Dungeon/walls_floor.png" id="1_xkj2b"]
-[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_v5c3d"]
-[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/assets/Image/Dungeon/decorative_cracks_floor.png" id="3_7a5kw"]
-[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/assets/Image/Dungeon/decorative_cracks_walls.png" id="4_ktghn"]
+[ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/Image/Dungeon/walls_floor.png" id="1_xkj2b"]
+[ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_v5c3d"]
+[ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/Image/Dungeon/decorative_cracks_floor.png" id="3_7a5kw"]
+[ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="4_ktghn"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="5_tbde7"]
 [ext_resource type="PackedScene" uid="uid://pm5gdcak0xg8" path="res://enemy/Boss/Buta.tscn" id="6_q4ajs"]
 

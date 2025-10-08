@@ -1,34 +1,38 @@
-[gd_scene load_steps=41 format=3 uid="uid://blustjpt4gi0x"]
+[gd_scene load_steps=42 format=3 uid="uid://blustjpt4gi0x"]
 
 [ext_resource type="Script" uid="uid://btf7cdfrukhdv" path="res://enemy/Skull.gd" id="1_cmnx4"]
-[ext_resource type="Texture2D" uid="uid://lr5w33mcu3xp" path="res://assets/assets/enemy/Troll/Troll_Attack.png" id="3_8cnfu"]
-[ext_resource type="Texture2D" uid="uid://dpv1hy6ycfd6r" path="res://assets/assets/enemy/Troll/Troll_Dead.png" id="4_6v2it"]
-[ext_resource type="Texture2D" uid="uid://vqyxgcgjlscj" path="res://assets/assets/enemy/Skull/Skull_Idle.png" id="4_spqrb"]
-[ext_resource type="Texture2D" uid="uid://dp1oy4mrcv1m" path="res://assets/assets/enemy/Skull/Skull_Run.png" id="5_i0h1j"]
+[ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_spqrb"]
+[ext_resource type="Texture2D" uid="uid://dpv1hy6ycfd6r" path="res://assets/enemy/Troll/Troll_Dead.png" id="4_6v2it"]
+[ext_resource type="Texture2D" uid="uid://vqyxgcgjlscj" path="res://assets/enemy/Skull/Skull_Idle.png" id="4_spqrb"]
+[ext_resource type="Texture2D" uid="uid://dp1oy4mrcv1m" path="res://assets/enemy/Skull/Skull_Run.png" id="5_i0h1j"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbw0t"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(0, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0h1j"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wjonb"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(384, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ei3c"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rovcg"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(768, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijigk"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n2hyd"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(1152, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4w8w"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6eq3"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(1536, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ow66"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(768, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_34gv7"]
-atlas = ExtResource("3_8cnfu")
-region = Rect2(1920, 0, 384, 384)
+[sub_resource type="AtlasTexture" id="AtlasTexture_08nch"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikd8g"]
+atlas = ExtResource("2_spqrb")
+region = Rect2(1152, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_730sd"]
 atlas = ExtResource("4_6v2it")
@@ -130,22 +134,25 @@ region = Rect2(960, 0, 192, 192)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tbw0t")
+"texture": SubResource("AtlasTexture_i0h1j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wjonb")
+"texture": SubResource("AtlasTexture_5ei3c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rovcg")
+"texture": SubResource("AtlasTexture_ijigk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n2hyd")
+"texture": SubResource("AtlasTexture_h4w8w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c6eq3")
+"texture": SubResource("AtlasTexture_4ow66")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_34gv7")
+"texture": SubResource("AtlasTexture_08nch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikd8g")
 }],
 "loop": false,
 "name": &"attack",
@@ -274,7 +281,9 @@ wait_time = 0.2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2mvqj")
-animation = &"idle"
+animation = &"attack"
+frame = 6
+frame_progress = 1.0
 offset = Vector2(0, -15)
 
 [node name="hitbox" type="Area2D" parent="."]
