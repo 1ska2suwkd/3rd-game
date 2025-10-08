@@ -10,7 +10,24 @@ func _ready() -> void:
 			if not area.is_connected("body_entered", Callable(self, "_on_any_door_body_entered")):
 				area.connect("body_entered", Callable(self, "_on_any_door_body_entered"))
 
+func check_enemies():
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	
+	var alive_enemies = []
+	
+	for i in enemies:
+		if is_instance_valid(i) and i.is_inside_tree() and self.is_ancestor_of(i):
+			alive_enemies.append(i)
+	if alive_enemies.is_empty():
+		_on_all_enemies_cleared()
 
+func _on_all_enemies_cleared():
+	print("모든 적 처치 완료!")
+	$NorthDoor/Door_animation.play("open")
+	$SouthDoor/Door_animation.play("open")
+	$EastDoor/Door_animation.play("open")
+	$WestDoor/Door_animation.play("open")
+	
 func _on_any_door_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		if global.transition_scene: return # 중복 방지

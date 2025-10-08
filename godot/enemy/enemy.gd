@@ -99,6 +99,15 @@ func _on_contact_damage_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not is_attack and not dead:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
 		
+		
+func find_parent_room() -> Node:
+	var current = get_parent()
+	while current:
+		if current is Node2D and current.has_method("check_enemies"):
+			return current
+		current = current.get_parent()
+	return null
+		
 
 func die():
 	if dead: return
@@ -108,5 +117,11 @@ func die():
 	player_chase = false
 	velocity = Vector2.ZERO
 	
+	if is_in_group("enemy"):
+		remove_from_group("enemy") # queue_free는 다음 프레임의 삭제하기 때문에 그룹에서 직접 제거
 	
-	queue_free()
+	var room = find_parent_room()
+	if room:
+		room.call_deferred("check_enemies")
+		
+	queue_free() # 다음 프레임 삭제 예약

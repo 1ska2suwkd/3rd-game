@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://h4qd5xu72aoc" path="res://enemy/Boss/Buta.gd" id="1_ofsxj"]
 [ext_resource type="PackedScene" uid="uid://6m6bj2quuagt" path="res://enemy/Boss/healthbar.tscn" id="2_5ffra"]
-[ext_resource type="Texture2D" uid="uid://brcr1r1p1iiqv" path="res://assets/enemy/Troll/Troll_Idle.png" id="2_ofsxj"]
-[ext_resource type="Texture2D" uid="uid://lr5w33mcu3xp" path="res://assets/enemy/Troll/Troll_Attack.png" id="2_pmsee"]
-[ext_resource type="Texture2D" uid="uid://dpv1hy6ycfd6r" path="res://assets/enemy/Troll/Troll_Dead.png" id="3_y5vj3"]
-[ext_resource type="Texture2D" uid="uid://cplricxb8r1o1" path="res://assets/enemy/Troll/Troll_Recovery.png" id="4_1wwld"]
-[ext_resource type="Texture2D" uid="uid://bgq6fvfc5no0s" path="res://assets/enemy/Troll/Troll_Walk.png" id="5_y5vj3"]
-[ext_resource type="Texture2D" uid="uid://c5bovaxcnlku0" path="res://assets/enemy/Troll/Troll_Windup.png" id="7_5ffra"]
+[ext_resource type="Texture2D" uid="uid://brcr1r1p1iiqv" path="res://assets/assets/enemy/Troll/Troll_Idle.png" id="2_ofsxj"]
+[ext_resource type="Texture2D" uid="uid://lr5w33mcu3xp" path="res://assets/assets/enemy/Troll/Troll_Attack.png" id="2_pmsee"]
+[ext_resource type="Texture2D" uid="uid://dpv1hy6ycfd6r" path="res://assets/assets/enemy/Troll/Troll_Dead.png" id="3_y5vj3"]
+[ext_resource type="Texture2D" uid="uid://cplricxb8r1o1" path="res://assets/assets/enemy/Troll/Troll_Recovery.png" id="4_1wwld"]
+[ext_resource type="Texture2D" uid="uid://bgq6fvfc5no0s" path="res://assets/assets/enemy/Troll/Troll_Walk.png" id="5_y5vj3"]
+[ext_resource type="Texture2D" uid="uid://c5bovaxcnlku0" path="res://assets/assets/enemy/Troll/Troll_Windup.png" id="7_5ffra"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbw0t"]
 atlas = ExtResource("2_pmsee")
@@ -431,7 +431,7 @@ height = 204.0
 radius = 166.0
 height = 500.0
 
-[node name="Buta" type="CharacterBody2D" node_paths=PackedStringArray("player")]
+[node name="Buta" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
 position = Vector2(1, 0)
 collision_mask = 3
 motion_mode = 1
