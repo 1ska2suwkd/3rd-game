@@ -148,6 +148,7 @@ func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	
 func is_dead():
+	dead = true
 	$AnimatedSprite2D.play("dead")
 
 func update_heart_display():

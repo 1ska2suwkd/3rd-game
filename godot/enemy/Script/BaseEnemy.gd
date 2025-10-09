@@ -81,10 +81,6 @@ func _on_detection_area_body_exited(body):
 		player_chase = false
 		
 
-func _on_attack_hitbox_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
-		
 func _on_contact_damage_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not is_attack and not dead:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)

@@ -25,6 +25,7 @@ func attack():
 	var projectile = preload("res://projectlies/Harpoon.tscn").instantiate()
 	projectile.global_position = global_position
 	projectile.target = player
+	projectile.damage = stat.damage
 	get_tree().current_scene.add_child(projectile)
 	
 
