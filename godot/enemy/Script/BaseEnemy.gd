@@ -31,17 +31,7 @@ func _physics_process(_delta: float) -> void:
 		velocity = knockback_vel
 		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 3000.0 * _delta)  # 감속량 조절
 		knockback_time -= _delta
-	elif not is_attack:
-		var dir = to_local(nav_agent.get_next_path_position()).normalized()
-		if player_chase and player:
-			velocity = dir * stat.speed
-		
-		if velocity.length() > 1.0 :
-			$AnimatedSprite2D.play("walk")
-			if abs(velocity.x) > 1.0: # 임계점 설정
-				$AnimatedSprite2D.flip_h = velocity.x < 0
-		else:
-			$AnimatedSprite2D.play("idle")
+
 			
 	move_and_slide()
 			
@@ -124,4 +114,4 @@ func die():
 	if room:
 		room.call_deferred("check_enemies")
 		
-	queue_free() # 다음 프레임 삭제 예약
+	queue_free()

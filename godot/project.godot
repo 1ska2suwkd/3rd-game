@@ -28,6 +28,12 @@ Player_attack="플레이어의 공격"
 player=""
 enemy=""
 
+[importer_defaults]
+
+animation_library={
+&"animation/fps": 120.0
+}
+
 [input]
 
 move_up={

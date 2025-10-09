@@ -41,7 +41,7 @@ func _process(_delta):
 func take_damage(p_damage:int):
 	PlayerStat.hp -= p_damage
 	if PlayerStat.hp <= 0:
-		dead = true # 사망하면 true 반환
+		is_dead()
 	
 func _physics_process(_delta):
 	if dead: return
@@ -143,8 +143,6 @@ func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0
 	$HitFlashTimer.start()
 	take_damage(p_damage)
 	update_heart_display()
-	if dead:
-		is_dead()
 
 func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
