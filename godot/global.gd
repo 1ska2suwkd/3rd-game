@@ -15,6 +15,6 @@ func finish_change_scenes():
 	if transition_scene == true:
 		transition_scene = false
 		
-		match current_scene:
-			"StartScene":
-				current_scene = "Room0"
+		#match current_scene:
+			#"StartScene":
+				#current_scene = "Room0"

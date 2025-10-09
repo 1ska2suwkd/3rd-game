@@ -15,7 +15,7 @@ var dash_speed = 500
 
 @onready var anim = $AnimatedSprite2D.animation
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
-@onready var healthbar = $Buta/Healthbar
+@onready var healthbar = $백성우/Healthbar
 
 func _ready():
 	stat = Stat.new(300, 50, 1) # speed, hp, damage

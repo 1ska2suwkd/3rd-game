@@ -51,9 +51,9 @@ one_shot = true
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 0.5
-offset_top = -26.0
+offset_top = -26.5
 offset_right = 40.5
-offset_bottom = -3.0
+offset_bottom = 3.5
 theme_override_constants/outline_size = 9
 text = "Boss"
 
