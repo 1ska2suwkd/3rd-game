@@ -13,7 +13,6 @@ var knockback_time := 0.0
 @export var player: Node2D
 
 @onready var anim_sprite := $AnimatedSprite2D
-@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _ready() -> void:
 	if not stat:
@@ -52,15 +51,6 @@ func take_damage(p_damage:int, from: Vector2):
 		die()
 		
 
-func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
-	nav_agent.target_position = player.global_position
-
-func _on_start_move_timeout() -> void:
-	$Pathfinding.start()
-
-func _on_pathfinding_timeout() -> void:
-	makepath()
-
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
 		take_damage(PlayerStat.damage, player.global_position)
@@ -82,7 +72,7 @@ func _on_detection_area_body_exited(body):
 		
 
 func _on_contact_damage_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and not is_attack and not dead:
+	if body.is_in_group("player") and not dead:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
 		
 		

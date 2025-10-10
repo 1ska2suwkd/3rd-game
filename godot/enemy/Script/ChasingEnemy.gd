@@ -1,5 +1,7 @@
 extends "res://enemy/Script/BaseEnemy.gd"
 
+@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+
 func _physics_process(_delta: float) -> void:
 	super._physics_process(_delta)
 	
@@ -14,3 +16,12 @@ func _physics_process(_delta: float) -> void:
 				$AnimatedSprite2D.flip_h = velocity.x < 0
 		else:
 			$AnimatedSprite2D.play("idle")
+
+func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
+	nav_agent.target_position = player.global_position
+
+func _on_start_move_timeout() -> void:
+	$Pathfinding.start()
+
+func _on_pathfinding_timeout() -> void:
+	makepath()

@@ -12,7 +12,7 @@ func _physics_process(_delta: float) -> void:
 			# 새 방향 선택 (랜덤)
 			var angle = randf_range(0, PI*2)
 			wander_dir = Vector2(cos(angle), sin(angle)).normalized()
-			wander_timer = randf_range(1.0, 3.0)  # 1~3초마다 방향 바꿈
+			wander_timer = randf_range(1.0, 1.0)  # 1~3초마다 방향 바꿈
 		
 		# 속도 적용
 		velocity = wander_dir * stat.speed

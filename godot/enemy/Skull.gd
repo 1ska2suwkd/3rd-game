@@ -1,4 +1,7 @@
 extends "res://enemy/Script/BaseEnemy.gd"
+# Skull이 BaseEnemy를 쓰는 이유는 공격 히트박스의 scale.x 변경을 위함
+
+@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _physics_process(_delta: float) -> void:
 	super._physics_process(_delta)
@@ -43,3 +46,13 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+
+
+func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
+	nav_agent.target_position = player.global_position
+
+func _on_start_move_timeout() -> void:
+	$Pathfinding.start()
+
+func _on_pathfinding_timeout() -> void:
+	makepath()
