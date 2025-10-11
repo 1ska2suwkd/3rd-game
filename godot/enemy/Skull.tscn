@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://blustjpt4gi0x"]
 
-[ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://enemy/Skull.gd" id="1_spqrb"]
+[ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://enemy/Script/Skull.gd" id="1_spqrb"]
 [ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_spqrb"]
 [ext_resource type="Texture2D" uid="uid://5m5qs26cx031" path="res://assets/Image/Effects/Explosion/Explosions.png" id="3_spqrb"]
 [ext_resource type="Texture2D" uid="uid://vqyxgcgjlscj" path="res://assets/enemy/Skull/Skull_Idle.png" id="4_spqrb"]
@@ -263,7 +263,7 @@ size = Vector2(293.3333, 56.666664)
 [node name="Skull" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(1, 0)
 scale = Vector2(0.6, 0.6)
-collision_mask = 3
+collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_spqrb")

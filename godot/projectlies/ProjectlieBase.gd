@@ -17,6 +17,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and not is_attacked:
+	if body.is_in_group("player"):
 		body.apply_knockback(global_position, 1000.0, 0.1, damage)
-		is_attacked = true
+		queue_free()
+	elif body.is_in_group("Wall"):
+		queue_free()
+	

@@ -27,6 +27,7 @@ mouse_cursor/custom_image="uid://yojvp06umfqn"
 Player_attack="플레이어의 공격"
 player=""
 enemy=""
+Wall=""
 
 [importer_defaults]
 

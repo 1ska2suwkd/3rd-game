@@ -4667,7 +4667,7 @@ texture = ExtResource("14_obo5u")
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, 26, -20, 50, 24, 50, 24, 26)
 
 [sub_resource type="TileSet" id="TileSet_sj2ks"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 64
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_y5wl5")
 sources/1 = SubResource("TileSetAtlasSource_ubgug")
@@ -4865,7 +4865,7 @@ y_sort_enabled = true
 [node name="player" parent="Ysort" instance=ExtResource("13_tb8y3")]
 position = Vector2(0, -298)
 
-[node name="Collition" type="TileMapLayer" parent="Ysort"]
+[node name="Collition" type="TileMapLayer" parent="Ysort" groups=["Wall"]]
 y_sort_enabled = true
 position = Vector2(-2, -21)
 scale = Vector2(4, 4)
@@ -4955,7 +4955,7 @@ sprite_frames = SubResource("SpriteFrames_xawcw")
 animation = &"open"
 flip_h = true
 
-[node name="DoorBlock" type="StaticBody2D" parent="."]
+[node name="DoorBlock" type="StaticBody2D" parent="." groups=["Wall"]]
 position = Vector2(0, 168)
 collision_mask = 3
 

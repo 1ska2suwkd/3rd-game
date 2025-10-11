@@ -433,7 +433,7 @@ height = 500.0
 
 [node name="Buta" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
 position = Vector2(1, 0)
-collision_mask = 3
+collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_ofsxj")

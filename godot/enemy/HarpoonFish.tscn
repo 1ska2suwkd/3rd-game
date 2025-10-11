@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://bmrf0bvbng7ux"]
 
-[ext_resource type="Script" uid="uid://cehjf26uxtsy3" path="res://enemy/harpoon_fish.gd" id="1_ujw4y"]
+[ext_resource type="Script" uid="uid://cehjf26uxtsy3" path="res://enemy/Script/harpoon_fish.gd" id="1_ujw4y"]
 [ext_resource type="Texture2D" uid="uid://bn28s8kbgp233" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Throw.png" id="2_g3c42"]
 [ext_resource type="Texture2D" uid="uid://bcdwb1gnvqobq" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Idle.png" id="3_m2fsh"]
 [ext_resource type="Texture2D" uid="uid://dwrgivcj73ub8" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Run.png" id="4_q8f30"]
@@ -239,6 +239,9 @@ shape = SubResource("CapsuleShape2D_5ffra")
 position = Vector2(-3, -14)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_p200p")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 64
 
 [connection signal="timeout" from="Start_move" to="." method="_on_start_move_timeout"]
 [connection signal="timeout" from="attack" to="." method="_on_attack_timeout"]
