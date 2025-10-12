@@ -194,7 +194,7 @@ height = 68.0
 [node name="HarpoonFish" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(1, 0)
 scale = Vector2(0.6, 0.6)
-collision_mask = 3
+collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_ujw4y")

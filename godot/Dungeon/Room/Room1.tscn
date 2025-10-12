@@ -4894,7 +4894,8 @@ player = NodePath("../player")
 position = Vector2(497.99997, 184)
 player = NodePath("../player")
 
-[node name="HarpoonFish" parent="Ysort" instance=ExtResource("16_3tqmi")]
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("16_3tqmi")]
+player = NodePath("../player")
 
 [node name="NorthDoor" type="Area2D" parent="."]
 z_index = -1
@@ -4955,10 +4956,19 @@ sprite_frames = SubResource("SpriteFrames_xawcw")
 animation = &"open"
 flip_h = true
 
-[node name="DoorBlock" type="StaticBody2D" parent="." groups=["Wall"]]
+[node name="DoorBlock" type="StaticBody2D" parent="."]
 position = Vector2(0, 168)
+collision_layer = 64
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="DoorBlock"]
 position = Vector2(4.9471893, -287.74954)
 polygon = PackedVector2Array(-42.94719, -229.25046, -42.94719, -341.25046, 28.05281, -341.25046, 29.05281, -341.25046, 29.05281, -229.25046, 705.0528, -229.25046, 705.0528, 62.749542, 817.0528, 62.749542, 817.0528, 138.74954, 705.0528, 138.74954, 705.0528, 490.74954, 33.05281, 490.74954, 33.05281, 602.7495, -42.94719, 602.7495, -42.94719, 490.74954, -718.9472, 490.74954, -718.9472, 138.74954, -829.9472, 138.74954, -829.9472, 50.749542, -718.9472, 50.749542, -718.9472, -229.25046, -54.94719, -229.25046, -65.94719, -567.2505, -1157.9471, -495.25046, -1112.9471, 767.7495, 1091.0529, 927.7495, 1224.0529, -197.25046, 829.0528, -838.2505, 2.0528107, -478.25046, -54.94719, -327.25046, -54.94719, -229.25046)
+
+[node name="Door_Wall" type="StaticBody2D" parent="." groups=["Wall"]]
+position = Vector2(0, 168)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Door_Wall"]
+position = Vector2(4.9471893, -287.74954)
+polygon = PackedVector2Array(-44.94719, -280.25046, -44.94719, -344.25046, 27.05281, -344.25046, 35.05281, -344.25046, 35.05281, -280.25046, 763.0528, -280.25046, 763.0528, 63.749542, 819.0528, 63.749542, 819.0528, 135.74954, 763.0528, 135.74954, 763.0528, 551.7495, 35.05281, 551.7495, 35.05281, 599.7495, -44.94719, 599.7495, -44.94719, 551.7495, -772.9472, 543.7495, -772.9472, 135.74954, -828.9472, 135.74954, -828.9472, 47.749542, -772.9472, 47.749542, -772.9472, -280.25046, -52.94719, -280.25046, -65.94719, -567.2505, -1157.9471, -495.25046, -1112.9471, 767.7495, 1091.0529, 927.7495, 1224.0529, -197.25046, 829.0528, -838.2505, 2.0528107, -478.25046, -54.94719, -327.25046, -52.94719, -280.25046)

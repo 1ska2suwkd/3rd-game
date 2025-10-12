@@ -8,6 +8,7 @@ radius = 8.0
 height = 91.0
 
 [node name="Harpoon" type="Area2D"]
+collision_mask = 65
 script = ExtResource("1_rm78g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
