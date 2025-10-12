@@ -7,7 +7,7 @@ func _ready():
 	randomize()
 
 func get_random_dungeon_scene() -> String:
-	var num = randi_range(1, 3)
+	var num = randi_range(1, 4)
 	current_scene = "Room" + str(num)
 	return "res://Dungeon/Room/Room" + str(num) + ".tscn"
 
