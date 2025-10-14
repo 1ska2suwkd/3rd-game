@@ -4945,7 +4945,7 @@ shape = SubResource("RectangleShape2D_ubgug")
 position = Vector2(-2, -405)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
+animation = &"open"
 
 [node name="SouthDoor" type="Area2D" parent="."]
 z_index = -1
@@ -4959,7 +4959,7 @@ position = Vector2(-2, 427)
 rotation = 3.1415927
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
+animation = &"open"
 flip_h = true
 
 [node name="EastDoor" type="Area2D" parent="."]
@@ -4975,7 +4975,7 @@ position = Vector2(766, -21)
 rotation = 1.5707964
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
+animation = &"open"
 
 [node name="WestDoor" type="Area2D" parent="."]
 z_index = -1
@@ -4990,7 +4990,7 @@ position = Vector2(-770, -21)
 rotation = -1.5707964
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
+animation = &"open"
 flip_h = true
 
 [node name="DoorBlock" type="StaticBody2D" parent="."]
