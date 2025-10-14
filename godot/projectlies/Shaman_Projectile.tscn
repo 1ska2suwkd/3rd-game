@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://xgtj31bfsb5f"]
 
-[ext_resource type="Script" uid="uid://486njm2a03pv" path="res://projectlies/ProjectlieBase.gd" id="1_2aatf"]
+[ext_resource type="Script" uid="uid://dvgnmam8qvi68" path="res://projectlies/shaman_projectile.gd" id="1_2aatf"]
 [ext_resource type="Texture2D" uid="uid://bvg5gbf4qclg8" path="res://assets/enemy/Shaman/Shaman_Explosion.png" id="1_lxipa"]
 [ext_resource type="Texture2D" uid="uid://pjjb0t2q651v" path="res://assets/enemy/Shaman/Shaman_Projectile.png" id="2_2aatf"]
 
@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5f8tc")
 }],
-"loop": true,
+"loop": false,
 "name": &"Explosion",
 "speed": 10.0
 }, {
@@ -95,8 +95,35 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pdjmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eeoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhw5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdjmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eeoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhw5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdjmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eeoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhw5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdjmo")
 }],
-"loop": true,
+"loop": false,
 "name": &"Projectile",
 "speed": 10.0
 }]
@@ -108,12 +135,17 @@ height = 74.0
 [node name="ShamanProjectile" type="Area2D"]
 script = ExtResource("1_2aatf")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.9999999, 0.9999999)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_lk3vs")
 animation = &"Explosion"
-frame_progress = 0.14850447
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964
+scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_lxipa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

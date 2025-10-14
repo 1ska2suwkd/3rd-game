@@ -4,7 +4,6 @@ extends Area2D
 @export var target: Node2D
 var damage: int = 0
 var direction: Vector2 = Vector2.ZERO
-var is_attacked: bool = false
 
 func _ready() -> void:
 	if target:

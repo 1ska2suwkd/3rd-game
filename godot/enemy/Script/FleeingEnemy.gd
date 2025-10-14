@@ -8,23 +8,22 @@ var is_fleeing := false
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 
-	if is_fleeing and player:
-		var dir = (global_position - player.global_position).normalized()
-		nav_agent.target_position = global_position + dir * flee_distance
+	if not is_attack:
+		if is_fleeing and player:
+			var dir = (global_position - player.global_position).normalized()
+			nav_agent.target_position = global_position + dir * flee_distance
 
-		var next_pos = nav_agent.get_next_path_position()
-		var move_dir = (next_pos - global_position).normalized()
-		velocity = move_dir * (stat.speed*0.4)
-	else:
-		velocity = Vector2.ZERO
+			var next_pos = nav_agent.get_next_path_position()
+			var move_dir = (next_pos - global_position).normalized()
+			velocity = move_dir * stat.speed
+		else:
+			velocity = Vector2.ZERO
 
-
-	# 애니메이션 (기존 스타일 유지)
-	if velocity.length() > 1.0:
-		$AnimatedSprite2D.play("walk")
-		$AnimatedSprite2D.flip_h = velocity.x < 0
-	else:
-		$AnimatedSprite2D.play("idle")
+		if velocity.length() > 1.0:
+			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+		else:
+			$AnimatedSprite2D.play("idle")
 
 
 func _on_detection_area_body_entered(body):
