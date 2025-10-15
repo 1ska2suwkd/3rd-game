@@ -1,7 +1,13 @@
 extends "res://enemy/Script/FleeingEnemy.gd"
 
 func _ready() -> void:
+	randomize()
+	start_random_timer()
 	init_stat(100, 3, 1)
+	
+func start_random_timer() -> void:
+	$attack.wait_time = randf_range(1.0, 3.0)
+	$attack.start()
 
 func _on_attack_timeout() -> void:
 	is_attack = true
@@ -30,3 +36,4 @@ func attack():
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	is_attack = false
+	start_random_timer()

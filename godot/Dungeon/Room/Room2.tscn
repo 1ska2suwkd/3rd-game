@@ -4859,7 +4859,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sj2ks"]
 size = Vector2(71, 70)
 
-[node name="Room1" type="Node2D"]
+[node name="Room2" type="Node2D"]
 script = ExtResource("1_v87y0")
 
 [node name="Collition" type="TileMapLayer" parent="." groups=["Wall"]]

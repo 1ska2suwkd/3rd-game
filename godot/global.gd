@@ -14,9 +14,9 @@ func get_random_dungeon_scene():
 
 		
 func get_random_num():
-	var tmp_num = randi_range(1,4)
+	var tmp_num = randi_range(1,6)
 	while last_num == tmp_num:
-		tmp_num = randi_range(1,4)
+		tmp_num = randi_range(1,6)
 	if last_num != tmp_num:
 		last_num = tmp_num
 		return tmp_num
