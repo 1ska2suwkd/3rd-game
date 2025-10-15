@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 
-# 공통 데이터
 var stat: Stat = null
 
 var dead: bool = false

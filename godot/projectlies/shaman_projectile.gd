@@ -3,10 +3,16 @@ extends Area2D
 @export var target: Node2D
 var damage: int = 0
 var overlapping_bodies: Array = []
+var is_attacked = false
 
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("Projectile")
+
+func _physics_process(_delta: float) -> void:
+	if overlapping_bodies and $AnimatedSprite2D.animation == "Explosion" and not is_attacked:
+		is_attacked = true
+		overlapping_bodies[0].apply_knockback(global_position, 1000.0, 0.1, damage)
 	
 
 func _on_body_entered(body: Node2D) -> void:
@@ -21,11 +27,10 @@ func _on_body_exited(body: Node2D) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if $AnimatedSprite2D.animation == "Projectile":
 		$AnimatedSprite2D.play("Explosion")
-
-		# 폭발 시작 시점에 한 번만 데미지 적용
-		for body in overlapping_bodies:
-			if is_instance_valid(body):
-				body.apply_knockback(global_position, 1000.0, 0.1, damage)
-				
 	elif $AnimatedSprite2D.animation == "Explosion":
 		queue_free()
+
+
+func _on_animated_sprite_2d_frame_changed() -> void:
+	if $AnimatedSprite2D.animation == "Explosion" and $AnimatedSprite2D.frame == 4:
+		$CollisionShape2D.disabled = true

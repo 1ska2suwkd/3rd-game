@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bvg5gbf4qclg8" path="res://assets/enemy/Shaman/Shaman_Explosion.png" id="1_lxipa"]
 [ext_resource type="Texture2D" uid="uid://pjjb0t2q651v" path="res://assets/enemy/Shaman/Shaman_Projectile.png" id="2_2aatf"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxipa"]
+radius = 23.5
+height = 74.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5wicq"]
 atlas = ExtResource("1_lxipa")
 region = Rect2(0, 0, 128, 128)
@@ -128,24 +132,23 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxipa"]
-radius = 33.0
-height = 74.0
-
 [node name="ShamanProjectile" type="Area2D"]
 script = ExtResource("1_2aatf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -7)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_lxipa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_lk3vs")
 animation = &"Explosion"
 frame = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5707964
-scale = Vector2(2, 2)
-shape = SubResource("CapsuleShape2D_lxipa")
+offset = Vector2(0, -10)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

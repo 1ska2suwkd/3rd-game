@@ -24,7 +24,7 @@ func attack():
 	var projectile = preload("res://projectlies/Shaman_Projectile.tscn").instantiate()
 	projectile.target = player
 	projectile.global_position = projectile.target.global_position
-	projectile.damage = 0
+	projectile.damage = stat.damage
 	get_tree().current_scene.add_child(projectile)
 	
 
