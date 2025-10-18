@@ -12,7 +12,6 @@ func _ready() -> void:
 
 func check_enemies():
 	var enemies = get_tree().get_nodes_in_group("enemy")
-	
 	var alive_enemies = []
 	
 	for i in enemies:
@@ -22,7 +21,7 @@ func check_enemies():
 		_on_all_enemies_cleared()
 
 func _on_all_enemies_cleared():
-	print("모든 적 처치 완료!")
+	print("현재 클리어한 방의 수 : ", global.clear_room_count)
 	$NorthDoor/Door_animation.play("open")
 	$SouthDoor/Door_animation.play("open")
 	$EastDoor/Door_animation.play("open")
@@ -32,11 +31,15 @@ func _on_any_door_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		if global.transition_scene: return # 중복 방지
 		global.transition_scene = true
-		call_deferred("_change_scene_deferred")
+		
+		if global.clear_room_count != 5:
+			global.clear_room_count += 1
+			global.change_scene(global.get_random_dungeon_scene())
+		else:
+			global.change_scene("res://Dungeon/Room/Room14.tscn")
+			global.clear_room_count = 0
+			
 
-
-func _change_scene_deferred():
-	if global.transition_scene == true:
-		var scene_path = global.get_random_dungeon_scene()
-		get_tree().change_scene_to_file(scene_path)
-		global.finish_change_scenes()
+#
+#func _change_scene_deferred():
+	#global.change_scene(global.get_random_dungeon_scene())

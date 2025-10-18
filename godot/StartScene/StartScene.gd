@@ -1,13 +1,10 @@
 extends Node2D
 
 func _process(_delta):
-	change_scene()
-
-func change_scene():
 	if global.transition_scene == true:
-		if global.current_scene == "StartScene" and Input.is_action_just_pressed("Interaction"):
-			get_tree().change_scene_to_file("res://Dungeon/Room/Room0.tscn")
-			global.finish_change_scenes()
+		if Input.is_action_just_pressed("Interaction"):
+			global.change_scene("res://Dungeon/Room/Room0.tscn")
+
  
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):

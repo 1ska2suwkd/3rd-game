@@ -3,6 +3,7 @@ extends Node
 var current_scene = "StartScene"
 var transition_scene = false
 var last_num = 0
+var clear_room_count = 0
 
 func _ready():
 	randomize()
@@ -20,6 +21,11 @@ func get_random_num():
 	if last_num != tmp_num:
 		last_num = tmp_num
 		return tmp_num
+		
+func change_scene(scene_path):
+	if transition_scene == true:
+		get_tree().call_deferred("change_scene_to_file", scene_path)
+		finish_change_scenes()
 	
 
 func finish_change_scenes():

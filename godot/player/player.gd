@@ -150,6 +150,10 @@ func _on_hit_flash_timer_timeout() -> void:
 func is_dead():
 	dead = true
 	$AnimatedSprite2D.play("dead")
+	await $AnimatedSprite2D.animation_finished
+	global.transition_scene = true
+	global.change_scene("res://StartScene/StartScene.tscn")
+	global.clear_room_count = 0
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
