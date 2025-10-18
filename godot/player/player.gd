@@ -152,6 +152,7 @@ func is_dead():
 	global.transition_scene = true
 	global.change_scene("res://StartScene/StartScene.tscn")
 	global.clear_room_count = 0
+	PlayerStat.hp = 3
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지

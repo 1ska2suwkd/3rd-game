@@ -420,15 +420,15 @@ size = Vector2(191, 118)
 radius = 1151.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
-radius = 97.0
-height = 234.0
+radius = 66.0
+height = 190.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
 radius = 57.0
-height = 204.0
+height = 152.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y5vj3"]
-radius = 166.0
+radius = 124.0
 height = 500.0
 
 [node name="Buta" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
@@ -470,17 +470,19 @@ one_shot = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2mvqj")
-animation = &"walk"
+animation = &"idle"
 offset = Vector2(0, -60)
 
 [node name="hitbox" type="Area2D" parent="."]
 visible = false
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
+visible = false
 position = Vector2(-0.5, 8)
 shape = SubResource("RectangleShape2D_y5vj3")
 
 [node name="detection_area" type="Area2D" parent="."]
+visible = false
 collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
@@ -489,7 +491,7 @@ shape = SubResource("CircleShape2D_y5vj3")
 [node name="Contact_Damage" type="Area2D" parent="."]
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(12, 14)
+position = Vector2(5, 17)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_5ffra")
 
@@ -502,7 +504,7 @@ shape = SubResource("CapsuleShape2D_p200p")
 visible = false
 
 [node name="attack_hitbox" type="CollisionShape2D" parent="Attack_hitbox"]
-position = Vector2(0, -86)
+position = Vector2(0, -50)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_y5vj3")
 disabled = true

@@ -4893,7 +4893,7 @@ polygon = PackedVector2Array(-40, -256, 40, -256, 40, -56, 424, -56, 424, 16, 40
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("13_qjcg5")]
-position = Vector2(0, 336)
+position = Vector2(2, -307)
 
 [node name="Deco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
