@@ -5,7 +5,6 @@ var dead = false
 
 var attacking := false
 # 공격하면서 이동 시 이동속도 감소
-var slow = 1
 var combo = "1"
 var attackDir = ""
 var hit_active_token := 0
@@ -61,18 +60,18 @@ func _physics_process(_delta):
 			dir.x -= 1
 		if Input.is_action_pressed("move_right"):
 			dir.x += 1
-		
-		if attacking:
-			slow = 0.7
 		# 방향 벡터 정규화 후 속도 적용
 		if dir != Vector2.ZERO:
-			velocity = dir.normalized() * PlayerStat.speed * slow
 			if not attacking:
+				velocity = dir.normalized() * PlayerStat.speed
 				$AnimatedSprite2D.play("walk")
 				if velocity.x < 0:
 					$AnimatedSprite2D.flip_h = true
 				elif velocity.x > 0:
 					$AnimatedSprite2D.flip_h = false
+			else:
+				velocity = dir.normalized() * PlayerStat.speed * PlayerStat.attack_slow
+				 
 		else:
 			velocity = Vector2.ZERO
 			if not attacking:
@@ -102,7 +101,6 @@ func _do_attack():
 	
 func _on_anim_finished():
 		attacking = false
-		slow = 1
 		if combo == "1":
 			combo = "2"
 		else:

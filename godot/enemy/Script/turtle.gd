@@ -1,6 +1,6 @@
 extends "res://enemy/Script/WanderingEnemy.gd"
 
-const BASE_DASH_SPEED := 650
+const BASE_DASH_SPEED := 550
 var dash_speed = BASE_DASH_SPEED
 var is_dash = false
 var dash_dir := Vector2.ZERO

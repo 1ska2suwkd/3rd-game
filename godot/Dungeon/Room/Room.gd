@@ -21,6 +21,7 @@ func check_enemies():
 		_on_all_enemies_cleared()
 
 func _on_all_enemies_cleared():
+	global.clear_room_count += 1
 	print("현재 클리어한 방의 수 : ", global.clear_room_count)
 	$NorthDoor/Door_animation.play("open")
 	$SouthDoor/Door_animation.play("open")
@@ -33,7 +34,6 @@ func _on_any_door_body_entered(body: Node) -> void:
 		global.transition_scene = true
 		
 		if global.clear_room_count != 5:
-			global.clear_room_count += 1
 			global.change_scene(global.get_random_dungeon_scene())
 		else:
 			global.change_scene("res://Dungeon/Room/Room14.tscn")
