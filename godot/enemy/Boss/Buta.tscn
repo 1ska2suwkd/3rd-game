@@ -470,7 +470,8 @@ one_shot = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2mvqj")
-animation = &"idle"
+animation = &"recover"
+frame = 9
 offset = Vector2(0, -60)
 
 [node name="hitbox" type="Area2D" parent="."]

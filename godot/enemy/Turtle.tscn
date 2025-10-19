@@ -213,13 +213,13 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0021k"]
 radius = 74.0
-height = 248.0
+height = 228.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 1151.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xlya"]
-radius = 88.0
+radius = 78.025635
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtobv"]
 radius = 65.0
@@ -245,7 +245,7 @@ autostart = true
 one_shot = true
 
 [node name="Attack_Duration" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.5
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

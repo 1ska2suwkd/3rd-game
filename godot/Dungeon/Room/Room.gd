@@ -33,7 +33,7 @@ func _on_any_door_body_entered(body: Node) -> void:
 		if global.transition_scene: return # 중복 방지
 		global.transition_scene = true
 		
-		if global.clear_room_count != 5:
+		if global.clear_room_count != 3:
 			global.change_scene(global.get_random_dungeon_scene())
 		else:
 			global.change_scene("res://Dungeon/Room/Room14.tscn")

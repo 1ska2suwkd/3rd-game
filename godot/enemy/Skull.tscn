@@ -240,14 +240,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i0h1j"]
-radius = 44.333332
-height = 106.666664
+radius = 43.333332
+height = 93.333336
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 1151.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
-radius = 33.333336
+radius = 33.333332
 height = 83.99999
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
@@ -285,10 +285,9 @@ animation = &"attack"
 offset = Vector2(0, -15)
 
 [node name="hitbox" type="Area2D" parent="."]
-position = Vector2(0, -27)
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, 0.333)
+position = Vector2(0, -31.666664)
 shape = SubResource("CapsuleShape2D_i0h1j")
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -302,7 +301,7 @@ shape = SubResource("CircleShape2D_y5vj3")
 position = Vector2(-1, -31)
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(0.99999976, 24.333332)
+position = Vector2(1, 11.000001)
 rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_5ffra")
 

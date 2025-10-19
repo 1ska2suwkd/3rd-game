@@ -587,13 +587,13 @@ radius = 9.12737
 height = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
-size = Vector2(117, 54.764236)
+size = Vector2(145, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dw6"]
-size = Vector2(56, 84.033134)
+size = Vector2(63, 120.68416)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
-size = Vector2(116, 61.72178)
+size = Vector2(145, 73)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
@@ -620,7 +620,7 @@ shape = SubResource("RectangleShape2D_rkbax")
 disabled = true
 
 [node name="RightAttack" type="CollisionShape2D" parent="AttackCollision"]
-position = Vector2(60, -14.634453)
+position = Vector2(63.5, -15.719366)
 shape = SubResource("RectangleShape2D_g1dw6")
 disabled = true
 
@@ -630,7 +630,7 @@ shape = SubResource("RectangleShape2D_g1dw6")
 disabled = true
 
 [node name="UpAttack" type="CollisionShape2D" parent="AttackCollision"]
-position = Vector2(8, -56.79254)
+position = Vector2(6.5, -62.659306)
 shape = SubResource("RectangleShape2D_yw30f")
 disabled = true
 

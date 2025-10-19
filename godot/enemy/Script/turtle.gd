@@ -54,12 +54,12 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		
 
 func _on_attack_duration_timeout() -> void:
+		is_dash = false
 		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("guard_out")
 		await $AnimatedSprite2D.animation_finished
-		
-		is_dash = false
 		is_attack = false
+		
 		dash_speed = BASE_DASH_SPEED
 		$cooldown.start()
 	
