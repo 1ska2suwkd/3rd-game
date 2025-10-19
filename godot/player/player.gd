@@ -9,10 +9,6 @@ var combo = "1"
 var attackDir = ""
 var hit_active_token := 0
 
-const DEFAULT_SPEED = 400
-const DEFAULT_HP = 6
-const DEFAULT_DAMAGE = 1
-const DEFAULT_ATTACK_SPEED = 1.0
 
 var knockback_vel: Vector2 = Vector2.ZERO
 var knockback_time := 0.0 
@@ -29,18 +25,40 @@ func _ready():
 	var hearts_parent = $heart_bar/HBoxContainer
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
-	$AnimatedSprite2D.animation_finished.connect(_on_anim_finished)
+	init_heart_display()
+	
 
+func update_heart_display():
+	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
+	
+	while hearts_list.size() > target_hp:
+		var heart = hearts_list[-1].get_node("heart")
+		if heart.animation != "heart_loss":
+			heart.play("heart_loss")
+		hearts_list.pop_back()
+	
+		
+func init_heart_display():
+	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
+	
+	while hearts_list.size() > target_hp:
+		var heart = hearts_list[-1].get_node("heart")
+		heart.play("lossed_heart")
+			
+		hearts_list.pop_back()
+
+func take_damage(p_damage:int):
+	PlayerStat.hp -= p_damage
+	if PlayerStat.hp <= 0:
+		is_dead()
+		
+		
 func _process(_delta):
 	if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
 		$AnimatedSprite2D.speed_scale = 1.0
 	else:
 		$AnimatedSprite2D.speed_scale = PlayerStat.attack_speed
-			
-func take_damage(p_damage:int):
-	PlayerStat.hp -= p_damage
-	if PlayerStat.hp <= 0:
-		is_dead()
+	
 	
 func _physics_process(_delta):
 	if dead: return
@@ -99,13 +117,15 @@ func _do_attack():
 	
 	$AnimatedSprite2D.play(attackDir + "_attack" + combo)
 	
-func _on_anim_finished():
+
+func _on_animated_sprite_2d_animation_finished() -> void:
 		attacking = false
 		if combo == "1":
 			combo = "2"
 		else:
 			combo = "1"
-
+			
+			
 func _on_animated_sprite_2d_frame_changed():
 	var anim = $AnimatedSprite2D.animation
 	var frame = $AnimatedSprite2D.frame
@@ -153,12 +173,3 @@ func is_dead():
 	global.change_scene("res://StartScene/StartScene.tscn")
 	global.clear_room_count = 0
 	PlayerStat.hp = 3
-
-func update_heart_display():
-	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
-	
-	while hearts_list.size() > target_hp:
-		var heart = hearts_list[-1].get_node("heart")
-		if heart.animation != "heart_loss":
-			heart.play("heart_loss")
-		hearts_list.pop_back()

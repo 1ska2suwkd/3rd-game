@@ -1,12 +1,23 @@
 extends Node
 
+var start_game = false
 var current_scene = "StartScene"
 var transition_scene = false
 var last_num = 0
 var clear_room_count = 0
+var full_screen = false
 
 func _ready():
 	randomize()
+	
+func _process(_delta: float) -> void:
+	if Input.is_action_pressed("change_screen") and full_screen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		full_screen = false
+	elif Input.is_action_pressed("change_screen") and not full_screen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		full_screen = true
+		
 
 func get_random_dungeon_scene():
 	var num = get_random_num()
@@ -32,6 +43,6 @@ func finish_change_scenes():
 	if transition_scene == true:
 		transition_scene = false
 		
-		#match current_scene:
-			#"StartScene":
-				#current_scene = "Room0"
+		match current_scene:
+			"StartScene":
+				current_scene = "Room0"

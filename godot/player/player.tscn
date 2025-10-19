@@ -665,5 +665,6 @@ layout_mode = 2
 
 [node name="heart" parent="heart_bar/HBoxContainer/Heart3" instance=ExtResource("4_yw30f")]
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]

@@ -184,12 +184,12 @@ size = Vector2(58, 65)
 radius = 253.23705
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m160p"]
-radius = 34.0
-height = 72.0
+radius = 22.0
+height = 58.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sycyy"]
-radius = 29.0
-height = 58.0
+radius = 17.0
+height = 36.0
 
 [node name="Shaman" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 65
@@ -219,10 +219,10 @@ frame = 9
 offset = Vector2(0, -25)
 
 [node name="hitbox" type="Area2D" parent="."]
-visible = false
 position = Vector2(0, -27)
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
+visible = false
 position = Vector2(-2, 3.5)
 shape = SubResource("RectangleShape2D_e5o11")
 
@@ -234,17 +234,15 @@ collision_layer = 128
 shape = SubResource("CircleShape2D_p6tip")
 
 [node name="Contact_Damage" type="Area2D" parent="."]
-visible = false
 position = Vector2(-1, -31)
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(-2, 10)
-rotation = -1.5707964
+position = Vector2(0, 10)
+rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_m160p")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-4, -20)
+position = Vector2(0, -15)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_sycyy")
 

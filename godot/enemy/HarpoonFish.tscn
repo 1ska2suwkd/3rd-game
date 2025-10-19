@@ -178,18 +178,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5vj3"]
-size = Vector2(60, 54)
+size = Vector2(76.666664, 66.66666)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 1151.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
-radius = 47.0
-height = 94.0
+radius = 36.333332
+height = 83.99999
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
-radius = 34.0
-height = 68.0
+radius = 29.666664
+height = 59.33333
 
 [node name="HarpoonFish" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(1, 0)
@@ -217,7 +217,7 @@ offset = Vector2(0, -15)
 position = Vector2(0, -27)
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-1, 12)
+position = Vector2(-3.333334, 8.666668)
 shape = SubResource("RectangleShape2D_y5vj3")
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -231,12 +231,12 @@ shape = SubResource("CircleShape2D_y5vj3")
 position = Vector2(-1, -31)
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(-1, 12)
-rotation = -1.5707964
+position = Vector2(0, 12)
+rotation = -3.1415927
 shape = SubResource("CapsuleShape2D_5ffra")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -14)
+position = Vector2(0, -14)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_p200p")
 

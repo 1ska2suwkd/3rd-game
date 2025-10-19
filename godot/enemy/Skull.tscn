@@ -239,8 +239,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5vj3"]
-size = Vector2(60, 54)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i0h1j"]
+radius = 44.333332
+height = 106.666664
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 1151.0
@@ -284,12 +285,11 @@ animation = &"attack"
 offset = Vector2(0, -15)
 
 [node name="hitbox" type="Area2D" parent="."]
-visible = false
 position = Vector2(0, -27)
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-1, 12)
-shape = SubResource("RectangleShape2D_y5vj3")
+position = Vector2(0, 0.333)
+shape = SubResource("CapsuleShape2D_i0h1j")
 
 [node name="detection_area" type="Area2D" parent="."]
 visible = false

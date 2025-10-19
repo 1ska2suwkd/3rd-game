@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8v4rsx6a51yo"]
+[gd_scene load_steps=10 format=3 uid="uid://c8v4rsx6a51yo"]
 
 [ext_resource type="Texture2D" uid="uid://ciqr72gnalaf5" path="res://assets/Image/Resources/heart/heart_animated_1.png" id="1_d7bgc"]
 
@@ -25,6 +25,10 @@ region = Rect2(68, 0, 17, 17)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d7bgc"]
 atlas = ExtResource("1_d7bgc")
 region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xpdv"]
+atlas = ExtResource("1_d7bgc")
+region = Rect2(68, 0, 17, 17)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4xpdv"]
 animations = [{
@@ -54,6 +58,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xpdv")
+}],
+"loop": true,
+"name": &"lossed_heart",
 "speed": 5.0
 }]
 

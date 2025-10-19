@@ -211,14 +211,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0021k"]
-radius = 73.33485
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0021k"]
+radius = 74.0
+height = 248.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 1151.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xlya"]
-radius = 96.02083
+radius = 88.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtobv"]
 radius = 65.0
@@ -256,11 +257,12 @@ frame_progress = 1.0
 offset = Vector2(0, -15)
 
 [node name="hitbox" type="Area2D" parent="."]
-position = Vector2(-12, -46)
+position = Vector2(0, -46)
 
 [node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-1, 12)
-shape = SubResource("CircleShape2D_0021k")
+position = Vector2(0, 28)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_0021k")
 
 [node name="detection_area" type="Area2D" parent="."]
 visible = false
@@ -272,11 +274,11 @@ shape = SubResource("CircleShape2D_y5vj3")
 [node name="Contact_Damage" type="Area2D" parent="."]
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(-10, -24)
+position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_6xlya")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-14, -34)
+position = Vector2(0, -34)
 rotation = -1.5707964
 shape = SubResource("CircleShape2D_jtobv")
 
