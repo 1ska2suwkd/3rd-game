@@ -6,9 +6,18 @@ var transition_scene = false
 var last_num = 0
 var clear_room_count = 0
 var full_screen = false
+var room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+var player_position_x = 0
+var player_position_y = 0
+var player_flip_h = false
 
 func _ready():
 	randomize()
+	
+func init_game():
+	clear_room_count = 0
+	PlayerStat.hp = 3
+	room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("change_screen") and full_screen:
@@ -26,12 +35,9 @@ func get_random_dungeon_scene():
 
 		
 func get_random_num():
-	var tmp_num = randi_range(1,7)
-	while last_num == tmp_num:
-		tmp_num = randi_range(1,7)
-	if last_num != tmp_num:
-		last_num = tmp_num
-		return tmp_num
+	var Next_Room_Number = randi_range(0,len(room_numbers)-1)
+	
+	return room_numbers.pop_at(Next_Room_Number)
 		
 func change_scene(scene_path):
 	if transition_scene == true:

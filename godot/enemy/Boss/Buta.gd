@@ -96,6 +96,7 @@ func play_n_times(anim_name: String, n: int) -> void:
 		$AnimatedSprite2D.play(anim_name)
 		await $AnimatedSprite2D.animation_finished
 	is_dash = false
+	$Contact_Damage/ContactDamage_Collision.disabled = true
 	for i in range(n):
 		if dead:  
 			return
@@ -103,6 +104,7 @@ func play_n_times(anim_name: String, n: int) -> void:
 		$AnimatedSprite2D.play("recover")
 		await $AnimatedSprite2D.animation_finished
 	is_attack = false
+	$Contact_Damage/ContactDamage_Collision.disabled = false
 	$cooldown.start()
 
 func _on_animated_sprite_2d_animation_changed() -> void:
@@ -116,7 +118,7 @@ func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
 		
 func _on_contact_damage_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player") and not is_attack and not dead:
+	if body.is_in_group("player") and not dead:
 		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
 	
 

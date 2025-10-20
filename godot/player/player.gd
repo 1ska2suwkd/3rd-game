@@ -171,5 +171,4 @@ func is_dead():
 	await $AnimatedSprite2D.animation_finished
 	global.transition_scene = true
 	global.change_scene("res://StartScene/StartScene.tscn")
-	global.clear_room_count = 0
-	PlayerStat.hp = 3
+	global.init_game()
