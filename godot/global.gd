@@ -7,9 +7,14 @@ var last_num = 0
 var clear_room_count = 0
 var full_screen = false
 var room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+
 var player_position_x = 0
 var player_position_y = 0
 var player_flip_h = false
+
+var random_number_generator = RandomNumberGenerator.new()
+var probabilities = [0, 0.05, 0.10, 0.25, 0.50, 1.0]
+var chest_room_stack = 0
 
 func _ready():
 	randomize()
@@ -18,6 +23,9 @@ func init_game():
 	clear_room_count = 0
 	PlayerStat.hp = 3
 	room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+	player_position_x = 0
+	player_position_y = 0
+	chest_room_stack = 0
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("change_screen") and full_screen:
