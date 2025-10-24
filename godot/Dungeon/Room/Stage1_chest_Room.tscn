@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://dwsjrbhp7i73f"]
+[gd_scene load_steps=63 format=4 uid="uid://dwsjrbhp7i73f"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Dungeon/Room/Room.gd" id="1_wxhd2"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_tlh0v"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="13_ujuhh"]
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_ccld8"]
 [ext_resource type="PackedScene" uid="uid://be4cdt0bxxe8q" path="res://Dungeon/Chest/chest.tscn" id="15_vkheq"]
+[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://Dungeon/UI/Room_Probability.tscn" id="16_8yxgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("2_tlh0v")
@@ -6399,3 +6400,5 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="DoorBlock"]
 position = Vector2(4.9471893, -287.74954)
 polygon = PackedVector2Array(-42.94719, -229.25046, -42.94719, -341.25046, 28.05281, -341.25046, 29.05281, -341.25046, 29.05281, -229.25046, 705.0528, -229.25046, 705.0528, 62.749542, 817.0528, 62.749542, 817.0528, 138.74954, 705.0528, 138.74954, 705.0528, 490.74954, 33.05281, 490.74954, 33.05281, 602.7495, -42.94719, 602.7495, -42.94719, 490.74954, -718.9472, 490.74954, -718.9472, 138.74954, -829.9472, 138.74954, -829.9472, 50.749542, -718.9472, 50.749542, -718.9472, -229.25046, -54.94719, -229.25046, -65.94719, -567.2505, -1157.9471, -495.25046, -1112.9471, 767.7495, 1091.0529, 927.7495, 1224.0529, -197.25046, 829.0528, -838.2505, 2.0528107, -478.25046, -54.94719, -327.25046, -54.94719, -229.25046)
+
+[node name="RoomProbability" parent="." instance=ExtResource("16_8yxgh")]

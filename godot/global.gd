@@ -13,8 +13,9 @@ var player_position_y = 0
 var player_flip_h = false
 
 var random_number_generator = RandomNumberGenerator.new()
-var probabilities = [0, 0.05, 0.10, 0.25, 0.50, 1.0]
+var probabilities = [0, 0.05, 0.15, 0.25, 0.50, 1.0]
 var chest_room_stack = 0
+var room_count = 0
 
 func _ready():
 	randomize()
@@ -22,7 +23,7 @@ func _ready():
 func init_game():
 	clear_room_count = 0
 	PlayerStat.hp = 3
-	room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+	room_numbers = [1,2,3,4,5,6,7,8]
 	player_position_x = 0
 	player_position_y = 0
 	chest_room_stack = 0
@@ -38,7 +39,7 @@ func _process(_delta: float) -> void:
 
 func get_random_dungeon_scene():
 	var num = get_random_num()
-	current_scene = "Room" + str(num)
+	current_scene = "Room"
 	return "res://Dungeon/Room/Room" + str(num) + ".tscn"
 
 		
@@ -60,3 +61,7 @@ func finish_change_scenes():
 		match current_scene:
 			"StartScene":
 				current_scene = "Room0"
+			"Room0":
+				current_scene = "Room"
+			"Room":
+				current_scene = "StartScene"

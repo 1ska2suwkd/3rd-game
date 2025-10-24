@@ -2,6 +2,7 @@
 extends Node2D
 
 func _ready() -> void:
+	print(global.room_count,"번째 방")
 	var door_names = ["NorthDoor", "SouthDoor", "EastDoor", "WestDoor"]
 	for door_name in door_names:
 		if has_node(door_name):
@@ -46,8 +47,8 @@ func change_room():
 		global.change_scene("res://Dungeon/Room/Stage1_Boss.tscn")
 		global.clear_room_count = 0
 	else:
+		global.room_count += 1
 		global.chest_room_stack += 1
-		print(global.chest_room_stack)
 		global.change_scene(global.get_random_dungeon_scene())
 			
 

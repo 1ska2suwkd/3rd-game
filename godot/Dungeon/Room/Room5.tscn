@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://mpoxyvcs0vfo"]
+[gd_scene load_steps=56 format=4 uid="uid://mpoxyvcs0vfo"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Dungeon/Room/Room.gd" id="1_0ts3w"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_o7p1m"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_m6fp7"]
 [ext_resource type="PackedScene" uid="uid://bfh82f0egxqxa" path="res://enemy/Shaman.tscn" id="15_o10hq"]
 [ext_resource type="PackedScene" uid="uid://bmrf0bvbng7ux" path="res://enemy/HarpoonFish.tscn" id="16_vjihp"]
+[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://Dungeon/UI/Room_Probability.tscn" id="17_vjihp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("2_o7p1m")
@@ -4989,3 +4990,11 @@ collision_layer = 64
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door_locked"]
 polygon = PackedVector2Array(710, -69, 710, 371, -714, 371, -714, -349, 710, -349, 710, -70, 854, -56, 794, -499, -838, -464, -844, 506, 851, 487, 854, -53)
+
+[node name="RoomProbability" parent="." instance=ExtResource("17_vjihp")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
