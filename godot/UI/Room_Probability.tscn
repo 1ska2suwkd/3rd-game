@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwj7g18bcuaxv"]
+
+[ext_resource type="Script" uid="uid://ns7sgsx5p2p7" path="res://UI/Script/room_probability.gd" id="1_ncxsp"]
+[ext_resource type="Texture2D" uid="uid://1g5iwlpyomlw" path="res://assets/Image/UI/Icons/icon_skull.png" id="2_ncxsp"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_o8nph"]
+[ext_resource type="Texture2D" uid="uid://dxywnl7teh6eh" path="res://assets/Image/UI/Icons/icon_chest.png" id="3_lhu5c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjxy1"]
+font = ExtResource("2_o8nph")
+font_size = 22
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o8nph"]
+line_spacing = 0.0
+font = ExtResource("2_o8nph")
+font_size = 20
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="RoomProbability" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ncxsp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -341.0
+offset_top = 58.0
+offset_right = -158.0
+offset_bottom = 146.0
+grow_horizontal = 0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "NEXT ROOM"
+label_settings = SubResource("LabelSettings_tjxy1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+modulate = Color(0.97302884, 0.09306914, 0.19809616, 1)
+layout_mode = 2
+texture = ExtResource("2_ncxsp")
+expand_mode = 2
+
+[node name="Boss" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "0%"
+label_settings = SubResource("LabelSettings_o8nph")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+modulate = Color(0.96861607, 0.75118494, 3.85046e-07, 1)
+layout_mode = 2
+texture = ExtResource("3_lhu5c")
+expand_mode = 2
+
+[node name="Chest" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "0%"
+label_settings = SubResource("LabelSettings_o8nph")

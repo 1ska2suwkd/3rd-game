@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="13_ujuhh"]
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_ccld8"]
 [ext_resource type="PackedScene" uid="uid://be4cdt0bxxe8q" path="res://Dungeon/Chest/chest.tscn" id="15_vkheq"]
-[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://Dungeon/UI/Room_Probability.tscn" id="16_8yxgh"]
+[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="16_8yxgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("2_tlh0v")

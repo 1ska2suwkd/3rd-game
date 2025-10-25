@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dgryxobep2mhd" path="res://enemy/Turtle.tscn" id="15_y5usk"]
 [ext_resource type="PackedScene" uid="uid://blustjpt4gi0x" path="res://enemy/Skull.tscn" id="16_0pju6"]
 [ext_resource type="PackedScene" uid="uid://bmrf0bvbng7ux" path="res://enemy/HarpoonFish.tscn" id="17_0pju6"]
-[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://Dungeon/UI/Room_Probability.tscn" id="18_hnagp"]
+[ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="18_hnagp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("5_36ctv")

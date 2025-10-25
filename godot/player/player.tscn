@@ -1,9 +1,14 @@
-[gd_scene load_steps=84 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=91 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
+[ext_resource type="Texture2D" uid="uid://c1l3bnkr68uj3" path="res://assets/Image/Resources/Resources/G_Idle_(NoShadow).png" id="6_boad6"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
+[ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="8_hg6s5"]
+[ext_resource type="Texture2D" uid="uid://dtpl84d8llvii" path="res://assets/Image/UI/Icons/icon_hand.png" id="9_8t03j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
 atlas = ExtResource("2_g1dw6")
@@ -595,6 +600,20 @@ size = Vector2(63, 120.68416)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
 size = Vector2(145, 73)
 
+[sub_resource type="LabelSettings" id="LabelSettings_hg6s5"]
+line_spacing = 0.0
+font = ExtResource("7_rgyib")
+font_size = 20
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8t03j"]
+line_spacing = 0.0
+font = ExtResource("7_rgyib")
+font_size = 20
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
 [node name="player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 scale = Vector2(1, 0.986045)
@@ -638,32 +657,93 @@ disabled = true
 wait_time = 0.1
 one_shot = true
 
-[node name="heart_bar" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("5_8t03j")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="heart_bar"]
+[node name="Hearts" type="HBoxContainer" parent="UI"]
 offset_left = 70.0
 offset_top = 70.0
 offset_right = 123.000015
 offset_bottom = 110.000015
 scale = Vector2(5, 5)
 
-[node name="Heart" type="TextureRect" parent="heart_bar/HBoxContainer"]
+[node name="Heart" type="TextureRect" parent="UI/Hearts"]
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
-[node name="heart" parent="heart_bar/HBoxContainer/Heart" instance=ExtResource("4_yw30f")]
+[node name="heart" parent="UI/Hearts/Heart" instance=ExtResource("4_yw30f")]
 
-[node name="Heart2" type="TextureRect" parent="heart_bar/HBoxContainer"]
+[node name="Heart2" type="TextureRect" parent="UI/Hearts"]
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
-[node name="heart" parent="heart_bar/HBoxContainer/Heart2" instance=ExtResource("4_yw30f")]
+[node name="heart" parent="UI/Hearts/Heart2" instance=ExtResource("4_yw30f")]
 
-[node name="Heart3" type="TextureRect" parent="heart_bar/HBoxContainer"]
+[node name="Heart3" type="TextureRect" parent="UI/Hearts"]
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 
-[node name="heart" parent="heart_bar/HBoxContainer/Heart3" instance=ExtResource("4_yw30f")]
+[node name="heart" parent="UI/Hearts/Heart3" instance=ExtResource("4_yw30f")]
+
+[node name="Gold" type="TextureRect" parent="UI"]
+offset_left = -20.0
+offset_top = 84.0
+offset_right = 108.0
+offset_bottom = 212.0
+texture = ExtResource("6_boad6")
+
+[node name="current_gold" type="Label" parent="UI/Gold"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 0
+offset_left = 99.0
+offset_top = 58.0
+offset_right = 162.0
+offset_bottom = 82.0
+scale = Vector2(1.5, 1.5)
+size_flags_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_hg6s5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+offset_left = 28.0
+offset_top = 602.0
+offset_right = 119.0
+offset_bottom = 678.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("8_hg6s5")
+expand_mode = 2
+
+[node name="Damage" type="Label" parent="UI/VBoxContainer/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_8t03j")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("9_8t03j")
+expand_mode = 2
+
+[node name="attack_speed" type="Label" parent="UI/VBoxContainer/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_8t03j")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

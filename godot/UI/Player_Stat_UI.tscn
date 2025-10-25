@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://be1exr5feoxp2"]
+
+[ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="1_1lo77"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_14m2n"]
+[ext_resource type="Texture2D" uid="uid://dtpl84d8llvii" path="res://assets/Image/UI/Icons/icon_hand.png" id="4_1lo77"]
+[ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="5_yp5p5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o8nph"]
+line_spacing = 0.0
+font = ExtResource("3_14m2n")
+font_size = 20
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="RoomProbability" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1lo77")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 70.0
+offset_top = 530.0
+offset_right = 131.0
+offset_bottom = 606.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("5_yp5p5")
+expand_mode = 2
+
+[node name="Damage" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_o8nph")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("4_1lo77")
+expand_mode = 2
+
+[node name="attack_speed" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_o8nph")
