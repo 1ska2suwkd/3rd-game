@@ -81,6 +81,10 @@ change_screen={
 
 pointing/updates_per_second=60
 
+[layer_names]
+
+2d_physics/layer_3="pickup"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

@@ -1,14 +1,14 @@
-[gd_scene load_steps=91 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=90 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
-[ext_resource type="Texture2D" uid="uid://c1l3bnkr68uj3" path="res://assets/Image/Resources/Resources/G_Idle_(NoShadow).png" id="6_boad6"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
 [ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="8_hg6s5"]
 [ext_resource type="Texture2D" uid="uid://dtpl84d8llvii" path="res://assets/Image/UI/Icons/icon_hand.png" id="9_8t03j"]
+[ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="9_hg6s5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
 atlas = ExtResource("2_g1dw6")
@@ -600,13 +600,6 @@ size = Vector2(63, 120.68416)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yw30f"]
 size = Vector2(145, 73)
 
-[sub_resource type="LabelSettings" id="LabelSettings_hg6s5"]
-line_spacing = 0.0
-font = ExtResource("7_rgyib")
-font_size = 20
-outline_size = 7
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_8t03j"]
 line_spacing = 0.0
 font = ExtResource("7_rgyib")
@@ -685,26 +678,7 @@ layout_mode = 2
 
 [node name="heart" parent="UI/Hearts/Heart3" instance=ExtResource("4_yw30f")]
 
-[node name="Gold" type="TextureRect" parent="UI"]
-offset_left = -20.0
-offset_top = 84.0
-offset_right = 108.0
-offset_bottom = 212.0
-texture = ExtResource("6_boad6")
-
-[node name="current_gold" type="Label" parent="UI/Gold"]
-modulate = Color(1, 1, 1, 0.78431374)
-layout_mode = 0
-offset_left = 99.0
-offset_top = 58.0
-offset_right = 162.0
-offset_bottom = 82.0
-scale = Vector2(1.5, 1.5)
-size_flags_vertical = 0
-text = "0"
-label_settings = SubResource("LabelSettings_hg6s5")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI"]
 offset_left = 28.0
 offset_top = 602.0
 offset_right = 119.0
@@ -713,32 +687,53 @@ scale = Vector2(1.5, 1.5)
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="UI/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="UI/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer3"]
+[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
 texture = ExtResource("8_hg6s5")
 expand_mode = 2
 
-[node name="Damage" type="Label" parent="UI/VBoxContainer/HBoxContainer3"]
+[node name="Damage" type="Label" parent="UI/VBoxContainer2/HBoxContainer3"]
 modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 2
 size_flags_vertical = 0
 text = "NULL"
 label_settings = SubResource("LabelSettings_8t03j")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="UI/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="UI/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer/HBoxContainer4"]
+[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer2/HBoxContainer4"]
 layout_mode = 2
 texture = ExtResource("9_8t03j")
 expand_mode = 2
 
-[node name="attack_speed" type="Label" parent="UI/VBoxContainer/HBoxContainer4"]
+[node name="attack_speed" type="Label" parent="UI/VBoxContainer2/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_8t03j")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="UI"]
+offset_left = 28.000002
+offset_top = 125.0
+offset_right = 119.0
+offset_bottom = 149.0
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="UI/HBoxContainer4"]
+modulate = Color(1, 0.8352941, 0, 1)
+layout_mode = 2
+texture = ExtResource("9_hg6s5")
+expand_mode = 2
+
+[node name="current_gold" type="Label" parent="UI/HBoxContainer4"]
 modulate = Color(1, 1, 1, 0.78431374)
 layout_mode = 2
 size_flags_vertical = 0
