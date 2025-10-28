@@ -24,9 +24,10 @@ func init_game():
 	clear_room_count = 0
 	PlayerStat.hp = 3
 	room_numbers = [1,2,3,4,5,6,7,8]
+	chest_room_stack = 0
+	room_count = 0
 	player_position_x = 0
 	player_position_y = 0
-	chest_room_stack = 0
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("change_screen") and full_screen:

@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
+[ext_resource type="Texture2D" uid="uid://b4fl0y7yn1uto" path="res://assets/Image/UI/Icons/attack_speed_icon.png" id="8_8t03j"]
 [ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="8_hg6s5"]
-[ext_resource type="Texture2D" uid="uid://dtpl84d8llvii" path="res://assets/Image/UI/Icons/icon_hand.png" id="9_8t03j"]
 [ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="9_hg6s5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
@@ -709,7 +709,7 @@ size_flags_horizontal = 0
 
 [node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer2/HBoxContainer4"]
 layout_mode = 2
-texture = ExtResource("9_8t03j")
+texture = ExtResource("8_8t03j")
 expand_mode = 2
 
 [node name="attack_speed" type="Label" parent="UI/VBoxContainer2/HBoxContainer4"]
