@@ -47,7 +47,7 @@ func take_damage(p_damage:int, from: Vector2):
 	stat.hp -= p_damage
 	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	if stat.hp <= 0:
-		die()
+		call_deferred("die")
 		
 
 func _on_area_2d_area_entered(area):
@@ -98,5 +98,17 @@ func die():
 	var room = find_parent_room()
 	if room:
 		room.call_deferred("check_enemies")
+	
+	if global.random_number_generator.randf() < 0.5:
+		var gold = preload("res://PickUp/gold.tscn").instantiate()
+		gold.global_position = global_position
+		var ysort = get_tree().current_scene.get_node("Ysort")
+		
+		if ysort:
+			ysort.add_child(gold)
+		else:
+			push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
+			get_tree().current_scene.add_child(gold)
 		
 	queue_free()
+	

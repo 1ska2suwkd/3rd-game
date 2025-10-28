@@ -4861,7 +4861,6 @@ animations = [{
 size = Vector2(71, 70)
 
 [node name="Room1" type="Node2D"]
-y_sort_enabled = true
 script = ExtResource("1_0ts3w")
 
 [node name="Camera2D" type="Camera2D" parent="."]

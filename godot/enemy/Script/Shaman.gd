@@ -31,7 +31,14 @@ func attack():
 	projectile.target = player
 	projectile.global_position = projectile.target.global_position
 	projectile.damage = stat.damage
-	get_tree().current_scene.add_child(projectile)
+	# 현재 씬에서 YSort 노드 찾기
+	var ysort = get_tree().current_scene.get_node("Ysort")
+
+	if ysort:
+		ysort.add_child(projectile)
+	else:
+		push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
+		get_tree().current_scene.add_child(projectile)
 	
 
 func _on_animated_sprite_2d_animation_finished() -> void:
