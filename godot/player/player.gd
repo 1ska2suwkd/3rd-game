@@ -26,7 +26,8 @@ func _ready():
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	init_heart_display()
-	
+
+	PlayerStat.is_crescent_slash = true # 임시
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
@@ -125,6 +126,14 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		else:
 			combo = "1"
 			
+func spawn_crescent_slash(path, direction):
+	if PlayerStat.is_crescent_slash:
+		var scene = load(path)
+		var projectile = scene.instantiate()
+		projectile.global_position = global_position
+		projectile.damage = PlayerStat.damage
+		projectile.direction = direction
+		get_tree().current_scene.add_child(projectile)
 			
 func _on_animated_sprite_2d_frame_changed():
 	var anim = $AnimatedSprite2D.animation
@@ -133,21 +142,25 @@ func _on_animated_sprite_2d_frame_changed():
 	if anim == "up_attack1" or anim == "up_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
+			spawn_crescent_slash("res://projectiles/Crescent_Slash/up_Crescent_Slash.tscn", Vector2(0,-1))
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
+			spawn_crescent_slash("res://projectiles/Crescent_Slash/down_Crescent_Slash.tscn", Vector2(0,1))
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
+			spawn_crescent_slash("res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn", Vector2(-1,0))
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
+			spawn_crescent_slash("res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn", Vector2(1,0))
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
 

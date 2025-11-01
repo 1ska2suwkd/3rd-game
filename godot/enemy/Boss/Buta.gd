@@ -60,12 +60,13 @@ func _on_pathfinding_timeout() -> void:
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
+		$HitFlashTimer.start()
 		take_damage(PlayerStat.damage)
 		healthbar.health = stat.hp
 
-func _on_area_2d_area_exited(area):
-	if area.is_in_group("Player_attack"):
-		$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+func _on_hit_flash_timer_timeout() -> void:
+	$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):

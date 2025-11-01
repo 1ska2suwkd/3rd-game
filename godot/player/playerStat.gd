@@ -1,13 +1,15 @@
 #playerStat.gd
 extends Node2D
 
-var damage = 5
+var damage = 2
 var speed = 400
 var hp = 3
-var attack_speed = 2.3
+var attack_speed = 1.3
 var attack_slow = 0.7
 
 var gold = 0
+
+var is_crescent_slash = false
 
 signal stats_changed()  # 현재 gd의 stats_changed()라는 함수 시그널 정의
 

@@ -271,6 +271,10 @@ script = ExtResource("1_spqrb")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Start_move" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -326,6 +330,7 @@ visible = false
 position = Vector2(-7.5101852e-06, -13.333333)
 shape = SubResource("RectangleShape2D_spqrb")
 
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
 [connection signal="timeout" from="Start_move" to="." method="_on_start_move_timeout"]
 [connection signal="timeout" from="Pathfinding" to="." method="_on_pathfinding_timeout"]
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]

@@ -27,38 +27,37 @@ func _physics_process(_delta: float) -> void:
 	if knockback_time > 0.0:
 		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
 		velocity = knockback_vel
-		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 3000.0 * _delta)  # 감속량 조절
+		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 2000.0 * _delta)  # 감속량 조절
 		knockback_time -= _delta
 
 			
 	move_and_slide()
 			
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, p_damage: int = 1) -> void:
 	if dead: return
 	
+	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	var dir := (global_position - from).normalized()
 	knockback_vel = dir * strength
 	knockback_time = duration
+	take_damage(p_damage)
+	$HitFlashTimer.start()
+
 	
 
-func take_damage(p_damage:int, from: Vector2):
-	apply_knockback(from, 500.0, 0.15)
+func _on_hit_flash_timer_timeout() -> void:
+	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
+
+func take_damage(p_damage:int):
 	
 	stat.hp -= p_damage
-	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	if stat.hp <= 0:
 		call_deferred("die")
-		
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
-		take_damage(PlayerStat.damage, player.global_position)
+		apply_knockback(player.global_position, 500.0, 0.1, PlayerStat.damage)
 
-func _on_area_2d_area_exited(area):
-	if area.is_in_group("Player_attack"):
-		$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
-		
-		
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):
 		player = body
@@ -72,7 +71,7 @@ func _on_detection_area_body_exited(body):
 
 func _on_contact_damage_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not dead:
-		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
+		body.apply_knockback(global_position, 1000.0, 0.1, stat.damage)
 		
 		
 func find_parent_room() -> Node:

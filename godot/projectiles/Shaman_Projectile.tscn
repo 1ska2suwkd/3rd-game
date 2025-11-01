@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://xgtj31bfsb5f"]
 
-[ext_resource type="Script" uid="uid://dvgnmam8qvi68" path="res://projectlies/shaman_projectile.gd" id="1_2aatf"]
+[ext_resource type="Script" uid="uid://dvgnmam8qvi68" path="res://projectiles/shaman_projectile.gd" id="1_2aatf"]
 [ext_resource type="Texture2D" uid="uid://bvg5gbf4qclg8" path="res://assets/enemy/Shaman/Shaman_Explosion.png" id="1_lxipa"]
 [ext_resource type="Texture2D" uid="uid://pjjb0t2q651v" path="res://assets/enemy/Shaman/Shaman_Projectile.png" id="2_2aatf"]
 

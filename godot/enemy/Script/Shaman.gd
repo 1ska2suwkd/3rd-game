@@ -27,7 +27,7 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 
 
 func attack():
-	var projectile = preload("res://projectlies/Shaman_Projectile.tscn").instantiate()
+	var projectile = preload("res://projectiles/Shaman_Projectile.tscn").instantiate()
 	projectile.target = player
 	projectile.global_position = projectile.target.global_position
 	projectile.damage = stat.damage

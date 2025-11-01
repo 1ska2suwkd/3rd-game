@@ -232,6 +232,10 @@ motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_0021k")
 
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Start_move" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -282,6 +286,7 @@ position = Vector2(0, -34)
 rotation = -1.5707964
 shape = SubResource("CircleShape2D_jtobv")
 
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
 [connection signal="timeout" from="Start_move" to="." method="_on_start_move_timeout"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="Guard_in" to="." method="_on_guard_in_timeout"]

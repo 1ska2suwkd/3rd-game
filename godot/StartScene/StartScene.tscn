@@ -681,7 +681,7 @@ scale = Vector2(1.79938, 1.77427)
 [node name="Dungeon" type="Sprite2D" parent="Dungeon"]
 texture = ExtResource("9_uvkb0")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Dungeon"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Dungeon" groups=["Wall"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dungeon/StaticBody2D"]
 position = Vector2(0, 3.38145)
@@ -702,7 +702,7 @@ y_sort_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="Ysort/player"]
 
-[node name="Collision" type="TileMapLayer" parent="Ysort"]
+[node name="Collision" type="TileMapLayer" parent="Ysort" groups=["Wall"]]
 y_sort_enabled = true
 position = Vector2(-18, -4.000242)
 tile_map_data = PackedByteArray("AADs/wAAAAAAAAAAAAADAPn/AQAAAAAAAAD4/wMAAgAAAAAAAAD7//r/AwAAAAAAAAD9//z/BAAAAAAAAAAOAP7/BQAAAAAAAAAGAPn/BQAAAAAAAAAFAAMABAAAAAAAAAAEAPr/AwAAAAAAAAD5//j/AwAAAAAAAAD5//7/BAAAAAAAAAD7//3/BQAAAAAAAAAEAP3/BQAAAAAAAAD6/wUABQAAAAAAAAD8/wEABQAAAAAAAAAEAAEAAwAAAAAAAAAMAAEAAwAAAAAAAAAGAAIABQAAAAAAAAD5//v/BQAAAAAAAAA=")
@@ -718,7 +718,7 @@ position = Vector2(0, -13.526697)
 texture = ExtResource("14_mcuyn")
 offset = Vector2(0, -80)
 
-[node name="Store" type="StaticBody2D" parent="Ysort/Store"]
+[node name="Store" type="StaticBody2D" parent="Ysort/Store" groups=["Wall"]]
 y_sort_enabled = true
 position = Vector2(-1.1114941, 1.6908264)
 

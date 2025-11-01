@@ -456,6 +456,10 @@ offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Pathfinding" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
@@ -509,6 +513,7 @@ rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_y5vj3")
 disabled = true
 
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
 [connection signal="timeout" from="Pathfinding" to="." method="_on_pathfinding_timeout"]
 [connection signal="timeout" from="windup" to="." method="_on_windup_timeout"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

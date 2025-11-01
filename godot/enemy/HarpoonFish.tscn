@@ -199,6 +199,10 @@ motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_ujw4y")
 
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="Start_move" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -243,6 +247,7 @@ shape = SubResource("CapsuleShape2D_p200p")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 collision_mask = 64
 
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
 [connection signal="timeout" from="Start_move" to="." method="_on_start_move_timeout"]
 [connection signal="timeout" from="attack" to="." method="_on_attack_timeout"]
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
