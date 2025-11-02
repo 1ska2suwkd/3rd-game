@@ -53,6 +53,7 @@ func change_scene(scene_path):
 	if transition_scene == true:
 		get_tree().call_deferred("change_scene_to_file", scene_path)
 		finish_change_scenes()
+		PlayerStat.is_player_hit = false
 	
 
 func finish_change_scenes():

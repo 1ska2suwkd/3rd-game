@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnujwwmqjh27w"]
+[gd_scene load_steps=6 format=3 uid="uid://dnujwwmqjh27w"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_401d5"]
 [ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Sword_attack_vfx.png" id="2_efnfs"]
+
+[sub_resource type="Curve" id="Curve_401d5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_efnfs"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.8871895, 0.6973419, 0.33317584, 1, 0.95400494, 0.87931633, 0.72136337, 1, 1, 1, 1, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rm78g"]
 radius = 9.5
@@ -11,6 +19,20 @@ height = 59.0
 rotation = -1.5707964
 collision_mask = 65
 script = ExtResource("1_401d5")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(-155, -8.000008)
+amount = 30
+lifetime = 0.09999999999999999
+speed_scale = 0.5
+emission_shape = 1
+emission_sphere_radius = 20.0
+gravity = Vector2(0, -600)
+radial_accel_max = 99.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_401d5")
+color_ramp = SubResource("Gradient_efnfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-50, -8)

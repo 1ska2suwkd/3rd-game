@@ -17,6 +17,8 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 global="*res://global.gd"
 PlayerStat="*res://player/playerStat.gd"
+MasterSkill="*res://Master_Skill.gd"
+Item="*res://Item.gd"
 
 [display]
 

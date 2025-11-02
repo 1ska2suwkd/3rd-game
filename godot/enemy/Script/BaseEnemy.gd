@@ -33,15 +33,12 @@ func _physics_process(_delta: float) -> void:
 			
 	move_and_slide()
 			
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15, p_damage: int = 1) -> void:
+func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
 	if dead: return
 	
-	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 	var dir := (global_position - from).normalized()
 	knockback_vel = dir * strength
 	knockback_time = duration
-	take_damage(p_damage)
-	$HitFlashTimer.start()
 
 	
 
@@ -49,14 +46,19 @@ func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 
 func take_damage(p_damage:int):
+	if dead: return
 	
+	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
+	$HitFlashTimer.start()
+	if not is_attack:
+		apply_knockback(player.global_position, 500.0, 0.1)
 	stat.hp -= p_damage
 	if stat.hp <= 0:
 		call_deferred("die")
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
-		apply_knockback(player.global_position, 500.0, 0.1, PlayerStat.damage)
+		take_damage(PlayerStat.damage)
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):

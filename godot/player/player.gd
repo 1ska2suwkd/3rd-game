@@ -27,7 +27,7 @@ func _ready():
 		hearts_list.append(child)
 	init_heart_display()
 
-	PlayerStat.is_crescent_slash = true # 임시
+	MasterSkill.Crescent_Slash = true # 임시
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
@@ -50,6 +50,8 @@ func init_heart_display():
 
 func take_damage(p_damage:int):
 	PlayerStat.hp -= p_damage
+	if not PlayerStat.is_player_hit:
+		PlayerStat.is_player_hit = true
 	if PlayerStat.hp <= 0:
 		is_dead()
 		
@@ -127,7 +129,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			combo = "1"
 			
 func spawn_crescent_slash(path, direction):
-	if PlayerStat.is_crescent_slash:
+	if MasterSkill.Crescent_Slash and not PlayerStat.is_player_hit:
 		var scene = load(path)
 		var projectile = scene.instantiate()
 		projectile.global_position = global_position
