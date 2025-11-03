@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbd1xb3ag183w"]
+[gd_scene load_steps=6 format=3 uid="uid://cbd1xb3ag183w"]
 
+[ext_resource type="Script" uid="uid://wkudotd7yruo" path="res://StartScene/Master/text_box.gd" id="1_deu3w"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_i0ewn"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_hrl8a"]
 
@@ -23,15 +24,15 @@ font_size = 40
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
+[node name="TextBox" type="CanvasLayer" parent="."]
+script = ExtResource("1_deu3w")
+
+[node name="ColorRect" type="ColorRect" parent="TextBox"]
 offset_left = -2678.0
 offset_top = -1657.0
 offset_right = 3795.0
 offset_bottom = 2982.0
 color = Color(0, 0, 0, 0.5882353)
-
-[node name="TextBox" type="CanvasLayer" parent="."]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="TextBox"]
 anchors_preset = 2
@@ -45,7 +46,7 @@ grow_vertical = 0
 texture = ExtResource("1_i0ewn")
 region_rect = Rect2(0, 0, 200, 192)
 
-[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+[node name="TextboxContainer" type="MarginContainer" parent="TextBox"]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -57,34 +58,40 @@ theme_override_constants/margin_left = 400
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 50
 
-[node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
+[node name="Panel" type="Panel" parent="TextBox/TextboxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_03uyg")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextBox/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextBox/TextboxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="TextBox/TextboxContainer/MarginContainer"]
 visible = false
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextBox/MarginContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox/TextboxContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="TextBox/MarginContainer/MarginContainer/HBoxContainer"]
+[node name="Start" type="Label" parent="TextBox/TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 text = "*"
 label_settings = SubResource("LabelSettings_deu3w")
 
-[node name="Text" type="Label" parent="TextBox/MarginContainer/MarginContainer/HBoxContainer"]
+[node name="Text" type="Label" parent="TextBox/TextboxContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 text = "안녕하세요 용사님 ㅋㅋ"
 label_settings = SubResource("LabelSettings_deu3w")
 autowrap_mode = 1
+
+[node name="End" type="Label" parent="TextBox/TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "v"
+label_settings = SubResource("LabelSettings_deu3w")
