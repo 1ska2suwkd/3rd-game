@@ -99,11 +99,21 @@ func die():
 	var room = find_parent_room()
 	if room:
 		room.call_deferred("check_enemies")
+		
+	var ysort = get_tree().current_scene.get_node("Ysort")
+	var particle = preload("res://enemy/dead_particle.tscn").instantiate()
+	particle.global_position = global_position
+	particle.emitting = true
+	
+	if ysort:
+		ysort.add_child(particle)
+	else:
+		push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
+		get_tree().current_scene.add_child(particle)
 	
 	if global.random_number_generator.randf() < 0.5:
 		var gold = preload("res://PickUp/gold.tscn").instantiate()
 		gold.global_position = global_position
-		var ysort = get_tree().current_scene.get_node("Ysort")
 		
 		if ysort:
 			ysort.add_child(gold)
