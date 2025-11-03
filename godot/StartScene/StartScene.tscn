@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=76 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://StartScene/StartScene.gd" id="1_1fguw"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://debr4gap1qjus" path="res://assets/Image/Terrain/Water/Rocks/Rocks_04.png" id="6_bifhp"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="9_uvkb0"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="11_bs1ij"]
-[ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://StartScene/master.gd" id="12_apmjc"]
+[ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://StartScene/Master/master.gd" id="12_apmjc"]
 [ext_resource type="Texture2D" uid="uid://d4mu0dp2a0ymc" path="res://assets/Image/Deco/01.png" id="13_1fguw"]
 [ext_resource type="Texture2D" uid="uid://c0mmw34u1jbdp" path="res://assets/Image/Deco/02.png" id="14_6bpma"]
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="14_mcuyn"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_peenx"]
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_03fdb"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
+[ext_resource type="PackedScene" uid="uid://cbd1xb3ag183w" path="res://StartScene/Master/Master_Text_Box.tscn" id="27_p4s3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 resource_name = "Collision_water"
@@ -727,11 +728,11 @@ position = Vector2(1.6672411, -16.908371)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_mcuyn")
 
-[node name="Area2D" type="Area2D" parent="Ysort/Store"]
+[node name="entered_store" type="Area2D" parent="Ysort/Store"]
 modulate = Color(0.2, 0.192157, 0.176471, 1)
 position = Vector2(0, -13.526695)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Store/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Store/entered_store"]
 
 [node name="Master" type="Node2D" parent="Ysort"]
 y_sort_enabled = true
@@ -754,5 +755,19 @@ frame_progress = 0.287592
 speed_scale = 2.0
 offset = Vector2(0, -10)
 
+[node name="Talk_to_Master" type="Area2D" parent="Ysort/Master"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Master/Talk_to_Master"]
+position = Vector2(0.8353462, 53.61566)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_fhlmx")
+
+[node name="Master_UI" parent="." instance=ExtResource("27_p4s3d")]
+
 [connection signal="body_entered" from="Dungeon/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dungeon/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Ysort/Store/entered_store" to="." method="_on_entered_store_body_entered"]
+[connection signal="body_exited" from="Ysort/Store/entered_store" to="." method="_on_entered_store_body_exited"]
+[connection signal="area_entered" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_area_entered"]
+[connection signal="body_entered" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_body_entered"]
+[connection signal="body_exited" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_body_exited"]
