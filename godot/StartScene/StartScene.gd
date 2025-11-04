@@ -8,7 +8,11 @@ func _process(_delta):
 		if Input.is_action_just_pressed("Interaction"):
 			global.change_scene("res://Dungeon/Room/Room0.tscn")
 	elif ready_master:
-		pass
+		if Input.is_action_just_pressed("Interaction") and not global.is_reading:
+			var master_textbox = preload("res://StartScene/Master/Master_Text_Box.tscn").instantiate()
+			master_textbox.queue_text("안녕")
+			master_textbox.queue_text("강력한 기술을 배우고싶지?")
+			get_tree().current_scene.add_child(master_textbox)
 	elif ready_store:
 		pass
 

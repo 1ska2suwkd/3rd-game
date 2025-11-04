@@ -64,7 +64,11 @@ func _process(_delta):
 	
 	
 func _physics_process(_delta):
-	if dead: return
+	if dead: 
+		return
+	elif global.is_reading:
+		$AnimatedSprite2D.play("idle")
+		return
 	
 	if knockback_time > 0.0:
 		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속

@@ -28,7 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_peenx"]
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_03fdb"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
-[ext_resource type="PackedScene" uid="uid://cbd1xb3ag183w" path="res://StartScene/Master/Master_Text_Box.tscn" id="27_p4s3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 resource_name = "Collision_water"
@@ -633,6 +632,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bv0wd"]
+radius = 107.46627
+
 [node name="StartScene" type="Node2D"]
 script = ExtResource("1_1fguw")
 
@@ -758,16 +760,13 @@ offset = Vector2(0, -10)
 [node name="Talk_to_Master" type="Area2D" parent="Ysort/Master"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Master/Talk_to_Master"]
-position = Vector2(0.8353462, 53.61566)
+position = Vector2(1.0000191, 81)
 scale = Vector2(1.0000001, 1)
-shape = SubResource("RectangleShape2D_fhlmx")
-
-[node name="Master_UI" parent="." instance=ExtResource("27_p4s3d")]
+shape = SubResource("CircleShape2D_bv0wd")
 
 [connection signal="body_entered" from="Dungeon/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dungeon/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Ysort/Store/entered_store" to="." method="_on_entered_store_body_entered"]
 [connection signal="body_exited" from="Ysort/Store/entered_store" to="." method="_on_entered_store_body_exited"]
-[connection signal="area_entered" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_area_entered"]
 [connection signal="body_entered" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_body_entered"]
 [connection signal="body_exited" from="Ysort/Master/Talk_to_Master" to="." method="_on_talk_to_master_body_exited"]

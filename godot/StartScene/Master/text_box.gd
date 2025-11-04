@@ -22,15 +22,13 @@ var current_state = State.READY
 
 func _ready() -> void:
 	hide_textbox()
-	queue_text("2025년 11월 03일 인디게임 개발을 마무리합니다~~")
-	queue_text("완성 목표는 2026년 1월 1일")
-	queue_text("그때까지 열심히 해볼게요!")
 
 
 func _process(_delta: float) -> void:
 	match current_state:
 		State.READY:
 			if not text_queue.is_empty():
+				global.is_reading = true
 				display_text()
 		State.READING:
 			if Input.is_action_just_pressed("Interaction"):
@@ -43,6 +41,9 @@ func _process(_delta: float) -> void:
 				change_state(State.READY)
 				if text_queue.is_empty():
 					hide_textbox()
+					#global.is_reading = false
+					var master_skilltree = preload("res://StartScene/Master/Master_Skilltree.tscn").instantiate()
+					get_tree().current_scene.add_child(master_skilltree)
 				else:
 					start_symbol.text = ""
 					text.text = ""

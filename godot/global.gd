@@ -17,6 +17,9 @@ var probabilities = [0, 0.05, 0.15, 0.25, 0.50, 1.0]
 var chest_room_stack = 0
 var room_count = 0
 
+# textbox 관련 변수
+var is_reading = false
+
 func _ready():
 	randomize()
 	
