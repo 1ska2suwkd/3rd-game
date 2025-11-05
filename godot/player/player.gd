@@ -27,7 +27,7 @@ func _ready():
 		hearts_list.append(child)
 	init_heart_display()
 
-	MasterSkill.Crescent_Slash = true # 임시
+	#MasterSkill.Crescent_Slash = true # 임시
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
