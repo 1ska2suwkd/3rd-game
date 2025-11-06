@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 var dead = false
 
-var attacking := false
 # 공격하면서 이동 시 이동속도 감소
 var combo = "1"
 var attackDir = ""
@@ -87,7 +86,7 @@ func _physics_process(_delta):
 			dir.x += 1
 		# 방향 벡터 정규화 후 속도 적용
 		if dir != Vector2.ZERO:
-			if not attacking:
+			if not PlayerStat.attacking:
 				velocity = dir.normalized() * PlayerStat.speed
 				$AnimatedSprite2D.play("walk")
 				if velocity.x < 0:
@@ -99,16 +98,16 @@ func _physics_process(_delta):
 				 
 		else:
 			velocity = Vector2.ZERO
-			if not attacking:
+			if not PlayerStat.attacking:
 				$AnimatedSprite2D.play("idle")
 			
-		if Input.is_action_pressed("attack") and not attacking:
+		if Input.is_action_pressed("attack") and not PlayerStat.attacking:
 			_do_attack()
 		# 충돌 계산 포함된 이동
 	move_and_slide()
 	
 func _do_attack():
-	attacking = true
+	PlayerStat.attacking = true
 	var mouse_pos = get_global_mouse_position()
 	var to_mouse = mouse_pos - global_position
 	
@@ -126,7 +125,7 @@ func _do_attack():
 	
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-		attacking = false
+		PlayerStat.attacking = false
 		if combo == "1":
 			combo = "2"
 		else:

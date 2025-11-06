@@ -1,13 +1,11 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bor1u72pbdixc"]
-
-[sub_resource type="Shader" id="Shader_l2quv"]
-code = "shader_type canvas_item;
+shader_type canvas_item;
 
 uniform vec4 outline_color : source_color = vec4(1.0, 1.0, 1.0, 1.0); // 흰색 (기본)
 uniform float threshold = 0.01; // 알파 판정 임계값 (대개 0.01이면 충분)
+uniform float outline_size = 10.0;
 
 void fragment() {
-    vec2 px = TEXTURE_PIXEL_SIZE; // 텍스쳐의 1픽셀 UV 오프셋
+    vec2 px = TEXTURE_PIXEL_SIZE * outline_size; // 텍스쳐의 1픽셀 UV 오프셋
 
     vec4 me = texture(TEXTURE, UV);
     float a = me.a;
@@ -37,9 +35,3 @@ void fragment() {
         COLOR = me;
     }
 }
-"
-
-[resource]
-shader = SubResource("Shader_l2quv")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/threshold = 0.01

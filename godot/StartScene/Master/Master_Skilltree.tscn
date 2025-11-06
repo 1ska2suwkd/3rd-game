@@ -180,20 +180,20 @@ pivot_offset = Vector2(96, 0)
 texture_normal = ExtResource("5_cb2jk")
 texture_pressed = ExtResource("6_w3niy")
 
-[node name="Label2" type="Label" parent="Buy_Skill"]
+[node name="Buy_text" type="Label" parent="Buy_Skill"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -241.00002
-offset_top = -60.000004
-offset_right = 241.0
-offset_bottom = 33.0
+offset_left = -241.5
+offset_top = -55.0
+offset_right = 240.5
+offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.3, 0.3)
 pivot_offset = Vector2(240, 0)
 text = "구매"
 label_settings = SubResource("LabelSettings_cb2jk")
@@ -232,5 +232,7 @@ texture = ExtResource("7_w3niy")
 
 [node name="exit_button" parent="." instance=ExtResource("9_jwj7w")]
 
+[connection signal="button_down" from="Buy_Skill" to="." method="_on_buy_skill_button_down"]
+[connection signal="button_up" from="Buy_Skill" to="." method="_on_buy_skill_button_up"]
 [connection signal="pressed" from="Buy_Skill" to="." method="_on_buy_skill_pressed"]
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]

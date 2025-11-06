@@ -1,12 +1,13 @@
 extends StaticBody2D
 
-@onready var outline_material := preload("res://Dungeon/Chest/chest.tres")
+@onready var outline_material := preload("res://UI/Outline.tres")
 @onready var sprite := $AnimatedSprite2D
 
 var ready_open = false
 var opend = false
 
 func _ready() -> void:
+	outline_material.set_shader_parameter("outline_size", 1)
 	sprite.material = null
 
 
