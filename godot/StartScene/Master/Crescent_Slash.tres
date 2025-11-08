@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://be7x0lshrbnna"]
+
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/item.gd" id="1_2siru"]
+[ext_resource type="Texture2D" uid="uid://drnf01ttx64v7" path="res://assets/Image/Item/slash_item.png" id="2_2siru"]
+
+[resource]
+script = ExtResource("1_2siru")
+item_name = "Crescent Slash"
+item_description = "마스터에게 전수받은 첫번째 기술 "
+item_ability = "달 모양의 검기를 날린다. 방에서 체력을 잃을 경우 그 방에서 Crescent Slash를 사용할 수 없게 된다."
+sprite = ExtResource("2_2siru")
+metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

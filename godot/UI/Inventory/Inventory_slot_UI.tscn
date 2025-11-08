@@ -1,19 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjeq2gfi4hunq"]
+[gd_scene load_steps=11 format=3 uid="uid://bjeq2gfi4hunq"]
 
+[ext_resource type="Script" uid="uid://dola0eak4m1hq" path="res://UI/Inventory/inventory_slot_ui.gd" id="1_0jkrt"]
 [ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
 [ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_0jkrt"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="4_t8dft"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jkrt"]
+bg_color = Color(0, 0, 0, 0.6666667)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8dft"]
+bg_color = Color(0.2627451, 0.2509804, 0.33333334, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdi84"]
+bg_color = Color(0, 0, 0, 0.7411765)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_t8dft"]
+font = ExtResource("4_t8dft")
+font_size = 40
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fknvb"]
+font = ExtResource("4_t8dft")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_vdi84"]
+font = ExtResource("4_t8dft")
+font_size = 40
+font_color = Color(1, 0, 0, 1)
 
 [node name="InventorySlotUi" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(140, 130)
-offset_right = 110.0
-offset_bottom = 124.0
+offset_right = 140.0
+offset_bottom = 130.0
+script = ExtResource("1_0jkrt")
 
 [node name="slot" type="Sprite2D" parent="."]
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("1_xtguw")
 centered = false
-offset = Vector2(-7, 0)
+region_enabled = true
+region_rect = Rect2(7, 0, 50, 49)
 
 [node name="ex_item" type="Sprite2D" parent="."]
 visible = false
@@ -21,3 +65,98 @@ position = Vector2(16, 15)
 scale = Vector2(1.2000002, 1.2000002)
 texture = ExtResource("2_0jkrt")
 centered = false
+
+[node name="item_display" type="Sprite2D" parent="."]
+position = Vector2(16, 15)
+scale = Vector2(1.2000002, 1.2000002)
+centered = false
+
+[node name="not_item" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jkrt")
+
+[node name="is_item" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 108.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jkrt")
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = 30
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 63.0
+offset_top = -65.0
+offset_right = 413.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t8dft")
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -85.0
+offset_right = 160.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vdi84")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -70.0
+offset_right = 435.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="name" type="Label" parent="Panel2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Crescent Slash"
+label_settings = SubResource("LabelSettings_t8dft")
+autowrap_mode = 1
+
+[node name="descript" type="Label" parent="Panel2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "마스터에게 전수받은 첫번째 기술 달 모양의 검기를 날린다.
+방에서 체력을 잃을 경우 그 방에서 Crescent Slash를 사용할 수 없게 된다."
+label_settings = SubResource("LabelSettings_fknvb")
+autowrap_mode = 1
+
+[node name="ability" type="Label" parent="Panel2/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "공격력 1 증가"
+label_settings = SubResource("LabelSettings_vdi84")
+autowrap_mode = 1
+
+[connection signal="mouse_entered" from="is_item" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="is_item" to="." method="_on_mouse_exited"]

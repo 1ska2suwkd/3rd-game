@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://bp60isr3xfqhu"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=6 format=3 uid="uid://bp60isr3xfqhu"]
 
-[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://item.gd" id="1_2o5ws"]
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/item.gd" id="1_2o5ws"]
 [ext_resource type="Script" uid="uid://q8gcp640llee" path="res://inventory.gd" id="2_3p7cu"]
+[ext_resource type="Resource" uid="uid://cflmkcmlowg63" path="res://Resources/Items/Materials/ATK_damage_book.tres" id="2_ly46k"]
+[ext_resource type="Resource" uid="uid://l4bx2lbja41o" path="res://Resources/Items/Materials/ATK_speed_book.tres" id="3_ly46k"]
+[ext_resource type="Resource" uid="uid://be7x0lshrbnna" path="res://StartScene/Master/Crescent_Slash.tres" id="4_ympv3"]
 
 [resource]
 script = ExtResource("2_3p7cu")
-items = Array[ExtResource("1_2o5ws")]([null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_2o5ws")]([ExtResource("2_ly46k"), ExtResource("3_ly46k"), ExtResource("4_ympv3"), null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://q8gcp640llee"
