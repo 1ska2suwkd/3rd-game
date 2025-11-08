@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cflmkcmlowg63"]
+
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://item.gd" id="1_twooy"]
+[ext_resource type="Texture2D" uid="uid://b7waoc7h5ayy5" path="res://assets/Image/Item/2권.png" id="2_5gpst"]
+
+[resource]
+script = ExtResource("1_twooy")
+item_name = "더 강하게! 더 박력있게!"
+item_description = "마스터가 잃어버린 책 제 2권, 강력한 공격을 하기 위한 연습법이 자세하게 적혀있다. 공격력 1 증가"
+sprite = ExtResource("2_5gpst")
+metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

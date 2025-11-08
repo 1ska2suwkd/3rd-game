@@ -6,7 +6,6 @@ var speed = 400
 var hp = 3
 var attack_speed = 1.3
 var attack_slow = 0.7
-
 var gold = 11
 
 var is_player_hit = false # 방에서 한 대라도 맞으면 스승 기술을 없애기 위한 변수

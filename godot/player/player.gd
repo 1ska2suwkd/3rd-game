@@ -19,6 +19,7 @@ var hearts_list : Array[TextureRect]
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
+@export var inventory : Inventory
 
 func _ready():
 	var hearts_parent = $UI/Hearts

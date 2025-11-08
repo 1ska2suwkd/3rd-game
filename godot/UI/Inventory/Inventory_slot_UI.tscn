@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjeq2gfi4hunq"]
+
+[ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
+[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_0jkrt"]
+
+[node name="InventorySlotUi" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(140, 130)
+offset_right = 110.0
+offset_bottom = 124.0
+
+[node name="slot" type="Sprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("1_xtguw")
+centered = false
+offset = Vector2(-7, 0)
+
+[node name="ex_item" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16, 15)
+scale = Vector2(1.2000002, 1.2000002)
+texture = ExtResource("2_0jkrt")
+centered = false
