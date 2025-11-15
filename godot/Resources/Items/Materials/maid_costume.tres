@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://73kkj3o3rn4x"]
+
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_8tved"]
+[ext_resource type="Texture2D" uid="uid://2wm7kawk1hys" path="res://assets/Image/Item/임재근의 메이드복.png" id="2_xgosx"]
+
+[resource]
+script = ExtResource("1_8tved")
+item_number = 3
+item_name = "임재근의 메이드복"
+item_description = "메이드 카페 알바는 쉬운 게 아니야 그치?"
+item_ability = "공격 사거리 2 증가"
+sprite = ExtResource("2_xgosx")
+metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

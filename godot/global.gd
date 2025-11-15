@@ -18,7 +18,7 @@ var chest_room_stack = 0
 var room_count = 0
 
 # textbox 관련 변수
-var is_reading = false
+var is_stop = false
 
 func _ready():
 	randomize()

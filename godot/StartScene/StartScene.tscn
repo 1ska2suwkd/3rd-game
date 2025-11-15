@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=83 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://StartScene/StartScene.gd" id="1_1fguw"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
@@ -30,6 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_03fdb"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 [ext_resource type="Texture2D" uid="uid://bre3rl1nxq6at" path="res://assets/Image/Factions/Knights/Buildings/Castle/Shadow.png" id="26_p4s3d"]
+[ext_resource type="PackedScene" uid="uid://cjo7bqiv4qdm6" path="res://Resources/Items/ATK_speed_book.tscn" id="31_apm22"]
+[ext_resource type="PackedScene" uid="uid://disjxfc6mfrip" path="res://Resources/Items/ATK_damage_book.tscn" id="32_vlyxd"]
+[ext_resource type="PackedScene" uid="uid://b1jeq3ui7pfxq" path="res://Resources/Items/Piercing_Attack.tscn" id="33_odp2v"]
+[ext_resource type="PackedScene" uid="uid://b13j4y6b2synt" path="res://Scene_Manager.tscn" id="34_6lqix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 resource_name = "Collision_water"
@@ -717,8 +721,6 @@ y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
 
-[node name="Camera2D" type="Camera2D" parent="Ysort/player"]
-
 [node name="Collision" type="TileMapLayer" parent="Ysort" groups=["Wall"]]
 y_sort_enabled = true
 position = Vector2(-18, -4.000242)
@@ -785,6 +787,17 @@ offset = Vector2(0, -10)
 position = Vector2(1.0000191, 81)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("CircleShape2D_bv0wd")
+
+[node name="Item" parent="." instance=ExtResource("31_apm22")]
+position = Vector2(-144, 258)
+
+[node name="Item2" parent="." instance=ExtResource("32_vlyxd")]
+position = Vector2(56, 269)
+
+[node name="Item3" parent="." instance=ExtResource("33_odp2v")]
+position = Vector2(-35, 325)
+
+[node name="SceneManager" parent="." instance=ExtResource("34_6lqix")]
 
 [connection signal="body_entered" from="Dungeon/Enter_ready" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dungeon/Enter_ready" to="." method="_on_area_2d_body_exited"]

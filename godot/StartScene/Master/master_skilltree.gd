@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var Check = $Check
 @onready var buy_text = $Buy_Skill/Buy_text
+
 var is_buy = false
 
 func _ready() -> void:
@@ -16,6 +17,7 @@ func _on_buy_skill_pressed() -> void:
 		is_buy = true
 		PlayerStat.set_gold(-10)
 		MasterSkill.Crescent_Slash = true
+		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		Check.show()
 
 func _on_buy_skill_button_down() -> void:
@@ -29,5 +31,5 @@ func _on_buy_skill_button_up() -> void:
 
 func _on_exit_button_pressed() -> void:
 	queue_free()
-	global.is_reading = false
+	global.is_stop = false
 	PlayerStat.attacking = false

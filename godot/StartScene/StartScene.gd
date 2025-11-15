@@ -4,6 +4,7 @@ extends Node2D
 @onready var Master_sprite := $Ysort/Master/StaticBody2D/Master_Animation
 @onready var Dungeon_sprite := $Dungeon/Dungeon
 @onready var Store_sprite := $Ysort/Store/store
+@onready var transition_out = $SceneManager/AnimationTree
 
 
 var ready_master = false
@@ -16,9 +17,14 @@ func _ready() -> void:
 func _process(_delta):
 	if global.transition_scene:
 		if Input.is_action_just_pressed("Interaction"):
+			global.is_stop = true
+			transition_out.play("transition_out")
+			await transition_out.animation_finished
 			global.change_scene("res://Dungeon/Room/Room0.tscn")
+			global.is_stop = false
+
 	elif ready_master:
-		if Input.is_action_just_pressed("Interaction") and not global.is_reading:
+		if Input.is_action_just_pressed("Interaction") and not global.is_stop:
 			var master_textbox = preload("res://StartScene/Master/Master_Text_Box.tscn").instantiate()
 			master_textbox.queue_text("안녕")
 			master_textbox.queue_text("강력한 기술을 배우고싶지?")

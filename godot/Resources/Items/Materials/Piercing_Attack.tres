@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://8bjyk62ro1ic"]
+
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_sjpb7"]
+[ext_resource type="Texture2D" uid="uid://dw7evycckw3et" path="res://assets/Image/Item/관통화살.png" id="2_dvyfc"]
+
+[resource]
+script = ExtResource("1_sjpb7")
+item_number = 4
+item_name = "관통의 화살"
+item_description = "상대의 약점을 겨냥하는 정확한 조준은 그 너머를 볼 수 있다."
+item_ability = "플레이어의 공격이 관통효과를 가진다."
+sprite = ExtResource("2_dvyfc")
+metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

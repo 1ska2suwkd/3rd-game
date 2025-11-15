@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://qgqvb8idhob"]
+
+[ext_resource type="Script" uid="uid://yr2wwijieck3" path="res://Resources/Items/Script/maid_costume.gd" id="1_j0wbn"]
+[ext_resource type="Resource" uid="uid://73kkj3o3rn4x" path="res://Resources/Items/Materials/maid_costume.tres" id="2_rxqs4"]
+[ext_resource type="Texture2D" uid="uid://bahjcalfnqnil" path="res://assets/Image/Item/64x64.png" id="3_i4wcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7mro"]
+size = Vector2(64, 64)
+
+[node name="Item" type="Area2D"]
+script = ExtResource("1_j0wbn")
+item_resources = ExtResource("2_rxqs4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_i4wcd")
+region_enabled = true
+region_rect = Rect2(320, 8320, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x7mro")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

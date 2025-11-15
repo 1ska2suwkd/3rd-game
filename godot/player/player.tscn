@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
-[ext_resource type="Resource" uid="uid://bp60isr3xfqhu" path="res://Resources/Inventory/Player_Inventory.tres" id="2_8t03j"]
 [ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
 [ext_resource type="Texture2D" uid="uid://b4fl0y7yn1uto" path="res://assets/Image/UI/Icons/attack_speed_icon.png" id="8_8t03j"]
 [ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="8_hg6s5"]
+[ext_resource type="Texture2D" uid="uid://dvhkk4t0je8nd" path="res://assets/Image/UI/Icons/canon_2.png" id="9_2ieo8"]
 [ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="9_hg6s5"]
 [ext_resource type="PackedScene" uid="uid://cme2w3tycgvye" path="res://UI/Inventory/Inventory_UI.tscn" id="11_2ieo8"]
 
@@ -614,7 +614,6 @@ y_sort_enabled = true
 scale = Vector2(1, 0.986045)
 collision_mask = 67
 script = ExtResource("1_onrkg")
-inventory = ExtResource("2_8t03j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -722,6 +721,22 @@ size_flags_vertical = 0
 text = "NULL"
 label_settings = SubResource("LabelSettings_8t03j")
 
+[node name="HBoxContainer5" type="HBoxContainer" parent="UI/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect2" type="TextureRect" parent="UI/VBoxContainer2/HBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("9_2ieo8")
+expand_mode = 2
+
+[node name="range" type="Label" parent="UI/VBoxContainer2/HBoxContainer5"]
+modulate = Color(1, 1, 1, 0.78431374)
+layout_mode = 2
+size_flags_vertical = 0
+text = "NULL"
+label_settings = SubResource("LabelSettings_8t03j")
+
 [node name="HBoxContainer4" type="HBoxContainer" parent="UI"]
 offset_left = 28.000002
 offset_top = 125.0
@@ -743,7 +758,10 @@ size_flags_vertical = 0
 text = "NULL"
 label_settings = SubResource("LabelSettings_8t03j")
 
-[node name="InventoryUi" parent="." instance=ExtResource("11_2ieo8")]
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="InventoryUi" parent="Camera2D" instance=ExtResource("11_2ieo8")]
+visible = false
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

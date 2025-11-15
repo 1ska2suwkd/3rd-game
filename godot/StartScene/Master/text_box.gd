@@ -28,7 +28,7 @@ func _process(_delta: float) -> void:
 	match current_state:
 		State.READY:
 			if not text_queue.is_empty():
-				global.is_reading = true
+				global.is_stop = true
 				display_text()
 		State.READING:
 			if Input.is_action_just_pressed("Interaction"):
@@ -41,7 +41,7 @@ func _process(_delta: float) -> void:
 				change_state(State.READY)
 				if text_queue.is_empty():
 					hide_textbox()
-					#global.is_reading = false
+					#global.is_stop = false
 					var master_skilltree = preload("res://StartScene/Master/Master_Skilltree.tscn").instantiate()
 					get_tree().current_scene.add_child(master_skilltree)
 				else:

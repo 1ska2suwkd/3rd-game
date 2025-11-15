@@ -83,6 +83,7 @@ func find_parent_room() -> Node:
 			return current
 		current = current.get_parent()
 	return null
+	
 		
 
 func die():

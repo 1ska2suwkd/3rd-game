@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://disjxfc6mfrip"]
+
+[ext_resource type="Texture2D" uid="uid://bahjcalfnqnil" path="res://assets/Image/Item/64x64.png" id="1_8n7bl"]
+[ext_resource type="Script" uid="uid://dw03ls60e8t4h" path="res://Resources/Items/Script/atk_damage_book.gd" id="1_uwk15"]
+[ext_resource type="Resource" uid="uid://cflmkcmlowg63" path="res://Resources/Items/Materials/ATK_damage_book.tres" id="2_skspc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7mro"]
+size = Vector2(64, 64)
+
+[node name="Item" type="Area2D"]
+script = ExtResource("1_uwk15")
+item_resources = ExtResource("2_skspc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8n7bl")
+region_enabled = true
+region_rect = Rect2(0, 1152, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x7mro")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -19,19 +19,16 @@ var hearts_list : Array[TextureRect]
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
-@export var inventory : Inventory
 
 func _ready():
 	var hearts_parent = $UI/Hearts
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	init_heart_display()
-
 	#MasterSkill.Crescent_Slash = true # 임시
 
 func update_heart_display():
 	var target_hp = max(PlayerStat.hp, 0) # 인덱스 언더플로우 방지
-	
 	while hearts_list.size() > target_hp:
 		var heart = hearts_list[-1].get_node("heart")
 		if heart.animation != "heart_loss":
@@ -66,7 +63,7 @@ func _process(_delta):
 func _physics_process(_delta):
 	if dead: 
 		return
-	elif global.is_reading:
+	elif global.is_stop:
 		$AnimatedSprite2D.play("idle")
 		return
 	
