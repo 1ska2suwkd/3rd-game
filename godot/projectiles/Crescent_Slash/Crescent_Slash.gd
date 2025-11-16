@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		#관통의 화살을 얻으면 투사체가 적에 닿아도 사라지지 않음
-		if PlayerStat.player_inv.items[3] == null:
+		if PlayerStat.player_inv.items[4] == null:
 			queue_free()
 	elif body.is_in_group("Wall"):
 		queue_free()

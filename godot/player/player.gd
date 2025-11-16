@@ -21,6 +21,7 @@ var hearts_list : Array[TextureRect]
 
 
 func _ready():
+	PlayerStat.attacking = false
 	var hearts_parent = $UI/Hearts
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
