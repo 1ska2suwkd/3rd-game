@@ -228,7 +228,6 @@ shape = SubResource("RectangleShape2D_y5vj3")
 collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-visible = false
 shape = SubResource("CircleShape2D_y5vj3")
 
 [node name="Contact_Damage" type="Area2D" parent="."]

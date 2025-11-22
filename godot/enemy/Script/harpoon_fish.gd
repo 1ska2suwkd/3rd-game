@@ -5,14 +5,15 @@ func _ready() -> void:
 
 
 func _on_attack_timeout() -> void:
-	is_attack = true
-	velocity = Vector2.ZERO
-	if player.global_position.x < global_position.x:
-		$AnimatedSprite2D.flip_h = true
-	else:
-		$AnimatedSprite2D.flip_h = false
+	if not player == null:
+		is_attack = true
+		velocity = Vector2.ZERO
+		if player.global_position.x < global_position.x:
+			$AnimatedSprite2D.flip_h = true
+		else:
+			$AnimatedSprite2D.flip_h = false
 		
-	$AnimatedSprite2D.play("attack")
+		$AnimatedSprite2D.play("attack")
 
 
 func _on_animated_sprite_2d_frame_changed() -> void:

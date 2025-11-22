@@ -7,7 +7,7 @@ extends CanvasLayer
 
 func _ready() -> void:
 	update_labels()
-	PlayerStat.connect("stats_changed", Callable(self, "update_labels")) # stat_changed 함수와 연결해서 시그널이 오면 update_labels를 실행
+	EventBus.connect("stats_changed", Callable(self, "update_labels")) # stat_changed 함수와 연결해서 시그널이 오면 update_labels를 실행
 
 
 func update_labels():

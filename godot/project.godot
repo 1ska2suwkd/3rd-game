@@ -18,6 +18,11 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 global="*res://global.gd"
 PlayerStat="*res://player/playerStat.gd"
 MasterSkill="*res://StartScene/Master/Master_Skill.gd"
+EventBus="*res://event_bus.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
 
 [display]
 

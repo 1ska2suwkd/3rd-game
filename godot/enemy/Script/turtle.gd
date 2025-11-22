@@ -38,7 +38,7 @@ func _on_guard_in_timeout() -> void:
 
 
 func _on_cooldown_timeout() -> void:
-	if not is_attack and not dead:
+	if not is_attack and not dead and not player == null:
 		is_attack = true
 		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("guard_in")

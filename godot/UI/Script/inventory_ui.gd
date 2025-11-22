@@ -6,16 +6,16 @@ extends Control
 var is_open = false
 
 func _ready() -> void:
-	update_slots()
+	#update_slots()
+	EventBus.connect("add_item",Callable(self, "update_slots"))
 	close()
-
+	
 	
 func update_slots():
 	for i in range(min(inv.items.size(), slots.size())):
 		slots[i].update(inv.items[i])
 	
 func _process(_delta: float) -> void:
-	update_slots()
 	if Input.is_action_just_pressed("E"):
 		if is_open:
 			close()
