@@ -10,6 +10,7 @@ extends Panel
 
 func _ready() -> void:
 	itme_descript_panel.visible = false
+	
 
 func update(item: Item):
 	if !item:

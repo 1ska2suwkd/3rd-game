@@ -19,6 +19,7 @@ var hearts_list : Array[TextureRect]
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
+@export var player_inv = preload("res://Resources/Inventory/Player_Inventory.tres")
 
 func _ready():
 	PlayerStat.attacking = false

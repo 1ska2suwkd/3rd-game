@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjeq2gfi4hunq"]
+[gd_scene load_steps=10 format=3 uid="uid://bjeq2gfi4hunq"]
 
 [ext_resource type="Script" uid="uid://dola0eak4m1hq" path="res://UI/Inventory/inventory_slot_ui.gd" id="1_0jkrt"]
 [ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
-[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_0jkrt"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="4_t8dft"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jkrt"]
@@ -59,13 +58,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2(7, 0, 50, 49)
 
-[node name="ex_item" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(16, 15)
-scale = Vector2(1.2000002, 1.2000002)
-texture = ExtResource("2_0jkrt")
-centered = false
-
 [node name="item_display" type="Sprite2D" parent="."]
 position = Vector2(16, 15)
 scale = Vector2(1.2000002, 1.2000002)
@@ -85,7 +77,7 @@ offset_bottom = 108.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0jkrt")
 
 [node name="Panel2" type="Panel" parent="."]
-z_index = 30
+z_index = 40
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -135,7 +127,7 @@ custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-text = "Crescent Slash"
+text = "item name"
 label_settings = SubResource("LabelSettings_t8dft")
 autowrap_mode = 1
 
@@ -144,8 +136,7 @@ custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-text = "마스터에게 전수받은 첫번째 기술 달 모양의 검기를 날린다.
-방에서 체력을 잃을 경우 그 방에서 Crescent Slash를 사용할 수 없게 된다."
+text = "item story"
 label_settings = SubResource("LabelSettings_fknvb")
 autowrap_mode = 1
 
@@ -154,7 +145,7 @@ custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-text = "공격력 1 증가"
+text = "item ability"
 label_settings = SubResource("LabelSettings_vdi84")
 autowrap_mode = 1
 

@@ -6,7 +6,7 @@ extends Control
 var is_open = false
 
 func _ready() -> void:
-	#update_slots()
+	update_slots()
 	EventBus.connect("add_item",Callable(self, "update_slots"))
 	close()
 	
