@@ -4,7 +4,7 @@ extends "res://enemy/Script/BaseEnemy.gd"
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _ready() -> void:
-	init_stat(250, 3, 1)
+	init_stat(250, 30, 1)
 
 
 func _physics_process(_delta: float) -> void:

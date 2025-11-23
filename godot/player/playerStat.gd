@@ -3,7 +3,7 @@ extends Node2D
 
 @onready var player_inv: Inventory = preload("res://Resources/Inventory/Player_Inventory.tres")
 
-var damage = 2
+var damage = 10
 var speed = 400
 var hp = 3
 var attack_speed = 1.3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://di1cg30e8i3jn"]
+[gd_scene load_steps=24 format=4 uid="uid://di1cg30e8i3jn"]
 
 [ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/Image/Dungeon/walls_floor.png" id="1_csfdu"]
 [ext_resource type="Texture2D" uid="uid://bx473x3dv8nce" path="res://assets/Image/Dungeon/water_detilazation_v2.png" id="1_s5ocl"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="4_v1chb"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="5_2qvu0"]
 [ext_resource type="PackedScene" uid="uid://pm5gdcak0xg8" path="res://enemy/Boss/Buta.tscn" id="6_4tl4b"]
+[ext_resource type="PackedScene" uid="uid://bmrf0bvbng7ux" path="res://enemy/HarpoonFish.tscn" id="9_5ekh7"]
+[ext_resource type="PackedScene" uid="uid://bfh82f0egxqxa" path="res://enemy/Shaman.tscn" id="10_kqotg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ekh7"]
 texture = ExtResource("1_s5ocl")
@@ -3002,3 +3004,11 @@ position = Vector2(-128, -128)
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAD8/wUAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAPz/AAAAAAAAAAD8//z/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_i2x58")
+
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("9_5ekh7")]
+position = Vector2(-559, -518)
+player = NodePath("../player")
+
+[node name="Shaman" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("10_kqotg")]
+position = Vector2(561, -522)
+player = NodePath("../player")

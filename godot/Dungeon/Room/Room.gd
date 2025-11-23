@@ -1,6 +1,8 @@
 #Room.gd
 extends Node2D
 
+@onready var transtion_animation = $Scene_Manager/AnimationTree
+
 func _ready() -> void:
 	print(global.room_count,"번째 방")
 	var door_names = ["NorthDoor", "SouthDoor", "EastDoor", "WestDoor"]

@@ -15,11 +15,11 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
-global="*res://Autoload/global.gd"
 PlayerStat="*res://player/playerStat.gd"
 MasterSkill="*res://StartScene/Master/Master_Skill.gd"
 EventBus="*res://Autoload/event_bus.gd"
 AllItem="*res://Autoload/all_item.gd"
+global="*res://Autoload/global.gd"
 
 [debug]
 

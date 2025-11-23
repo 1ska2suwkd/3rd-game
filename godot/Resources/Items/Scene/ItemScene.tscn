@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch3oabloq30wy"]
+[gd_scene load_steps=8 format=3 uid="uid://ch3oabloq30wy"]
 
 [ext_resource type="Script" uid="uid://dphy1o3sw5nov" path="res://Resources/Items/add_Item.gd" id="1_qvyix"]
 [ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_mhjr0"]
@@ -8,6 +8,7 @@ size = Vector2(64, 64)
 
 [sub_resource type="Animation" id="Animation_l2j6k"]
 resource_name = "ItemSpawn"
+length = 1.45
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,10 +16,10 @@ tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333335, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.35, 0.65, 1.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 50)]
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, -100), Vector2(0, 100)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -27,10 +28,22 @@ tracks/1/path = NodePath("CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 1.45),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.45),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_gkcr1"]
@@ -59,14 +72,44 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mhjr0"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 92), Vector2(0, 100)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mhjr0"]
 _data = {
 &"ItemSpawn": SubResource("Animation_l2j6k"),
-&"RESET": SubResource("Animation_gkcr1")
+&"RESET": SubResource("Animation_gkcr1"),
+&"idle": SubResource("Animation_mhjr0")
 }
 
 [node name="Item" type="Area2D"]
+z_index = 1
 script = ExtResource("1_qvyix")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

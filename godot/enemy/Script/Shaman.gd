@@ -3,7 +3,7 @@ extends "res://enemy/Script/FleeingEnemy.gd"
 func _ready() -> void:
 	randomize()
 	start_random_timer()
-	init_stat(100, 3, 1)
+	init_stat(100, 20, 1)
 	
 func start_random_timer() -> void:
 	$attack.wait_time = randf_range(1.0, 3.0)

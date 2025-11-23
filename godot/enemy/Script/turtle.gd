@@ -10,7 +10,7 @@ var _dash_t := 0.0
 var restitution := 0.8 # 튕겼을 때 속도 감소량
 
 func _ready() -> void:
-	init_stat(100, 5, 1)
+	init_stat(100, 30, 1)
 	
 
 func _physics_process(_delta: float) -> void:

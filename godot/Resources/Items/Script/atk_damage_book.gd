@@ -2,4 +2,4 @@
 extends Resource
 
 func apply():
-	PlayerStat.set_damage(1)
+	PlayerStat.set_damage(5)

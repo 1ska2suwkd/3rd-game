@@ -23,6 +23,9 @@ func Setup():
 		item_script = item_data.effect_script.new()
 		
 	spawn_animation.play("ItemSpawn")
+	await spawn_animation.animation_finished
+	
+	spawn_animation.play("idle")
 
 func use_item():
 	if item_script:

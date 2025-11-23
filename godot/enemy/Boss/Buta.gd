@@ -10,8 +10,6 @@ var is_dash = false
 var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 var dash_speed = 500
-var accel_rate = 300.0
-var current_speed = 0
 
 @export var player: Node2D
 
@@ -20,7 +18,7 @@ var current_speed = 0
 @onready var healthbar = $백성우/Healthbar
 
 func _ready():
-	stat = Stat.new(300, 50, 1) # speed, hp, damage
+	stat = Stat.new(300, 300, 1) # speed, hp, damage
 	$cooldown.start()
 	healthbar.init_health(stat.hp)
 	
@@ -35,8 +33,7 @@ func _physics_process(_delta: float) -> void:
 	elif not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()
 		if player_chase and player:
-			current_speed = min(current_speed + accel_rate * _delta, stat.speed)
-			velocity = dir * current_speed
+			velocity = dir * stat.speed
 		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
 		if velocity.length() > 1.0 :
@@ -101,7 +98,6 @@ func play_n_times(anim_name: String, n: int) -> void:
 	for i in range(n):
 		if dead:  
 			return
-		current_speed = 0 
 		$AnimatedSprite2D.play("recover")
 		await $AnimatedSprite2D.animation_finished
 	is_attack = false

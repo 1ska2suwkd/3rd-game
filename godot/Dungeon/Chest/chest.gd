@@ -25,6 +25,7 @@ func OpenChest():
 	opend = true
 	
 	inItem.global_position = global_position
+	inItem.global_position.y += -50
 	get_tree().current_scene.add_child(inItem)
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
