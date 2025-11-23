@@ -6282,15 +6282,17 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAABAP3/AAAAAAAAAAAFAAAAAAAAAAAAAAD6//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_8bn0n")
 
-[node name="Turtle" parent="Ysort" instance=ExtResource("15_y5usk")]
+[node name="Turtle" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_y5usk")]
 position = Vector2(-259, -21)
+player = NodePath("../player")
 
 [node name="Skull" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("16_0pju6")]
 position = Vector2(246, -14)
 player = NodePath("../player")
 
-[node name="HarpoonFish" parent="Ysort" instance=ExtResource("17_0pju6")]
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("17_0pju6")]
 position = Vector2(1, -24)
+player = NodePath("../player")
 
 [node name="NorthDoor" type="Area2D" parent="."]
 z_index = -1

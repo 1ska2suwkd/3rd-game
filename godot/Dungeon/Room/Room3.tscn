@@ -6297,13 +6297,16 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAD5//z/BAAAAAUAAAD5//3/BAAAAAYAAAD5//7/BAAAAAcAAAD6//z/BAABAAUAAAD6//3/BAABAAYAAAD6//7/BAABAAcAAAD7//z/BAACAAUAAAD7//3/BAACAAYAAAD7//7/BAACAAcAAAD5////BAAAAAgAAAD6////BAABAAgAAAD7////BAACAAgAAAAEAAEABAAAAAYAAAAEAAIABAAAAAcAAAAEAAMABAAAAAgAAAAFAAEABAABAAYAAAAFAAIABAABAAcAAAAFAAMABAABAAgAAAAGAAEABAACAAYAAAAGAAIABAACAAcAAAAGAAMABAACAAgAAAAEAAAABAAAAAUAAAAFAAAABAABAAUAAAAGAAAABAACAAUAAAA=")
 tile_set = SubResource("TileSet_jseem")
 
-[node name="HarpoonFish" parent="Ysort" instance=ExtResource("15_dhr2u")]
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_dhr2u")]
 position = Vector2(-353, -180.00002)
+player = NodePath("../player")
 
-[node name="HarpoonFish2" parent="Ysort" instance=ExtResource("15_dhr2u")]
+[node name="HarpoonFish2" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_dhr2u")]
 position = Vector2(356, 84)
+player = NodePath("../player")
 
-[node name="Turtle" parent="Ysort" instance=ExtResource("16_i2b11")]
+[node name="Turtle" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("16_i2b11")]
+player = NodePath("../player")
 
 [node name="NorthDoor" type="Area2D" parent="."]
 z_index = -1

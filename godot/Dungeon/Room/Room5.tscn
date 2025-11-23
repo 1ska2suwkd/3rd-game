@@ -6275,8 +6275,9 @@ player = NodePath("../player")
 position = Vector2(-464, 186)
 player = NodePath("../player")
 
-[node name="HarpoonFish" parent="Ysort" instance=ExtResource("16_vjihp")]
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("16_vjihp")]
 position = Vector2(3, -10)
+player = NodePath("../player")
 
 [node name="NorthDoor" type="Area2D" parent="."]
 z_index = -1

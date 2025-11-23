@@ -7,6 +7,7 @@ var ready_open = false
 var opend = false
 
 func _ready() -> void:
+	randomize()
 	outline_material.set_shader_parameter("outline_size", 1)
 	sprite.material = null
 
@@ -15,9 +16,15 @@ func _process(_delta: float) -> void:
 	if opend: return
 	
 	if ready_open and Input.is_action_just_pressed("Interaction"):
-		$AnimatedSprite2D.play("open")
-		sprite.material = null
-		opend = true
+		OpenChest()
+
+func OpenChest():
+	var RandomItemNumber = randi_range(1,4)
+	
+	$AnimatedSprite2D.play("open")
+	sprite.material = null
+	opend = true
+	
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

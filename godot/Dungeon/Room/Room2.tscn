@@ -6270,17 +6270,21 @@ y_sort_enabled = true
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_8bn0n")
 
-[node name="HarpoonFish" parent="Ysort" instance=ExtResource("15_qfusw")]
+[node name="HarpoonFish" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_qfusw")]
 position = Vector2(-136, 128)
+player = NodePath("../player")
 
-[node name="HarpoonFish3" parent="Ysort" instance=ExtResource("15_qfusw")]
+[node name="HarpoonFish3" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_qfusw")]
 position = Vector2(-137, -133)
+player = NodePath("../player")
 
-[node name="HarpoonFish4" parent="Ysort" instance=ExtResource("15_qfusw")]
+[node name="HarpoonFish4" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_qfusw")]
 position = Vector2(162, -128)
+player = NodePath("../player")
 
-[node name="HarpoonFish2" parent="Ysort" instance=ExtResource("15_qfusw")]
+[node name="HarpoonFish2" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_qfusw")]
 position = Vector2(146, 137)
+player = NodePath("../player")
 
 [node name="NorthDoor" type="Area2D" parent="."]
 z_index = -1
