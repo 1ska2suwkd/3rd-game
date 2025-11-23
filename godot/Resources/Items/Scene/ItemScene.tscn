@@ -1,19 +1,85 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch3oabloq30wy"]
+[gd_scene load_steps=7 format=3 uid="uid://ch3oabloq30wy"]
 
 [ext_resource type="Script" uid="uid://dphy1o3sw5nov" path="res://Resources/Items/add_Item.gd" id="1_qvyix"]
-[ext_resource type="Resource" uid="uid://cflmkcmlowg63" path="res://Resources/Items/Materials/ATK_damage_book.tres" id="2_27mo1"]
+[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_mhjr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7mro"]
 size = Vector2(64, 64)
 
+[sub_resource type="Animation" id="Animation_l2j6k"]
+resource_name = "ItemSpawn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_gkcr1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhjr0"]
+_data = {
+&"ItemSpawn": SubResource("Animation_l2j6k"),
+&"RESET": SubResource("Animation_gkcr1")
+}
+
 [node name="Item" type="Area2D"]
 script = ExtResource("1_qvyix")
-exdata = ExtResource("2_27mo1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mhjr0")
 region_rect = Rect2(0, 1152, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_x7mro")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mhjr0")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
