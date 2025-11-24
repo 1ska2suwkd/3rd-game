@@ -2,7 +2,8 @@ extends StaticBody2D
 
 @onready var outline_material := preload("res://UI/Outline.tres")
 @onready var sprite := $AnimatedSprite2D
-@onready var inItem = preload("res://Resources/Items/Scene/ItemScene.tscn").instantiate()
+@onready var item_scene = preload("res://Resources/Items/Scene/ItemScene.tscn")
+
 
 var ready_open = false
 var opend = false
@@ -19,14 +20,18 @@ func _process(_delta: float) -> void:
 		OpenChest()
 
 func OpenChest():
+	if opend:	return
+	opend = true
 	$AnimatedSprite2D.play("open")
 	await $AnimatedSprite2D.animation_finished
 	sprite.material = null
-	opend = true
 	
-	inItem.global_position = global_position
-	inItem.global_position.y += -50
-	get_tree().current_scene.add_child(inItem)
+	var item = item_scene.instantiate()
+	var ysort = get_tree().current_scene.get_node("Ysort")
+	
+	item.global_position = global_position
+	item.global_position.y += -50
+	ysort.add_child(item)
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:

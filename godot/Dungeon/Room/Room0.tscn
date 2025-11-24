@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Dungeon/Room/Room.gd" id="1_efkbg"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/decorative_cracks_coasts_animation.png" id="2_1lqhy"]
+[ext_resource type="PackedScene" uid="uid://dutsp2tqmwnhi" path="res://Dungeon/Dungeon_Scene_Manager.tscn" id="2_v460w"]
 [ext_resource type="Texture2D" uid="uid://lhnk2pjhty8p" path="res://assets/Image/Dungeon/decorative_cracks_floor.png" id="3_ddnqa"]
 [ext_resource type="Texture2D" uid="uid://bx473x3dv8nce" path="res://assets/Image/Dungeon/water_detilazation_v2.png" id="4_herhq"]
 [ext_resource type="Texture2D" uid="uid://nipyvthqtb" path="res://assets/Image/Dungeon/decorative_cracks_walls.png" id="5_bk8ax"]
@@ -15,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="13_4j7ql"]
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_buxqe"]
 [ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="15_jw8qa"]
-[ext_resource type="PackedScene" uid="uid://b13j4y6b2synt" path="res://Scene_Manager.tscn" id="16_v460w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5amnk"]
 texture = ExtResource("2_1lqhy")
@@ -4848,10 +4848,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sj2ks"]
-size = Vector2(71, 70)
+size = Vector2(71, 31)
 
-[node name="Room1" type="Node2D"]
+[node name="Room0" type="Node2D"]
 script = ExtResource("1_efkbg")
+
+[node name="Dungeon_Scene_Manager" parent="." instance=ExtResource("2_v460w")]
 
 [node name="Ground" type="TileMapLayer" parent="."]
 z_index = -2
@@ -4909,7 +4911,7 @@ flip_h = true
 z_index = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EastDoor"]
-position = Vector2(753, -19)
+position = Vector2(772.5, -19)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_sj2ks")
 
@@ -4949,7 +4951,5 @@ offset_top = 4.0
 offset_bottom = 4.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-
-[node name="Scene_Manager" parent="." instance=ExtResource("16_v460w")]
 
 [connection signal="body_entered" from="NorthDoor" to="." method="_on_NorthDoor_body_entered"]

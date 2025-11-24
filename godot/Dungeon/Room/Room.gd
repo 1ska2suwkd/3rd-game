@@ -1,9 +1,17 @@
 #Room.gd
 extends Node2D
 
-@onready var transtion_animation = $Scene_Manager/AnimationTree
+@onready var transtion_animation = $Dungeon_Scene_Manager/animation
 
 func _ready() -> void:
+	match global.player_position_x:
+		-680.0: transtion_animation.play("east_faid_out")
+		680: transtion_animation.play("west_faid_out")
+	match global.player_position_y:
+		345: transtion_animation.play("north_faid_out")
+		-305: transtion_animation.play("south_faid_out")
+	
+		
 	print(global.room_count,"번째 방")
 	var door_names = ["NorthDoor", "SouthDoor", "EastDoor", "WestDoor"]
 	for door_name in door_names:
@@ -57,25 +65,46 @@ func change_room():
 
 func _on_NorthDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		global.is_stop = true
+		transtion_animation.play("north_faid_in")
+		await transtion_animation.animation_finished
 		change_room()
 		global.player_position_x = 0
 		global.player_position_y = 345
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
+		global.is_stop = false
+		
 func _on_SouthDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		global.is_stop = true
+		transtion_animation.play("south_faid_in")
+		await transtion_animation.animation_finished
 		change_room()
 		global.player_position_x = 0
 		global.player_position_y = -305
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
+		global.is_stop = false
+		
 func _on_EastDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		global.is_stop = true
+		transtion_animation.play("east_faid_in")
+		await transtion_animation.animation_finished
+		
 		change_room()
 		global.player_position_x = -680.0
 		global.player_position_y = -21
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
+		global.is_stop = false
+		
 func _on_WestDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		global.is_stop = true
+		transtion_animation.play("west_faid_in")
+		await transtion_animation.animation_finished
+		
 		change_room()
 		global.player_position_x = 680
 		global.player_position_y = -21
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
+		global.is_stop = false

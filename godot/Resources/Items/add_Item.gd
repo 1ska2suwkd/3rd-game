@@ -1,7 +1,7 @@
 extends Area2D
 
 #@export var exdata: Resource
-@onready var Sprite = $Sprite2D
+@onready var Sprite = $CollisionShape2D/Sprite2D
 @onready var spawn_animation = $AnimationPlayer
 var item_number: int
 var item_data: Resource
