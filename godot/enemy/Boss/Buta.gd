@@ -58,7 +58,7 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 		$HitFlashTimer.start()
-		take_damage(PlayerStat.damage)
+		take_damage(PlayerStat.TotalDamage)
 		healthbar.health = stat.hp
 
 

@@ -19,7 +19,7 @@ var hearts_list : Array[TextureRect]
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
 
-@export var player_inv = preload("res://Resources/Inventory/Player_Inventory.tres")
+#@export var player_inv = preload("res://Resources/Inventory/Player_Inventory.tres")
 
 func _ready():
 	PlayerStat.attacking = false
@@ -27,6 +27,12 @@ func _ready():
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	init_heart_display()
+
+	if MasterSkill.Crescent_Slash:
+		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
+		EventBus.emit_signal("add_item")
+
+
 	#MasterSkill.Crescent_Slash = true # 임시
 
 func update_heart_display():
@@ -59,7 +65,7 @@ func _process(_delta):
 	if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
 		$AnimatedSprite2D.speed_scale = 1.0
 	else:
-		$AnimatedSprite2D.speed_scale = PlayerStat.attack_speed
+		$AnimatedSprite2D.speed_scale = PlayerStat.TotalAttackSpeed
 	
 	
 func _physics_process(_delta):
@@ -87,14 +93,14 @@ func _physics_process(_delta):
 		# 방향 벡터 정규화 후 속도 적용
 		if dir != Vector2.ZERO:
 			if not PlayerStat.attacking:
-				velocity = dir.normalized() * PlayerStat.speed
+				velocity = dir.normalized() * PlayerStat.TotalSpeed
 				$AnimatedSprite2D.play("walk")
 				if velocity.x < 0:
 					$AnimatedSprite2D.flip_h = true
 				elif velocity.x > 0:
 					$AnimatedSprite2D.flip_h = false
 			else:
-				velocity = dir.normalized() * PlayerStat.speed * PlayerStat.attack_slow
+				velocity = dir.normalized() * PlayerStat.TotalSpeed * PlayerStat.PlayerAttackSlow
 				 
 		else:
 			velocity = Vector2.ZERO
@@ -136,7 +142,7 @@ func spawn_crescent_slash(path, direction):
 		var scene = load(path)
 		var projectile = scene.instantiate()
 		projectile.global_position = global_position
-		projectile.damage = PlayerStat.damage
+		projectile.damage = PlayerStat.TotalDamage
 		projectile.direction = direction
 		get_tree().current_scene.add_child(projectile)
 			

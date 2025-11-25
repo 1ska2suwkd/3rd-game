@@ -58,7 +58,7 @@ func take_damage(p_damage:int):
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
-		take_damage(PlayerStat.damage)
+		take_damage(PlayerStat.TotalDamage)
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):

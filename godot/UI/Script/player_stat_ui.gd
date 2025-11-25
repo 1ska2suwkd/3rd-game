@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 func update_labels():
-	damage.text = str(PlayerStat.damage)
-	attack_speed.text = str(PlayerStat.attack_speed)
-	attack_range.text = str(PlayerStat.attack_range)
+	damage.text = str(PlayerStat.TotalDamage)
+	attack_speed.text = str(PlayerStat.TotalAttackSpeed)
+	attack_range.text = str(PlayerStat.TotalAttackRange)
 	gold.text = str(PlayerStat.gold)

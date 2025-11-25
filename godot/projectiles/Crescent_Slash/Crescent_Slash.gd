@@ -11,7 +11,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	position += direction * speed * delta
 	
-	if start_position.distance_to(global_position) >= (PlayerStat.attack_range * 100): # attack_range가 플레이어한테 보일땐 한자리지만 실제로 거리계산을 할땐 값이 더 커야함
+	if start_position.distance_to(global_position) >= (PlayerStat.TotalAttackRange * 100): # attack_range가 플레이어한테 보일땐 한자리지만 실제로 거리계산을 할땐 값이 더 커야함
 		queue_free()
 
 
