@@ -5,11 +5,23 @@ extends Node2D
 
 func _ready() -> void:
 	match global.player_position_x:
-		-680.0: transtion_animation.play("east_faid_out")
-		680: transtion_animation.play("west_faid_out")
+		-680.0: 
+			transtion_animation.play("east_faid_out")
+			await transtion_animation.animation_finished
+			global.is_stop = false
+		680: 
+			transtion_animation.play("west_faid_out")
+			await transtion_animation.animation_finished
+			global.is_stop = false
 	match global.player_position_y:
-		345: transtion_animation.play("north_faid_out")
-		-305: transtion_animation.play("south_faid_out")
+		345: 
+			transtion_animation.play("north_faid_out")
+			await transtion_animation.animation_finished
+			global.is_stop = false
+		-305: 
+			transtion_animation.play("south_faid_out")
+			await transtion_animation.animation_finished
+			global.is_stop = false
 	
 		
 	print(global.room_count,"번째 방")
@@ -52,13 +64,17 @@ func change_room():
 	
 	if global.random_number_generator.randf() < global.probabilities[global.chest_room_stack]:
 		global.change_scene("res://Dungeon/Room/Stage1_chest_Room.tscn")
-		global.chest_room_stack = 0
+		match global.chest_room_stack:
+			0:
+				global.chest_room_stack = 1
+			1:
+				global.chest_room_stack = 2
 	elif global.clear_room_count == 5:
 		global.change_scene("res://Dungeon/Room/Stage1_Boss.tscn")
 		global.clear_room_count = 0
 	else:
 		global.room_count += 1
-		global.chest_room_stack += 1
+		#global.chest_room_stack += 1
 		global.change_scene(global.get_random_dungeon_scene())
 			
 
@@ -72,7 +88,6 @@ func _on_NorthDoor_body_entered(body: Node2D) -> void:
 		global.player_position_x = 0
 		global.player_position_y = 345
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
-		global.is_stop = false
 		
 func _on_SouthDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -83,7 +98,6 @@ func _on_SouthDoor_body_entered(body: Node2D) -> void:
 		global.player_position_x = 0
 		global.player_position_y = -305
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
-		global.is_stop = false
 		
 func _on_EastDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -95,7 +109,6 @@ func _on_EastDoor_body_entered(body: Node2D) -> void:
 		global.player_position_x = -680.0
 		global.player_position_y = -21
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
-		global.is_stop = false
 		
 func _on_WestDoor_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -107,4 +120,3 @@ func _on_WestDoor_body_entered(body: Node2D) -> void:
 		global.player_position_x = 680
 		global.player_position_y = -21
 		global.player_flip_h = $Ysort/player/AnimatedSprite2D.flip_h
-		global.is_stop = false

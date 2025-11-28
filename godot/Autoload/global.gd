@@ -13,7 +13,7 @@ var player_position_y = 0
 var player_flip_h = false
 
 var random_number_generator = RandomNumberGenerator.new()
-var probabilities = [0, 0.05, 0.15, 0.25, 0.50, 1.0]
+var probabilities = [1.0, 0.1, 0.05]
 var chest_room_stack = 0
 var room_count = 0
 
