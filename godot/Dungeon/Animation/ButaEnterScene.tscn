@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0sakoc1gqkti"]
+
+[ext_resource type="Script" uid="uid://c5e5adpxws3vb" path="res://Dungeon/Animation/buta_enter_scene.gd" id="1_g6k48"]
+[ext_resource type="Texture2D" uid="uid://lr5w33mcu3xp" path="res://assets/enemy/Troll/Troll_Attack.png" id="1_uyoty"]
+[ext_resource type="Texture2D" uid="uid://bt5go6y7k1vis" path="res://assets/Image/StageBackGround/Stage1BackGround.png" id="1_yaqst"]
+[ext_resource type="Texture2D" uid="uid://bv38fy6lueeim" path="res://assets/Image/StageBackGround/Gemini_Generated_Image_8ek2b08ek2b08ek2-removebg-preview.png" id="2_3y7xx"]
+[ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_yaqst"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyoty"]
+bg_color = Color(0.08627451, 0.10980392, 0.18039216, 0.69803923)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yaqst"]
+font_size = 100
+font_color = Color(0.9700697, 0.8912614, 0.84344727, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uyoty"]
+font_size = 100
+font_color = Color(0.45480722, 0, 0.01617588, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 2)
+
+[sub_resource type="Animation" id="Animation_3y7xx"]
+resource_name = "EnterAnimation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Warrior:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-400, 43), Vector2(-86.79999, 43), Vector2(35, 43), Vector2(-700, 43)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Buta:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3069, -247), Vector2(2500, -247), Vector2(2357, -247), Vector2(3289, -247)]
+}
+
+[sub_resource type="Animation" id="Animation_g6k48"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Warrior:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(35, 43)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Buta:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2357, -247)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_06nek"]
+_data = {
+&"EnterAnimation": SubResource("Animation_3y7xx"),
+&"RESET": SubResource("Animation_g6k48")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_g6k48")
+
+[node name="Stage1BackGround" type="TextureRect" parent="."]
+offset_right = 2752.0
+offset_bottom = 1536.0
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("1_yaqst")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1740.0
+offset_bottom = 980.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uyoty")
+
+[node name="VS" type="TextureRect" parent="."]
+modulate = Color(0.66169786, 0.40915507, 5.7756904e-07, 1)
+self_modulate = Color(1, 1, 1, 0.3764706)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.5
+offset_top = -299.0
+offset_right = 283.5
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(283.5, 296.5)
+texture = ExtResource("2_3y7xx")
+
+[node name="Buta" type="NinePatchRect" parent="."]
+offset_left = 2357.0
+offset_top = -247.0
+offset_right = 2741.0
+offset_bottom = 137.0
+scale = Vector2(-5, 5)
+texture = ExtResource("1_uyoty")
+region_rect = Rect2(0, 0, 384, 384)
+
+[node name="Warrior" type="NinePatchRect" parent="."]
+offset_left = 35.0
+offset_top = 43.0
+offset_right = 419.0
+offset_bottom = 427.0
+rotation = 0.2617994
+scale = Vector2(3, 3)
+texture = ExtResource("2_yaqst")
+region_rect = Rect2(0, 384, 192, 192)
+
+[node name="Warrior2" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 281.0
+offset_top = -849.0
+offset_right = 526.0
+offset_bottom = -734.0
+grow_vertical = 0
+size_flags_horizontal = 0
+text = "신보기"
+label_settings = SubResource("LabelSettings_yaqst")
+
+[node name="Buta2" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -547.0
+offset_top = -849.0
+offset_right = -302.0
+offset_bottom = -734.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "백성우"
+label_settings = SubResource("LabelSettings_uyoty")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Warrior2")
+libraries = {
+&"": SubResource("AnimationLibrary_06nek")
+}
