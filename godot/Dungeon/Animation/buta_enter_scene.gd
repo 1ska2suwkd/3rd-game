@@ -6,4 +6,6 @@ func _ready() -> void:
 	EnterAnimation.play("EnterAnimation")
 	await EnterAnimation.animation_finished
 	
+	global.transition_scene = true
+	global.is_stop = false
 	global.change_scene("res://Dungeon/Room/Stage1_Boss.tscn")

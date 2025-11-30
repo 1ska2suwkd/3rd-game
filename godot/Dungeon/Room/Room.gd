@@ -64,7 +64,7 @@ func change_room(direction):
 			1:
 				global.chest_room_stack = 2
 	elif global.clear_room_count == 5:
-		global.change_scene("res://Dungeon/Room/Stage1_Boss.tscn")
+		global.change_scene("res://Dungeon/Animation/ButaEnterScene.tscn")
 		global.clear_room_count = 0
 	else:
 		global.room_count += 1
