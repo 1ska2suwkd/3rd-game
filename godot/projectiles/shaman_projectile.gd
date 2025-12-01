@@ -34,3 +34,4 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_animated_sprite_2d_frame_changed() -> void:
 	if $AnimatedSprite2D.animation == "Explosion" and $AnimatedSprite2D.frame == 4:
 		$CollisionShape2D.disabled = true
+		$PointLight2D.visible = false

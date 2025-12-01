@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cghss6xuwxyxi"]
+[gd_scene load_steps=7 format=3 uid="uid://cghss6xuwxyxi"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_fakwx"]
 [ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Sword_attack_vfx.png" id="2_e7rk3"]
+[ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_gsj2i"]
 
-[sub_resource type="Curve" id="Curve_fakwx"]
+[sub_resource type="Curve" id="Curve_jgkqi"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_e7rk3"]
+[sub_resource type="Gradient" id="Gradient_qbdd1"]
 offsets = PackedFloat32Array(0, 0.5, 1)
 colors = PackedColorArray(0.8871895, 0.6973419, 0.33317584, 1, 0.95400494, 0.87931633, 0.72136337, 1, 1, 1, 1, 1)
 
@@ -20,19 +21,20 @@ rotation = 1.5707964
 collision_mask = 65
 script = ExtResource("1_fakwx")
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
-position = Vector2(-155, -8.000008)
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-155, -8)
 amount = 30
-lifetime = 0.09999999999999999
+texture = ExtResource("2_gsj2i")
+lifetime = 0.1
 speed_scale = 0.5
 emission_shape = 1
 emission_sphere_radius = 20.0
-gravity = Vector2(0, 600)
+gravity = Vector2(600, 0)
 radial_accel_max = 99.0
-scale_amount_min = 10.0
-scale_amount_max = 10.0
-scale_amount_curve = SubResource("Curve_fakwx")
-color_ramp = SubResource("Gradient_e7rk3")
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_jgkqi")
+color_ramp = SubResource("Gradient_qbdd1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-50, -8)

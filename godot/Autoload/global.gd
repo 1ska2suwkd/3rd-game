@@ -21,6 +21,8 @@ var room_count = 0
 var is_stop = false
 
 func _ready():
+	#clear_room_count = 5
+	
 	randomize()
 	
 func init_game():

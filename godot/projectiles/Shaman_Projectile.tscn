@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://xgtj31bfsb5f"]
+[gd_scene load_steps=19 format=3 uid="uid://xgtj31bfsb5f"]
 
 [ext_resource type="Script" uid="uid://dvgnmam8qvi68" path="res://projectiles/shaman_projectile.gd" id="1_2aatf"]
 [ext_resource type="Texture2D" uid="uid://bvg5gbf4qclg8" path="res://assets/enemy/Shaman/Shaman_Explosion.png" id="1_lxipa"]
 [ext_resource type="Texture2D" uid="uid://pjjb0t2q651v" path="res://assets/enemy/Shaman/Shaman_Projectile.png" id="2_2aatf"]
+[ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="4_eaail"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxipa"]
 radius = 23.5
@@ -147,6 +148,13 @@ sprite_frames = SubResource("SpriteFrames_lk3vs")
 animation = &"Explosion"
 frame = 2
 offset = Vector2(0, -10)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -23)
+color = Color(0.99215686, 0.69803923, 0.9882353, 1)
+energy = 0.5
+texture = ExtResource("4_eaail")
+texture_scale = 1.92
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

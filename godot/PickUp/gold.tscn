@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://fxfo6y3umxis"]
+[gd_scene load_steps=15 format=3 uid="uid://fxfo6y3umxis"]
 
 [ext_resource type="Script" uid="uid://cts3qjanv82l8" path="res://PickUp/gold.gd" id="1_63tex"]
 [ext_resource type="Texture2D" uid="uid://bnbt36upjiy5p" path="res://assets/Image/Resources/Resources/G_Idle.png" id="1_mshsf"]
 [ext_resource type="Texture2D" uid="uid://dimhwejjkilha" path="res://assets/Image/Resources/Resources/G_Spawn.png" id="2_63tex"]
+[ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="2_vjcfk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vjcfk"]
 atlas = ExtResource("1_mshsf")
@@ -79,6 +80,11 @@ radius = 18.027756
 [node name="Gold" type="Area2D"]
 y_sort_enabled = true
 script = ExtResource("1_63tex")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, -5)
+color = Color(0.29586652, 0.2958665, 0.2958665, 1)
+texture = ExtResource("2_vjcfk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xgh6s")
