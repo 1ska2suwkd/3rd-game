@@ -78,3 +78,6 @@ layout_mode = 2
 size_flags_vertical = 0
 text = "0%"
 label_settings = SubResource("LabelSettings_o8nph")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.89254886, 0.8763313, 0.97783524, 1)

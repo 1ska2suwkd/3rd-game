@@ -3012,3 +3012,6 @@ player = NodePath("../player")
 [node name="Shaman" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("10_kqotg")]
 position = Vector2(561, -522)
 player = NodePath("../player")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.89254886, 0.8763313, 0.97783524, 1)
