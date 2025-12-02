@@ -144,7 +144,12 @@ func spawn_crescent_slash(path, direction):
 		projectile.global_position = global_position
 		projectile.damage = PlayerStat.TotalDamage
 		projectile.direction = direction
-		get_tree().current_scene.add_child(projectile)
+		var ysort = get_tree().current_scene.get_node("Ysort")
+		if ysort:
+			ysort.add_child(projectile)
+		else:
+			push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
+			get_tree().current_scene.add_child(projectile)
 			
 func _on_animated_sprite_2d_frame_changed():
 	var anim = $AnimatedSprite2D.animation

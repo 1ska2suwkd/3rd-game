@@ -6234,7 +6234,7 @@ script = ExtResource("1_hruki")
 
 [node name="Dungeon_Scene_Manager" parent="." instance=ExtResource("19_ey6vw")]
 
-[node name="wall" type="TileMapLayer" parent="." groups=["Wall"]]
+[node name="wall" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 position = Vector2(-2, -21)
 scale = Vector2(4, 4)
