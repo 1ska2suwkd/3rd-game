@@ -656,6 +656,7 @@ one_shot = true
 visible = false
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("5_8t03j")
 
 [node name="Hearts" type="HBoxContainer" parent="UI"]
