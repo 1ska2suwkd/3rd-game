@@ -1,0 +1,102 @@
+[gd_scene load_steps=14 format=3 uid="uid://dlnu4ml2tv30m"]
+
+[ext_resource type="Texture2D" uid="uid://bssx4b33d2oai" path="res://assets/Image/Dungeon/Stage1/doors_lever_chest_animation.png" id="1_0p1oq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj2ks"]
+size = Vector2(71, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xawcw"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tqmi"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ok6a"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh62o"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuftp"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qn7n"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhtcd"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8rxv"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cmyc"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jna3g"]
+atlas = ExtResource("1_0p1oq")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xawcw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xawcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tqmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ok6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh62o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuftp")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qn7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhtcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8rxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cmyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jna3g")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="EastDoor" type="Area2D"]
+z_index = -1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_sj2ks")
+
+[node name="Door_animation" type="AnimatedSprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_xawcw")
+animation = &"close"

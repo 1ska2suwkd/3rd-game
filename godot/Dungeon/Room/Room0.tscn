@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://ch53v6eldhf5g"]
+[gd_scene load_steps=47 format=4 uid="uid://ch53v6eldhf5g"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Dungeon/Room/Room.gd" id="1_efkbg"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/Stage1/decorative_cracks_coasts_animation.png" id="2_1lqhy"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_buxqe"]
 [ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="15_jw8qa"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="17_1hjre"]
+[ext_resource type="PackedScene" uid="uid://dqmfgsrxa2y83" path="res://Dungeon/Scene/Door/NorthDoor.tscn" id="17_t5fv8"]
+[ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Dungeon/Scene/Door/SouthDoor.tscn" id="18_mlwnb"]
+[ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Dungeon/Scene/Door/EastDoor.tscn" id="19_ylfab"]
+[ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Dungeon/Scene/Door/WestDoor.tscn" id="20_kybqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hjre"]
 texture = ExtResource("9_c8sjk")
@@ -4762,95 +4766,6 @@ texture = ExtResource("7_eku1k")
 sources/0 = SubResource("TileSetAtlasSource_dgg64")
 sources/1 = SubResource("TileSetAtlasSource_i83dt")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubgug"]
-size = Vector2(71, 70)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xawcw"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(128, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3tqmi"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0ok6a"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dh62o"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wuftp"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0qn7n"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhtcd"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8rxv"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3cmyc"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jna3g"]
-atlas = ExtResource("6_4vj8i")
-region = Rect2(128, 96, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xawcw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xawcw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3tqmi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0ok6a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dh62o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wuftp")
-}],
-"loop": false,
-"name": &"close",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0qn7n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhtcd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a8rxv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3cmyc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jna3g")
-}],
-"loop": false,
-"name": &"open",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj2ks"]
-size = Vector2(71, 31)
-
 [node name="Room0" type="Node2D"]
 script = ExtResource("1_efkbg")
 
@@ -4951,64 +4866,17 @@ energy = 2.0
 texture = ExtResource("17_1hjre")
 texture_scale = 1.3
 
-[node name="NorthDoor" type="Area2D" parent="."]
-z_index = -1
-
-[node name="CollisionShape2D_open" type="CollisionShape2D" parent="NorthDoor"]
-position = Vector2(0, -402.75)
-shape = SubResource("RectangleShape2D_ubgug")
-
-[node name="Door_animation" type="AnimatedSprite2D" parent="NorthDoor"]
+[node name="NorthDoor" parent="." instance=ExtResource("17_t5fv8")]
 position = Vector2(-2, -405)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
 
-[node name="SouthDoor" type="Area2D" parent="."]
-z_index = -1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthDoor"]
-position = Vector2(0, 415)
-shape = SubResource("RectangleShape2D_ubgug")
-
-[node name="Door_animation" type="AnimatedSprite2D" parent="SouthDoor"]
+[node name="SouthDoor" parent="." instance=ExtResource("18_mlwnb")]
 position = Vector2(-2, 427)
-rotation = 3.1415927
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
-flip_h = true
 
-[node name="EastDoor" type="Area2D" parent="."]
-z_index = -1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EastDoor"]
-position = Vector2(772.5, -19)
-rotation = -1.5707964
-shape = SubResource("RectangleShape2D_sj2ks")
-
-[node name="Door_animation" type="AnimatedSprite2D" parent="EastDoor"]
+[node name="EastDoor" parent="." instance=ExtResource("19_ylfab")]
 position = Vector2(766, -21)
-rotation = 1.5707964
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
 
-[node name="WestDoor" type="Area2D" parent="."]
-z_index = -1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WestDoor"]
-position = Vector2(-763.75, -19)
-rotation = -1.5707964
-shape = SubResource("RectangleShape2D_sj2ks")
-
-[node name="Door_animation" type="AnimatedSprite2D" parent="WestDoor"]
+[node name="WestDoor" parent="." instance=ExtResource("20_kybqi")]
 position = Vector2(-770, -21)
-rotation = -1.5707964
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_xawcw")
-animation = &"close"
-flip_h = true
 
 [node name="DoorBlock" type="StaticBody2D" parent="."]
 position = Vector2(0, 168)
@@ -5023,5 +4891,3 @@ offset_top = 4.0
 offset_bottom = 4.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-
-[connection signal="body_entered" from="NorthDoor" to="." method="_on_NorthDoor_body_entered"]
