@@ -1,0 +1,105 @@
+[gd_scene load_steps=14 format=3 uid="uid://066c1ayexldc"]
+
+[ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://Scene/StartScene/Master/master.gd" id="1_ju63l"]
+[ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_3eukt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgrc2"]
+radius = 14.0
+height = 42.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej4l"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rphby"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhlmx"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fguw"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bpma"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri4fu"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjfh1"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peenx"]
+atlas = ExtResource("2_3eukt")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bifhp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oej4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rphby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhlmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fguw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bpma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri4fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjfh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peenx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bv0wd"]
+radius = 107.46627
+
+[node name="Master" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ju63l")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 84)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_kgrc2")
+
+[node name="Master_Animation" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(1, 69)
+sprite_frames = SubResource("SpriteFrames_bifhp")
+animation = &"idle"
+frame_progress = 0.287592
+speed_scale = 2.0
+offset = Vector2(0, -10)
+
+[node name="Talk_to_Master" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_to_Master"]
+position = Vector2(1.0000191, 81)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("CircleShape2D_bv0wd")
+
+[connection signal="body_entered" from="Talk_to_Master" to="." method="_on_talk_to_master_body_entered"]
+[connection signal="body_exited" from="Talk_to_Master" to="." method="_on_talk_to_master_body_exited"]

@@ -50,7 +50,7 @@ func _process(_delta: float) -> void:
 func get_random_dungeon_scene():
 	var num = get_random_num()
 	current_scene = "Room"
-	return "res://Dungeon/Room/Room" + str(num) + ".tscn"
+	return "res://Scene/Dungeon/Room/Room" + str(num) + ".tscn"
 
 		
 func get_random_num():

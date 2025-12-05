@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcgn08o6xf0hx"]
+
+[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/TutorialScene/story_scene.gd" id="1_8k0g7"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_5ycye"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwj7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ymnk"]
+font = ExtResource("2_5ycye")
+font_size = 80
+
+[node name="StoryScene" type="CanvasLayer"]
+script = ExtResource("1_8k0g7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1740.0
+offset_bottom = 980.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xwj7")
+
+[node name="Text" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -725.75
+offset_top = -46.5
+offset_right = 725.75
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "안녕하세요 용사님 ㅋㅋ"
+label_settings = SubResource("LabelSettings_5ymnk")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="End" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -132.0
+offset_right = -39.0
+offset_bottom = -39.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+label_settings = SubResource("LabelSettings_5ymnk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -705.0
+offset_top = -103.0
+offset_right = 705.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/normal_font = ExtResource("2_5ycye")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 1
+horizontal_alignment = 1

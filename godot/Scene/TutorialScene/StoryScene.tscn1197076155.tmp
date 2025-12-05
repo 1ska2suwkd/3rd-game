@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcgn08o6xf0hx"]
+
+[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/TutorialScene/story_scene.gd" id="1_8k0g7"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_5ycye"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwj7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ymnk"]
+font = ExtResource("2_5ycye")
+font_size = 80
+
+[node name="StoryScene" type="CanvasLayer"]
+script = ExtResource("1_8k0g7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1740.0
+offset_bottom = 980.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xwj7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -869.5
+offset_top = -23.5
+offset_right = 869.5
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "*"
+label_settings = SubResource("LabelSettings_5ymnk")
+
+[node name="Text" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "안녕하세요 용사님 ㅋㅋ"
+label_settings = SubResource("LabelSettings_5ymnk")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="End" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "v"
+label_settings = SubResource("LabelSettings_5ymnk")

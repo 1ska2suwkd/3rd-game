@@ -1,0 +1,238 @@
+[gd_scene load_steps=16 format=3 uid="uid://bfulsq0v1trwe"]
+
+[ext_resource type="Script" uid="uid://cu6oa557x2x8l" path="res://Scene/StartScene/Master/master_skilltree.gd" id="1_7sbki"]
+[ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_lrl4c"]
+[ext_resource type="Texture2D" uid="uid://coqypbnlh4yoo" path="res://assets/Image/UI/Icons/slash_icon.png" id="2_rfvd1"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_1dgr8"]
+[ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="4_ipbgu"]
+[ext_resource type="Texture2D" uid="uid://dshu5thlwkh74" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides.png" id="5_cb2jk"]
+[ext_resource type="Texture2D" uid="uid://ilaqimmd4up0" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="6_w3niy"]
+[ext_resource type="Texture2D" uid="uid://0bvcg5qjn0hv" path="res://assets/Image/UI/Icons/check.png" id="7_w3niy"]
+[ext_resource type="PackedScene" uid="uid://b5grtfllhwruo" path="res://UI/exit_button.tscn" id="9_jwj7w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dgr8"]
+bg_color = Color(0.2627451, 0.2509804, 0.33333334, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfvd1"]
+bg_color = Color(0, 0, 0, 0.7411765)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ipbgu"]
+font = ExtResource("3_1dgr8")
+font_size = 80
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lc638"]
+line_spacing = 0.0
+font = ExtResource("3_1dgr8")
+font_size = 60
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cb2jk"]
+font = ExtResource("3_1dgr8")
+font_size = 80
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cb2jk"]
+bg_color = Color(0, 0, 0, 0.827451)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MasterSkilltree" type="CanvasLayer"]
+script = ExtResource("1_7sbki")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2283.0
+offset_top = -1391.0
+offset_right = 4190.0
+offset_bottom = 3248.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = -756.0
+offset_right = 1019.40405
+offset_bottom = 527.0
+grow_vertical = 0
+texture = ExtResource("1_lrl4c")
+region_rect = Rect2(0, 0, 200, 192)
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -240.0
+offset_right = 175.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1dgr8")
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfvd1")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rfvd1")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.0
+offset_top = -156.0
+offset_right = 221.0
+offset_bottom = -63.0
+grow_horizontal = 2
+text = "첫 번째 가르침"
+label_settings = SubResource("LabelSettings_ipbgu")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = 26.0
+offset_right = 70.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(50, 0)
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel2/HBoxContainer4"]
+modulate = Color(1, 0.8352941, 0, 1)
+layout_mode = 2
+texture = ExtResource("4_ipbgu")
+expand_mode = 2
+
+[node name="prise" type="Label" parent="Panel2/HBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "10"
+label_settings = SubResource("LabelSettings_lc638")
+
+[node name="Buy_Skill" type="TextureButton" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -227.0
+offset_right = 96.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(96, 0)
+texture_normal = ExtResource("5_cb2jk")
+texture_pressed = ExtResource("6_w3niy")
+
+[node name="Buy_text" type="Label" parent="Buy_Skill"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -55.0
+offset_right = 240.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(240, 0)
+text = "구매"
+label_settings = SubResource("LabelSettings_cb2jk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Check" type="Panel" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -240.0
+offset_right = 175.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cb2jk")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Check"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_w3niy")
+
+[node name="exit_button" parent="." instance=ExtResource("9_jwj7w")]
+
+[connection signal="button_down" from="Buy_Skill" to="." method="_on_buy_skill_button_down"]
+[connection signal="button_up" from="Buy_Skill" to="." method="_on_buy_skill_button_up"]
+[connection signal="pressed" from="Buy_Skill" to="." method="_on_buy_skill_pressed"]
+[connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
