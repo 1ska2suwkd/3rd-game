@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcgn08o6xf0hx"]
 
-[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/TutorialScene/story_scene.gd" id="1_8k0g7"]
+[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/StoryScene/story_scene.gd" id="1_8k0g7"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_5ycye"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwj7"]
