@@ -1,8 +1,9 @@
-[gd_scene load_steps=94 format=4 uid="uid://u4mj3g2udqas"]
+[gd_scene load_steps=106 format=4 uid="uid://u4mj3g2udqas"]
 
 [ext_resource type="Script" uid="uid://bfg4othh08fox" path="res://Scene/TutorialScene/tutorial_scene.gd" id="1_ri83b"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_wkfk2"]
 [ext_resource type="Texture2D" uid="uid://c5ntkfjssvw3e" path="res://assets/Image/Terrain/Water/Foam/Foam.png" id="2_0cr78"]
+[ext_resource type="Texture2D" uid="uid://l7vd6m5y2xdh" path="res://assets/Image/UI/Ribbons/Ribbon_Blue_3Slides.png" id="2_lis7o"]
 [ext_resource type="Texture2D" uid="uid://d26yvnf7wlpji" path="res://assets/Image/Terrain/Water/Rocks/Rocks_01.png" id="3_cm7dp"]
 [ext_resource type="Texture2D" uid="uid://cjtbrqre05ave" path="res://assets/Image/Terrain/Water/Rocks/Rocks_02.png" id="4_ikkvm"]
 [ext_resource type="Texture2D" uid="uid://bwkl7acx7cb02" path="res://assets/Image/Terrain/Water/Rocks/Rocks_03.png" id="5_qnfqb"]
@@ -18,9 +19,13 @@
 [ext_resource type="Texture2D" uid="uid://dsqsy7nr3t2s" path="res://assets/Image/Deco/11.png" id="15_h7mt1"]
 [ext_resource type="Texture2D" uid="uid://iwq5rx7u4du5" path="res://assets/Image/UI/Icons/Keyboard Letters and Symbols.png" id="16_52gnc"]
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="17_0cr78"]
+[ext_resource type="Texture2D" uid="uid://c32yg8j2ja5sy" path="res://assets/Image/UI/Banners/Carved_3Slides.png" id="19_37w05"]
+[ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Scene/StartScene/Master/master.tscn" id="19_dtueh"]
 [ext_resource type="Texture2D" uid="uid://cy12ls7bk5he2" path="res://assets/Image/Factions/Knights/Buildings/Tower/Tower_black.png" id="19_m0qp3"]
 [ext_resource type="Texture2D" uid="uid://7s3u03fm5w32" path="res://assets/Image/Deco/16.png" id="20_dtueh"]
+[ext_resource type="Script" uid="uid://du6wmc5wfoeg" path="res://Scene/StartScene/Master/Script/tutorial_master.gd" id="20_jknon"]
 [ext_resource type="Texture2D" uid="uid://bpcsx4g45tdsc" path="res://assets/Image/Deco/17.png" id="21_jknon"]
+[ext_resource type="Texture2D" uid="uid://dfij6wgtytcpa" path="res://assets/Image/UI/Buttons/Button_Disable_3Slides.png" id="21_vedem"]
 [ext_resource type="Texture2D" uid="uid://or5feijlrt8b" path="res://assets/Image/Resources/Trees/Tree1.png" id="22_lis7o"]
 [ext_resource type="Texture2D" uid="uid://dvbm8opr1mvkf" path="res://assets/Image/Resources/Trees/Tree2.png" id="23_37w05"]
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_vedem"]
@@ -611,6 +616,88 @@ sources/2 = SubResource("TileSetAtlasSource_f3eyy")
 sources/9 = SubResource("TileSetAtlasSource_dfagp")
 sources/10 = SubResource("TileSetAtlasSource_ajy13")
 
+[sub_resource type="Animation" id="Animation_m0qp3"]
+resource_name = "CameraMove"
+length = 13.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneStart/StartAnimationCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.4, 10, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2243, -4087), Vector2(2243, -2527), Vector2(1531, -2260), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dtueh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneStart/StartAnimationCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2243, -4087)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SceneStart/CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jknon"]
+resource_name = "SceneStart"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SceneStart/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jknon"]
+_data = {
+&"CameraMove": SubResource("Animation_m0qp3"),
+&"RESET": SubResource("Animation_dtueh"),
+&"SceneStart": SubResource("Animation_jknon")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_lis7o"]
+font_size = 70
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vedem"]
+bg_color = Color(0.37036446, 0.37036452, 0.37036437, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oox1i"]
+bg_color = Color(0.37036446, 0.37036452, 0.37036437, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kawtg"]
 texture = ExtResource("16_52gnc")
 0:0/0 = 0
@@ -725,70 +812,69 @@ texture = ExtResource("16_52gnc")
 [sub_resource type="TileSet" id="TileSet_lduw1"]
 sources/0 = SubResource("TileSetAtlasSource_kawtg")
 
-[sub_resource type="Animation" id="Animation_m0qp3"]
-resource_name = "CameraMove"
-length = 13.0
+[sub_resource type="Animation" id="Animation_vedem"]
+resource_name = "Hint"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartAnimationCamera:position")
+tracks/0/path = NodePath("Hint:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 6.4, 10, 13),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2243, -4087), Vector2(2243, -2527), Vector2(1531, -2260), Vector2(0, 0)]
+"values": [Vector2(-1055, 433.00003), Vector2(-690, 433.00003)]
 }
 
-[sub_resource type="Animation" id="Animation_dtueh"]
+[sub_resource type="Animation" id="Animation_oox1i"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StartAnimationCamera:position")
+tracks/0/path = NodePath("Hint:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2243, -4087)]
+"values": [Vector2(-1057, 433.00003)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasModulate:color")
+tracks/1/path = NodePath("Ribbon:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(18.892157, 18.892157, 18.892157, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_jknon"]
-resource_name = "SceneStart"
-length = 3.0
+[sub_resource type="Animation" id="Animation_hntwa"]
+resource_name = "ShowRibbon"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/path = NodePath("Ribbon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 0.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(18.892157, 18.892157, 18.892157, 1), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jknon"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hntwa"]
 _data = {
-&"CameraMove": SubResource("Animation_m0qp3"),
-&"RESET": SubResource("Animation_dtueh"),
-&"SceneStart": SubResource("Animation_jknon")
+&"Hint": SubResource("Animation_vedem"),
+&"RESET": SubResource("Animation_oox1i"),
+&"ShowRibbon": SubResource("Animation_hntwa")
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ck6x"]
@@ -1334,7 +1420,8 @@ tile_set = SubResource("TileSet_vl4al")
 
 [node name="Ground" type="TileMapLayer" parent="tilemaplayer"]
 z_index = -10
-tile_map_data = PackedByteArray("AAAAAPz/AAABAAAAAAD///z/AAABAAAAAAD+//z/AAABAAAAAAD9//z/AAABAAAAAAD8//z/AAABAAAAAAD7/wEAAAAAAAEAAAD8/wIAAAABAAEAAAD9/wIAAAABAAEAAAD+/wMAAAABAAIAAAD//wMAAAABAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAIAAAACAAIAAAABAAEAAAADAAAAAAABAAEAAAAEAP7/AAACAAEAAAADAP3/AAABAAEAAAABAPz/AAABAAAAAAAEAAMAAAACAAIAAAAEAAIAAAACAAEAAAAEAAEAAAACAAEAAAAEAAAAAAACAAEAAAAEAP//AAACAAEAAAAEAP3/AAACAAEAAAAEAPz/AAACAAAAAAADAAMAAAABAAIAAAADAAIAAAABAAEAAAADAAEAAAABAAEAAAADAP//AAABAAEAAAADAP7/AAABAAEAAAADAPz/AAABAAAAAAACAAMAAAABAAIAAAACAAEAAAABAAEAAAACAAAAAAABAAEAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAACAP3/AAABAAEAAAACAPz/AAABAAAAAAABAAIAAAABAAEAAAABAAEAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAAAAAIAAAABAAEAAAAAAAEAAAABAAEAAAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAAAAP7/AAABAAEAAAAAAP3/AAABAAEAAAD//wIAAAABAAEAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAD/////AAABAAEAAAD///7/AAABAAEAAAD///3/AAABAAEAAAD+/wIAAAABAAEAAAD+/wEAAAABAAEAAAD+/wAAAAABAAEAAAD+////AAABAAEAAAD+//7/AAABAAEAAAD+//3/AAABAAEAAAD9/wMAAAABAAIAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAEAAAD8/wMAAAABAAIAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD7/wMAAAAAAAIAAAD7/wIAAAAAAAEAAAD7/wAAAAAAAAEAAAD7////AAAAAAEAAAD7//7/AAAAAAEAAAD7//3/AAAAAAEAAAD7//z/AAAAAAAAAAA=")
+position = Vector2(2.38419e-07, -1.9998779)
+tile_map_data = PackedByteArray("AAAAAPz/AAABAAEAAAD///z/AAABAAEAAAD+//z/AAABAAEAAAD9//z/AAABAAEAAAD8//z/AAABAAEAAAD7/wEAAAABAAEAAAD8/wIAAAABAAEAAAD9/wIAAAABAAEAAAD+/wMAAAABAAEAAAD//wMAAAABAAEAAAAAAAMAAAABAAEAAAABAAMAAAABAAEAAAACAAIAAAABAAEAAAADAAAAAAABAAEAAAAEAP7/AAABAAEAAAADAP3/AAABAAEAAAABAPz/AAABAAEAAAAEAAMAAAABAAEAAAAEAAIAAAABAAEAAAAEAAEAAAABAAEAAAAEAAAAAAABAAEAAAAEAP//AAABAAEAAAAEAP3/AAABAAEAAAAEAPz/AAABAAEAAAADAAMAAAABAAEAAAADAAIAAAABAAEAAAADAAEAAAABAAEAAAADAP//AAABAAEAAAADAP7/AAABAAEAAAADAPz/AAABAAEAAAACAAMAAAABAAEAAAACAAEAAAABAAEAAAACAAAAAAABAAEAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAACAP3/AAABAAEAAAACAPz/AAABAAEAAAABAAIAAAABAAEAAAABAAEAAAABAAEAAAABAAAAAAABAAEAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAABAP3/AAABAAEAAAAAAAIAAAABAAEAAAAAAAEAAAABAAEAAAAAAAAAAAABAAEAAAAAAP//AAABAAEAAAAAAP7/AAABAAEAAAAAAP3/AAABAAEAAAD//wIAAAABAAEAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAD/////AAABAAEAAAD///7/AAABAAEAAAD///3/AAABAAEAAAD+/wIAAAABAAEAAAD+/wEAAAABAAEAAAD+/wAAAAABAAEAAAD+////AAABAAEAAAD+//7/AAABAAEAAAD+//3/AAABAAEAAAD9/wMAAAABAAEAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAEAAAD9//7/AAABAAEAAAD9//3/AAABAAEAAAD8/wMAAAABAAEAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD7/wMAAAABAAEAAAD7/wIAAAABAAEAAAD7/wAAAAABAAEAAAD7////AAABAAEAAAD7//7/AAABAAEAAAD7//3/AAABAAEAAAD7//z/AAABAAEAAAAIAAUAAAACAAIAAAAIAAQAAAACAAEAAAAIAAMAAAACAAEAAAAIAAIAAAACAAEAAAAIAAEAAAACAAEAAAAIAAAAAAACAAEAAAAIAP//AAACAAEAAAAIAP7/AAACAAEAAAAIAP3/AAACAAEAAAAIAPz/AAACAAEAAAAIAPv/AAACAAEAAAAIAPr/AAACAAAAAAAHAAUAAAABAAIAAAAHAAQAAAABAAEAAAAHAAMAAAABAAEAAAAHAAIAAAABAAEAAAAHAAEAAAABAAEAAAAHAAAAAAABAAEAAAAHAP//AAABAAEAAAAHAP7/AAABAAEAAAAHAP3/AAABAAEAAAAHAPz/AAABAAEAAAAHAPv/AAABAAEAAAAHAPr/AAABAAAAAAAGAAUAAAABAAIAAAAGAAQAAAABAAEAAAAGAAMAAAABAAEAAAAGAAIAAAABAAEAAAAGAAEAAAABAAEAAAAGAAAAAAABAAEAAAAGAP//AAABAAEAAAAGAP7/AAABAAEAAAAGAP3/AAABAAEAAAAGAPz/AAABAAEAAAAGAPv/AAABAAEAAAAGAPr/AAABAAAAAAAFAAUAAAABAAIAAAAFAAQAAAABAAEAAAAFAAMAAAABAAEAAAAFAAIAAAABAAEAAAAFAAEAAAABAAEAAAAFAAAAAAABAAEAAAAFAP//AAABAAEAAAAFAP7/AAABAAEAAAAFAP3/AAABAAEAAAAFAPz/AAABAAEAAAAFAPv/AAABAAEAAAAFAPr/AAABAAAAAAAEAAUAAAABAAIAAAAEAAQAAAABAAEAAAAEAPv/AAABAAEAAAAEAPr/AAABAAAAAAADAAUAAAABAAIAAAADAAQAAAABAAEAAAADAPv/AAABAAEAAAADAPr/AAABAAAAAAACAAUAAAABAAIAAAACAAQAAAABAAEAAAACAPv/AAABAAEAAAACAPr/AAABAAAAAAABAAUAAAABAAIAAAABAAQAAAABAAEAAAABAPv/AAABAAEAAAABAPr/AAABAAAAAAAAAAUAAAABAAIAAAAAAAQAAAABAAEAAAAAAPv/AAABAAEAAAAAAPr/AAABAAAAAAD//wUAAAABAAIAAAD//wQAAAABAAEAAAD///v/AAABAAEAAAD///r/AAABAAAAAAD+/wUAAAABAAIAAAD+/wQAAAABAAEAAAD+//v/AAABAAEAAAD+//r/AAABAAAAAAD9/wUAAAABAAIAAAD9/wQAAAABAAEAAAD9//v/AAABAAEAAAD9//r/AAABAAAAAAD8/wUAAAABAAIAAAD8/wQAAAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAAAAAD7/wUAAAABAAIAAAD7/wQAAAABAAEAAAD7//v/AAABAAEAAAD7//r/AAABAAAAAAD6/wUAAAAAAAIAAAD6/wQAAAAAAAEAAAD6/wMAAAAAAAEAAAD6/wIAAAAAAAEAAAD6/wEAAAAAAAEAAAD6/wAAAAAAAAEAAAD6////AAAAAAEAAAD6//7/AAAAAAEAAAD6//3/AAAAAAEAAAD6//z/AAAAAAEAAAD6//v/AAAAAAEAAAD6//r/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_o6f6m")
 
 [node name="Terrain" type="TileMapLayer" parent="tilemaplayer/Ground"]
@@ -1352,21 +1439,113 @@ tile_set = SubResource("TileSet_kpecq")
 [node name="Deco" type="TileMapLayer" parent="tilemaplayer"]
 tile_set = SubResource("TileSet_ye4by")
 
-[node name="KeyboardLetters" type="TileMapLayer" parent="tilemaplayer"]
-position = Vector2(2.38419e-07, 0.00012207)
-tile_set = SubResource("TileSet_lduw1")
+[node name="SceneStart" type="Node2D" parent="."]
 
-[node name="StartAnimationCamera" type="Camera2D" parent="."]
-position = Vector2(2243, -4087)
+[node name="CanvasModulate" type="CanvasModulate" parent="SceneStart"]
 
-[node name="Ysort" type="Node2D" parent="."]
-
-[node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneStart"]
+root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_jknon")
 }
+
+[node name="StartAnimationCamera" type="Camera2D" parent="SceneStart"]
+position = Vector2(2243, -4087)
+
+[node name="Ysort" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
+
+[node name="Q1" type="Node2D" parent="Ysort/player"]
+z_index = 100
+position = Vector2(0, -349.88263)
+scale = Vector2(1, 1.0141525)
+
+[node name="Ribbon" type="Node2D" parent="Ysort/player/Q1"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -56.99997)
+scale = Vector2(0.7, 0.7)
+
+[node name="Ribbon" type="Sprite2D" parent="Ysort/player/Q1/Ribbon"]
+scale = Vector2(4, 3.185)
+texture = ExtResource("2_lis7o")
+
+[node name="Label" type="Label" parent="Ysort/player/Q1/Ribbon"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -55.99997
+offset_right = 356.0
+offset_bottom = 26.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
+text = "1. 신보기를 움직여라"
+label_settings = SubResource("LabelSettings_lis7o")
+
+[node name="Hint" type="Node2D" parent="Ysort/player/Q1"]
+position = Vector2(-1057, 433.00003)
+
+[node name="Panel" type="Panel" parent="Ysort/player/Q1/Hint"]
+offset_left = -161.0
+offset_top = -109.0
+offset_right = -25.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vedem")
+
+[node name="Panel2" type="Panel" parent="Ysort/player/Q1/Hint"]
+offset_left = -25.0
+offset_top = -84.0
+offset_right = 160.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oox1i")
+
+[node name="BannerVertical" type="Sprite2D" parent="Ysort/player/Q1/Hint"]
+scale = Vector2(1.7135416, 2.8125)
+texture = ExtResource("19_37w05")
+
+[node name="KeyboardLetters" type="TileMapLayer" parent="Ysort/player/Q1/Hint"]
+position = Vector2(-23, 3.0517578e-05)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAIAAAABAAAAAAADAAIAAAAAAP//AAAGAAQAAAAAAAAAAAACAAQAAAA=")
+tile_set = SubResource("TileSet_lduw1")
+
+[node name="ButtonDisable3Slides" type="Sprite2D" parent="Ysort/player/Q1/Hint"]
+position = Vector2(-93.5, -79)
+scale = Vector2(0.7447917, 1)
+texture = ExtResource("21_vedem")
+
+[node name="Label2" type="Label" parent="Ysort/player/Q1/Hint"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -97.0
+offset_right = 426.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 4
+text = "HINT"
+label_settings = SubResource("LabelSettings_lis7o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ysort/player/Q1"]
+libraries = {
+&"": SubResource("AnimationLibrary_hntwa")
+}
+
+[node name="Master" parent="Ysort" instance=ExtResource("19_dtueh")]
+position = Vector2(323, -78)
+scale = Vector2(-1, 1)
+script = ExtResource("20_jknon")
 
 [node name="StartScene" type="Node2D" parent="."]
 position = Vector2(2244, -2458)
@@ -1441,6 +1620,3 @@ texture = ExtResource("28_c4q8n")
 z_index = -1
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("29_e7f3h")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(18.892157, 18.892157, 18.892157, 1)

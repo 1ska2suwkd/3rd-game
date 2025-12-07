@@ -5,7 +5,7 @@ extends Node2D
 
 var hp = 3
 var PlayerAttackSlow = 0.7
-var gold = 10
+var gold = 0
 
 var PlayerDamage = 10
 var ItemDamage = 0

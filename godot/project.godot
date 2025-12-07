@@ -40,6 +40,10 @@ player=""
 enemy=""
 Wall=""
 
+[gui]
+
+theme/custom_font="uid://bluohanf8106y"
+
 [importer_defaults]
 
 animation_library={

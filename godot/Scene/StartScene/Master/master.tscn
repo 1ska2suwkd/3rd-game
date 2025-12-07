@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://066c1ayexldc"]
 
-[ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://Scene/StartScene/Master/master.gd" id="1_ju63l"]
+[ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://Scene/StartScene/Master/Script/master.gd" id="1_ju63l"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_3eukt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgrc2"]

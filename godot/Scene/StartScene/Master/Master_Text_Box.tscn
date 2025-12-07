@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbd1xb3ag183w"]
 
-[ext_resource type="Script" uid="uid://wkudotd7yruo" path="res://Scene/StartScene/Master/text_box.gd" id="1_deu3w"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_i0ewn"]
+[ext_resource type="Script" uid="uid://c45kvyg36b31a" path="res://Scene/StartScene/Master/Script/master_textbox.gd" id="1_isuft"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_hrl8a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03uyg"]
@@ -21,7 +21,7 @@ font = ExtResource("2_hrl8a")
 font_size = 40
 
 [node name="TextBox" type="CanvasLayer"]
-script = ExtResource("1_deu3w")
+script = ExtResource("1_isuft")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -2678.0
