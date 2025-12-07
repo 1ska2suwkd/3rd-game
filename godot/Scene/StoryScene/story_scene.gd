@@ -6,6 +6,7 @@ var tween
 
 @onready var end_symbol = $End
 @onready var text = $RichTextLabel
+@onready var SceneChangeAnimation = $NextSceneReady
 
 enum State{
 	READY,
@@ -47,6 +48,8 @@ func _process(_delta: float) -> void:
 				if text_queue.is_empty():
 					hide_textbox()
 					global.transition_scene = true
+					SceneChangeAnimation.play("NextSceneReady")
+					await SceneChangeAnimation.animation_finished
 					global.change_scene("res://Scene/TutorialScene/TutorialScene.tscn")
 				else:
 					text.text = ""

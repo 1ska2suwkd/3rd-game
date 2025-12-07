@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcgn08o6xf0hx"]
+[gd_scene load_steps=8 format=3 uid="uid://bcgn08o6xf0hx"]
 
 [ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/StoryScene/story_scene.gd" id="1_8k0g7"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_5ycye"]
@@ -9,6 +9,43 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_5ymnk"]
 font = ExtResource("2_5ycye")
 font_size = 80
+
+[sub_resource type="Animation" id="Animation_mrgf5"]
+resource_name = "NextSceneReady"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_i7yas"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iq31a"]
+_data = {
+&"NextSceneReady": SubResource("Animation_mrgf5"),
+&"RESET": SubResource("Animation_i7yas")
+}
 
 [node name="StoryScene" type="CanvasLayer"]
 script = ExtResource("1_8k0g7")
@@ -75,3 +112,8 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 1
 horizontal_alignment = 1
+
+[node name="NextSceneReady" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_iq31a")
+}
