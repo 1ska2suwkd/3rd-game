@@ -8,6 +8,7 @@ extends Node2D
 @onready var QuestText = $Ysort/player/QuestUI/Ribbon/Quest
 @onready var HintText = $Ysort/player/QuestUI/Hint/HintText
 @onready var Q1Hint = $Ysort/player/QuestUI/Hint/WASD
+@onready var Q2Hint = $Ysort/player/QuestUI/Hint/MouseLeftClick
 var master_textbox_scene = preload("res://Scene/StartScene/Master/Master_Text_Box.tscn")
 
 
@@ -25,7 +26,7 @@ func _ready() -> void:
 	#CameraAnimation.play("CameraMove")
 	#await CameraAnimation.animation_finished
 	#StartAnimationCamera.queue_free()
-	#$StartScene.queue_free()
+	$StartScene.queue_free()
 	textbox.queue_text("자 오늘은 마지막 수업이야~")
 	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나를 찾아봐!")
 	get_tree().current_scene.add_child(textbox)
@@ -51,7 +52,7 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 		Q1Hint.visible = false
 	
 		QuestText.text = "2. 공격으로 돌파하기"
-		HintText.text = "마우스 왼쪽 클릭"
+		Q2Hint.visible = true
 		$Trigger/Q1/Q1_finished.queue_free()
 
 
