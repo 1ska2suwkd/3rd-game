@@ -10,7 +10,7 @@ var tween
 @onready var start_symbol = $TextboxContainer/MarginContainer/HBoxContainer/Start
 @onready var end_symbol = $TextboxContainer/MarginContainer/HBoxContainer/End
 @onready var text = $TextboxContainer/MarginContainer/HBoxContainer/Text
-var is_skilltree = true
+var is_skilltree = false
 
 enum State{
 	READY,

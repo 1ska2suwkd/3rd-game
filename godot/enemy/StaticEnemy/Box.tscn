@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4nl6h3rgkbl1"]
+
+[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://enemy/StaticEnemy/Script/CollisionEnemy.gd" id="1_267t6"]
+[ext_resource type="Texture2D" uid="uid://be0a4yhrakqrv" path="res://assets/Image/Dungeon/Stage1/Objects.png" id="1_ida0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_267t6"]
+size = Vector2(15, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2opa6"]
+size = Vector2(15, 17)
+
+[node name="Box" type="Area2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_267t6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ida0s")
+offset = Vector2(0, -10)
+region_enabled = true
+region_rect = Rect2(32, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_267t6")
+
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_2opa6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
