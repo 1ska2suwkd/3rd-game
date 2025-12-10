@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=4 uid="uid://u4mj3g2udqas"]
+[gd_scene load_steps=112 format=4 uid="uid://u4mj3g2udqas"]
 
 [ext_resource type="Script" uid="uid://bfg4othh08fox" path="res://Scene/TutorialScene/Script/tutorial_scene.gd" id="1_ri83b"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_wkfk2"]
@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://du6wmc5wfoeg" path="res://Scene/StartScene/Master/Script/tutorial_master.gd" id="20_jknon"]
 [ext_resource type="Texture2D" uid="uid://bpcsx4g45tdsc" path="res://assets/Image/Deco/17.png" id="21_jknon"]
 [ext_resource type="Texture2D" uid="uid://dfij6wgtytcpa" path="res://assets/Image/UI/Buttons/Button_Disable_3Slides.png" id="21_vedem"]
+[ext_resource type="Texture2D" uid="uid://badcr8kmwg84w" path="res://assets/Image/UI/Icons/MouseLeftClick.png" id="22_hntwa"]
 [ext_resource type="Texture2D" uid="uid://or5feijlrt8b" path="res://assets/Image/Resources/Trees/Tree1.png" id="22_lis7o"]
 [ext_resource type="Texture2D" uid="uid://dvbm8opr1mvkf" path="res://assets/Image/Resources/Trees/Tree2.png" id="23_37w05"]
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_vedem"]
@@ -1618,6 +1619,12 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 label_settings = SubResource("LabelSettings_vedem")
+
+[node name="MouseLeftClick" type="Sprite2D" parent="Ysort/player/QuestUI/Hint"]
+visible = false
+position = Vector2(-11, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("22_hntwa")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Ysort/player/QuestUI"]
 libraries = {
