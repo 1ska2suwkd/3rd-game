@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=4 uid="uid://u4mj3g2udqas"]
+[gd_scene load_steps=136 format=4 uid="uid://u4mj3g2udqas"]
 
 [ext_resource type="Script" uid="uid://bfg4othh08fox" path="res://Scene/TutorialScene/Script/tutorial_scene.gd" id="1_ri83b"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_wkfk2"]
@@ -828,6 +828,34 @@ font_size = 70
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_pgixl"]
+resource_name = "ChangeRibbonSize"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ribbon/Ribbon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8.5, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ribbon/Ribbon/CenterContainer/PanelContainer/Quest:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-411.42834, -34)]
+}
+
 [sub_resource type="Animation" id="Animation_vedem"]
 resource_name = "Hint"
 tracks/0/type = "value"
@@ -893,6 +921,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ribbon/Ribbon:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.256, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Ribbon/Ribbon/CenterContainer/PanelContainer/Quest:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-195, -30), Vector2(-192.85713, -34.285713)]
+}
 
 [sub_resource type="Animation" id="Animation_hntwa"]
 resource_name = "ShowRibbon"
@@ -939,6 +991,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hntwa"]
 _data = {
+&"ChangeRibbonSize": SubResource("Animation_pgixl"),
 &"Hint": SubResource("Animation_vedem"),
 &"RESET": SubResource("Animation_oox1i"),
 &"ShowRibbon": SubResource("Animation_hntwa"),
@@ -3002,29 +3055,55 @@ z_index = 100
 position = Vector2(0, -349.88263)
 scale = Vector2(1, 1.0141525)
 
-[node name="Ribbon" type="Node2D" parent="Ysort/player/QuestUI"]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, -56.99997)
-scale = Vector2(0.7, 0.7)
+[node name="Ribbon" type="CanvasLayer" parent="Ysort/player/QuestUI"]
 
-[node name="Ribbon" type="Sprite2D" parent="Ysort/player/QuestUI/Ribbon"]
-scale = Vector2(4, 3.185)
-texture = ExtResource("2_lis7o")
-
-[node name="Quest" type="Label" parent="Ysort/player/QuestUI/Ribbon"]
-anchors_preset = 8
+[node name="Control" type="Control" parent="Ysort/player/QuestUI/Ribbon"]
+layout_mode = 3
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -193.0
-offset_top = -55.99997
-offset_right = 356.0
-offset_bottom = 26.00003
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Ribbon" type="NinePatchRect" parent="Ysort/player/QuestUI/Ribbon"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -187.0
+offset_right = 523.0
+offset_bottom = 86.0
+grow_horizontal = 2
+scale = Vector2(1.256, 1)
+size_flags_horizontal = 4
+texture = ExtResource("2_lis7o")
+region_rect = Rect2(0, 0, 192, 64)
+patch_margin_left = 43
+patch_margin_top = 7
+patch_margin_right = 44
+patch_margin_bottom = 25
+
+[node name="CenterContainer" type="CenterContainer" parent="Ysort/player/QuestUI/Ribbon/Ribbon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.753
+anchor_right = 0.5
+anchor_bottom = 0.753
+offset_left = -305.0
+offset_top = -57.758003
+offset_right = 923.0
+offset_bottom = 54.241997
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.7, 0.7)
-size_flags_horizontal = 4
+scale = Vector2(0.5, 0.5)
+
+[node name="PanelContainer" type="PanelContainer" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer"]
+layout_mode = 2
+
+[node name="Quest" type="Label" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/PanelContainer"]
+layout_mode = 2
 text = "1. 신보기를 움직여라"
 label_settings = SubResource("LabelSettings_lis7o")
 
@@ -3267,6 +3346,14 @@ shape = SubResource("RectangleShape2D_vedem")
 
 [node name="Q3" type="Node2D" parent="Trigger"]
 
+[node name="Q3_start" type="Area2D" parent="Trigger/Q3"]
+position = Vector2(3360, -17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q3/Q3_start"]
+position = Vector2(-1.5, 12)
+shape = SubResource("RectangleShape2D_vedem")
+
 [connection signal="body_entered" from="Trigger/Q1/Q1_finished" to="." method="_on_q_1_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_finished" to="." method="_on_q_2_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_start" to="." method="_on_q_2_start_body_entered"]
+[connection signal="body_entered" from="Trigger/Q3/Q3_start" to="." method="_on_q_3_start_body_entered"]

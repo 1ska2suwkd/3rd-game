@@ -27,6 +27,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_fyqef")
+region_rect = Rect2(0, 0, 192, 192)
 patch_margin_left = 29
 patch_margin_top = 24
 patch_margin_right = 24
