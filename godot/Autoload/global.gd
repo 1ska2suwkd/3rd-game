@@ -1,7 +1,7 @@
 extends Node
 
 var start_game = false
-var current_scene = "StartScene"
+var current_scene = "Village"
 var transition_scene = false
 var last_num = 0
 var clear_room_count = 0
@@ -70,9 +70,9 @@ func finish_change_scenes():
 		transition_scene = false
 		
 		match current_scene:
-			"StartScene":
+			"Village":
 				current_scene = "Room0"
 			"Room0":
 				current_scene = "Room"
 			"Room":
-				current_scene = "StartScene"
+				current_scene = "Village"

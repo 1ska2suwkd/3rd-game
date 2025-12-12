@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbd1xb3ag183w"]
 
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_i0ewn"]
-[ext_resource type="Script" uid="uid://c45kvyg36b31a" path="res://Scene/StartScene/Master/Script/master_textbox.gd" id="1_isuft"]
+[ext_resource type="Script" uid="uid://c45kvyg36b31a" path="res://Scene/Master/Script/master_textbox.gd" id="1_isuft"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_hrl8a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03uyg"]

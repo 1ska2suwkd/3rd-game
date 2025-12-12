@@ -1,6 +1,6 @@
 [gd_scene load_steps=68 format=4 uid="uid://br2w02siuqlt"]
 
-[ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://Scene/StartScene/StartScene.gd" id="1_1fguw"]
+[ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://Scene/Village/Village.gd" id="1_1fguw"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
 [ext_resource type="Texture2D" uid="uid://d26yvnf7wlpji" path="res://assets/Image/Terrain/Water/Rocks/Rocks_01.png" id="3_hk6ix"]
 [ext_resource type="Texture2D" uid="uid://kq5g4gfoa2x7" path="res://assets/Image/Terrain/Ground/Tilemap_Flat.png" id="3_oej4l"]
@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_03fdb"]
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 [ext_resource type="Texture2D" uid="uid://bre3rl1nxq6at" path="res://assets/Image/Factions/Knights/Buildings/Castle/Shadow.png" id="26_p4s3d"]
-[ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Scene/StartScene/Master/master.tscn" id="30_iyi5a"]
+[ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Scene/Master/master.tscn" id="30_iyi5a"]
 [ext_resource type="PackedScene" uid="uid://b13j4y6b2synt" path="res://Scene_Manager.tscn" id="34_6lqix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
@@ -571,7 +571,7 @@ height = 270.093
 radius = 37.235046
 height = 94.47699
 
-[node name="StartScene" type="Node2D"]
+[node name="Village" type="Node2D"]
 script = ExtResource("1_1fguw")
 
 [node name="SceneManager" parent="." instance=ExtResource("34_6lqix")]

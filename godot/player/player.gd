@@ -199,5 +199,5 @@ func is_dead():
 	$AnimatedSprite2D.play("dead")
 	await $AnimatedSprite2D.animation_finished
 	global.transition_scene = true
-	global.change_scene("res://Scene/StartScene/StartScene.tscn")
+	global.change_scene("res://Scene/Village/Village.tscn")
 	global.init_game()
