@@ -5,7 +5,7 @@ extends Node2D
 @onready var CameraAnimation = $SceneStart/AnimationPlayer
 
 @onready var QuestUIAnimation = $Ysort/player/QuestUI/AnimationPlayer
-@onready var QuestText = $Ysort/player/QuestUI/Ribbon/Ribbon/PanelContainer/Quest
+@onready var QuestText = $Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/Quest
 @onready var HintText = $Ysort/player/QuestUI/Hint/HintText
 @onready var Q1Hint = $Ysort/player/QuestUI/Hint/WASD
 @onready var Q2Hint = $Ysort/player/QuestUI/Hint/MouseLeftClick

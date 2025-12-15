@@ -834,26 +834,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Ribbon/Ribbon:scale")
+tracks/0/path = NodePath("Ribbon/Ribbon:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.001),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8.5, 4)]
+"values": [Vector2(845, 97.25)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Ribbon/Ribbon/CenterContainer/PanelContainer/Quest:position")
+tracks/1/path = NodePath("Ribbon/Ribbon:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.001),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-411.42834, -34)]
+"values": [Vector2(447.5, 30)]
 }
 
 [sub_resource type="Animation" id="Animation_vedem"]
@@ -900,50 +900,50 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Ribbon:modulate")
+tracks/1/path = NodePath("Hint:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Hint:modulate")
+tracks/2/path = NodePath("Ribbon/Ribbon:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Ribbon/Ribbon:scale")
+tracks/3/path = NodePath("Ribbon/Ribbon:size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.256, 1)]
+"values": [Vector2(461, 97.25)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Ribbon/Ribbon/CenterContainer/PanelContainer/Quest:position")
+tracks/4/path = NodePath("Ribbon/Ribbon:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.001),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-195, -30), Vector2(-192.85713, -34.285713)]
+"values": [Vector2(639.338, 30)]
 }
 
 [sub_resource type="Animation" id="Animation_hntwa"]
@@ -952,7 +952,7 @@ length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Ribbon:modulate")
+tracks/0/path = NodePath("Ribbon/Ribbon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -967,7 +967,7 @@ resource_name = "finished_Quest"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Ribbon:modulate")
+tracks/0/path = NodePath("Hint:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -979,7 +979,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hint:modulate")
+tracks/1/path = NodePath("Ribbon/Ribbon:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -3057,25 +3057,16 @@ scale = Vector2(1, 1.0141525)
 
 [node name="Ribbon" type="CanvasLayer" parent="Ysort/player/QuestUI"]
 
-[node name="Control" type="Control" parent="Ysort/player/QuestUI/Ribbon"]
-layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
-grow_horizontal = 2
-
 [node name="Ribbon" type="NinePatchRect" parent="Ysort/player/QuestUI/Ribbon"]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -187.0
-offset_right = 523.0
-offset_bottom = 86.0
+offset_left = -230.66199
+offset_top = 30.0
+offset_right = 230.33801
+offset_bottom = 127.25
 grow_horizontal = 2
-scale = Vector2(1.256, 1)
 size_flags_horizontal = 4
 texture = ExtResource("2_lis7o")
 region_rect = Rect2(0, 0, 192, 64)
@@ -3086,25 +3077,22 @@ patch_margin_bottom = 25
 
 [node name="CenterContainer" type="CenterContainer" parent="Ysort/player/QuestUI/Ribbon/Ribbon"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.753
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.753
-offset_left = -305.0
-offset_top = -57.758003
-offset_right = 923.0
-offset_bottom = 54.241997
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -76.0
+offset_right = 967.0
+offset_bottom = 195.73352
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 
-[node name="PanelContainer" type="PanelContainer" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer"]
+[node name="Quest" type="Label" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer"]
 layout_mode = 2
-
-[node name="Quest" type="Label" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/PanelContainer"]
-layout_mode = 2
-text = "1. 신보기를 움직여라"
+text = "3. 아이템을 획득하고 인벤토리를 확인하자!"
 label_settings = SubResource("LabelSettings_lis7o")
 
 [node name="Hint" type="Node2D" parent="Ysort/player/QuestUI"]
@@ -3183,7 +3171,7 @@ libraries = {
 }
 
 [node name="Master" parent="Ysort" instance=ExtResource("19_dtueh")]
-position = Vector2(323, -78)
+position = Vector2(3841, -1983)
 scale = Vector2(-1, 1)
 script = ExtResource("20_jknon")
 

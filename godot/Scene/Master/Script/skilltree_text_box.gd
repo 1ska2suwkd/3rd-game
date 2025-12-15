@@ -42,7 +42,7 @@ func _process(_delta: float) -> void:
 				if text_queue.is_empty():
 					hide_textbox()
 					#global.is_stop = false
-					var master_skilltree = preload("res://Scene/StartScene/Master/Master_Skilltree.tscn").instantiate()
+					var master_skilltree = preload("res://Scene/Master/Master_Skilltree.tscn").instantiate()
 					get_tree().current_scene.add_child(master_skilltree)
 				else:
 					start_symbol.text = ""
