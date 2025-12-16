@@ -1,8 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjeq2gfi4hunq"]
+[gd_scene load_steps=11 format=3 uid="uid://bjeq2gfi4hunq"]
 
 [ext_resource type="Script" uid="uid://dola0eak4m1hq" path="res://UI/Inventory/inventory_slot_ui.gd" id="1_0jkrt"]
 [ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="4_t8dft"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fknvb"]
+bg_color = Color(0.8, 0.72156864, 0.5529412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jkrt"]
 bg_color = Color(0, 0, 0, 0.6666667)
@@ -51,6 +58,14 @@ offset_right = 140.0
 offset_bottom = 130.0
 script = ExtResource("1_0jkrt")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 116.0
+offset_bottom = 115.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fknvb")
+
 [node name="slot" type="Sprite2D" parent="."]
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("1_xtguw")
@@ -77,6 +92,7 @@ offset_bottom = 108.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0jkrt")
 
 [node name="Panel2" type="Panel" parent="."]
+visible = false
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
