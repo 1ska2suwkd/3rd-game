@@ -93,12 +93,12 @@ layout_mode = 2
 [node name="InventorySlotUi16" parent="GridContainer" instance=ExtResource("3_dphwu")]
 layout_mode = 2
 
-[node name="ButtonDisable3Slides" type="Sprite2D" parent="."]
+[node name="Panel" type="Sprite2D" parent="."]
 position = Vector2(-214.5, -257)
 scale = Vector2(0.7447917, 1)
 texture = ExtResource("4_piqhx")
 
-[node name="Hint" type="Label" parent="."]
+[node name="InventoryText" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
