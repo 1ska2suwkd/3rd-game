@@ -7,7 +7,7 @@ extends Node2D
 @onready var QuestUIAnimation = $Ysort/player/QuestUI/AnimationPlayer
 @onready var QuestText = $Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/Quest
 @onready var HintText = $Ysort/player/QuestUI/Hint/HintText
-@onready var Q1Hint = $Ysort/player/QuestUI/Hint/WASD
+@onready var WASD = $Ysort/player/QuestUI/Hint/CenterContainer/WASD
 @onready var Q2Hint = $Ysort/player/QuestUI/Hint/MouseLeftClick
 var master_textbox_scene = preload("res://Scene/Master/Master_Text_Box.tscn")
 
@@ -49,7 +49,7 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		QuestUIAnimation.play("finished_Quest")
 		await  QuestUIAnimation.animation_finished
-		Q1Hint.visible = false
+		WASD.visible = false
 	
 		QuestText.text = "2. 공격으로 돌파하기"
 		Q2Hint.visible = true
