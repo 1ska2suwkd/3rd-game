@@ -3049,6 +3049,7 @@ tile_set = SubResource("TileSet_ye4by")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
+position = Vector2(3649, -278)
 
 [node name="QuestUI" type="Node2D" parent="Ysort/player"]
 z_index = 100
@@ -3209,8 +3210,13 @@ position = Vector2(3840, -344)
 position = Vector2(3838, -552)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_b6d0y")
-animation = &"close"
+animation = &"open"
 offset = Vector2(0, -5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ysort/Door"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ysort/Door/StaticBody2D"]
+polygon = PackedVector2Array(-9, -10, 9, -10, 9, 8, -9, 8)
 
 [node name="Wall" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
@@ -3219,17 +3225,16 @@ scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAA6APX/BAAAAAIAAAA7APX/BAABAAIAAAA8APX/BAABAAIAAAA9APX/BAACAAIAAAA7APT/BAABAAEAAAA8APT/BAABAAEAAAA9APT/BAACAAEAAAA6APT/BAAAAAEAAAA9APP/BAACAAAAAAA8APP/BAABAAAAAAA7APP/BAABAAAAAAA6APP/BAAAAAAAAAA7APb/BAABAAMAAAA8APb/BAABAAMAAAA9APb/BAACAAMAAAA9APf/BAACAAQAAAA6APf/BAAAAAQAAAA6APb/BAAAAAMAAAA=")
 tile_set = SubResource("TileSet_udmk3")
 collision_enabled = false
-collision_visibility_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ysort/Wall"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ysort/Wall/StaticBody2D"]
-position = Vector2(0, 3.0517578e-05)
-polygon = PackedVector2Array(944, -129.99997, 951, -129.99997, 951, -200, 944, -199.99997)
+position = Vector2(0.5, 3.0517578e-05)
+polygon = PackedVector2Array(929.5, -130, 951.5, -130, 951.5, -200, 929.5, -200)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ysort/Wall/StaticBody2D"]
-position = Vector2(25, 3.0517578e-05)
-polygon = PackedVector2Array(944, -129.99997, 951, -129.99997, 951, -200, 944, -199.99997)
+position = Vector2(39.5, 3.0517578e-05)
+polygon = PackedVector2Array(929.5, -130, 950.5, -130, 950.5, -200, 929.5, -200)
 
 [node name="StartScene" type="Node2D" parent="."]
 position = Vector2(2244, -2458)
