@@ -25,11 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(780, 0)
 texture = ExtResource("2_piqhx")
-region_rect = Rect2(37.45382, 1.1453719, 117.80439, 152.68108)
-patch_margin_left = 55
-patch_margin_top = 42
-patch_margin_right = 55
-patch_margin_bottom = 58
 metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
