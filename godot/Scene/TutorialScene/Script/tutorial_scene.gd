@@ -1,5 +1,7 @@
 extends Node2D
 
+var INVENTORY_SIZE = 16
+
 @onready var PlayerUI = $Ysort/player/UI
 @onready var StartAnimationCamera = $SceneStart/StartAnimationCamera
 @onready var CameraAnimation = $SceneStart/AnimationPlayer
@@ -32,17 +34,26 @@ func _ready() -> void:
 	textbox.queue_text("자 오늘은 마지막 수업이야~")
 	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나를 찾아봐!")
 	get_tree().current_scene.add_child(textbox)
+	
+func _process(_delta: float) -> void:
+	# 플레이어의 인벤토리에는 배열의 크기만큼 NULL이 들어가있음 
+	# 플레이어가 아이템을 하나 먹으면 NULL의 숫자가 1 줄어드는 성질을 이용함
+	if PlayerStat.player_inv.items.count(null) < INVENTORY_SIZE and Input.is_action_just_pressed("E"):
+		if $Ysort/Door.animation != "open":
+			$Ysort/Door.play("open")
+			$Ysort/Door/StaticBody2D/CollisionPolygon2D.disabled = true
 
 func PlayAnimation():
-	var CurrentQuest = QuestQueue.pop_front()
-	
-	if CurrentQuest == "Q3":
-		QuestUIAnimation.play("ChangeRibbonSize")
+	if not QuestQueue.is_empty():
+		var CurrentQuest = QuestQueue.pop_front()
+		
+		if CurrentQuest == "Q3":
+			QuestUIAnimation.play("ChangeRibbonSize")
+			await QuestUIAnimation.animation_finished
+		
+		QuestUIAnimation.play("ShowRibbon")
 		await QuestUIAnimation.animation_finished
-	
-	QuestUIAnimation.play("ShowRibbon")
-	await QuestUIAnimation.animation_finished
-	QuestUIAnimation.play("Hint")
+		QuestUIAnimation.play("Hint")
 
 
 func _on_q_1_finished_body_entered(body: Node2D) -> void:
@@ -81,3 +92,15 @@ func _on_q_3_start_body_entered(body: Node2D) -> void:
 		textbox.queue_text("화이팅~")
 		get_tree().current_scene.add_child(textbox)
 		$Trigger/Q3/Q3_start.queue_free()
+
+
+func _on_q_3_finished_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		QuestUIAnimation.play("finished_Quest")
+		
+		# 물리 리스트를 순회하면서 처리하기 때문에 body가 entered 하는 타이밍과 비슷하게 disabled를 false 하면
+		# 안전을 위해 godot에서 오류를 발생함 그렇기 때문에 set_deferred를 사용
+		$Ysort/Door/StaticBody2D/CollisionPolygon2D.set_deferred("disabled", false)
+		$Ysort/Door.play("close")
+		
+		$Trigger/Q3/Q3_finished.queue_free()

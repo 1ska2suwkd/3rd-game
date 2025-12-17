@@ -1066,6 +1066,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0qn7n")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qn7n")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lhtcd")
@@ -1081,6 +1089,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jna3g")
+}],
+"loop": true,
+"name": &"opened",
 "speed": 5.0
 }]
 
@@ -3053,7 +3069,6 @@ tile_set = SubResource("TileSet_ye4by")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(451, -18)
 
 [node name="QuestUI" type="Node2D" parent="Ysort/player"]
 z_index = 100
@@ -3196,7 +3211,6 @@ libraries = {
 
 [node name="Master" parent="Ysort" instance=ExtResource("19_dtueh")]
 position = Vector2(3841, -1983)
-scale = Vector2(-1, 1)
 script = ExtResource("20_jknon")
 
 [node name="CollisionObject" type="Node2D" parent="Ysort"]
@@ -3233,7 +3247,7 @@ position = Vector2(3840, -344)
 position = Vector2(3838, -552)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_b6d0y")
-animation = &"open"
+animation = &"closed"
 offset = Vector2(0, -5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ysort/Door"]
@@ -3369,7 +3383,15 @@ position = Vector2(3360, -17)
 position = Vector2(-1.5, 12)
 shape = SubResource("RectangleShape2D_vedem")
 
+[node name="Q3_finished" type="Area2D" parent="Trigger/Q3"]
+position = Vector2(3902, -865)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q3/Q3_finished"]
+position = Vector2(-63.5, 9.5)
+shape = SubResource("RectangleShape2D_c4q8n")
+
 [connection signal="body_entered" from="Trigger/Q1/Q1_finished" to="." method="_on_q_1_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_finished" to="." method="_on_q_2_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_start" to="." method="_on_q_2_start_body_entered"]
 [connection signal="body_entered" from="Trigger/Q3/Q3_start" to="." method="_on_q_3_start_body_entered"]
+[connection signal="body_entered" from="Trigger/Q3/Q3_finished" to="." method="_on_q_3_finished_body_entered"]

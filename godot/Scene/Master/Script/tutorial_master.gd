@@ -19,8 +19,8 @@ func _process(_delta):
 		if Input.is_action_just_pressed("Interaction") and not global.is_stop:
 			var master_textbox = preload("res://Scene/Master/Master_Text_Box.tscn").instantiate()
 			master_textbox.is_skilltree = false
-			master_textbox.queue_text("안녕")
-			master_textbox.queue_text("강력한 기술을 배우고싶지?")
+			master_textbox.queue_text("안녕!")
+			master_textbox.queue_text("수고많았어 이제 마을로 돌아가자")
 			get_tree().current_scene.add_child(master_textbox)
 	
 func _on_talk_to_master_body_entered(body: Node2D) -> void:
