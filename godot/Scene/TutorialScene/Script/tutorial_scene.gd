@@ -10,7 +10,8 @@ var INVENTORY_SIZE = 16
 @onready var QuestText = $Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/Quest
 @onready var HintText = $Ysort/player/QuestUI/Hint/HintText
 @onready var WASD = $Ysort/player/QuestUI/Hint/CenterContainer/WASD
-@onready var Q2Hint = $Ysort/player/QuestUI/Hint/MouseLeftClick
+@onready var MouseLeftClick = $Ysort/player/QuestUI/Hint/MouseLeftClick
+@onready var E = $Ysort/player/QuestUI/Hint/CenterContainer/E
 var master_textbox_scene = preload("res://Scene/Master/Master_Text_Box.tscn")
 
 var QuestQueue = ["Q1", "Q2", "Q3"]
@@ -63,7 +64,7 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 		WASD.visible = false
 	
 		QuestText.text = "2. 공격으로 돌파하기"
-		Q2Hint.visible = true
+		MouseLeftClick.visible = true
 		$Trigger/Q1/Q1_finished.queue_free()
 
 
@@ -80,8 +81,10 @@ func _on_q_2_finished_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		QuestUIAnimation.play("finished_Quest")
 		await  QuestUIAnimation.animation_finished
+		MouseLeftClick.visible = false
 	
 		QuestText.text = "3. 아이템을 획득하고 인벤토리를 확인하자!"
+		E.visible = true
 		$Trigger/Q2/Q2_finished.queue_free()
 
 
