@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4nl6h3rgkbl1"]
 
-[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://enemy/StaticEnemy/Script/CollisionEnemy.gd" id="1_267t6"]
+[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://Object/Script/CollisionEnemy.gd" id="1_267t6"]
 [ext_resource type="Texture2D" uid="uid://be0a4yhrakqrv" path="res://assets/Image/Dungeon/Stage1/Objects.png" id="1_ida0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_267t6"]
