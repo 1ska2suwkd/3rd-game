@@ -52,7 +52,7 @@ func PlayAnimation():
 			QuestUIAnimation.play("ChangeRibbonSize")
 			await QuestUIAnimation.animation_finished
 		
-		QuestUIAnimation.play("ShowRibbon")
+		QuestUIAnimation.play("ShowTutorialUI")
 
 
 func _on_q_1_finished_body_entered(body: Node2D) -> void:
