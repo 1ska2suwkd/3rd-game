@@ -2,7 +2,7 @@ extends Node2D
 
 var INVENTORY_SIZE = 16
 
-@onready var PlayerUI = $Ysort/player/UI
+@onready var PlayerUI = $Ysort/player/UI/PlayerUI
 @onready var StartAnimationCamera = $SceneStart/StartAnimationCamera
 @onready var CameraAnimation = $SceneStart/AnimationPlayer
 

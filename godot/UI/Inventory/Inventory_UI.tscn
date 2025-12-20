@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cme2w3tycgvye"]
+[gd_scene load_steps=6 format=3 uid="uid://cck6ejbbut60o"]
 
 [ext_resource type="Script" uid="uid://dr3bk3rriouu3" path="res://UI/Script/inventory_ui.gd" id="1_ljb4w"]
 [ext_resource type="Texture2D" uid="uid://d1gecday3kc5e" path="res://assets/Image/UI/Banners/Banner_Connection_Up.png" id="2_piqhx"]
