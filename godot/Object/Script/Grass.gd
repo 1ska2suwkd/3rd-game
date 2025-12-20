@@ -40,24 +40,23 @@ func die():
 
 	dead = true
 	
-	var to_player = player.global_position - global_position
-	
 	var particle = preload("res://Particle/GrassParticle.tscn").instantiate()
+	particle.process_material = particle.process_material.duplicate()
 	particle.global_position = global_position
-	particle.emitting = true
 	
-	if abs(to_player.x) > abs(to_player.y):
-		if to_player.x > 0:
-			particle.process_material.direction = Vector3(-1,0,0)
-		else:
-			particle.process_material.direction = Vector3(1,0,0)
-	else:
-		if to_player.y > 0:
-			particle.process_material.direction = Vector3(0,-1,0)
-		else:
-			particle.process_material.direction = Vector3(0,1,0)
-
-	
+	if player:
+		# 2. 플레이어로부터 나(잔디)로 향하는 방향 벡터를 구합니다.
+		# (나 - 플레이어)를 해야 내가 튕겨 나가는 방향이 나옵니다.
+		var bounce_dir = (global_position - player.global_position).normalized()
+			
+		# 3. 파티클의 방향을 이 벡터로 설정 (Vector3로 변환)
+		# 이렇게 하면 상하좌우+대각선 모든 각도가 완벽하게 반영됩니다.
+		particle.process_material.direction = Vector3(bounce_dir.x, bounce_dir.y, 0)
+		
+		# 4. 퍼짐(Spread)을 조금 주면 더 풍성해집니다.
+		particle.restart()
+		particle.emitting = true
+		
 	if ysort:
 		ysort.add_child(particle)
 	else:
@@ -67,19 +66,3 @@ func die():
 		
 	queue_free()
 	
-#func _do_attack():
-	#PlayerStat.attacking = true
-	#var mouse_pos = get_global_mouse_position()
-	#var to_mouse = mouse_pos - global_position
-	#
-	#if abs(to_mouse.x) > abs(to_mouse.y):
-		#attackDir = "right" if to_mouse.x > 0 else "left"
-	#else:
-		#attackDir = "down" if to_mouse.y > 0 else "up"
-	#
-	#if attackDir == "left":
-		#$AnimatedSprite2D.flip_h = true
-	#elif attackDir == "right":
-		#$AnimatedSprite2D.flip_h = false
-	#
-	#$AnimatedSprite2D.play(attackDir + "_attack" + combo)
