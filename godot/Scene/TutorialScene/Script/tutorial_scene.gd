@@ -10,7 +10,7 @@ var INVENTORY_SIZE = 16
 @onready var QuestText = $QuestUI/Ribbon/Ribbon/CenterContainer/Quest
 @onready var HintText = $QuestUI/Hint/HintUI/HintText
 @onready var WASD = $QuestUI/Hint/HintUI/CenterContainer/WASD
-@onready var MouseLeftClick = $QuestUI/Hint/HintUI/MouseLeftClick
+@onready var MouseLeftClick = $QuestUI/Hint/HintUI/CenterContainer/MouseLeftClick
 @onready var E = $QuestUI/Hint/HintUI/CenterContainer/E
 var master_textbox_scene = preload("res://Scene/Master/Master_Text_Box.tscn")
 
@@ -63,6 +63,8 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 	
 		QuestText.text = "2. 공격으로 돌파하기"
 		MouseLeftClick.visible = true
+		if MouseLeftClick.visible:
+			print("hi")
 		$Trigger/Q1/Q1_finished.queue_free()
 
 
