@@ -45,7 +45,7 @@ func die():
 	
 		
 	var ysort = get_tree().current_scene.get_node("Ysort")
-	var particle = preload("res://enemy/dead_particle.tscn").instantiate()
+	var particle = preload("res://Particle/EnemyDeadParticle.tscn").instantiate()
 	particle.global_position = global_position
 	particle.emitting = true
 	

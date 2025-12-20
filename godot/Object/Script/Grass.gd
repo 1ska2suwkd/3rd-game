@@ -5,7 +5,6 @@ var stat: Stat = null
 
 var dead: bool = false
 
-@export var player: Node2D
 
 @onready var Sprite := $Sprite2D
 
@@ -35,18 +34,29 @@ func _on_area_2d_area_entered(area):
 
 
 func die():
+	var player = get_tree().get_first_node_in_group("player")
+	var ysort = get_tree().current_scene.get_node("Ysort")
 	if dead: return
-	
+
 	dead = true
 	
-	if is_in_group("enemy"):
-		remove_from_group("enemy") # queue_free는 다음 프레임의 삭제하기 때문에 그룹에서 직접 제거
+	var to_player = player.global_position - global_position
 	
-		
-	var ysort = get_tree().current_scene.get_node("Ysort")
-	var particle = preload("res://enemy/dead_particle.tscn").instantiate()
+	var particle = preload("res://Particle/GrassParticle.tscn").instantiate()
 	particle.global_position = global_position
 	particle.emitting = true
+	
+	if abs(to_player.x) > abs(to_player.y):
+		if to_player.x > 0:
+			particle.process_material.direction = Vector3(-1,0,0)
+		else:
+			particle.process_material.direction = Vector3(1,0,0)
+	else:
+		if to_player.y > 0:
+			particle.process_material.direction = Vector3(0,-1,0)
+		else:
+			particle.process_material.direction = Vector3(0,1,0)
+
 	
 	if ysort:
 		ysort.add_child(particle)
@@ -54,15 +64,22 @@ func die():
 		push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
 		get_tree().current_scene.add_child(particle)
 	
-	#if global.random_number_generator.randf() < 0.5:
-		#var gold = preload("res://PickUp/gold.tscn").instantiate()
-		#gold.global_position = global_position
-		#
-		#if ysort:
-			#ysort.add_child(gold)
-		#else:
-			#push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
-			#get_tree().current_scene.add_child(gold)
 		
 	queue_free()
 	
+#func _do_attack():
+	#PlayerStat.attacking = true
+	#var mouse_pos = get_global_mouse_position()
+	#var to_mouse = mouse_pos - global_position
+	#
+	#if abs(to_mouse.x) > abs(to_mouse.y):
+		#attackDir = "right" if to_mouse.x > 0 else "left"
+	#else:
+		#attackDir = "down" if to_mouse.y > 0 else "up"
+	#
+	#if attackDir == "left":
+		#$AnimatedSprite2D.flip_h = true
+	#elif attackDir == "right":
+		#$AnimatedSprite2D.flip_h = false
+	#
+	#$AnimatedSprite2D.play(attackDir + "_attack" + combo)
