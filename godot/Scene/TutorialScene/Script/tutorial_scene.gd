@@ -6,12 +6,12 @@ var INVENTORY_SIZE = 16
 @onready var StartAnimationCamera = $SceneStart/StartAnimationCamera
 @onready var CameraAnimation = $SceneStart/AnimationPlayer
 
-@onready var QuestUIAnimation = $Ysort/player/QuestUI/AnimationPlayer
-@onready var QuestText = $Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer/Quest
-@onready var HintText = $Ysort/player/QuestUI/Hint/HintText
-@onready var WASD = $Ysort/player/QuestUI/Hint/CenterContainer/WASD
-@onready var MouseLeftClick = $Ysort/player/QuestUI/Hint/MouseLeftClick
-@onready var E = $Ysort/player/QuestUI/Hint/CenterContainer/E
+@onready var QuestUIAnimation = $QuestUI/AnimationPlayer
+@onready var QuestText = $QuestUI/Ribbon/Ribbon/CenterContainer/Quest
+@onready var HintText = $QuestUI/Hint/HintUI/HintText
+@onready var WASD = $QuestUI/Hint/HintUI/CenterContainer/WASD
+@onready var MouseLeftClick = $QuestUI/Hint/HintUI/MouseLeftClick
+@onready var E = $QuestUI/Hint/HintUI/CenterContainer/E
 var master_textbox_scene = preload("res://Scene/Master/Master_Text_Box.tscn")
 
 var QuestQueue = ["Q1", "Q2", "Q3"]
@@ -53,8 +53,6 @@ func PlayAnimation():
 			await QuestUIAnimation.animation_finished
 		
 		QuestUIAnimation.play("ShowRibbon")
-		await QuestUIAnimation.animation_finished
-		QuestUIAnimation.play("Hint")
 
 
 func _on_q_1_finished_body_entered(body: Node2D) -> void:

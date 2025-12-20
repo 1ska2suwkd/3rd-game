@@ -716,127 +716,6 @@ sources/9 = SubResource("TileSetAtlasSource_dfagp")
 sources/10 = SubResource("TileSetAtlasSource_ajy13")
 sources/12 = SubResource("TileSetAtlasSource_eyeuw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd7m6"]
-texture = ExtResource("18_lxwxn")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq4dm"]
-texture = ExtResource("19_n6sw0")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kll6i"]
-texture = ExtResource("21_7feyj")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epbbk"]
-texture = ExtResource("22_ub4mc")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lxwxn"]
-scenes/1/scene = ExtResource("24_lxwxn")
-
-[sub_resource type="TileSet" id="TileSet_ncuoy"]
-tile_size = Vector2i(32, 32)
-sources/3 = SubResource("TileSetAtlasSource_kd7m6")
-sources/4 = SubResource("TileSetAtlasSource_kq4dm")
-sources/6 = SubResource("TileSetAtlasSource_kll6i")
-sources/7 = SubResource("TileSetAtlasSource_epbbk")
-sources/8 = SubResource("TileSetScenesCollectionSource_lxwxn")
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_aq0hj"]
-scenes/1/scene = ExtResource("43_k70om")
-scenes/2/scene = ExtResource("24_lxwxn")
-
-[sub_resource type="TileSet" id="TileSet_aq0hj"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetScenesCollectionSource_aq0hj")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgixl"]
-texture = ExtResource("22_lis7o")
-texture_region_size = Vector2i(64, 64)
-0:0/size_in_atlas = Vector2i(3, 4)
-0:0/next_alternative_id = 2
-0:0/animation_speed = 7.0
-0:0/animation_mode = 1
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/0 = 0
-0:0/0/y_sort_origin = 85
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 78.46187, 14.676331, 82.97768, 22.014496, 96.52504, 1.6934204, 106.12108, -18.627625, 98.78294, -13.547363, 82.97768)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6d0y"]
-texture = ExtResource("23_37w05")
-texture_region_size = Vector2i(64, 64)
-0:0/size_in_atlas = Vector2i(3, 4)
-0:0/animation_speed = 7.0
-0:0/animation_mode = 1
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/0 = 0
-0:0/0/y_sort_origin = 90
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.1289673, 77.897385, 12.4184265, 85.23555, 18.063171, 104.42766, 2.257904, 110.0724, -14.111847, 104.42766, -10.725006, 85.80003)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cb20q"]
-texture = ExtResource("24_vedem")
-texture_region_size = Vector2i(64, 64)
-0:0/size_in_atlas = Vector2i(3, 3)
-0:0/animation_speed = 7.0
-0:0/animation_mode = 1
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/0 = 0
-0:0/0/y_sort_origin = 60
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.080261, 50.802658, 6.773712, 51.367126, 6.773712, 66.607925, -6.209198, 66.04344)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkqw4"]
-texture = ExtResource("25_oox1i")
-texture_region_size = Vector2i(64, 64)
-0:0/size_in_atlas = Vector2i(3, 3)
-0:0/animation_speed = 7.0
-0:0/animation_mode = 1
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/0 = 0
-0:0/0/y_sort_origin = 58
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.3868408, 50.802658, 8.467133, 50.238174, 9.031586, 64.35002, -5.080261, 63.221085)
-
-[sub_resource type="TileSet" id="TileSet_obnsl"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 255
-sources/3 = SubResource("TileSetAtlasSource_pgixl")
-sources/4 = SubResource("TileSetAtlasSource_b6d0y")
-sources/5 = SubResource("TileSetAtlasSource_cb20q")
-sources/6 = SubResource("TileSetAtlasSource_lkqw4")
-
 [sub_resource type="LabelSettings" id="LabelSettings_lis7o"]
 font_size = 70
 outline_size = 20
@@ -1008,26 +887,14 @@ resource_name = "Hint"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hint:position")
-tracks/0/interp = 1
+tracks/0/path = NodePath("Hint/HintUI:position")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-1055, 433.00003), Vector2(-690, 433.00003)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Hint:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(-186, 613), Vector2(186, 613)]
 }
 
 [sub_resource type="Animation" id="Animation_oox1i"]
@@ -1035,67 +902,55 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hint:position")
+tracks/0/path = NodePath("Ribbon/Ribbon:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1057, 433.00003)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hint:modulate")
+tracks/1/path = NodePath("Ribbon/Ribbon:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(461, 97.25)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Ribbon/Ribbon:modulate")
+tracks/2/path = NodePath("Ribbon/Ribbon:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(639.338, 30)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Ribbon/Ribbon:size")
+tracks/3/path = NodePath("Hint/HintUI:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(461, 97.25)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Ribbon/Ribbon:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(639.338, 30)]
+"values": [Vector2(-186, 613)]
 }
 
 [sub_resource type="Animation" id="Animation_hntwa"]
 resource_name = "ShowRibbon"
-length = 0.7
+length = 1.45
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1107,6 +962,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hint/HintUI:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.29999995, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-186, 613), Vector2(186, 613)]
 }
 
 [sub_resource type="Animation" id="Animation_sroei"]
@@ -1144,6 +1011,127 @@ _data = {
 &"ShowRibbon": SubResource("Animation_hntwa"),
 &"finished_Quest": SubResource("Animation_sroei")
 }
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kd7m6"]
+texture = ExtResource("18_lxwxn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq4dm"]
+texture = ExtResource("19_n6sw0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kll6i"]
+texture = ExtResource("21_7feyj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epbbk"]
+texture = ExtResource("22_ub4mc")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lxwxn"]
+scenes/1/scene = ExtResource("24_lxwxn")
+
+[sub_resource type="TileSet" id="TileSet_ncuoy"]
+tile_size = Vector2i(32, 32)
+sources/3 = SubResource("TileSetAtlasSource_kd7m6")
+sources/4 = SubResource("TileSetAtlasSource_kq4dm")
+sources/6 = SubResource("TileSetAtlasSource_kll6i")
+sources/7 = SubResource("TileSetAtlasSource_epbbk")
+sources/8 = SubResource("TileSetScenesCollectionSource_lxwxn")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_aq0hj"]
+scenes/1/scene = ExtResource("43_k70om")
+scenes/2/scene = ExtResource("24_lxwxn")
+
+[sub_resource type="TileSet" id="TileSet_aq0hj"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_aq0hj")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgixl"]
+texture = ExtResource("22_lis7o")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 4)
+0:0/next_alternative_id = 2
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 85
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 78.46187, 14.676331, 82.97768, 22.014496, 96.52504, 1.6934204, 106.12108, -18.627625, 98.78294, -13.547363, 82.97768)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6d0y"]
+texture = ExtResource("23_37w05")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 4)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 90
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.1289673, 77.897385, 12.4184265, 85.23555, 18.063171, 104.42766, 2.257904, 110.0724, -14.111847, 104.42766, -10.725006, 85.80003)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cb20q"]
+texture = ExtResource("24_vedem")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 60
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.080261, 50.802658, 6.773712, 51.367126, 6.773712, 66.607925, -6.209198, 66.04344)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkqw4"]
+texture = ExtResource("25_oox1i")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_speed = 7.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:0/0/y_sort_origin = 58
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.3868408, 50.802658, 8.467133, 50.238174, 9.031586, 64.35002, -5.080261, 63.221085)
+
+[sub_resource type="TileSet" id="TileSet_obnsl"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 255
+sources/3 = SubResource("TileSetAtlasSource_pgixl")
+sources/4 = SubResource("TileSetAtlasSource_b6d0y")
+sources/5 = SubResource("TileSetAtlasSource_cb20q")
+sources/6 = SubResource("TileSetAtlasSource_lkqw4")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xawcw"]
 atlas = ExtResource("17_pgixl")
@@ -3231,6 +3219,160 @@ tile_set = SubResource("TileSet_o6f6m")
 [node name="Deco" type="TileMapLayer" parent="tilemaplayer"]
 tile_set = SubResource("TileSet_ye4by")
 
+[node name="QuestUI" type="Node2D" parent="."]
+z_index = 100
+position = Vector2(3872, -518)
+
+[node name="Ribbon" type="CanvasLayer" parent="QuestUI"]
+
+[node name="Ribbon" type="NinePatchRect" parent="QuestUI/Ribbon"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.66199
+offset_top = 30.0
+offset_right = 230.33801
+offset_bottom = 127.25
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_lis7o")
+region_rect = Rect2(0, 0, 192, 64)
+patch_margin_left = 43
+patch_margin_top = 7
+patch_margin_right = 44
+patch_margin_bottom = 25
+
+[node name="CenterContainer" type="CenterContainer" parent="QuestUI/Ribbon/Ribbon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -76.0
+offset_right = 967.0
+offset_bottom = 195.73352
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="Quest" type="Label" parent="QuestUI/Ribbon/Ribbon/CenterContainer"]
+layout_mode = 2
+text = "3. 아이템을 획득하고 인벤토리를 확인하자!"
+label_settings = SubResource("LabelSettings_lis7o")
+
+[node name="Hint" type="CanvasLayer" parent="QuestUI"]
+
+[node name="HintUI" type="Control" parent="QuestUI/Hint"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = 123.0
+offset_right = -186.0
+offset_bottom = 123.0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="QuestUI/Hint/HintUI"]
+layout_mode = 0
+offset_left = -164.0
+offset_top = -112.0
+offset_right = -28.0
+offset_bottom = 83.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vedem")
+
+[node name="Panel2" type="Panel" parent="QuestUI/Hint/HintUI"]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -87.0
+offset_right = 157.0
+offset_bottom = 83.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oox1i")
+
+[node name="BannerVertical" type="Sprite2D" parent="QuestUI/Hint/HintUI"]
+position = Vector2(-3, -2.999998)
+scale = Vector2(1.7135416, 2.8125)
+texture = ExtResource("19_37w05")
+
+[node name="ButtonDisable3Slides" type="Sprite2D" parent="QuestUI/Hint/HintUI"]
+position = Vector2(-96.5, -82)
+scale = Vector2(0.7447917, 1)
+texture = ExtResource("21_vedem")
+
+[node name="Hint" type="Label" parent="QuestUI/Hint/HintUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = -103.0
+offset_right = 428.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 4
+text = "HINT"
+label_settings = SubResource("LabelSettings_lis7o")
+
+[node name="HintText" type="Label" parent="QuestUI/Hint/HintUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -23.0
+offset_right = 340.0
+offset_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+label_settings = SubResource("LabelSettings_vedem")
+
+[node name="MouseLeftClick" type="Sprite2D" parent="QuestUI/Hint/HintUI"]
+visible = false
+position = Vector2(181.00002, 578)
+scale = Vector2(2.3, 2.3)
+texture = ExtResource("22_hntwa")
+
+[node name="CenterContainer" type="CenterContainer" parent="QuestUI/Hint/HintUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.75
+offset_top = -38.25
+offset_right = 39.75
+offset_bottom = 40.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="E" type="TileMapLayer" parent="QuestUI/Hint/HintUI/CenterContainer"]
+visible = false
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAAAAAAAAAAEAAIAAAA=")
+tile_set = SubResource("TileSet_lduw1")
+
+[node name="WASD" type="TileMapLayer" parent="QuestUI/Hint/HintUI/CenterContainer"]
+position = Vector2(4.75, 37.24997)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAIAAAABAAAAAAADAAIAAAAAAP//AAAGAAQAAAAAAAAAAAACAAQAAAA=")
+tile_set = SubResource("TileSet_lduw1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="QuestUI"]
+libraries = {
+&"": SubResource("AnimationLibrary_hntwa")
+}
+
 [node name="Ysort" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -3251,146 +3393,7 @@ tile_map_data = PackedByteArray("AAA1APf/AwAAAAAAAAA3APf/AwAAAAAAAAA5APf/AwAAAAA
 tile_set = SubResource("TileSet_obnsl")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(-161, 27)
-
-[node name="QuestUI" type="Node2D" parent="Ysort/player"]
-z_index = 100
-position = Vector2(0, -349.88263)
-scale = Vector2(1, 1.0141525)
-
-[node name="Ribbon" type="CanvasLayer" parent="Ysort/player/QuestUI"]
-
-[node name="Ribbon" type="NinePatchRect" parent="Ysort/player/QuestUI/Ribbon"]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -230.66199
-offset_top = 30.0
-offset_right = 230.33801
-offset_bottom = 127.25
-grow_horizontal = 2
-size_flags_horizontal = 4
-texture = ExtResource("2_lis7o")
-region_rect = Rect2(0, 0, 192, 64)
-patch_margin_left = 43
-patch_margin_top = 7
-patch_margin_right = 44
-patch_margin_bottom = 25
-
-[node name="CenterContainer" type="CenterContainer" parent="Ysort/player/QuestUI/Ribbon/Ribbon"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -322.0
-offset_top = -76.0
-offset_right = 967.0
-offset_bottom = 195.73352
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.5, 0.5)
-
-[node name="Quest" type="Label" parent="Ysort/player/QuestUI/Ribbon/Ribbon/CenterContainer"]
-layout_mode = 2
-text = "3. 아이템을 획득하고 인벤토리를 확인하자!"
-label_settings = SubResource("LabelSettings_lis7o")
-
-[node name="Hint" type="Node2D" parent="Ysort/player/QuestUI"]
-position = Vector2(-1057, 433.00003)
-
-[node name="Panel" type="Panel" parent="Ysort/player/QuestUI/Hint"]
-offset_left = -161.0
-offset_top = -109.0
-offset_right = -25.0
-offset_bottom = 86.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_vedem")
-
-[node name="Panel2" type="Panel" parent="Ysort/player/QuestUI/Hint"]
-offset_left = -25.0
-offset_top = -84.0
-offset_right = 160.0
-offset_bottom = 86.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_oox1i")
-
-[node name="BannerVertical" type="Sprite2D" parent="Ysort/player/QuestUI/Hint"]
-scale = Vector2(1.7135416, 2.8125)
-texture = ExtResource("19_37w05")
-
-[node name="ButtonDisable3Slides" type="Sprite2D" parent="Ysort/player/QuestUI/Hint"]
-position = Vector2(-93.5, -79)
-scale = Vector2(0.7447917, 1)
-texture = ExtResource("21_vedem")
-
-[node name="Hint" type="Label" parent="Ysort/player/QuestUI/Hint"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -123.0
-offset_top = -97.0
-offset_right = 426.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.3, 0.3)
-size_flags_horizontal = 4
-text = "HINT"
-label_settings = SubResource("LabelSettings_lis7o")
-
-[node name="HintText" type="Label" parent="Ysort/player/QuestUI/Hint"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -108.0
-offset_top = -24.0
-offset_right = 338.0
-offset_bottom = 143.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.5, 0.5)
-label_settings = SubResource("LabelSettings_vedem")
-
-[node name="MouseLeftClick" type="Sprite2D" parent="Ysort/player/QuestUI/Hint"]
-visible = false
-position = Vector2(-8, 3)
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("22_hntwa")
-
-[node name="CenterContainer" type="CenterContainer" parent="Ysort/player/QuestUI/Hint"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -37.75
-offset_top = -39.25
-offset_right = 37.75
-offset_bottom = 39.25
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="E" type="TileMapLayer" parent="Ysort/player/QuestUI/Hint/CenterContainer"]
-visible = false
-scale = Vector2(5, 5)
-tile_map_data = PackedByteArray("AAAAAAAAAAAEAAIAAAA=")
-tile_set = SubResource("TileSet_lduw1")
-
-[node name="WASD" type="TileMapLayer" parent="Ysort/player/QuestUI/Hint/CenterContainer"]
-position = Vector2(4.75, 37.24997)
-scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAD//wAAAAAAAAIAAAABAAAAAAADAAIAAAAAAP//AAAGAAQAAAAAAAAAAAACAAQAAAA=")
-tile_set = SubResource("TileSet_lduw1")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Ysort/player/QuestUI"]
-libraries = {
-&"": SubResource("AnimationLibrary_hntwa")
-}
+position = Vector2(3872, -173)
 
 [node name="Master" parent="Ysort" instance=ExtResource("19_dtueh")]
 position = Vector2(3841, -1983)
@@ -3549,458 +3552,458 @@ position = Vector2(-63.5, 9.5)
 shape = SubResource("RectangleShape2D_c4q8n")
 
 [connection signal="area_entered" from="Ysort/YsortDeco/BigGrass" to="Ysort/YsortDeco/BigGrass" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122675" to="Ysort/YsortDeco/@Area2D@122675" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122676" to="Ysort/YsortDeco/@Area2D@122676" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122677" to="Ysort/YsortDeco/@Area2D@122677" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122678" to="Ysort/YsortDeco/@Area2D@122678" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122679" to="Ysort/YsortDeco/@Area2D@122679" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122680" to="Ysort/YsortDeco/@Area2D@122680" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122681" to="Ysort/YsortDeco/@Area2D@122681" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122682" to="Ysort/YsortDeco/@Area2D@122682" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122683" to="Ysort/YsortDeco/@Area2D@122683" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122684" to="Ysort/YsortDeco/@Area2D@122684" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122685" to="Ysort/YsortDeco/@Area2D@122685" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122686" to="Ysort/YsortDeco/@Area2D@122686" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122687" to="Ysort/YsortDeco/@Area2D@122687" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122688" to="Ysort/YsortDeco/@Area2D@122688" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122689" to="Ysort/YsortDeco/@Area2D@122689" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122690" to="Ysort/YsortDeco/@Area2D@122690" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122691" to="Ysort/YsortDeco/@Area2D@122691" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122692" to="Ysort/YsortDeco/@Area2D@122692" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122693" to="Ysort/YsortDeco/@Area2D@122693" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122694" to="Ysort/YsortDeco/@Area2D@122694" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122695" to="Ysort/YsortDeco/@Area2D@122695" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122696" to="Ysort/YsortDeco/@Area2D@122696" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122697" to="Ysort/YsortDeco/@Area2D@122697" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122698" to="Ysort/YsortDeco/@Area2D@122698" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122699" to="Ysort/YsortDeco/@Area2D@122699" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122700" to="Ysort/YsortDeco/@Area2D@122700" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122701" to="Ysort/YsortDeco/@Area2D@122701" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122702" to="Ysort/YsortDeco/@Area2D@122702" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122703" to="Ysort/YsortDeco/@Area2D@122703" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122704" to="Ysort/YsortDeco/@Area2D@122704" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122705" to="Ysort/YsortDeco/@Area2D@122705" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122706" to="Ysort/YsortDeco/@Area2D@122706" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122707" to="Ysort/YsortDeco/@Area2D@122707" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122708" to="Ysort/YsortDeco/@Area2D@122708" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122709" to="Ysort/YsortDeco/@Area2D@122709" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122710" to="Ysort/YsortDeco/@Area2D@122710" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122711" to="Ysort/YsortDeco/@Area2D@122711" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122712" to="Ysort/YsortDeco/@Area2D@122712" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122713" to="Ysort/YsortDeco/@Area2D@122713" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122714" to="Ysort/YsortDeco/@Area2D@122714" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122715" to="Ysort/YsortDeco/@Area2D@122715" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122716" to="Ysort/YsortDeco/@Area2D@122716" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122717" to="Ysort/YsortDeco/@Area2D@122717" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122718" to="Ysort/YsortDeco/@Area2D@122718" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122719" to="Ysort/YsortDeco/@Area2D@122719" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122720" to="Ysort/YsortDeco/@Area2D@122720" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122721" to="Ysort/YsortDeco/@Area2D@122721" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122722" to="Ysort/YsortDeco/@Area2D@122722" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122723" to="Ysort/YsortDeco/@Area2D@122723" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122724" to="Ysort/YsortDeco/@Area2D@122724" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122725" to="Ysort/YsortDeco/@Area2D@122725" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122726" to="Ysort/YsortDeco/@Area2D@122726" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122727" to="Ysort/YsortDeco/@Area2D@122727" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122728" to="Ysort/YsortDeco/@Area2D@122728" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122729" to="Ysort/YsortDeco/@Area2D@122729" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122730" to="Ysort/YsortDeco/@Area2D@122730" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122731" to="Ysort/YsortDeco/@Area2D@122731" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122732" to="Ysort/YsortDeco/@Area2D@122732" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122733" to="Ysort/YsortDeco/@Area2D@122733" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122734" to="Ysort/YsortDeco/@Area2D@122734" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122735" to="Ysort/YsortDeco/@Area2D@122735" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122736" to="Ysort/YsortDeco/@Area2D@122736" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122737" to="Ysort/YsortDeco/@Area2D@122737" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122738" to="Ysort/YsortDeco/@Area2D@122738" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122739" to="Ysort/YsortDeco/@Area2D@122739" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122740" to="Ysort/YsortDeco/@Area2D@122740" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122741" to="Ysort/YsortDeco/@Area2D@122741" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122742" to="Ysort/YsortDeco/@Area2D@122742" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122743" to="Ysort/YsortDeco/@Area2D@122743" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122744" to="Ysort/YsortDeco/@Area2D@122744" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122745" to="Ysort/YsortDeco/@Area2D@122745" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122746" to="Ysort/YsortDeco/@Area2D@122746" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122747" to="Ysort/YsortDeco/@Area2D@122747" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122748" to="Ysort/YsortDeco/@Area2D@122748" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122749" to="Ysort/YsortDeco/@Area2D@122749" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122750" to="Ysort/YsortDeco/@Area2D@122750" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122751" to="Ysort/YsortDeco/@Area2D@122751" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122752" to="Ysort/YsortDeco/@Area2D@122752" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122753" to="Ysort/YsortDeco/@Area2D@122753" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122754" to="Ysort/YsortDeco/@Area2D@122754" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122755" to="Ysort/YsortDeco/@Area2D@122755" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122756" to="Ysort/YsortDeco/@Area2D@122756" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122757" to="Ysort/YsortDeco/@Area2D@122757" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122758" to="Ysort/YsortDeco/@Area2D@122758" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122759" to="Ysort/YsortDeco/@Area2D@122759" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122760" to="Ysort/YsortDeco/@Area2D@122760" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122761" to="Ysort/YsortDeco/@Area2D@122761" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122762" to="Ysort/YsortDeco/@Area2D@122762" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122763" to="Ysort/YsortDeco/@Area2D@122763" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122764" to="Ysort/YsortDeco/@Area2D@122764" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122765" to="Ysort/YsortDeco/@Area2D@122765" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122766" to="Ysort/YsortDeco/@Area2D@122766" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122767" to="Ysort/YsortDeco/@Area2D@122767" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122768" to="Ysort/YsortDeco/@Area2D@122768" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122769" to="Ysort/YsortDeco/@Area2D@122769" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122770" to="Ysort/YsortDeco/@Area2D@122770" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122771" to="Ysort/YsortDeco/@Area2D@122771" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122772" to="Ysort/YsortDeco/@Area2D@122772" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122773" to="Ysort/YsortDeco/@Area2D@122773" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122774" to="Ysort/YsortDeco/@Area2D@122774" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122775" to="Ysort/YsortDeco/@Area2D@122775" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122776" to="Ysort/YsortDeco/@Area2D@122776" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122777" to="Ysort/YsortDeco/@Area2D@122777" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122778" to="Ysort/YsortDeco/@Area2D@122778" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122779" to="Ysort/YsortDeco/@Area2D@122779" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122780" to="Ysort/YsortDeco/@Area2D@122780" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122781" to="Ysort/YsortDeco/@Area2D@122781" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122782" to="Ysort/YsortDeco/@Area2D@122782" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122783" to="Ysort/YsortDeco/@Area2D@122783" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122784" to="Ysort/YsortDeco/@Area2D@122784" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122785" to="Ysort/YsortDeco/@Area2D@122785" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122786" to="Ysort/YsortDeco/@Area2D@122786" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122787" to="Ysort/YsortDeco/@Area2D@122787" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122788" to="Ysort/YsortDeco/@Area2D@122788" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122789" to="Ysort/YsortDeco/@Area2D@122789" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122790" to="Ysort/YsortDeco/@Area2D@122790" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122791" to="Ysort/YsortDeco/@Area2D@122791" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122792" to="Ysort/YsortDeco/@Area2D@122792" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122793" to="Ysort/YsortDeco/@Area2D@122793" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122794" to="Ysort/YsortDeco/@Area2D@122794" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122795" to="Ysort/YsortDeco/@Area2D@122795" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122796" to="Ysort/YsortDeco/@Area2D@122796" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122797" to="Ysort/YsortDeco/@Area2D@122797" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122798" to="Ysort/YsortDeco/@Area2D@122798" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122799" to="Ysort/YsortDeco/@Area2D@122799" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122800" to="Ysort/YsortDeco/@Area2D@122800" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122801" to="Ysort/YsortDeco/@Area2D@122801" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122802" to="Ysort/YsortDeco/@Area2D@122802" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122803" to="Ysort/YsortDeco/@Area2D@122803" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122804" to="Ysort/YsortDeco/@Area2D@122804" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122805" to="Ysort/YsortDeco/@Area2D@122805" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122806" to="Ysort/YsortDeco/@Area2D@122806" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122807" to="Ysort/YsortDeco/@Area2D@122807" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122808" to="Ysort/YsortDeco/@Area2D@122808" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122809" to="Ysort/YsortDeco/@Area2D@122809" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122810" to="Ysort/YsortDeco/@Area2D@122810" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122811" to="Ysort/YsortDeco/@Area2D@122811" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122812" to="Ysort/YsortDeco/@Area2D@122812" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122813" to="Ysort/YsortDeco/@Area2D@122813" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122814" to="Ysort/YsortDeco/@Area2D@122814" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122815" to="Ysort/YsortDeco/@Area2D@122815" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122816" to="Ysort/YsortDeco/@Area2D@122816" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122817" to="Ysort/YsortDeco/@Area2D@122817" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122818" to="Ysort/YsortDeco/@Area2D@122818" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122819" to="Ysort/YsortDeco/@Area2D@122819" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122820" to="Ysort/YsortDeco/@Area2D@122820" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122821" to="Ysort/YsortDeco/@Area2D@122821" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122822" to="Ysort/YsortDeco/@Area2D@122822" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122823" to="Ysort/YsortDeco/@Area2D@122823" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122824" to="Ysort/YsortDeco/@Area2D@122824" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122825" to="Ysort/YsortDeco/@Area2D@122825" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122826" to="Ysort/YsortDeco/@Area2D@122826" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122827" to="Ysort/YsortDeco/@Area2D@122827" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122828" to="Ysort/YsortDeco/@Area2D@122828" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122829" to="Ysort/YsortDeco/@Area2D@122829" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122830" to="Ysort/YsortDeco/@Area2D@122830" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122831" to="Ysort/YsortDeco/@Area2D@122831" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122832" to="Ysort/YsortDeco/@Area2D@122832" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122833" to="Ysort/YsortDeco/@Area2D@122833" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122834" to="Ysort/YsortDeco/@Area2D@122834" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122835" to="Ysort/YsortDeco/@Area2D@122835" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122836" to="Ysort/YsortDeco/@Area2D@122836" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122837" to="Ysort/YsortDeco/@Area2D@122837" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122838" to="Ysort/YsortDeco/@Area2D@122838" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122839" to="Ysort/YsortDeco/@Area2D@122839" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122840" to="Ysort/YsortDeco/@Area2D@122840" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122841" to="Ysort/YsortDeco/@Area2D@122841" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122842" to="Ysort/YsortDeco/@Area2D@122842" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122843" to="Ysort/YsortDeco/@Area2D@122843" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122844" to="Ysort/YsortDeco/@Area2D@122844" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122845" to="Ysort/YsortDeco/@Area2D@122845" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122846" to="Ysort/YsortDeco/@Area2D@122846" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122847" to="Ysort/YsortDeco/@Area2D@122847" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122848" to="Ysort/YsortDeco/@Area2D@122848" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122849" to="Ysort/YsortDeco/@Area2D@122849" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122850" to="Ysort/YsortDeco/@Area2D@122850" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122851" to="Ysort/YsortDeco/@Area2D@122851" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122852" to="Ysort/YsortDeco/@Area2D@122852" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122853" to="Ysort/YsortDeco/@Area2D@122853" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122854" to="Ysort/YsortDeco/@Area2D@122854" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122855" to="Ysort/YsortDeco/@Area2D@122855" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122856" to="Ysort/YsortDeco/@Area2D@122856" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122857" to="Ysort/YsortDeco/@Area2D@122857" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122858" to="Ysort/YsortDeco/@Area2D@122858" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122859" to="Ysort/YsortDeco/@Area2D@122859" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122860" to="Ysort/YsortDeco/@Area2D@122860" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122861" to="Ysort/YsortDeco/@Area2D@122861" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122862" to="Ysort/YsortDeco/@Area2D@122862" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122863" to="Ysort/YsortDeco/@Area2D@122863" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122864" to="Ysort/YsortDeco/@Area2D@122864" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122865" to="Ysort/YsortDeco/@Area2D@122865" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122866" to="Ysort/YsortDeco/@Area2D@122866" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122867" to="Ysort/YsortDeco/@Area2D@122867" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122868" to="Ysort/YsortDeco/@Area2D@122868" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122869" to="Ysort/YsortDeco/@Area2D@122869" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122870" to="Ysort/YsortDeco/@Area2D@122870" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122871" to="Ysort/YsortDeco/@Area2D@122871" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122872" to="Ysort/YsortDeco/@Area2D@122872" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122873" to="Ysort/YsortDeco/@Area2D@122873" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122874" to="Ysort/YsortDeco/@Area2D@122874" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122875" to="Ysort/YsortDeco/@Area2D@122875" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122876" to="Ysort/YsortDeco/@Area2D@122876" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122877" to="Ysort/YsortDeco/@Area2D@122877" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122878" to="Ysort/YsortDeco/@Area2D@122878" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122879" to="Ysort/YsortDeco/@Area2D@122879" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122880" to="Ysort/YsortDeco/@Area2D@122880" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122881" to="Ysort/YsortDeco/@Area2D@122881" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122882" to="Ysort/YsortDeco/@Area2D@122882" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122883" to="Ysort/YsortDeco/@Area2D@122883" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122884" to="Ysort/YsortDeco/@Area2D@122884" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122885" to="Ysort/YsortDeco/@Area2D@122885" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122886" to="Ysort/YsortDeco/@Area2D@122886" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122887" to="Ysort/YsortDeco/@Area2D@122887" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122888" to="Ysort/YsortDeco/@Area2D@122888" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122889" to="Ysort/YsortDeco/@Area2D@122889" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122890" to="Ysort/YsortDeco/@Area2D@122890" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122891" to="Ysort/YsortDeco/@Area2D@122891" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122892" to="Ysort/YsortDeco/@Area2D@122892" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122893" to="Ysort/YsortDeco/@Area2D@122893" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122894" to="Ysort/YsortDeco/@Area2D@122894" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122895" to="Ysort/YsortDeco/@Area2D@122895" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122896" to="Ysort/YsortDeco/@Area2D@122896" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122897" to="Ysort/YsortDeco/@Area2D@122897" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122898" to="Ysort/YsortDeco/@Area2D@122898" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122899" to="Ysort/YsortDeco/@Area2D@122899" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122900" to="Ysort/YsortDeco/@Area2D@122900" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122901" to="Ysort/YsortDeco/@Area2D@122901" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122902" to="Ysort/YsortDeco/@Area2D@122902" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122903" to="Ysort/YsortDeco/@Area2D@122903" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122904" to="Ysort/YsortDeco/@Area2D@122904" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122905" to="Ysort/YsortDeco/@Area2D@122905" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122906" to="Ysort/YsortDeco/@Area2D@122906" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122907" to="Ysort/YsortDeco/@Area2D@122907" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122908" to="Ysort/YsortDeco/@Area2D@122908" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122909" to="Ysort/YsortDeco/@Area2D@122909" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122910" to="Ysort/YsortDeco/@Area2D@122910" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122911" to="Ysort/YsortDeco/@Area2D@122911" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122912" to="Ysort/YsortDeco/@Area2D@122912" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122913" to="Ysort/YsortDeco/@Area2D@122913" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122914" to="Ysort/YsortDeco/@Area2D@122914" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122915" to="Ysort/YsortDeco/@Area2D@122915" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122916" to="Ysort/YsortDeco/@Area2D@122916" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122917" to="Ysort/YsortDeco/@Area2D@122917" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122918" to="Ysort/YsortDeco/@Area2D@122918" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122919" to="Ysort/YsortDeco/@Area2D@122919" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122920" to="Ysort/YsortDeco/@Area2D@122920" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122921" to="Ysort/YsortDeco/@Area2D@122921" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122922" to="Ysort/YsortDeco/@Area2D@122922" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122923" to="Ysort/YsortDeco/@Area2D@122923" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122924" to="Ysort/YsortDeco/@Area2D@122924" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122925" to="Ysort/YsortDeco/@Area2D@122925" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122926" to="Ysort/YsortDeco/@Area2D@122926" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122927" to="Ysort/YsortDeco/@Area2D@122927" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122928" to="Ysort/YsortDeco/@Area2D@122928" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122929" to="Ysort/YsortDeco/@Area2D@122929" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122930" to="Ysort/YsortDeco/@Area2D@122930" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122931" to="Ysort/YsortDeco/@Area2D@122931" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122932" to="Ysort/YsortDeco/@Area2D@122932" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122933" to="Ysort/YsortDeco/@Area2D@122933" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122934" to="Ysort/YsortDeco/@Area2D@122934" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122935" to="Ysort/YsortDeco/@Area2D@122935" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122936" to="Ysort/YsortDeco/@Area2D@122936" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122937" to="Ysort/YsortDeco/@Area2D@122937" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122938" to="Ysort/YsortDeco/@Area2D@122938" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122939" to="Ysort/YsortDeco/@Area2D@122939" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122940" to="Ysort/YsortDeco/@Area2D@122940" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122941" to="Ysort/YsortDeco/@Area2D@122941" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122942" to="Ysort/YsortDeco/@Area2D@122942" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122943" to="Ysort/YsortDeco/@Area2D@122943" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122944" to="Ysort/YsortDeco/@Area2D@122944" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122945" to="Ysort/YsortDeco/@Area2D@122945" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122946" to="Ysort/YsortDeco/@Area2D@122946" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122947" to="Ysort/YsortDeco/@Area2D@122947" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122948" to="Ysort/YsortDeco/@Area2D@122948" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122949" to="Ysort/YsortDeco/@Area2D@122949" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122950" to="Ysort/YsortDeco/@Area2D@122950" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122951" to="Ysort/YsortDeco/@Area2D@122951" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122952" to="Ysort/YsortDeco/@Area2D@122952" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122953" to="Ysort/YsortDeco/@Area2D@122953" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122954" to="Ysort/YsortDeco/@Area2D@122954" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122955" to="Ysort/YsortDeco/@Area2D@122955" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122956" to="Ysort/YsortDeco/@Area2D@122956" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122957" to="Ysort/YsortDeco/@Area2D@122957" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122958" to="Ysort/YsortDeco/@Area2D@122958" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122959" to="Ysort/YsortDeco/@Area2D@122959" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122960" to="Ysort/YsortDeco/@Area2D@122960" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122961" to="Ysort/YsortDeco/@Area2D@122961" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122962" to="Ysort/YsortDeco/@Area2D@122962" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122963" to="Ysort/YsortDeco/@Area2D@122963" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122964" to="Ysort/YsortDeco/@Area2D@122964" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122965" to="Ysort/YsortDeco/@Area2D@122965" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122966" to="Ysort/YsortDeco/@Area2D@122966" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122967" to="Ysort/YsortDeco/@Area2D@122967" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122968" to="Ysort/YsortDeco/@Area2D@122968" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122969" to="Ysort/YsortDeco/@Area2D@122969" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122970" to="Ysort/YsortDeco/@Area2D@122970" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122971" to="Ysort/YsortDeco/@Area2D@122971" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122972" to="Ysort/YsortDeco/@Area2D@122972" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122973" to="Ysort/YsortDeco/@Area2D@122973" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122974" to="Ysort/YsortDeco/@Area2D@122974" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122975" to="Ysort/YsortDeco/@Area2D@122975" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122976" to="Ysort/YsortDeco/@Area2D@122976" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122977" to="Ysort/YsortDeco/@Area2D@122977" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122978" to="Ysort/YsortDeco/@Area2D@122978" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122979" to="Ysort/YsortDeco/@Area2D@122979" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122980" to="Ysort/YsortDeco/@Area2D@122980" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122981" to="Ysort/YsortDeco/@Area2D@122981" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122982" to="Ysort/YsortDeco/@Area2D@122982" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122983" to="Ysort/YsortDeco/@Area2D@122983" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122984" to="Ysort/YsortDeco/@Area2D@122984" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122985" to="Ysort/YsortDeco/@Area2D@122985" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122986" to="Ysort/YsortDeco/@Area2D@122986" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122987" to="Ysort/YsortDeco/@Area2D@122987" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122988" to="Ysort/YsortDeco/@Area2D@122988" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122989" to="Ysort/YsortDeco/@Area2D@122989" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122990" to="Ysort/YsortDeco/@Area2D@122990" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122991" to="Ysort/YsortDeco/@Area2D@122991" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122992" to="Ysort/YsortDeco/@Area2D@122992" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122993" to="Ysort/YsortDeco/@Area2D@122993" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122994" to="Ysort/YsortDeco/@Area2D@122994" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122995" to="Ysort/YsortDeco/@Area2D@122995" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122996" to="Ysort/YsortDeco/@Area2D@122996" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122997" to="Ysort/YsortDeco/@Area2D@122997" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122998" to="Ysort/YsortDeco/@Area2D@122998" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@122999" to="Ysort/YsortDeco/@Area2D@122999" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123000" to="Ysort/YsortDeco/@Area2D@123000" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123001" to="Ysort/YsortDeco/@Area2D@123001" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123002" to="Ysort/YsortDeco/@Area2D@123002" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123003" to="Ysort/YsortDeco/@Area2D@123003" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123004" to="Ysort/YsortDeco/@Area2D@123004" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123005" to="Ysort/YsortDeco/@Area2D@123005" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123006" to="Ysort/YsortDeco/@Area2D@123006" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123007" to="Ysort/YsortDeco/@Area2D@123007" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123008" to="Ysort/YsortDeco/@Area2D@123008" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123009" to="Ysort/YsortDeco/@Area2D@123009" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123010" to="Ysort/YsortDeco/@Area2D@123010" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123011" to="Ysort/YsortDeco/@Area2D@123011" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123012" to="Ysort/YsortDeco/@Area2D@123012" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123013" to="Ysort/YsortDeco/@Area2D@123013" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123014" to="Ysort/YsortDeco/@Area2D@123014" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123015" to="Ysort/YsortDeco/@Area2D@123015" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123016" to="Ysort/YsortDeco/@Area2D@123016" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123017" to="Ysort/YsortDeco/@Area2D@123017" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123018" to="Ysort/YsortDeco/@Area2D@123018" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123019" to="Ysort/YsortDeco/@Area2D@123019" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123020" to="Ysort/YsortDeco/@Area2D@123020" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123021" to="Ysort/YsortDeco/@Area2D@123021" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123022" to="Ysort/YsortDeco/@Area2D@123022" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123023" to="Ysort/YsortDeco/@Area2D@123023" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123024" to="Ysort/YsortDeco/@Area2D@123024" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123025" to="Ysort/YsortDeco/@Area2D@123025" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123026" to="Ysort/YsortDeco/@Area2D@123026" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123027" to="Ysort/YsortDeco/@Area2D@123027" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123028" to="Ysort/YsortDeco/@Area2D@123028" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123029" to="Ysort/YsortDeco/@Area2D@123029" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123030" to="Ysort/YsortDeco/@Area2D@123030" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123031" to="Ysort/YsortDeco/@Area2D@123031" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123032" to="Ysort/YsortDeco/@Area2D@123032" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123033" to="Ysort/YsortDeco/@Area2D@123033" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123034" to="Ysort/YsortDeco/@Area2D@123034" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123035" to="Ysort/YsortDeco/@Area2D@123035" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123036" to="Ysort/YsortDeco/@Area2D@123036" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123037" to="Ysort/YsortDeco/@Area2D@123037" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123038" to="Ysort/YsortDeco/@Area2D@123038" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123039" to="Ysort/YsortDeco/@Area2D@123039" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123040" to="Ysort/YsortDeco/@Area2D@123040" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123041" to="Ysort/YsortDeco/@Area2D@123041" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123042" to="Ysort/YsortDeco/@Area2D@123042" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123043" to="Ysort/YsortDeco/@Area2D@123043" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123044" to="Ysort/YsortDeco/@Area2D@123044" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123045" to="Ysort/YsortDeco/@Area2D@123045" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123046" to="Ysort/YsortDeco/@Area2D@123046" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123047" to="Ysort/YsortDeco/@Area2D@123047" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123048" to="Ysort/YsortDeco/@Area2D@123048" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123049" to="Ysort/YsortDeco/@Area2D@123049" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123050" to="Ysort/YsortDeco/@Area2D@123050" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123051" to="Ysort/YsortDeco/@Area2D@123051" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123052" to="Ysort/YsortDeco/@Area2D@123052" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123053" to="Ysort/YsortDeco/@Area2D@123053" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123054" to="Ysort/YsortDeco/@Area2D@123054" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123055" to="Ysort/YsortDeco/@Area2D@123055" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123056" to="Ysort/YsortDeco/@Area2D@123056" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123057" to="Ysort/YsortDeco/@Area2D@123057" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123058" to="Ysort/YsortDeco/@Area2D@123058" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123059" to="Ysort/YsortDeco/@Area2D@123059" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123060" to="Ysort/YsortDeco/@Area2D@123060" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123061" to="Ysort/YsortDeco/@Area2D@123061" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123062" to="Ysort/YsortDeco/@Area2D@123062" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123063" to="Ysort/YsortDeco/@Area2D@123063" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123064" to="Ysort/YsortDeco/@Area2D@123064" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123065" to="Ysort/YsortDeco/@Area2D@123065" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123066" to="Ysort/YsortDeco/@Area2D@123066" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123067" to="Ysort/YsortDeco/@Area2D@123067" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123068" to="Ysort/YsortDeco/@Area2D@123068" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123069" to="Ysort/YsortDeco/@Area2D@123069" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123070" to="Ysort/YsortDeco/@Area2D@123070" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123071" to="Ysort/YsortDeco/@Area2D@123071" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123072" to="Ysort/YsortDeco/@Area2D@123072" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123073" to="Ysort/YsortDeco/@Area2D@123073" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123074" to="Ysort/YsortDeco/@Area2D@123074" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123075" to="Ysort/YsortDeco/@Area2D@123075" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123076" to="Ysort/YsortDeco/@Area2D@123076" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123077" to="Ysort/YsortDeco/@Area2D@123077" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123078" to="Ysort/YsortDeco/@Area2D@123078" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123079" to="Ysort/YsortDeco/@Area2D@123079" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123080" to="Ysort/YsortDeco/@Area2D@123080" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123081" to="Ysort/YsortDeco/@Area2D@123081" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123082" to="Ysort/YsortDeco/@Area2D@123082" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123083" to="Ysort/YsortDeco/@Area2D@123083" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123084" to="Ysort/YsortDeco/@Area2D@123084" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123085" to="Ysort/YsortDeco/@Area2D@123085" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123086" to="Ysort/YsortDeco/@Area2D@123086" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123087" to="Ysort/YsortDeco/@Area2D@123087" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123088" to="Ysort/YsortDeco/@Area2D@123088" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123089" to="Ysort/YsortDeco/@Area2D@123089" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123090" to="Ysort/YsortDeco/@Area2D@123090" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123091" to="Ysort/YsortDeco/@Area2D@123091" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@123092" to="Ysort/YsortDeco/@Area2D@123092" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40228" to="Ysort/YsortDeco/@Area2D@40228" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40229" to="Ysort/YsortDeco/@Area2D@40229" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40230" to="Ysort/YsortDeco/@Area2D@40230" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40231" to="Ysort/YsortDeco/@Area2D@40231" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40232" to="Ysort/YsortDeco/@Area2D@40232" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40233" to="Ysort/YsortDeco/@Area2D@40233" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40234" to="Ysort/YsortDeco/@Area2D@40234" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40235" to="Ysort/YsortDeco/@Area2D@40235" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40236" to="Ysort/YsortDeco/@Area2D@40236" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40237" to="Ysort/YsortDeco/@Area2D@40237" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40238" to="Ysort/YsortDeco/@Area2D@40238" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40239" to="Ysort/YsortDeco/@Area2D@40239" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40240" to="Ysort/YsortDeco/@Area2D@40240" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40241" to="Ysort/YsortDeco/@Area2D@40241" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40242" to="Ysort/YsortDeco/@Area2D@40242" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40243" to="Ysort/YsortDeco/@Area2D@40243" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40244" to="Ysort/YsortDeco/@Area2D@40244" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40245" to="Ysort/YsortDeco/@Area2D@40245" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40246" to="Ysort/YsortDeco/@Area2D@40246" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40247" to="Ysort/YsortDeco/@Area2D@40247" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40248" to="Ysort/YsortDeco/@Area2D@40248" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40249" to="Ysort/YsortDeco/@Area2D@40249" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40250" to="Ysort/YsortDeco/@Area2D@40250" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40251" to="Ysort/YsortDeco/@Area2D@40251" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40252" to="Ysort/YsortDeco/@Area2D@40252" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40253" to="Ysort/YsortDeco/@Area2D@40253" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40254" to="Ysort/YsortDeco/@Area2D@40254" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40255" to="Ysort/YsortDeco/@Area2D@40255" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40256" to="Ysort/YsortDeco/@Area2D@40256" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40257" to="Ysort/YsortDeco/@Area2D@40257" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40258" to="Ysort/YsortDeco/@Area2D@40258" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40259" to="Ysort/YsortDeco/@Area2D@40259" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40260" to="Ysort/YsortDeco/@Area2D@40260" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40261" to="Ysort/YsortDeco/@Area2D@40261" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40262" to="Ysort/YsortDeco/@Area2D@40262" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40263" to="Ysort/YsortDeco/@Area2D@40263" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40264" to="Ysort/YsortDeco/@Area2D@40264" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40265" to="Ysort/YsortDeco/@Area2D@40265" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40266" to="Ysort/YsortDeco/@Area2D@40266" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40267" to="Ysort/YsortDeco/@Area2D@40267" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40268" to="Ysort/YsortDeco/@Area2D@40268" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40269" to="Ysort/YsortDeco/@Area2D@40269" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40270" to="Ysort/YsortDeco/@Area2D@40270" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40271" to="Ysort/YsortDeco/@Area2D@40271" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40272" to="Ysort/YsortDeco/@Area2D@40272" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40273" to="Ysort/YsortDeco/@Area2D@40273" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40274" to="Ysort/YsortDeco/@Area2D@40274" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40275" to="Ysort/YsortDeco/@Area2D@40275" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40276" to="Ysort/YsortDeco/@Area2D@40276" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40277" to="Ysort/YsortDeco/@Area2D@40277" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40278" to="Ysort/YsortDeco/@Area2D@40278" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40279" to="Ysort/YsortDeco/@Area2D@40279" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40280" to="Ysort/YsortDeco/@Area2D@40280" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40281" to="Ysort/YsortDeco/@Area2D@40281" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40282" to="Ysort/YsortDeco/@Area2D@40282" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40283" to="Ysort/YsortDeco/@Area2D@40283" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40284" to="Ysort/YsortDeco/@Area2D@40284" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40285" to="Ysort/YsortDeco/@Area2D@40285" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40286" to="Ysort/YsortDeco/@Area2D@40286" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40287" to="Ysort/YsortDeco/@Area2D@40287" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40288" to="Ysort/YsortDeco/@Area2D@40288" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40289" to="Ysort/YsortDeco/@Area2D@40289" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40290" to="Ysort/YsortDeco/@Area2D@40290" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40291" to="Ysort/YsortDeco/@Area2D@40291" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40292" to="Ysort/YsortDeco/@Area2D@40292" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40293" to="Ysort/YsortDeco/@Area2D@40293" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40294" to="Ysort/YsortDeco/@Area2D@40294" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40295" to="Ysort/YsortDeco/@Area2D@40295" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40296" to="Ysort/YsortDeco/@Area2D@40296" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40297" to="Ysort/YsortDeco/@Area2D@40297" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40298" to="Ysort/YsortDeco/@Area2D@40298" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40299" to="Ysort/YsortDeco/@Area2D@40299" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40300" to="Ysort/YsortDeco/@Area2D@40300" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40301" to="Ysort/YsortDeco/@Area2D@40301" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40302" to="Ysort/YsortDeco/@Area2D@40302" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40303" to="Ysort/YsortDeco/@Area2D@40303" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40304" to="Ysort/YsortDeco/@Area2D@40304" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40305" to="Ysort/YsortDeco/@Area2D@40305" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40306" to="Ysort/YsortDeco/@Area2D@40306" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40307" to="Ysort/YsortDeco/@Area2D@40307" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40308" to="Ysort/YsortDeco/@Area2D@40308" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40309" to="Ysort/YsortDeco/@Area2D@40309" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40310" to="Ysort/YsortDeco/@Area2D@40310" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40311" to="Ysort/YsortDeco/@Area2D@40311" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40312" to="Ysort/YsortDeco/@Area2D@40312" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40313" to="Ysort/YsortDeco/@Area2D@40313" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40314" to="Ysort/YsortDeco/@Area2D@40314" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40315" to="Ysort/YsortDeco/@Area2D@40315" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40316" to="Ysort/YsortDeco/@Area2D@40316" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40317" to="Ysort/YsortDeco/@Area2D@40317" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40318" to="Ysort/YsortDeco/@Area2D@40318" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40319" to="Ysort/YsortDeco/@Area2D@40319" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40320" to="Ysort/YsortDeco/@Area2D@40320" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40321" to="Ysort/YsortDeco/@Area2D@40321" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40322" to="Ysort/YsortDeco/@Area2D@40322" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40323" to="Ysort/YsortDeco/@Area2D@40323" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40324" to="Ysort/YsortDeco/@Area2D@40324" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40325" to="Ysort/YsortDeco/@Area2D@40325" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40326" to="Ysort/YsortDeco/@Area2D@40326" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40327" to="Ysort/YsortDeco/@Area2D@40327" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40328" to="Ysort/YsortDeco/@Area2D@40328" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40329" to="Ysort/YsortDeco/@Area2D@40329" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40330" to="Ysort/YsortDeco/@Area2D@40330" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40331" to="Ysort/YsortDeco/@Area2D@40331" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40332" to="Ysort/YsortDeco/@Area2D@40332" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40333" to="Ysort/YsortDeco/@Area2D@40333" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40334" to="Ysort/YsortDeco/@Area2D@40334" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40335" to="Ysort/YsortDeco/@Area2D@40335" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40336" to="Ysort/YsortDeco/@Area2D@40336" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40337" to="Ysort/YsortDeco/@Area2D@40337" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40338" to="Ysort/YsortDeco/@Area2D@40338" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40339" to="Ysort/YsortDeco/@Area2D@40339" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40340" to="Ysort/YsortDeco/@Area2D@40340" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40341" to="Ysort/YsortDeco/@Area2D@40341" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40342" to="Ysort/YsortDeco/@Area2D@40342" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40343" to="Ysort/YsortDeco/@Area2D@40343" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40344" to="Ysort/YsortDeco/@Area2D@40344" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40345" to="Ysort/YsortDeco/@Area2D@40345" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40346" to="Ysort/YsortDeco/@Area2D@40346" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40347" to="Ysort/YsortDeco/@Area2D@40347" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40348" to="Ysort/YsortDeco/@Area2D@40348" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40349" to="Ysort/YsortDeco/@Area2D@40349" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40350" to="Ysort/YsortDeco/@Area2D@40350" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40351" to="Ysort/YsortDeco/@Area2D@40351" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40352" to="Ysort/YsortDeco/@Area2D@40352" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40353" to="Ysort/YsortDeco/@Area2D@40353" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40354" to="Ysort/YsortDeco/@Area2D@40354" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40355" to="Ysort/YsortDeco/@Area2D@40355" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40356" to="Ysort/YsortDeco/@Area2D@40356" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40357" to="Ysort/YsortDeco/@Area2D@40357" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40358" to="Ysort/YsortDeco/@Area2D@40358" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40359" to="Ysort/YsortDeco/@Area2D@40359" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40360" to="Ysort/YsortDeco/@Area2D@40360" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40361" to="Ysort/YsortDeco/@Area2D@40361" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40362" to="Ysort/YsortDeco/@Area2D@40362" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40363" to="Ysort/YsortDeco/@Area2D@40363" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40364" to="Ysort/YsortDeco/@Area2D@40364" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40365" to="Ysort/YsortDeco/@Area2D@40365" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40366" to="Ysort/YsortDeco/@Area2D@40366" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40367" to="Ysort/YsortDeco/@Area2D@40367" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40368" to="Ysort/YsortDeco/@Area2D@40368" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40369" to="Ysort/YsortDeco/@Area2D@40369" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40370" to="Ysort/YsortDeco/@Area2D@40370" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40371" to="Ysort/YsortDeco/@Area2D@40371" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40372" to="Ysort/YsortDeco/@Area2D@40372" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40373" to="Ysort/YsortDeco/@Area2D@40373" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40374" to="Ysort/YsortDeco/@Area2D@40374" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40375" to="Ysort/YsortDeco/@Area2D@40375" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40376" to="Ysort/YsortDeco/@Area2D@40376" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40377" to="Ysort/YsortDeco/@Area2D@40377" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40378" to="Ysort/YsortDeco/@Area2D@40378" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40379" to="Ysort/YsortDeco/@Area2D@40379" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40380" to="Ysort/YsortDeco/@Area2D@40380" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40381" to="Ysort/YsortDeco/@Area2D@40381" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40382" to="Ysort/YsortDeco/@Area2D@40382" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40383" to="Ysort/YsortDeco/@Area2D@40383" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40384" to="Ysort/YsortDeco/@Area2D@40384" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40385" to="Ysort/YsortDeco/@Area2D@40385" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40386" to="Ysort/YsortDeco/@Area2D@40386" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40387" to="Ysort/YsortDeco/@Area2D@40387" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40388" to="Ysort/YsortDeco/@Area2D@40388" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40389" to="Ysort/YsortDeco/@Area2D@40389" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40390" to="Ysort/YsortDeco/@Area2D@40390" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40391" to="Ysort/YsortDeco/@Area2D@40391" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40392" to="Ysort/YsortDeco/@Area2D@40392" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40393" to="Ysort/YsortDeco/@Area2D@40393" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40394" to="Ysort/YsortDeco/@Area2D@40394" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40395" to="Ysort/YsortDeco/@Area2D@40395" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40396" to="Ysort/YsortDeco/@Area2D@40396" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40397" to="Ysort/YsortDeco/@Area2D@40397" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40398" to="Ysort/YsortDeco/@Area2D@40398" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40399" to="Ysort/YsortDeco/@Area2D@40399" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40400" to="Ysort/YsortDeco/@Area2D@40400" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40401" to="Ysort/YsortDeco/@Area2D@40401" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40402" to="Ysort/YsortDeco/@Area2D@40402" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40403" to="Ysort/YsortDeco/@Area2D@40403" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40404" to="Ysort/YsortDeco/@Area2D@40404" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40405" to="Ysort/YsortDeco/@Area2D@40405" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40406" to="Ysort/YsortDeco/@Area2D@40406" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40407" to="Ysort/YsortDeco/@Area2D@40407" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40408" to="Ysort/YsortDeco/@Area2D@40408" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40409" to="Ysort/YsortDeco/@Area2D@40409" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40410" to="Ysort/YsortDeco/@Area2D@40410" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40411" to="Ysort/YsortDeco/@Area2D@40411" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40412" to="Ysort/YsortDeco/@Area2D@40412" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40413" to="Ysort/YsortDeco/@Area2D@40413" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40414" to="Ysort/YsortDeco/@Area2D@40414" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40415" to="Ysort/YsortDeco/@Area2D@40415" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40416" to="Ysort/YsortDeco/@Area2D@40416" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40417" to="Ysort/YsortDeco/@Area2D@40417" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40418" to="Ysort/YsortDeco/@Area2D@40418" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40419" to="Ysort/YsortDeco/@Area2D@40419" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40420" to="Ysort/YsortDeco/@Area2D@40420" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40421" to="Ysort/YsortDeco/@Area2D@40421" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40422" to="Ysort/YsortDeco/@Area2D@40422" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40423" to="Ysort/YsortDeco/@Area2D@40423" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40424" to="Ysort/YsortDeco/@Area2D@40424" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40425" to="Ysort/YsortDeco/@Area2D@40425" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40426" to="Ysort/YsortDeco/@Area2D@40426" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40427" to="Ysort/YsortDeco/@Area2D@40427" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40428" to="Ysort/YsortDeco/@Area2D@40428" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40429" to="Ysort/YsortDeco/@Area2D@40429" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40430" to="Ysort/YsortDeco/@Area2D@40430" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40431" to="Ysort/YsortDeco/@Area2D@40431" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40432" to="Ysort/YsortDeco/@Area2D@40432" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40433" to="Ysort/YsortDeco/@Area2D@40433" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40434" to="Ysort/YsortDeco/@Area2D@40434" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40435" to="Ysort/YsortDeco/@Area2D@40435" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40436" to="Ysort/YsortDeco/@Area2D@40436" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40437" to="Ysort/YsortDeco/@Area2D@40437" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40438" to="Ysort/YsortDeco/@Area2D@40438" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40439" to="Ysort/YsortDeco/@Area2D@40439" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40440" to="Ysort/YsortDeco/@Area2D@40440" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40441" to="Ysort/YsortDeco/@Area2D@40441" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40442" to="Ysort/YsortDeco/@Area2D@40442" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40443" to="Ysort/YsortDeco/@Area2D@40443" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40444" to="Ysort/YsortDeco/@Area2D@40444" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40445" to="Ysort/YsortDeco/@Area2D@40445" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40446" to="Ysort/YsortDeco/@Area2D@40446" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40447" to="Ysort/YsortDeco/@Area2D@40447" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40448" to="Ysort/YsortDeco/@Area2D@40448" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40449" to="Ysort/YsortDeco/@Area2D@40449" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40450" to="Ysort/YsortDeco/@Area2D@40450" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40451" to="Ysort/YsortDeco/@Area2D@40451" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40452" to="Ysort/YsortDeco/@Area2D@40452" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40453" to="Ysort/YsortDeco/@Area2D@40453" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40454" to="Ysort/YsortDeco/@Area2D@40454" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40455" to="Ysort/YsortDeco/@Area2D@40455" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40456" to="Ysort/YsortDeco/@Area2D@40456" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40457" to="Ysort/YsortDeco/@Area2D@40457" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40458" to="Ysort/YsortDeco/@Area2D@40458" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40459" to="Ysort/YsortDeco/@Area2D@40459" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40460" to="Ysort/YsortDeco/@Area2D@40460" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40461" to="Ysort/YsortDeco/@Area2D@40461" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40462" to="Ysort/YsortDeco/@Area2D@40462" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40463" to="Ysort/YsortDeco/@Area2D@40463" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40464" to="Ysort/YsortDeco/@Area2D@40464" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40465" to="Ysort/YsortDeco/@Area2D@40465" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40466" to="Ysort/YsortDeco/@Area2D@40466" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40467" to="Ysort/YsortDeco/@Area2D@40467" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40468" to="Ysort/YsortDeco/@Area2D@40468" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40469" to="Ysort/YsortDeco/@Area2D@40469" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40470" to="Ysort/YsortDeco/@Area2D@40470" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40471" to="Ysort/YsortDeco/@Area2D@40471" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40472" to="Ysort/YsortDeco/@Area2D@40472" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40473" to="Ysort/YsortDeco/@Area2D@40473" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40474" to="Ysort/YsortDeco/@Area2D@40474" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40475" to="Ysort/YsortDeco/@Area2D@40475" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40476" to="Ysort/YsortDeco/@Area2D@40476" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40477" to="Ysort/YsortDeco/@Area2D@40477" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40478" to="Ysort/YsortDeco/@Area2D@40478" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40479" to="Ysort/YsortDeco/@Area2D@40479" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40480" to="Ysort/YsortDeco/@Area2D@40480" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40481" to="Ysort/YsortDeco/@Area2D@40481" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40482" to="Ysort/YsortDeco/@Area2D@40482" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40483" to="Ysort/YsortDeco/@Area2D@40483" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40484" to="Ysort/YsortDeco/@Area2D@40484" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40485" to="Ysort/YsortDeco/@Area2D@40485" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40486" to="Ysort/YsortDeco/@Area2D@40486" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40487" to="Ysort/YsortDeco/@Area2D@40487" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40488" to="Ysort/YsortDeco/@Area2D@40488" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40489" to="Ysort/YsortDeco/@Area2D@40489" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40490" to="Ysort/YsortDeco/@Area2D@40490" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40491" to="Ysort/YsortDeco/@Area2D@40491" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40492" to="Ysort/YsortDeco/@Area2D@40492" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40493" to="Ysort/YsortDeco/@Area2D@40493" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40494" to="Ysort/YsortDeco/@Area2D@40494" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40495" to="Ysort/YsortDeco/@Area2D@40495" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40496" to="Ysort/YsortDeco/@Area2D@40496" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40497" to="Ysort/YsortDeco/@Area2D@40497" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40498" to="Ysort/YsortDeco/@Area2D@40498" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40499" to="Ysort/YsortDeco/@Area2D@40499" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40500" to="Ysort/YsortDeco/@Area2D@40500" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40501" to="Ysort/YsortDeco/@Area2D@40501" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40502" to="Ysort/YsortDeco/@Area2D@40502" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40503" to="Ysort/YsortDeco/@Area2D@40503" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40504" to="Ysort/YsortDeco/@Area2D@40504" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40505" to="Ysort/YsortDeco/@Area2D@40505" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40506" to="Ysort/YsortDeco/@Area2D@40506" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40507" to="Ysort/YsortDeco/@Area2D@40507" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40508" to="Ysort/YsortDeco/@Area2D@40508" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40509" to="Ysort/YsortDeco/@Area2D@40509" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40510" to="Ysort/YsortDeco/@Area2D@40510" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40511" to="Ysort/YsortDeco/@Area2D@40511" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40512" to="Ysort/YsortDeco/@Area2D@40512" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40513" to="Ysort/YsortDeco/@Area2D@40513" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40514" to="Ysort/YsortDeco/@Area2D@40514" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40515" to="Ysort/YsortDeco/@Area2D@40515" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40516" to="Ysort/YsortDeco/@Area2D@40516" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40517" to="Ysort/YsortDeco/@Area2D@40517" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40518" to="Ysort/YsortDeco/@Area2D@40518" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40519" to="Ysort/YsortDeco/@Area2D@40519" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40520" to="Ysort/YsortDeco/@Area2D@40520" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40521" to="Ysort/YsortDeco/@Area2D@40521" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40522" to="Ysort/YsortDeco/@Area2D@40522" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40523" to="Ysort/YsortDeco/@Area2D@40523" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40524" to="Ysort/YsortDeco/@Area2D@40524" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40525" to="Ysort/YsortDeco/@Area2D@40525" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40526" to="Ysort/YsortDeco/@Area2D@40526" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40527" to="Ysort/YsortDeco/@Area2D@40527" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40528" to="Ysort/YsortDeco/@Area2D@40528" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40529" to="Ysort/YsortDeco/@Area2D@40529" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40530" to="Ysort/YsortDeco/@Area2D@40530" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40531" to="Ysort/YsortDeco/@Area2D@40531" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40532" to="Ysort/YsortDeco/@Area2D@40532" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40533" to="Ysort/YsortDeco/@Area2D@40533" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40534" to="Ysort/YsortDeco/@Area2D@40534" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40535" to="Ysort/YsortDeco/@Area2D@40535" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40536" to="Ysort/YsortDeco/@Area2D@40536" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40537" to="Ysort/YsortDeco/@Area2D@40537" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40538" to="Ysort/YsortDeco/@Area2D@40538" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40539" to="Ysort/YsortDeco/@Area2D@40539" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40540" to="Ysort/YsortDeco/@Area2D@40540" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40541" to="Ysort/YsortDeco/@Area2D@40541" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40542" to="Ysort/YsortDeco/@Area2D@40542" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40543" to="Ysort/YsortDeco/@Area2D@40543" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40544" to="Ysort/YsortDeco/@Area2D@40544" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40545" to="Ysort/YsortDeco/@Area2D@40545" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40546" to="Ysort/YsortDeco/@Area2D@40546" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40547" to="Ysort/YsortDeco/@Area2D@40547" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40548" to="Ysort/YsortDeco/@Area2D@40548" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40549" to="Ysort/YsortDeco/@Area2D@40549" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40550" to="Ysort/YsortDeco/@Area2D@40550" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40551" to="Ysort/YsortDeco/@Area2D@40551" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40552" to="Ysort/YsortDeco/@Area2D@40552" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40553" to="Ysort/YsortDeco/@Area2D@40553" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40554" to="Ysort/YsortDeco/@Area2D@40554" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40555" to="Ysort/YsortDeco/@Area2D@40555" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40556" to="Ysort/YsortDeco/@Area2D@40556" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40557" to="Ysort/YsortDeco/@Area2D@40557" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40558" to="Ysort/YsortDeco/@Area2D@40558" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40559" to="Ysort/YsortDeco/@Area2D@40559" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40560" to="Ysort/YsortDeco/@Area2D@40560" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40561" to="Ysort/YsortDeco/@Area2D@40561" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40562" to="Ysort/YsortDeco/@Area2D@40562" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40563" to="Ysort/YsortDeco/@Area2D@40563" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40564" to="Ysort/YsortDeco/@Area2D@40564" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40565" to="Ysort/YsortDeco/@Area2D@40565" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40566" to="Ysort/YsortDeco/@Area2D@40566" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40567" to="Ysort/YsortDeco/@Area2D@40567" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40568" to="Ysort/YsortDeco/@Area2D@40568" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40569" to="Ysort/YsortDeco/@Area2D@40569" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40570" to="Ysort/YsortDeco/@Area2D@40570" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40571" to="Ysort/YsortDeco/@Area2D@40571" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40572" to="Ysort/YsortDeco/@Area2D@40572" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40573" to="Ysort/YsortDeco/@Area2D@40573" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40574" to="Ysort/YsortDeco/@Area2D@40574" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40575" to="Ysort/YsortDeco/@Area2D@40575" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40576" to="Ysort/YsortDeco/@Area2D@40576" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40577" to="Ysort/YsortDeco/@Area2D@40577" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40578" to="Ysort/YsortDeco/@Area2D@40578" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40579" to="Ysort/YsortDeco/@Area2D@40579" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40580" to="Ysort/YsortDeco/@Area2D@40580" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40581" to="Ysort/YsortDeco/@Area2D@40581" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40582" to="Ysort/YsortDeco/@Area2D@40582" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40583" to="Ysort/YsortDeco/@Area2D@40583" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40584" to="Ysort/YsortDeco/@Area2D@40584" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40585" to="Ysort/YsortDeco/@Area2D@40585" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40586" to="Ysort/YsortDeco/@Area2D@40586" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40587" to="Ysort/YsortDeco/@Area2D@40587" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40588" to="Ysort/YsortDeco/@Area2D@40588" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40589" to="Ysort/YsortDeco/@Area2D@40589" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40590" to="Ysort/YsortDeco/@Area2D@40590" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40591" to="Ysort/YsortDeco/@Area2D@40591" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40592" to="Ysort/YsortDeco/@Area2D@40592" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40593" to="Ysort/YsortDeco/@Area2D@40593" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40594" to="Ysort/YsortDeco/@Area2D@40594" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40595" to="Ysort/YsortDeco/@Area2D@40595" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40596" to="Ysort/YsortDeco/@Area2D@40596" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40597" to="Ysort/YsortDeco/@Area2D@40597" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40598" to="Ysort/YsortDeco/@Area2D@40598" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40599" to="Ysort/YsortDeco/@Area2D@40599" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40600" to="Ysort/YsortDeco/@Area2D@40600" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40601" to="Ysort/YsortDeco/@Area2D@40601" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40602" to="Ysort/YsortDeco/@Area2D@40602" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40603" to="Ysort/YsortDeco/@Area2D@40603" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40604" to="Ysort/YsortDeco/@Area2D@40604" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40605" to="Ysort/YsortDeco/@Area2D@40605" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40606" to="Ysort/YsortDeco/@Area2D@40606" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40607" to="Ysort/YsortDeco/@Area2D@40607" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40608" to="Ysort/YsortDeco/@Area2D@40608" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40609" to="Ysort/YsortDeco/@Area2D@40609" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40610" to="Ysort/YsortDeco/@Area2D@40610" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40611" to="Ysort/YsortDeco/@Area2D@40611" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40612" to="Ysort/YsortDeco/@Area2D@40612" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40613" to="Ysort/YsortDeco/@Area2D@40613" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40614" to="Ysort/YsortDeco/@Area2D@40614" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40615" to="Ysort/YsortDeco/@Area2D@40615" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40616" to="Ysort/YsortDeco/@Area2D@40616" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40617" to="Ysort/YsortDeco/@Area2D@40617" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40618" to="Ysort/YsortDeco/@Area2D@40618" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40619" to="Ysort/YsortDeco/@Area2D@40619" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40620" to="Ysort/YsortDeco/@Area2D@40620" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40621" to="Ysort/YsortDeco/@Area2D@40621" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40622" to="Ysort/YsortDeco/@Area2D@40622" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40623" to="Ysort/YsortDeco/@Area2D@40623" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40624" to="Ysort/YsortDeco/@Area2D@40624" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40625" to="Ysort/YsortDeco/@Area2D@40625" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40626" to="Ysort/YsortDeco/@Area2D@40626" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40627" to="Ysort/YsortDeco/@Area2D@40627" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40628" to="Ysort/YsortDeco/@Area2D@40628" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40629" to="Ysort/YsortDeco/@Area2D@40629" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40630" to="Ysort/YsortDeco/@Area2D@40630" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40631" to="Ysort/YsortDeco/@Area2D@40631" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40632" to="Ysort/YsortDeco/@Area2D@40632" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40633" to="Ysort/YsortDeco/@Area2D@40633" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40634" to="Ysort/YsortDeco/@Area2D@40634" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40635" to="Ysort/YsortDeco/@Area2D@40635" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40636" to="Ysort/YsortDeco/@Area2D@40636" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40637" to="Ysort/YsortDeco/@Area2D@40637" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40638" to="Ysort/YsortDeco/@Area2D@40638" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40639" to="Ysort/YsortDeco/@Area2D@40639" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40640" to="Ysort/YsortDeco/@Area2D@40640" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40641" to="Ysort/YsortDeco/@Area2D@40641" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40642" to="Ysort/YsortDeco/@Area2D@40642" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40643" to="Ysort/YsortDeco/@Area2D@40643" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40644" to="Ysort/YsortDeco/@Area2D@40644" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/YsortDeco/@Area2D@40645" to="Ysort/YsortDeco/@Area2D@40645" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Ysort/CollisionObject/Box" to="Ysort/CollisionObject/Box" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123093" to="Ysort/CollisionObject/@Area2D@123093" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123094" to="Ysort/CollisionObject/@Area2D@123094" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123095" to="Ysort/CollisionObject/@Area2D@123095" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123096" to="Ysort/CollisionObject/@Area2D@123096" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123097" to="Ysort/CollisionObject/@Area2D@123097" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123098" to="Ysort/CollisionObject/@Area2D@123098" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123099" to="Ysort/CollisionObject/@Area2D@123099" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123100" to="Ysort/CollisionObject/@Area2D@123100" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123101" to="Ysort/CollisionObject/@Area2D@123101" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123102" to="Ysort/CollisionObject/@Area2D@123102" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123103" to="Ysort/CollisionObject/@Area2D@123103" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123104" to="Ysort/CollisionObject/@Area2D@123104" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123105" to="Ysort/CollisionObject/@Area2D@123105" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123106" to="Ysort/CollisionObject/@Area2D@123106" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123107" to="Ysort/CollisionObject/@Area2D@123107" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123108" to="Ysort/CollisionObject/@Area2D@123108" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123109" to="Ysort/CollisionObject/@Area2D@123109" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123110" to="Ysort/CollisionObject/@Area2D@123110" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123111" to="Ysort/CollisionObject/@Area2D@123111" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123112" to="Ysort/CollisionObject/@Area2D@123112" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123113" to="Ysort/CollisionObject/@Area2D@123113" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123114" to="Ysort/CollisionObject/@Area2D@123114" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123115" to="Ysort/CollisionObject/@Area2D@123115" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123116" to="Ysort/CollisionObject/@Area2D@123116" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123117" to="Ysort/CollisionObject/@Area2D@123117" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123118" to="Ysort/CollisionObject/@Area2D@123118" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123119" to="Ysort/CollisionObject/@Area2D@123119" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123120" to="Ysort/CollisionObject/@Area2D@123120" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123121" to="Ysort/CollisionObject/@Area2D@123121" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123122" to="Ysort/CollisionObject/@Area2D@123122" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123123" to="Ysort/CollisionObject/@Area2D@123123" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40646" to="Ysort/CollisionObject/@Area2D@40646" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40647" to="Ysort/CollisionObject/@Area2D@40647" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40648" to="Ysort/CollisionObject/@Area2D@40648" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40649" to="Ysort/CollisionObject/@Area2D@40649" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40650" to="Ysort/CollisionObject/@Area2D@40650" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40651" to="Ysort/CollisionObject/@Area2D@40651" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40652" to="Ysort/CollisionObject/@Area2D@40652" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40653" to="Ysort/CollisionObject/@Area2D@40653" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40654" to="Ysort/CollisionObject/@Area2D@40654" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40655" to="Ysort/CollisionObject/@Area2D@40655" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40656" to="Ysort/CollisionObject/@Area2D@40656" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40657" to="Ysort/CollisionObject/@Area2D@40657" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40658" to="Ysort/CollisionObject/@Area2D@40658" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40659" to="Ysort/CollisionObject/@Area2D@40659" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40660" to="Ysort/CollisionObject/@Area2D@40660" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40661" to="Ysort/CollisionObject/@Area2D@40661" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40662" to="Ysort/CollisionObject/@Area2D@40662" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40663" to="Ysort/CollisionObject/@Area2D@40663" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40664" to="Ysort/CollisionObject/@Area2D@40664" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40665" to="Ysort/CollisionObject/@Area2D@40665" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40666" to="Ysort/CollisionObject/@Area2D@40666" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40667" to="Ysort/CollisionObject/@Area2D@40667" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40668" to="Ysort/CollisionObject/@Area2D@40668" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40669" to="Ysort/CollisionObject/@Area2D@40669" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40670" to="Ysort/CollisionObject/@Area2D@40670" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40671" to="Ysort/CollisionObject/@Area2D@40671" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40672" to="Ysort/CollisionObject/@Area2D@40672" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40673" to="Ysort/CollisionObject/@Area2D@40673" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40674" to="Ysort/CollisionObject/@Area2D@40674" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40675" to="Ysort/CollisionObject/@Area2D@40675" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40676" to="Ysort/CollisionObject/@Area2D@40676" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Ysort/CollisionObject/BigGrass" to="Ysort/CollisionObject/BigGrass" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@123124" to="Ysort/CollisionObject/@Area2D@123124" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Ysort/CollisionObject/@Area2D@40677" to="Ysort/CollisionObject/@Area2D@40677" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Trigger/Q1/Q1_finished" to="." method="_on_q_1_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_finished" to="." method="_on_q_2_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_start" to="." method="_on_q_2_start_body_entered"]

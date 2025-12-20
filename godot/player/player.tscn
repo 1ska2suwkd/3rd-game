@@ -1,7 +1,8 @@
-[gd_scene load_steps=92 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=93 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bc7vvfrmkdd15" path="res://player/camera_2d.gd" id="2_ebec5"]
 [ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
@@ -615,6 +616,9 @@ scale = Vector2(1, 0.986045)
 collision_mask = 67
 script = ExtResource("1_onrkg")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_ebec5")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
@@ -760,8 +764,6 @@ layout_mode = 2
 size_flags_vertical = 0
 text = "NULL"
 label_settings = SubResource("LabelSettings_8t03j")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
