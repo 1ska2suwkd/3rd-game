@@ -31,6 +31,7 @@ func _ready() -> void:
 	#CameraAnimation.play("CameraMove")
 	#await CameraAnimation.animation_finished
 	#StartAnimationCamera.queue_free()
+	
 	$StartScene.queue_free()
 	textbox.queue_text("자 오늘은 마지막 수업이야~")
 	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나를 찾아봐!")
