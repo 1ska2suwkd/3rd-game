@@ -1,43 +1,24 @@
 extends Area2D
 
-
-var stat: Stat = null
-
-var dead: bool = false
-
+var is_cut: bool = false
+var particle = preload("res://Particle/GrassParticle.tscn").instantiate()
 
 @onready var Sprite := $Sprite2D
 
-func _ready() -> void:
-	if not stat:
-		init_stat()
-
-func init_stat(p_speed: int = 350, p_hp: int = 1, p_damage: int = 1):
-	stat = Stat.new(p_speed, p_hp, p_damage)
-	dead = false
-
-
-
-func take_damage(p_damage:int):
-	if dead: return
-	
-	stat.hp -= p_damage
-	if stat.hp <= 0:
-		call_deferred("die")
-
 func _on_area_2d_area_entered(area):
-	if area.is_in_group("Player_attack") and not dead:
-		take_damage(PlayerStat.TotalDamage)
+	if area.is_in_group("Player_attack") and not is_cut:
+		cut_grass()
 
 
-func die():
+func cut_grass():
 	var player = get_tree().get_first_node_in_group("player")
 	var ysort = get_tree().current_scene.get_node("Ysort")
-	if dead: return
+	if is_cut: return
 
-	dead = true
+	is_cut = true
 	
-	var particle = preload("res://Particle/GrassParticle.tscn").instantiate()
+	$CollisionShape2D.set_deferred("disabled", true)
+	
 	particle.process_material = particle.process_material.duplicate()
 	particle.global_position = global_position
 	
