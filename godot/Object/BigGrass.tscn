@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://v48d8spfwy3j"]
+[gd_scene load_steps=5 format=3 uid="uid://v48d8spfwy3j"]
 
-[ext_resource type="Script" uid="uid://dicnfmwvbdrpc" path="res://Object/Script/Grass.gd" id="1_f48op"]
 [ext_resource type="Texture2D" uid="uid://cddip3ifealne" path="res://assets/Image/Deco/09.png" id="1_gbf5u"]
+[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://Object/Script/Object.gd" id="1_i0pd8"]
+[ext_resource type="PackedScene" uid="uid://ddwflpknfce05" path="res://Particle/GrassParticle.tscn" id="2_b2dpv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f48op"]
 size = Vector2(46, 21)
 
 [node name="BigGrass" type="Area2D"]
 monitoring = false
-script = ExtResource("1_f48op")
+script = ExtResource("1_i0pd8")
+Use_Directional = true
+HP = null
+DESTROY_PARTICLE = ExtResource("2_b2dpv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_gbf5u")
@@ -18,5 +22,9 @@ region_rect = Rect2(32, 64, 32, 32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -7.5)
 shape = SubResource("RectangleShape2D_f48op")
+
+[node name="HitFlashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_2d_area_entered"]

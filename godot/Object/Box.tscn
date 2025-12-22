@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4nl6h3rgkbl1"]
+[gd_scene load_steps=6 format=3 uid="uid://b4nl6h3rgkbl1"]
 
-[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://Object/Script/CollisionEnemy.gd" id="1_267t6"]
+[ext_resource type="Script" uid="uid://cwi0unr0x6048" path="res://Object/Script/Object.gd" id="1_267t6"]
 [ext_resource type="Texture2D" uid="uid://be0a4yhrakqrv" path="res://assets/Image/Dungeon/Stage1/Objects.png" id="1_ida0s"]
+[ext_resource type="PackedScene" uid="uid://b2elanspxh4oy" path="res://Particle/EnemyDeadParticle.tscn" id="2_kfe1x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_267t6"]
 size = Vector2(15, 17)
@@ -11,7 +12,10 @@ size = Vector2(15, 17)
 
 [node name="Box" type="Area2D"]
 scale = Vector2(4, 4)
+monitoring = false
 script = ExtResource("1_267t6")
+HP = 30
+DESTROY_PARTICLE = ExtResource("2_kfe1x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ida0s")
