@@ -7,7 +7,7 @@
 size = Vector2(46, 21)
 
 [node name="BigGrass" type="Area2D"]
-monitorable = false
+monitoring = false
 script = ExtResource("1_f48op")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

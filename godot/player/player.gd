@@ -205,3 +205,13 @@ func is_dead():
 	global.transition_scene = true
 	global.change_scene("res://Scene/Village/Village.tscn")
 	global.init_game()
+
+
+func _on_attack_collision_area_entered(area: Area2D) -> void:
+	if area.has_method("cut_grass"):
+		area.cut_grass()
+
+
+func _on_pickup_area_area_entered(area: Area2D) -> void:
+	if area.has_method("use_item"):
+		pass

@@ -5,10 +5,6 @@ var is_cut: bool = false
 
 @onready var Sprite := $Sprite2D
 
-func _on_area_2d_area_entered(area):
-	if area.is_in_group("Player_attack") and not is_cut:
-		cut_grass()
-
 
 func cut_grass():
 	var player = get_tree().get_first_node_in_group("player")

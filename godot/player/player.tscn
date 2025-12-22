@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=94 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
@@ -590,6 +590,10 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebec5"]
+radius = 11.155678
+height = 34.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fddr8"]
 radius = 9.12737
 height = 28.0
@@ -625,13 +629,20 @@ sprite_frames = SubResource("SpriteFrames_h6w8y")
 animation = &"idle"
 offset = Vector2(0, -20)
 
+[node name="PickupArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+position = Vector2(0, 5.0707626)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ebec5")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10.141525)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_fddr8")
 
 [node name="AttackCollision" type="Area2D" parent="." groups=["Player_attack"]]
-monitoring = false
+monitorable = false
 
 [node name="DownAttack" type="CollisionShape2D" parent="AttackCollision"]
 position = Vector2(9, 35.49534)
@@ -788,4 +799,6 @@ layout_mode = 2
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
+[connection signal="area_entered" from="AttackCollision" to="." method="_on_attack_collision_area_entered"]
 [connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
