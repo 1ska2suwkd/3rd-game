@@ -28,12 +28,7 @@ func Setup():
 	spawn_animation.play("idle")
 
 func use_item():
+	PlayerStat.player_inv.items[item_number] = item_data
 	if item_script:
 		item_script.apply()
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		PlayerStat.player_inv.items[item_number] = item_data
-		EventBus.emit_signal("add_item")
-		use_item()
-		queue_free()
+	queue_free()

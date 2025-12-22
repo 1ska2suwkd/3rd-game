@@ -14,11 +14,13 @@ var knockback_time := 0.0
 
 var hearts_list : Array[TextureRect]
 
+
 const SLASH_UP = preload("res://projectiles/Crescent_Slash/up_Crescent_Slash.tscn")
 const SLASH_DOWN = preload("res://projectiles/Crescent_Slash/down_Crescent_Slash.tscn")
 const SLASH_LEFT = preload("res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn")
 const SLASH_RIGHT = preload("res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn")
 
+@onready var INVENTORY_UI = $UI/InventoryUi
 @onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
 @onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
@@ -214,4 +216,5 @@ func _on_attack_collision_area_entered(area: Area2D) -> void:
 
 func _on_pickup_area_area_entered(area: Area2D) -> void:
 	if area.has_method("use_item"):
-		pass
+		area.use_item()
+		EventBus.emit_signal("update_inv_ui")
