@@ -1,7 +1,7 @@
 extends Area2D
 
+const GRASS_PARTICLE = preload("res://Particle/GrassParticle.tscn")
 var is_cut: bool = false
-var particle = preload("res://Particle/GrassParticle.tscn").instantiate()
 
 @onready var Sprite := $Sprite2D
 
@@ -18,7 +18,7 @@ func cut_grass():
 	is_cut = true
 	
 	$CollisionShape2D.set_deferred("disabled", true)
-	
+	var particle = GRASS_PARTICLE.instantiate()
 	particle.process_material = particle.process_material.duplicate()
 	particle.global_position = global_position
 	
