@@ -631,6 +631,7 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_fddr8")
 
 [node name="AttackCollision" type="Area2D" parent="." groups=["Player_attack"]]
+monitoring = false
 
 [node name="DownAttack" type="CollisionShape2D" parent="AttackCollision"]
 position = Vector2(9, 35.49534)

@@ -64,8 +64,6 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 	
 		QuestText.text = "2. 공격으로 돌파하기"
 		MouseLeftClick.visible = true
-		if MouseLeftClick.visible:
-			print("hi")
 		$Trigger/Q1/Q1_finished.queue_free()
 
 

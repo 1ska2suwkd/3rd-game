@@ -17,13 +17,10 @@ func init_stat(p_speed: int = 350, p_hp: int = 1, p_damage: int = 1):
 	dead = false
 
 
-func _on_hit_flash_timer_timeout() -> void:
-	Sprite.modulate = Color(1, 1, 1, 1)
 
 func take_damage(p_damage:int):
 	if dead: return
 	
-	Sprite.modulate = Color(18.892, 18.892, 18.892)
 	stat.hp -= p_damage
 	if stat.hp <= 0:
 		call_deferred("die")
