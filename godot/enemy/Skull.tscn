@@ -303,6 +303,8 @@ shape = SubResource("CircleShape2D_y5vj3")
 
 [node name="Contact_Damage" type="Area2D" parent="."]
 position = Vector2(-1, -31)
+collision_layer = 0
+collision_mask = 8
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
 position = Vector2(1, 11.000001)
@@ -316,6 +318,8 @@ shape = SubResource("CapsuleShape2D_p200p")
 
 [node name="Attack_hitbox" type="Area2D" parent="."]
 visible = false
+collision_layer = 0
+collision_mask = 8
 
 [node name="attack_hitbox" type="CollisionShape2D" parent="Attack_hitbox"]
 position = Vector2(96.666664, -13.333333)
@@ -340,6 +344,7 @@ shape = SubResource("RectangleShape2D_spqrb")
 [connection signal="area_exited" from="hitbox" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="Contact_Damage" to="." method="_on_contact_damage_body_entered"]
+[connection signal="area_entered" from="Contact_Damage" to="." method="_on_contact_damage_area_entered"]
+[connection signal="area_entered" from="Attack_hitbox" to="." method="_on_attack_hitbox_area_entered"]
 [connection signal="body_entered" from="Attack_hitbox" to="." method="_on_attack_hitbox_body_entered"]
 [connection signal="body_entered" from="Attack_detection" to="." method="_on_attack_detection_body_entered"]

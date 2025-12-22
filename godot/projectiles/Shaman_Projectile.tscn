@@ -133,7 +133,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="ShamanProjectile" type="Area2D"]
+[node name="ShamanProjectile" type="Area2D" groups=["enemy_projectile"]]
 script = ExtResource("1_2aatf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -39,6 +39,7 @@ Player_attack="플레이어의 공격"
 player=""
 enemy=""
 Wall=""
+enemy_projectile=""
 
 [gui]
 
@@ -100,6 +101,7 @@ pointing/updates_per_second=60
 [layer_names]
 
 2d_physics/layer_3="pickup"
+2d_physics/layer_4="player_hitbox"
 
 [rendering]
 

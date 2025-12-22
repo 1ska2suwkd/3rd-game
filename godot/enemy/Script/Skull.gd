@@ -47,9 +47,11 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	is_attack = false
 	$Attack_hitbox/attack_hitbox.disabled = true
 	
-func _on_attack_hitbox_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+
+func _on_attack_hitbox_area_entered(area: Area2D) -> void:
+	if area.owner.is_in_group("player"):
+		var target = area.owner
+		target.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
 
 
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?

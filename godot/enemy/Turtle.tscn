@@ -296,4 +296,4 @@ shape = SubResource("CircleShape2D_jtobv")
 [connection signal="area_exited" from="hitbox" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="body_entered" from="Contact_Damage" to="." method="_on_contact_damage_body_entered"]
+[connection signal="area_entered" from="Contact_Damage" to="." method="_on_contact_damage_area_entered"]
