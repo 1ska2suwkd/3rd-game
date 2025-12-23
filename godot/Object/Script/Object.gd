@@ -24,6 +24,7 @@ func take_damage(p_damage:int):
 func destroy():
 	if is_destroy: return
 	is_destroy = true
+	$CollisionShape2D.set_deferred("disabled", true)
 	
 	
 	var ysort = get_tree().current_scene.get_node("Ysort")

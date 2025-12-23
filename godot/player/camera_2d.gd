@@ -11,7 +11,7 @@ func _ready() -> void:
 	current = to;
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	to = (get_parent() as CharacterBody2D).position;
 	current = current.lerp(to, pow(0.5, delta * BLEND_SPEED))
 	

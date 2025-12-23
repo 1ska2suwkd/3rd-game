@@ -11,7 +11,6 @@ size = Vector2(46, 21)
 monitoring = false
 script = ExtResource("1_i0pd8")
 Use_Directional = true
-HP = null
 DESTROY_PARTICLE = ExtResource("2_b2dpv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
