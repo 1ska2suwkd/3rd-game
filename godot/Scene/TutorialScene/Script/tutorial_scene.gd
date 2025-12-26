@@ -20,21 +20,21 @@ var QuestQueue = ["Q1", "Q2", "Q3"]
 func _ready() -> void:
 	QuestText.text = "1. 신보기를 움직여라" #첫번째 퀘스트 내용으로 초기화
 	
-	StartAnimationCamera.queue_free()
+	#StartAnimationCamera.queue_free()
 	
 	var textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "PlayAnimation"))
 	PlayerUI.visible = false
 	
-	#CameraAnimation.play("SceneStart")
-	#await CameraAnimation.animation_finished
-	#CameraAnimation.play("CameraMove")
-	#await CameraAnimation.animation_finished
-	#StartAnimationCamera.queue_free()
+	CameraAnimation.play("SceneStart")
+	await CameraAnimation.animation_finished
+	CameraAnimation.play("CameraMove")
+	await CameraAnimation.animation_finished
+	StartAnimationCamera.queue_free()
 	
 	$StartScene.queue_free()
 	textbox.queue_text("자 오늘은 마지막 수업이야~")
-	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나를 찾아봐!")
+	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나한테 와!")
 	get_tree().current_scene.add_child(textbox)
 	
 func _process(_delta: float) -> void:

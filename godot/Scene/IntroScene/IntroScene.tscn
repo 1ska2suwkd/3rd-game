@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcgn08o6xf0hx"]
 
-[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/StoryScene/story_scene.gd" id="1_8k0g7"]
-[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_5ycye"]
+[ext_resource type="Script" uid="uid://h1403epr4knh" path="res://Scene/IntroScene/IntroScene.gd" id="1_2jagd"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="2_k2ql5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xwj7"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ymnk"]
-font = ExtResource("2_5ycye")
+font = ExtResource("2_k2ql5")
 font_size = 80
 
 [sub_resource type="Animation" id="Animation_mrgf5"]
@@ -48,7 +48,7 @@ _data = {
 }
 
 [node name="StoryScene" type="CanvasLayer"]
-script = ExtResource("1_8k0g7")
+script = ExtResource("1_2jagd")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1740.0
@@ -105,7 +105,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/normal_font = ExtResource("2_5ycye")
+theme_override_fonts/normal_font = ExtResource("2_k2ql5")
 theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
 fit_content = true
