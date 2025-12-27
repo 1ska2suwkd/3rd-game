@@ -634,7 +634,7 @@ animation = &"idle"
 offset = Vector2(0, -20)
 
 [node name="HitBoxArea" type="Area2D" parent="."]
-collision_layer = 8
+collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea"]

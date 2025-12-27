@@ -4,7 +4,6 @@ extends CharacterBody2D
 var stat: Stat = null
 
 var dead: bool = false
-var player_chase: bool = false
 var is_attack: bool = false
 var knockback_vel: Vector2 = Vector2.ZERO
 var knockback_time := 0.0 
@@ -60,16 +59,6 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
 		take_damage(PlayerStat.TotalDamage)
 
-func _on_detection_area_body_entered(body):
-	if body.is_in_group("player"):
-		player = body
-		player_chase = true
-
-func _on_detection_area_body_exited(body):
-	if body.is_in_group("player"):
-		#player = null
-		player_chase = false
-		
 
 func _on_contact_damage_area_entered(area: Area2D) -> void:
 	if area.owner.is_in_group("player") and not dead:
@@ -91,7 +80,6 @@ func die():
 	
 	dead = true
 	is_attack = false
-	player_chase = false
 	velocity = Vector2.ZERO
 	
 	if is_in_group("enemy"):
