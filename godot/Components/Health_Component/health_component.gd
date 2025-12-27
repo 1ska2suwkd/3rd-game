@@ -1,10 +1,13 @@
 extends Node2D
 class_name HealthComponent
 
-@export var stats: Resource
+var hp = 0
+var stats: EnemyStat:
+	set(new_stats):
+		stats = new_stats
+		if stats:
+			hp = stats.max_hp
 
-var hp: int = stats.max_hp
-@onready var AnimationSprite = $"../../AnimatedSprite2D"
 
 func damage(p_damage):
 	hp -= p_damage

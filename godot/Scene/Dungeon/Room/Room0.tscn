@@ -4894,5 +4894,4 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 
 [node name="Skull" parent="." node_paths=PackedStringArray("player") instance=ExtResource("22_ynk6m")]
-position = Vector2(-230, -56)
 player = NodePath("../Ysort/player")
