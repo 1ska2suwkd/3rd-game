@@ -41,13 +41,13 @@ func check_enemies():
 
 func _on_all_enemies_cleared():
 	global.clear_room_count += 1
-	print("현재 클리어한 방의 수 : ", global.clear_room_count)
-	print("다음 방이 상자 방일 확률: ", global.probabilities[global.chest_room_stack]*100,"%")
-	$NorthDoor/Door_animation.play("open")
-	$SouthDoor/Door_animation.play("open")
-	$EastDoor/Door_animation.play("open")
-	$WestDoor/Door_animation.play("open")
-	$Door_locked/CollisionPolygon2D.disabled = true
+	#print("현재 클리어한 방의 수 : ", global.clear_room_count)
+	#print("다음 방이 상자 방일 확률: ", global.probabilities[global.chest_room_stack]*100,"%")
+	#$NorthDoor/Door_animation.play("open")
+	#$SouthDoor/Door_animation.play("open")
+	#$EastDoor/Door_animation.play("open")
+	#$WestDoor/Door_animation.play("open")
+	#$Door_locked/CollisionPolygon2D.disabled = true
 	
 
 func change_room(direction):

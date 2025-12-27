@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://cc2g7qqggms8n" path="res://assets/Image/Dungeon/Stage1/trap_animation.png" id="10_8aip2"]
 [ext_resource type="Texture2D" uid="uid://ueww00adnnnk" path="res://assets/Image/Dungeon/Stage1/walls_floor.png" id="11_d3j5g"]
 [ext_resource type="Texture2D" uid="uid://b8foafr5msqyn" path="res://assets/Image/Dungeon/Stage1/Water_coasts_animation.png" id="12_a7oe7"]
-[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://player/player.tscn" id="13_40vtu"]
+[ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://Entities/player/player.tscn" id="13_40vtu"]
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_3u6g4"]
-[ext_resource type="PackedScene" uid="uid://dgryxobep2mhd" path="res://enemy/Turtle.tscn" id="15_w0e5e"]
+[ext_resource type="PackedScene" uid="uid://dgryxobep2mhd" path="res://Entities/enemies/Common/Turtle/Turtle.tscn" id="15_w0e5e"]
 [ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="16_usl6g"]
 [ext_resource type="PackedScene" uid="uid://dutsp2tqmwnhi" path="res://Scene/Dungeon/Dungeon_Scene_Manager.tscn" id="17_idq2p"]
 

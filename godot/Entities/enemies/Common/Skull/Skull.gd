@@ -1,4 +1,4 @@
-extends "res://enemy/Script/BaseEnemy.gd"
+extends "res://Entities/enemies/Common/Script/BaseEnemy.gd"
 # Skull이 BaseEnemy를 쓰는 이유는 공격 히트박스의 scale.x 변경을 위함
 
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D

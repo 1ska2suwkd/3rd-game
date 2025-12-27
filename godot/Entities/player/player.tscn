@@ -1,10 +1,10 @@
 [gd_scene load_steps=95 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://sijoxyauulai" path="res://player/player.gd" id="1_onrkg"]
-[ext_resource type="Script" uid="uid://bc7vvfrmkdd15" path="res://player/camera_2d.gd" id="2_ebec5"]
+[ext_resource type="Script" uid="uid://sijoxyauulai" path="res://Entities/player/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bc7vvfrmkdd15" path="res://Entities/player/camera_2d.gd" id="2_ebec5"]
 [ext_resource type="Texture2D" uid="uid://yk8x62f8uga8" path="res://assets/Image/Factions/Knights/Troops/Dead/Dead.png" id="2_g1dw6"]
-[ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://player/heart.tscn" id="4_yw30f"]
+[ext_resource type="PackedScene" uid="uid://c8v4rsx6a51yo" path="res://Entities/player/heart.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
 [ext_resource type="PackedScene" uid="uid://cck6ejbbut60o" path="res://UI/Inventory/Inventory_UI.tscn" id="6_ebec5"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
@@ -654,6 +654,8 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_fddr8")
 
 [node name="AttackCollision" type="Area2D" parent="." groups=["Player_attack"]]
+collision_layer = 0
+collision_mask = 2
 monitorable = false
 
 [node name="DownAttack" type="CollisionShape2D" parent="AttackCollision"]
