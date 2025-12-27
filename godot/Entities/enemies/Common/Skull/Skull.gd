@@ -79,8 +79,6 @@ func _on_attack_hitbox_area_entered(area: Area2D) -> void:
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
 	nav_agent.target_position = player.global_position
 
-func _on_start_move_timeout() -> void:
-	$Pathfinding.start()
 
 func _on_pathfinding_timeout() -> void:
 	makepath()
