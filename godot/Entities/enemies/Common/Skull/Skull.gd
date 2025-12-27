@@ -2,26 +2,41 @@ extends CharacterBody2D
 @export var SkullStat: EnemyStat
 @export var player: CharacterBody2D
 
-@export var detection_area: DetectionComponent
+@export var movement_component: MoveComponent
+@export var detection_component: DetectionComponent
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 var is_attack = false
 
 func _ready() -> void:
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
-	$Components/MoveComponent.stats = SkullStat
+	$Components/MovementComponent.stats = SkullStat
 
 
 func _physics_process(_delta: float) -> void:
-	
 	if not is_attack:
-		var dir = to_local(nav_agent.get_next_path_position()).normalized()
-		if detection_area.player_chase and detection_area.player:
-			velocity = dir * SkullStat.speed
+		# --- 방향 계산 ---
+		var dir = Vector2.ZERO
+		# 플레이어를 쫓는 상황이면 네비게이션으로 방향을 구함
+		if detection_component.player_chase and detection_component.player:
+			# get_next_path_position()은 전역 좌표이므로 to_local로 로컬 방향으로 변환
+			dir = to_local(nav_agent.get_next_path_position()).normalized()
 		
+		# --- [핵심 변경] 컴포넌트에게 명령 ---
+		if dir != Vector2.ZERO:
+			# "이 방향으로 가라" (가속 적용)
+			movement_component.move(dir, _delta)
+		else:
+			# "방향이 없으면 멈춰라" (마찰 적용)
+			movement_component.stop(_delta)
+		
+		# --- 애니메이션 처리 (기존 로직 유지) ---
+		# 컴포넌트가 move_and_slide를 했으니, 적의 실제 velocity가 변해있음. 그걸 읽어오면 됨.
 		if velocity.length() > 1.0 :
 			$AnimatedSprite2D.play("walk")
-			if abs(velocity.x) > 1.0: # 임계점 설정
+			
+			# 좌우 반전 로직
+			if abs(velocity.x) > 1.0: 
 				if velocity.x < 0:
 					$AnimatedSprite2D.flip_h = true
 					$Attack_hitbox.scale.x = -1
@@ -31,8 +46,11 @@ func _physics_process(_delta: float) -> void:
 					
 		else:
 			$AnimatedSprite2D.play("idle")
+			
 	else:
-		velocity = Vector2.ZERO
+		# 공격 중일 때 정지
+		# velocity = Vector2.ZERO 대신 stop을 써서 부드럽게 멈춤 (원하면 강제 0 할당도 가능)
+		movement_component.stop(_delta)
 
 
 func _on_attack_detection_body_entered(body: Node2D) -> void:

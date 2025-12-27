@@ -6,5 +6,5 @@
 script = ExtResource("1_dwqrx")
 max_hp = 30
 damage = 1
-speed = 250
+speed = 300
 metadata/_custom_type_script = "uid://bs4gp3tfxx3ks"
