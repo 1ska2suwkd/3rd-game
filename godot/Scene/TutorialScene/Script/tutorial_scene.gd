@@ -24,7 +24,8 @@ func _ready() -> void:
 		preload("res://Particle/GrassParticle.tscn"),
 		preload("res://Particle/BoxParticle.tscn")
 	]
-	CameraAnimation.play("SceneStart")
+	StartAnimationCamera.queue_free()
+	#CameraAnimation.play("SceneStart")
 	PlayerUI.visible = false
 	
 	for p in particles_to_cache:
@@ -38,20 +39,17 @@ func _ready() -> void:
 		# 아주 짧은 시간 뒤에 삭제 (혹은 셰이더가 컴파일될 시간 확보)
 		await get_tree().create_timer(0.1).timeout
 		instance.queue_free()
-		print(p)
 	
 	QuestText.text = "1. 신보기를 움직여라" #첫번째 퀘스트 내용으로 초기화
-	
-	#StartAnimationCamera.queue_free()
 	
 	var textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "PlayAnimation"))
 	
-	CameraAnimation.play("SceneStart")
-	await CameraAnimation.animation_finished
-	CameraAnimation.play("CameraMove")
-	await CameraAnimation.animation_finished
-	StartAnimationCamera.queue_free()
+	#CameraAnimation.play("SceneStart")
+	#await CameraAnimation.animation_finished
+	#CameraAnimation.play("CameraMove")
+	#await CameraAnimation.animation_finished
+	#StartAnimationCamera.queue_free()
 	
 	$StartScene.queue_free()
 	textbox.queue_text("자 오늘은 마지막 수업이야~")
