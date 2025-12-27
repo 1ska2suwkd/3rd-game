@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://8bjyk62ro1ic"]
 
-[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_sjpb7"]
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_sjpb7"]
 [ext_resource type="Texture2D" uid="uid://dw7evycckw3et" path="res://assets/Image/Item/관통화살.png" id="2_dvyfc"]
 
 [resource]

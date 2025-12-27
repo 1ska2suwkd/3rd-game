@@ -1,13 +1,12 @@
-[gd_scene load_steps=45 format=3 uid="uid://blustjpt4gi0x"]
+[gd_scene load_steps=44 format=3 uid="uid://blustjpt4gi0x"]
 
 [ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://Entities/enemies/Common/Skull/Skull.gd" id="1_ks2w7"]
 [ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_q6mhb"]
 [ext_resource type="Texture2D" uid="uid://5m5qs26cx031" path="res://assets/Image/Effects/Explosion/Explosions.png" id="3_vnird"]
 [ext_resource type="Texture2D" uid="uid://vqyxgcgjlscj" path="res://assets/enemy/Skull/Skull_Idle.png" id="4_6cdlu"]
 [ext_resource type="Texture2D" uid="uid://dp1oy4mrcv1m" path="res://assets/enemy/Skull/Skull_Run.png" id="5_h34kc"]
-[ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Hitbox_Component/hitbox_component.tscn" id="6_q6mhb"]
+[ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Hurtbox_Component/hurtbox_component.tscn" id="6_q6mhb"]
 [ext_resource type="PackedScene" uid="uid://ctd5ah1sqp6k3" path="res://Components/Detection_Component/detection_component.tscn" id="6_vnird"]
-[ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/ContactDamage_Component/contact_damage_component.tscn" id="8_6cdlu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0h1j"]
 atlas = ExtResource("2_q6mhb")
@@ -242,13 +241,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
-radius = 29.999998
-height = 73.33333
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnird"]
 radius = 43.333332
 height = 93.333336
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
+radius = 33.333332
+height = 83.99999
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
 radius = 24.666664
@@ -261,14 +260,13 @@ height = 116.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spqrb"]
 size = Vector2(293.3333, 56.666664)
 
-[node name="Skull" type="CharacterBody2D" node_paths=PackedStringArray("detection_area") groups=["enemy"]]
+[node name="Skull" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(1, 0)
 scale = Vector2(0.6, 0.6)
 collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_ks2w7")
-detection_area = NodePath("Components/DetectionComponent")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
@@ -291,23 +289,29 @@ offset = Vector2(0, -15)
 
 [node name="Components" type="Node2D" parent="."]
 
-[node name="ContactDamage" parent="Components" instance=ExtResource("8_6cdlu")]
-position = Vector2(-1, -31)
-
-[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Components/ContactDamage"]
-position = Vector2(1, 11)
-rotation = 3.1415925
-shape = SubResource("CapsuleShape2D_5ffra")
-
-[node name="HitboxComponent" parent="Components" instance=ExtResource("6_q6mhb")]
-
-[node name="Hitbox" type="CollisionShape2D" parent="Components/HitboxComponent"]
-position = Vector2(1.0000001, -18.999998)
+[node name="hurtbox" parent="Components" instance=ExtResource("6_q6mhb")]
+position = Vector2(1, 0)
 scale = Vector2(0.6, 0.6)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="hurtbox" type="CollisionShape2D" parent="Components/hurtbox"]
+position = Vector2(0, -31.666664)
 shape = SubResource("CapsuleShape2D_vnird")
 
-[node name="DetectionComponent" parent="Components" instance=ExtResource("6_vnird")]
+[node name="detection_area" parent="Components" instance=ExtResource("6_vnird")]
+
+[node name="Contact_Damage" type="Area2D" parent="."]
 visible = false
+position = Vector2(-1, -31)
+collision_layer = 0
+collision_mask = 2
+
+[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
+position = Vector2(1, 11.000001)
+rotation = -3.1415927
+shape = SubResource("CapsuleShape2D_5ffra")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -339,6 +343,9 @@ shape = SubResource("RectangleShape2D_spqrb")
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="body_entered" from="Components/detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Components/detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="Contact_Damage" to="." method="_on_contact_damage_area_entered"]
 [connection signal="area_entered" from="Attack_hitbox" to="." method="_on_attack_hitbox_area_entered"]
 [connection signal="body_entered" from="Attack_hitbox" to="." method="_on_attack_hitbox_body_entered"]
 [connection signal="body_entered" from="Attack_detection" to="." method="_on_attack_detection_body_entered"]

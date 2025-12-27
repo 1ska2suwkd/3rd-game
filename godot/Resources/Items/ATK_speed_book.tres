@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://l4bx2lbja41o"]
 
 [ext_resource type="Script" uid="uid://c2d1wse6bbjlq" path="res://Resources/Items/Script/atk_speed_book.gd" id="1_2kp7h"]
-[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_7i0vr"]
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_7i0vr"]
 [ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_7i0vr"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://73kkj3o3rn4x"]
 
-[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_8tved"]
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_8tved"]
 [ext_resource type="Script" uid="uid://yr2wwijieck3" path="res://Resources/Items/Script/maid_costume.gd" id="1_w7nhn"]
 [ext_resource type="Texture2D" uid="uid://2wm7kawk1hys" path="res://assets/Image/Item/임재근의 메이드복.png" id="2_xgosx"]
 

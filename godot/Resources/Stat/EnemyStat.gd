@@ -1,7 +1,6 @@
 # Stat.gd
 extends Node
 
-class_name Stat
 
 var speed: int
 var hp: int

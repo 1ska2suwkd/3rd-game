@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cflmkcmlowg63"]
 
-[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Items/Item_Resources.gd" id="1_5gpst"]
+[ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_5gpst"]
 [ext_resource type="Script" uid="uid://dw03ls60e8t4h" path="res://Resources/Items/Script/atk_damage_book.gd" id="1_utnrh"]
 [ext_resource type="Texture2D" uid="uid://b7waoc7h5ayy5" path="res://assets/Image/Item/2권.png" id="2_5gpst"]
 

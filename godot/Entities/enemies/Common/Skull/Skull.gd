@@ -1,10 +1,13 @@
 extends "res://Entities/enemies/Common/Script/BaseEnemy.gd"
 # Skull이 BaseEnemy를 쓰는 이유는 공격 히트박스의 scale.x 변경을 위함
 
+@export var SkullStat: EnemyStat 
+
+@export var detection_area: DetectionComponent
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _ready() -> void:
-	init_stat(250, 30, 1)
+	$Components/ContactDamage.stats = SkullStat
 
 
 func _physics_process(_delta: float) -> void:
@@ -12,8 +15,8 @@ func _physics_process(_delta: float) -> void:
 	
 	if not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()
-		if player_chase and player:
-			velocity = dir * stat.speed
+		if detection_area.player_chase and detection_area.player:
+			velocity = dir * SkullStat.speed
 		
 		if velocity.length() > 1.0 :
 			$AnimatedSprite2D.play("walk")
@@ -51,7 +54,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_attack_hitbox_area_entered(area: Area2D) -> void:
 	if area.owner.is_in_group("player"):
 		var target = area.owner
-		target.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+		target.apply_knockback(global_position, 1000.0, 0.5, SkullStat.damage)
 
 
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?

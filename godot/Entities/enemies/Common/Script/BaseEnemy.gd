@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-
-var stat: Stat = null
-
 var dead: bool = false
 var is_attack: bool = false
 var knockback_vel: Vector2 = Vector2.ZERO
@@ -12,13 +9,6 @@ var knockback_time := 0.0
 
 @onready var anim_sprite := $AnimatedSprite2D
 
-func _ready() -> void:
-	if not stat:
-		init_stat()
-
-func init_stat(p_speed: int = 350, p_hp: int = 4, p_damage: int = 1):
-	stat = Stat.new(p_speed, p_hp, p_damage)
-	dead = false
 
 func _physics_process(_delta: float) -> void:
 	if dead: return
@@ -51,8 +41,8 @@ func take_damage(p_damage:int):
 	$HitFlashTimer.start()
 	if not is_attack:
 		apply_knockback(player.global_position, 500.0, 0.1)
-	stat.hp -= p_damage
-	if stat.hp <= 0:
+	#stat.hp -= p_damage
+	#if stat.hp <= 0:
 		call_deferred("die")
 
 func _on_area_2d_area_entered(area):
@@ -63,7 +53,7 @@ func _on_area_2d_area_entered(area):
 func _on_contact_damage_area_entered(area: Area2D) -> void:
 	if area.owner.is_in_group("player") and not dead:
 		var target = area.owner
-		target.apply_knockback(global_position, 1000.0, 0.1, stat.damage)
+		#target.apply_knockback(global_position, 1000.0, 0.1, stat.damage)
 		
 func find_parent_room() -> Node:
 	var current = get_parent()
