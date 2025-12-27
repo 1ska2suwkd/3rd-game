@@ -18,13 +18,34 @@ var QuestQueue = ["Q1", "Q2", "Q3"]
 
 
 func _ready() -> void:
+	# 렉을 유발하는 파티클들을 리스트업
+	var particles_to_cache = [
+		preload("res://Particle/EnemyDeadParticle.tscn"),
+		preload("res://Particle/GrassParticle.tscn"),
+		preload("res://Particle/BoxParticle.tscn")
+	]
+	CameraAnimation.play("SceneStart")
+	PlayerUI.visible = false
+	
+	for p in particles_to_cache:
+		var instance = p.instantiate()
+		instance.position = Vector2(-9999, -9999) # 화면 밖
+		add_child(instance)
+		# GPUParticles2D라면 emitting을 true로 해서 셰이더를 강제로 태웁니다.
+		if instance is GPUParticles2D:
+			instance.emitting = true 
+		
+		# 아주 짧은 시간 뒤에 삭제 (혹은 셰이더가 컴파일될 시간 확보)
+		await get_tree().create_timer(0.1).timeout
+		instance.queue_free()
+		print(p)
+	
 	QuestText.text = "1. 신보기를 움직여라" #첫번째 퀘스트 내용으로 초기화
 	
 	#StartAnimationCamera.queue_free()
 	
 	var textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "PlayAnimation"))
-	PlayerUI.visible = false
 	
 	CameraAnimation.play("SceneStart")
 	await CameraAnimation.animation_finished
