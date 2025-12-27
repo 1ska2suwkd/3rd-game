@@ -1,17 +1,18 @@
-extends "res://Entities/enemies/Common/Script/BaseEnemy.gd"
-# Skull이 BaseEnemy를 쓰는 이유는 공격 히트박스의 scale.x 변경을 위함
-
-@export var SkullStat: EnemyStat 
+extends CharacterBody2D
+@export var SkullStat: EnemyStat
+@export var player: CharacterBody2D
 
 @export var detection_area: DetectionComponent
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+var is_attack = false
 
 func _ready() -> void:
 	$Components/ContactDamage.stats = SkullStat
+	$Components/HealthComponent.stats = SkullStat
+	$Components/MoveComponent.stats = SkullStat
 
 
 func _physics_process(_delta: float) -> void:
-	super._physics_process(_delta)
 	
 	if not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()

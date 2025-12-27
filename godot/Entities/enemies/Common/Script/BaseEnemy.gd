@@ -34,16 +34,7 @@ func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0
 func _on_hit_flash_timer_timeout() -> void:
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 
-func take_damage(p_damage:int):
-	if dead: return
-	
-	$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
-	$HitFlashTimer.start()
-	if not is_attack:
-		apply_knockback(player.global_position, 500.0, 0.1)
-	#stat.hp -= p_damage
-	#if stat.hp <= 0:
-		call_deferred("die")
+
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
