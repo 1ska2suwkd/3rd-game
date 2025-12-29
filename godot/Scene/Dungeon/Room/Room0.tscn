@@ -17,10 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_buxqe"]
 [ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="15_jw8qa"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="17_1hjre"]
-[ext_resource type="PackedScene" uid="uid://dqmfgsrxa2y83" path="res://Scene/Dungeon/Scene/Door/NorthDoor.tscn" id="17_t5fv8"]
-[ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Scene/Dungeon/Scene/Door/SouthDoor.tscn" id="18_mlwnb"]
-[ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Scene/Dungeon/Scene/Door/EastDoor.tscn" id="19_ylfab"]
-[ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Scene/Dungeon/Scene/Door/WestDoor.tscn" id="20_kybqi"]
+[ext_resource type="PackedScene" uid="uid://dqmfgsrxa2y83" path="res://Components/DungeonComponents/Door/NorthDoor.tscn" id="17_t5fv8"]
+[ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Components/DungeonComponents/Door/SouthDoor.tscn" id="18_mlwnb"]
+[ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Components/DungeonComponents/Door/EastDoor.tscn" id="19_ylfab"]
+[ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Components/DungeonComponents/Door/WestDoor.tscn" id="20_kybqi"]
 [ext_resource type="PackedScene" uid="uid://blustjpt4gi0x" path="res://Entities/enemies/Common/Skull/Skull.tscn" id="22_ynk6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hjre"]
@@ -4894,4 +4894,5 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 
 [node name="Skull" parent="." node_paths=PackedStringArray("player") instance=ExtResource("22_ynk6m")]
+position = Vector2(-291, 30)
 player = NodePath("../Ysort/player")

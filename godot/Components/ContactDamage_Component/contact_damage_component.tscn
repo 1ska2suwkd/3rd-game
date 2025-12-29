@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqmc7ebhwjn8f"]
-
-[ext_resource type="Script" uid="uid://dlhmhkv7lymf4" path="res://Components/ContactDamage_Component/contact_damage_component.gd" id="1_tjfrx"]
-
-[node name="ContactDamage" type="Area2D"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("1_tjfrx")
