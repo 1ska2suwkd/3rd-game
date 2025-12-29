@@ -6,7 +6,7 @@ var stats: EnemyStat
 
 # 움직임의 퀄리티를 결정하는 변수들 (직접 조절 가능)
 @export var acceleration: float = 800.0 # 출발할 때 얼마나 빨리 최고 속도에 도달하는가
-@export var friction: float = 800.0    # 멈출 때 얼마나 미끄러지며 멈추는가
+@export var friction: float = 1000.0    # 멈출 때 얼마나 미끄러지며 멈추는가
 var CanMove: bool = false
 
 # [핵심] 방향만 주면 알아서 움직여주는 함수

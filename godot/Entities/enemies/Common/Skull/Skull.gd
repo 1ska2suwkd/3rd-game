@@ -71,8 +71,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	$Components/AttackHitboxComponent/attack_hitbox.disabled = true
 	
 
-
-
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
 	nav_agent.target_position = player.global_position
 
