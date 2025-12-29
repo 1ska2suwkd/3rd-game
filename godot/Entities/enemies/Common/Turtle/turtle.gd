@@ -1,20 +1,30 @@
-extends "res://enemy/Script/WanderingEnemy.gd"
+extends CharacterBody2D
 
-const BASE_DASH_SPEED := 500
+@export var TurtleStat: EnemyStat
+@export var player: CharacterBody2D
+
+@export var movement_component: MoveComponent
+@export var knockback_component: KnockbackComponent
+
+var is_attack = false
+const BASE_DASH_SPEED := 1000
 var dash_speed = BASE_DASH_SPEED
 var is_dash = false
 var dash_dir := Vector2.ZERO
 var _dash_t := 0.0
 
+var wander_dir := Vector2.ZERO
+var wander_timer := 0.0
+
 
 var restitution := 0.8 # 튕겼을 때 속도 감소량
 
 func _ready() -> void:
-	init_stat(100, 30, 1)
-	
+	$Components/ContactDamageComponent.stats = TurtleStat
+	$Components/HealthComponent.stats = TurtleStat
+	$Components/MovementComponent.stats = TurtleStat
 
 func _physics_process(_delta: float) -> void:
-	super._physics_process(_delta)
 	
 	if is_dash:
 		_dash_t += _delta
@@ -30,6 +40,23 @@ func _physics_process(_delta: float) -> void:
 			dash_dir = velocity.normalized()
 			# 대시 속도도 현재 속도로 동기화
 			dash_speed = velocity.length()
+			
+	elif not is_attack and not is_dash:
+		wander_timer -= _delta
+		if wander_timer <= 0.0:
+			# 새 방향 선택 (랜덤)
+			var angle = randf_range(0, PI*2)
+			wander_dir = Vector2(cos(angle), sin(angle)).normalized()
+			wander_timer = randf_range(1.0, 1.0)  # 1~3초마다 방향 바꿈
+		
+		movement_component.move(wander_dir, _delta)
+		
+		# 애니메이션
+		if velocity.length() > 0.1:
+			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+		else:
+			$AnimatedSprite2D.play("idle")
 
 
 func _on_guard_in_timeout() -> void:
@@ -38,7 +65,7 @@ func _on_guard_in_timeout() -> void:
 
 
 func _on_cooldown_timeout() -> void:
-	if not is_attack and not dead and not player == null:
+	if not is_attack and not player == null:
 		is_attack = true
 		velocity = Vector2.ZERO
 		$AnimatedSprite2D.play("guard_in")

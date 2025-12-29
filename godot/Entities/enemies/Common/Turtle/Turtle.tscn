@@ -1,10 +1,17 @@
-[gd_scene load_steps=37 format=3 uid="uid://dgryxobep2mhd"]
+[gd_scene load_steps=43 format=3 uid="uid://dgryxobep2mhd"]
 
 [ext_resource type="Texture2D" uid="uid://ml86fs1uhoev" path="res://assets/enemy/Turtle/Turtle_Guard_In.png" id="1_2gx6n"]
 [ext_resource type="Script" uid="uid://couki1dh63g56" path="res://Entities/enemies/Common/Turtle/turtle.gd" id="1_0021k"]
 [ext_resource type="Texture2D" uid="uid://c06k0cly6ri2k" path="res://assets/enemy/Turtle/Turtle_Guard_Out.png" id="2_0021k"]
+[ext_resource type="Resource" uid="uid://cra10rpls4p4t" path="res://Resources/Stat/TurtleStat.tres" id="2_c2ajo"]
 [ext_resource type="Texture2D" uid="uid://c4frg82cidujv" path="res://assets/enemy/Turtle/Turtle_Idle.png" id="3_6xlya"]
 [ext_resource type="Texture2D" uid="uid://djldeh1x5j82j" path="res://assets/enemy/Turtle/Turtle_Walk.png" id="4_jtobv"]
+[ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Movement_Component/movement_component.tscn" id="6_4863w"]
+[ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="7_c2ajo"]
+[ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="8_6bgxp"]
+[ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="9_peqer"]
+[ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="11_cx5wt"]
+[ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/ContactDamage_Component/contact_damage_component.tscn" id="12_dl7wn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svdd1"]
 atlas = ExtResource("1_2gx6n")
@@ -215,30 +222,22 @@ animations = [{
 radius = 74.0
 height = 228.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
-radius = 1151.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xlya"]
 radius = 78.025635
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtobv"]
 radius = 65.0
 
-[node name="Turtle" type="CharacterBody2D" groups=["enemy"]]
+[node name="Turtle" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "knockback_component") groups=["enemy"]]
 position = Vector2(1, 0)
 scale = Vector2(0.5, 0.5)
 collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_0021k")
-
-[node name="HitFlashTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
-[node name="Start_move" type="Timer" parent="."]
-one_shot = true
-autostart = true
+TurtleStat = ExtResource("2_c2ajo")
+movement_component = NodePath("Components/MovementComponent")
+knockback_component = NodePath("Components/KnockbackComponent")
 
 [node name="cooldown" type="Timer" parent="."]
 wait_time = 3.0
@@ -260,24 +259,31 @@ frame = 2
 frame_progress = 1.0
 offset = Vector2(0, -15)
 
-[node name="hitbox" type="Area2D" parent="."]
-position = Vector2(0, -46)
+[node name="Components" type="Node2D" parent="."]
 
-[node name="hitbox" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, 28)
+[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("6_4863w")]
+body = NodePath("../..")
+
+[node name="KnockbackComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("7_c2ajo")]
+body = NodePath("../..")
+
+[node name="HealthComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("8_6bgxp")]
+death_component = NodePath("../DeathComponent")
+
+[node name="HitboxComponent" parent="Components" node_paths=PackedStringArray("health_component", "knockback_component") instance=ExtResource("9_peqer")]
+health_component = NodePath("../HealthComponent")
+knockback_component = NodePath("../KnockbackComponent")
+
+[node name="hitbox" type="CollisionShape2D" parent="Components/HitboxComponent"]
+position = Vector2(0, -18)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_0021k")
 
-[node name="detection_area" type="Area2D" parent="."]
-visible = false
-collision_layer = 128
+[node name="DeathComponent" parent="Components" instance=ExtResource("11_cx5wt")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-shape = SubResource("CircleShape2D_y5vj3")
+[node name="ContactDamageComponent" parent="Components" instance=ExtResource("12_dl7wn")]
 
-[node name="Contact_Damage" type="Area2D" parent="."]
-
-[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
+[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Components/ContactDamageComponent"]
 position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_6xlya")
 
@@ -286,14 +292,7 @@ position = Vector2(0, -34)
 rotation = -1.5707964
 shape = SubResource("CircleShape2D_jtobv")
 
-[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
-[connection signal="timeout" from="Start_move" to="." method="_on_start_move_timeout"]
 [connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="Guard_in" to="." method="_on_guard_in_timeout"]
 [connection signal="timeout" from="Attack_Duration" to="." method="_on_attack_duration_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="area_entered" from="hitbox" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="hitbox" to="." method="_on_area_2d_area_exited"]
-[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="area_entered" from="Contact_Damage" to="." method="_on_contact_damage_area_entered"]
