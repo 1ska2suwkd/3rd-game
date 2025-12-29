@@ -4,19 +4,17 @@ extends CharacterBody2D
 
 @export var movement_component: MoveComponent
 @export var detection_component: DetectionComponent
+@export var knockback_component: KnockbackComponent
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 var is_attack = false
 
 func _ready() -> void:
-
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
 	$Components/MovementComponent.stats = SkullStat
 	$Components/AttackHitboxComponent.stats = SkullStat
 
 func _physics_process(_delta: float) -> void:
-	var direction_to_player = global_position.direction_to(player.global_position)
-	
 	if not is_attack:
 		# --- 방향 계산 ---
 		var dir = Vector2.ZERO
@@ -35,12 +33,12 @@ func _physics_process(_delta: float) -> void:
 		
 		# --- 애니메이션 처리 (기존 로직 유지) ---
 		# 컴포넌트가 move_and_slide를 했으니, 적의 실제 velocity가 변해있음. 그걸 읽어오면 됨.
-		if velocity.length() > 1.0 :
+		if velocity.length() > 1.0 and knockback_component.knockback_time <= 0:
 			$AnimatedSprite2D.play("walk")
 			
 			# 좌우 반전 로직
-			if abs(velocity.x) > 1.0: 
-				if direction_to_player.x < 0:
+			if abs(velocity.x) > 1.0:
+				if velocity.x < 0:
 					$AnimatedSprite2D.flip_h = true
 					$Components/AttackHitboxComponent.scale.x = -1
 				else:
