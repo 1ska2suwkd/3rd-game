@@ -15,7 +15,7 @@ func _physics_process(_delta: float) -> void:
 		knockback_time -= _delta
 		
 
-func apply_knockback(from: Vector2, strength: float = 500, duration: float = 0.1) -> void:
+func apply_knockback(from: Vector2, strength: float = 400, duration: float = 0.1) -> void:
 	#if dead: return
 	
 	var dir := (body.global_position - from).normalized()
