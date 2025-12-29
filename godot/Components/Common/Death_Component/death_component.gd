@@ -1,6 +1,8 @@
 extends Node2D
 class_name DeathComponent
 
+
+	
 func die():
 	
 	if is_in_group("enemy"):
@@ -26,6 +28,5 @@ func die():
 		else:
 			push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
 			get_tree().current_scene.add_child(gold)
-		
-	owner.queue_free()
 	
+	owner.call_deferred("queue_free")

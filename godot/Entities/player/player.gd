@@ -37,7 +37,7 @@ func _ready():
 
 	if MasterSkill.Crescent_Slash:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
-		EventBus.emit_signal("add_item")
+		EventBus.emit_signal("update_inv_ui")
 
 
 	#MasterSkill.Crescent_Slash = true # 임시

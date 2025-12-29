@@ -11,7 +11,7 @@ func _ready() -> void:
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
 	$Components/MovementComponent.stats = SkullStat
-
+	$Components/AttackHitboxComponent.stats = SkullStat
 
 func _physics_process(_delta: float) -> void:
 	if not is_attack:
@@ -39,10 +39,10 @@ func _physics_process(_delta: float) -> void:
 			if abs(velocity.x) > 1.0: 
 				if velocity.x < 0:
 					$AnimatedSprite2D.flip_h = true
-					$Attack_hitbox.scale.x = -1
+					$Components/AttackHitboxComponent.scale.x = -1
 				else:
 					$AnimatedSprite2D.flip_h = false
-					$Attack_hitbox.scale.x = 1
+					$Components/AttackHitboxComponent.scale.x = 1
 					
 		else:
 			$AnimatedSprite2D.play("idle")
@@ -62,18 +62,14 @@ func _on_attack_detection_body_entered(body: Node2D) -> void:
 func _on_animated_sprite_2d_frame_changed() -> void:
 	if $AnimatedSprite2D.animation == "attack":
 		if $AnimatedSprite2D.frame == 2:
-			$Attack_hitbox/attack_hitbox.disabled = false
+			$Components/AttackHitboxComponent/attack_hitbox.disabled = false
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	is_attack = false
-	$Attack_hitbox/attack_hitbox.disabled = true
+	$Components/AttackHitboxComponent/attack_hitbox.disabled = true
 	
 
-func _on_attack_hitbox_area_entered(area: Area2D) -> void:
-	if area.owner.is_in_group("player"):
-		var target = area.owner
-		target.apply_knockback(global_position, 1000.0, 0.5, SkullStat.damage)
 
 
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?

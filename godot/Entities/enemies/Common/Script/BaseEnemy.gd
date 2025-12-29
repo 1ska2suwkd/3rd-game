@@ -22,7 +22,7 @@ func _physics_process(_delta: float) -> void:
 			
 	move_and_slide()
 			
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
+func apply_knockback(from: Vector2, strength: float = 1000.0, duration: float = 0.1) -> void:
 	if dead: return
 	
 	var dir := (global_position - from).normalized()

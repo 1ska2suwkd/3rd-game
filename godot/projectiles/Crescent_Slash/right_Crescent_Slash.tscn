@@ -52,7 +52,8 @@ radius = 9.5
 height = 59.0
 
 [node name="rigth_Crescent_Slash" type="Area2D" groups=["Player_attack"]]
-collision_mask = 65
+collision_layer = 0
+collision_mask = 66
 script = ExtResource("1_jnfef")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]

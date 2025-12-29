@@ -11,11 +11,11 @@ func _physics_process(_delta: float) -> void:
 	if knockback_time > 0.0:
 		# 넉백 중: 입력 무시하고 넉백 속도 적용 + 감속
 		body.velocity = knockback_vel
-		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 2000.0 * _delta)  # 감속량 조절
+		knockback_vel = knockback_vel.move_toward(Vector2.ZERO, 3000.0 * _delta)  # 감속량 조절
 		knockback_time -= _delta
 		
 
-func apply_knockback(from: Vector2, strength: float = 500.0, duration: float = 0.15) -> void:
+func apply_knockback(from: Vector2, strength: float = 500, duration: float = 0.1) -> void:
 	#if dead: return
 	
 	var dir := (body.global_position - from).normalized()
