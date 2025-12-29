@@ -8,12 +8,15 @@ extends CharacterBody2D
 var is_attack = false
 
 func _ready() -> void:
+
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
 	$Components/MovementComponent.stats = SkullStat
 	$Components/AttackHitboxComponent.stats = SkullStat
 
 func _physics_process(_delta: float) -> void:
+	var direction_to_player = global_position.direction_to(player.global_position)
+	
 	if not is_attack:
 		# --- 방향 계산 ---
 		var dir = Vector2.ZERO
@@ -37,7 +40,7 @@ func _physics_process(_delta: float) -> void:
 			
 			# 좌우 반전 로직
 			if abs(velocity.x) > 1.0: 
-				if velocity.x < 0:
+				if direction_to_player.x < 0:
 					$AnimatedSprite2D.flip_h = true
 					$Components/AttackHitboxComponent.scale.x = -1
 				else:
