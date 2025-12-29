@@ -1,6 +1,8 @@
 extends Node2D
 class_name HealthComponent
 
+@export var death_component: DeathComponent
+
 var hp = 0
 var stats: EnemyStat:
 	set(new_stats):
@@ -12,5 +14,4 @@ var stats: EnemyStat:
 func damage(p_damage):
 	hp -= p_damage
 	if hp <= 0:
-		pass
-		#시그널 넣어서 DeathComponent 랑 연결 필요
+		death_component.die()

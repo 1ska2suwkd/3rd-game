@@ -212,8 +212,8 @@ func is_dead():
 func _on_attack_collision_area_entered(area: Area2D) -> void:
 	if area.has_method("destroy"):
 		area.take_damage(PlayerStat.TotalDamage)
-	elif area.owner.has_method("die"):
-		area.owner.take_damage(PlayerStat.TotalDamage)
+	elif area.owner.is_in_group("enemy"):
+		area.take_damage(PlayerStat.TotalDamage)
 
 
 func _on_pickup_area_area_entered(area: Area2D) -> void:
