@@ -11,7 +11,6 @@ var CanMove: bool = false
 
 # [핵심] 방향만 주면 알아서 움직여주는 함수
 func move(direction: Vector2, _delta: float) -> void:
-	pass
 	if CanMove:
 		# 스탯 리소스가 있으면 거기 있는 속도를 쓰고, 없으면 기본값 100 사용
 		var current_speed = stats.speed
@@ -25,7 +24,6 @@ func move(direction: Vector2, _delta: float) -> void:
 		return
 
 func stop(_delta: float) -> void:
-	pass
 	# 속도를 0으로 서서히 줄임 (마찰)
 	body.velocity = body.velocity.move_toward(Vector2.ZERO, friction * _delta)
 	
