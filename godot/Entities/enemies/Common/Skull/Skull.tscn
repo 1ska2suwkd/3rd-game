@@ -8,13 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_q6mhb"]
 [ext_resource type="PackedScene" uid="uid://ctd5ah1sqp6k3" path="res://Components/Enemies/Detection_Component/detection_component.tscn" id="6_vnird"]
 [ext_resource type="PackedScene" uid="uid://cgek6f2kva1yr" path="res://Components/Enemies/Attack_Hitbox_Component/attack_hitbox_component.tscn" id="7_gw138"]
+[ext_resource type="PackedScene" uid="uid://efq4u3d5k488" path="res://Components/Enemies/Attack_Detection_component/attack_detection.tscn" id="7_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/ContactDamage_Component/contact_damage_component.tscn" id="8_6cdlu"]
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="10_gw138"]
 [ext_resource type="Resource" uid="uid://bs15aiytc4x1a" path="res://Resources/Stat/SkullStat.tres" id="10_mye0v"]
 [ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="11_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Movement_Component/movement_component.tscn" id="12_mye0v"]
 [ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="14_xn0n7"]
-[ext_resource type="Script" uid="uid://lj544hkd1n7h" path="res://Components/Enemies/Attack_Detection_component/attack_detection.gd" id="15_xn0n7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0h1j"]
 atlas = ExtResource("2_q6mhb")
@@ -294,8 +294,7 @@ offset = Vector2(0, -15)
 
 [node name="Components" type="Node2D" parent="."]
 
-[node name="Attack_detection" type="Area2D" parent="Components"]
-script = ExtResource("15_xn0n7")
+[node name="Attack_detection" parent="Components" instance=ExtResource("7_xn0n7")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Components/Attack_detection"]
 position = Vector2(-7.5101852e-06, -13.333333)
@@ -351,4 +350,3 @@ shape = SubResource("CapsuleShape2D_p200p")
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-[connection signal="area_entered" from="Components/Attack_detection" to="Components/Attack_detection" method="_on_area_entered"]
