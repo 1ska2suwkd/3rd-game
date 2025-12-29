@@ -9,6 +9,8 @@ extends CharacterBody2D
 var is_attack = false
 
 func _ready() -> void:
+	EventBus.target_enter_range.connect(attack)
+	
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
 	$Components/MovementComponent.stats = SkullStat
@@ -54,11 +56,9 @@ func _physics_process(_delta: float) -> void:
 		movement_component.stop(_delta)
 
 
-func _on_attack_detection_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		is_attack = true
-		$AnimatedSprite2D.play("attack")
-
+func attack():
+	is_attack = true
+	$AnimatedSprite2D.play("attack")
 
 func _on_animated_sprite_2d_frame_changed() -> void:
 	if $AnimatedSprite2D.animation == "attack":

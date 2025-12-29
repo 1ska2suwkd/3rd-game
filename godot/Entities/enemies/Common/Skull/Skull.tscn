@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://blustjpt4gi0x"]
+[gd_scene load_steps=52 format=3 uid="uid://blustjpt4gi0x"]
 
 [ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://Entities/enemies/Common/Skull/Skull.gd" id="1_ks2w7"]
 [ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_q6mhb"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="11_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Movement_Component/movement_component.tscn" id="12_mye0v"]
 [ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="14_xn0n7"]
+[ext_resource type="Script" uid="uid://lj544hkd1n7h" path="res://Components/Enemies/Attack_Detection_component/attack_detection.gd" id="15_xn0n7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0h1j"]
 atlas = ExtResource("2_q6mhb")
@@ -248,6 +249,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spqrb"]
+size = Vector2(293.3333, 56.666664)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_spqrb"]
 radius = 28.333332
 height = 116.0
@@ -263,9 +267,6 @@ height = 124.44445
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
 radius = 24.666664
 height = 49.33333
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_spqrb"]
-size = Vector2(293.3333, 56.666664)
 
 [node name="Skull" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "detection_component", "knockback_component") groups=["enemy"]]
 position = Vector2(1, 0)
@@ -292,6 +293,13 @@ animation = &"attack"
 offset = Vector2(0, -15)
 
 [node name="Components" type="Node2D" parent="."]
+
+[node name="Attack_detection" type="Area2D" parent="Components"]
+script = ExtResource("15_xn0n7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Components/Attack_detection"]
+position = Vector2(-7.5101852e-06, -13.333333)
+shape = SubResource("RectangleShape2D_spqrb")
 
 [node name="AttackHitboxComponent" parent="Components" instance=ExtResource("7_gw138")]
 
@@ -339,14 +347,8 @@ position = Vector2(0, -6.6666665)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_p200p")
 
-[node name="Attack_detection" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_detection"]
-position = Vector2(-7.5101852e-06, -13.333333)
-shape = SubResource("RectangleShape2D_spqrb")
-
 [connection signal="timeout" from="Pathfinding" to="." method="_on_pathfinding_timeout"]
 [connection signal="animation_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-[connection signal="body_entered" from="Attack_detection" to="." method="_on_attack_detection_body_entered"]
+[connection signal="area_entered" from="Components/Attack_detection" to="Components/Attack_detection" method="_on_area_entered"]
