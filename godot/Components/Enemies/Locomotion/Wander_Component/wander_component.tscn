@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwj7bijrp7jiv"]
+
+[ext_resource type="Script" uid="uid://haujarmokg21" path="res://Components/Enemies/Locomotion/Wander_Component/wander_component.gd" id="1_t7v51"]
+
+[node name="WanderComponent" type="Node2D"]
+script = ExtResource("1_t7v51")

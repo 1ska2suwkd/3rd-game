@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-@export var TurtleStat: EnemyStat
+@export var TurtleStats: EnemyStat
 @export var player: CharacterBody2D
 
 @export var movement_component: MoveComponent
-@export var knockback_component: KnockbackComponent
 
 var is_attack = false
 const BASE_DASH_SPEED := 1000
@@ -20,9 +19,9 @@ var wander_timer := 0.0
 var restitution := 0.8 # 튕겼을 때 속도 감소량
 
 func _ready() -> void:
-	$Components/ContactDamageComponent.stats = TurtleStat
-	$Components/HealthComponent.stats = TurtleStat
-	$Components/MovementComponent.stats = TurtleStat
+	movement_component.stats = TurtleStats
+	$Components/ContactDamageComponent.stats = TurtleStats
+	$Components/HealthComponent.stats = TurtleStats
 
 func _physics_process(_delta: float) -> void:
 	

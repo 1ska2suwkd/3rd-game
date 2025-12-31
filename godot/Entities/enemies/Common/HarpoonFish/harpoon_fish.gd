@@ -1,13 +1,27 @@
 extends CharacterBody2D
 
-@export var stats: EnemyStat
+@export var HarpoonFishStats: EnemyStat
 @export var player: CharacterBody2D
+@export var movement_component: MoveComponent
+@export var wander_component: WanderComponent
 
 
 var is_attack = false
 
 func _ready() -> void:
-	
+	movement_component.stats = HarpoonFishStats
+	$Components/ContactDamageComponent.stats = HarpoonFishStats
+	$Components/HealthComponent.stats = HarpoonFishStats
+
+
+func _physics_process(_delta: float) -> void:
+	if not is_attack:
+		# 애니메이션
+		if velocity.length() > 0.1:
+			$AnimatedSprite2D.play("walk")
+			$AnimatedSprite2D.flip_h = velocity.x < 0
+		else:
+			$AnimatedSprite2D.play("idle")
 
 func _on_attack_timeout() -> void:
 	if not player == null:
@@ -31,7 +45,7 @@ func attack():
 	var projectile = preload("res://projectiles/Harpoon.tscn").instantiate()
 	projectile.global_position = global_position
 	projectile.target = player
-	projectile.damage = stat.damage
+	#projectile.damage = stat.damage
 	# 현재 씬에서 YSort 노드 찾기
 	var ysort = get_tree().current_scene.get_node("Ysort")
 	

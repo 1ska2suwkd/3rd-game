@@ -228,16 +228,15 @@ radius = 78.025635
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtobv"]
 radius = 65.0
 
-[node name="Turtle" type="CharacterBody2D" node_paths=PackedStringArray("movement_component", "knockback_component") groups=["enemy"]]
+[node name="Turtle" type="CharacterBody2D" node_paths=PackedStringArray("movement_component") groups=["enemy"]]
 position = Vector2(1, 0)
 scale = Vector2(0.5, 0.5)
 collision_mask = 67
 motion_mode = 1
 wall_min_slide_angle = 0.017453292
 script = ExtResource("1_0021k")
-TurtleStat = ExtResource("2_c2ajo")
+TurtleStats = ExtResource("2_c2ajo")
 movement_component = NodePath("Components/MovementComponent")
-knockback_component = NodePath("Components/KnockbackComponent")
 
 [node name="cooldown" type="Timer" parent="."]
 wait_time = 3.0
