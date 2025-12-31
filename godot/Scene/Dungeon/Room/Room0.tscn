@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://ch53v6eldhf5g"]
+[gd_scene load_steps=49 format=4 uid="uid://ch53v6eldhf5g"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Scene/Dungeon/Room/Room.gd" id="1_efkbg"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/Stage1/decorative_cracks_coasts_animation.png" id="2_1lqhy"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Components/Dungeon/Door/SouthDoor.tscn" id="18_mlwnb"]
 [ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Components/Dungeon/Door/EastDoor.tscn" id="19_ylfab"]
 [ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Components/Dungeon/Door/WestDoor.tscn" id="20_kybqi"]
+[ext_resource type="PackedScene" uid="uid://dgryxobep2mhd" path="res://Entities/enemies/Common/Turtle/Turtle.tscn" id="22_ynk6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hjre"]
 texture = ExtResource("9_c8sjk")
@@ -4870,6 +4871,10 @@ color = Color(1, 0.40119168, 0.29666862, 1)
 energy = 2.0
 texture = ExtResource("17_1hjre")
 texture_scale = 1.3
+
+[node name="Turtle" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("22_ynk6m")]
+position = Vector2(314, -129)
+player = NodePath("../player")
 
 [node name="NorthDoor" parent="." instance=ExtResource("17_t5fv8")]
 position = Vector2(-2, -405)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dgryxobep2mhd"]
+[gd_scene load_steps=44 format=3 uid="uid://dgryxobep2mhd"]
 
 [ext_resource type="Texture2D" uid="uid://ml86fs1uhoev" path="res://assets/enemy/Turtle/Turtle_Guard_In.png" id="1_2gx6n"]
 [ext_resource type="Script" uid="uid://couki1dh63g56" path="res://Entities/enemies/Common/Turtle/turtle.gd" id="1_0021k"]
@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://cra10rpls4p4t" path="res://Resources/Stat/TurtleStat.tres" id="2_c2ajo"]
 [ext_resource type="Texture2D" uid="uid://c4frg82cidujv" path="res://assets/enemy/Turtle/Turtle_Idle.png" id="3_6xlya"]
 [ext_resource type="Texture2D" uid="uid://djldeh1x5j82j" path="res://assets/enemy/Turtle/Turtle_Walk.png" id="4_jtobv"]
-[ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Movement_Component/movement_component.tscn" id="6_4863w"]
+[ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="6_4863w"]
+[ext_resource type="PackedScene" uid="uid://cwj7bijrp7jiv" path="res://Components/Enemies/Locomotion/Wander_Component/wander_component.tscn" id="7_6bgxp"]
 [ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="7_c2ajo"]
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="8_6bgxp"]
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="9_peqer"]
@@ -259,6 +260,9 @@ frame_progress = 1.0
 offset = Vector2(0, -15)
 
 [node name="Components" type="Node2D" parent="."]
+
+[node name="WanderComponent" parent="Components" node_paths=PackedStringArray("movement_component") instance=ExtResource("7_6bgxp")]
+movement_component = NodePath("../MovementComponent")
 
 [node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("6_4863w")]
 body = NodePath("../..")

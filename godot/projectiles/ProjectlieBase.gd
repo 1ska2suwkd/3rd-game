@@ -2,6 +2,7 @@ extends Area2D
 
 @export var speed: float = 600
 @export var target: Node2D
+@export var HarpoonFish_Stats: EnemyStat
 var damage: int = 0
 var direction: Vector2 = Vector2.ZERO
 
@@ -17,7 +18,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.apply_knockback(global_position, 1000.0, 0.1, damage)
+		body.apply_knockback(global_position, 1000.0, 0.1, HarpoonFish_Stats.damage)
 		queue_free()
 	elif body.is_in_group("Wall"):
 		queue_free()
