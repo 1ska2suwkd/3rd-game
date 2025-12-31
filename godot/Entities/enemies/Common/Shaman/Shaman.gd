@@ -1,9 +1,12 @@
-extends "res://enemy/Script/FleeingEnemy.gd"
+extends CharacterBody2D
+
+@export var player: CharacterBody2D
+
+var is_attack = false
 
 func _ready() -> void:
 	randomize()
 	start_random_timer()
-	init_stat(100, 20, 1)
 	
 func start_random_timer() -> void:
 	$attack.wait_time = randf_range(1.0, 3.0)

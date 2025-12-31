@@ -45,6 +45,7 @@ func attack():
 	var projectile = preload("res://projectiles/Harpoon.tscn").instantiate()
 	projectile.global_position = global_position
 	projectile.target = player
+	projectile.damage = HarpoonFishStats.damage
 	#projectile.damage = stat.damage
 	# 현재 씬에서 YSort 노드 찾기
 	var ysort = get_tree().current_scene.get_node("Ysort")
