@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://blustjpt4gi0x"]
+[gd_scene load_steps=53 format=3 uid="uid://blustjpt4gi0x"]
 
 [ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://Entities/enemies/Common/Skull/Skull.gd" id="1_ks2w7"]
 [ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_q6mhb"]
@@ -264,6 +264,9 @@ height = 73.33333
 radius = 48.333332
 height = 124.44445
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xn0n7"]
+radius = 1151.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p200p"]
 radius = 24.666664
 height = 49.33333
@@ -328,6 +331,9 @@ shape = SubResource("CapsuleShape2D_vnird")
 
 [node name="DetectionComponent" parent="Components" instance=ExtResource("6_vnird")]
 visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Components/DetectionComponent"]
+shape = SubResource("CircleShape2D_xn0n7")
 
 [node name="HealthComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("10_gw138")]
 death_component = NodePath("../DeathComponent")

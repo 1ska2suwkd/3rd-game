@@ -230,7 +230,8 @@ position = Vector2(-1, -18.999998)
 rotation = 3.1415925
 shape = SubResource("CapsuleShape2D_5ffra")
 
-[node name="MovementComponent" parent="Components" instance=ExtResource("6_jcsf1")]
+[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("6_jcsf1")]
+body = NodePath("../..")
 
 [node name="DetectionComponent" parent="Components" instance=ExtResource("7_l6gv4")]
 
@@ -239,13 +240,16 @@ shape = SubResource("CircleShape2D_y5vj3")
 
 [node name="KnockbackComponent" parent="Components" instance=ExtResource("8_eg40r")]
 
-[node name="HitboxComponent" parent="Components" instance=ExtResource("9_bsni6")]
+[node name="HitboxComponent" parent="Components" node_paths=PackedStringArray("health_component", "knockback_component") instance=ExtResource("9_bsni6")]
+health_component = NodePath("../HealthComponent")
+knockback_component = NodePath("../KnockbackComponent")
 
 [node name="hitbox" type="CollisionShape2D" parent="Components/HitboxComponent"]
 position = Vector2(-3.333334, -18.333332)
 shape = SubResource("RectangleShape2D_y5vj3")
 
-[node name="HealthComponent" parent="Components" instance=ExtResource("10_bseha")]
+[node name="HealthComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("10_bseha")]
+death_component = NodePath("../DeathComponent")
 
 [node name="DeathComponent" parent="Components" instance=ExtResource("11_syx0i")]
 

@@ -1,8 +1,13 @@
-extends "res://enemy/Script/WanderingEnemy.gd"
+extends CharacterBody2D
+
+@export var stats: EnemyStat
+@export var player: CharacterBody2D
+
+
+var is_attack = false
 
 func _ready() -> void:
-	init_stat(100, 20, 1)
-
+	
 
 func _on_attack_timeout() -> void:
 	if not player == null:
