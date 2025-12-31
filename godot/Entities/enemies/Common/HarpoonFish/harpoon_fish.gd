@@ -24,7 +24,7 @@ func _physics_process(_delta: float) -> void:
 			$AnimatedSprite2D.play("idle")
 
 func _on_attack_timeout() -> void:
-	if not player == null:
+	if not player == null and $Components/DetectionComponent.player_chase:
 		is_attack = true
 		velocity = Vector2.ZERO
 		if player.global_position.x < global_position.x:

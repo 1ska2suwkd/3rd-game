@@ -195,7 +195,7 @@ radius = 36.333332
 height = 83.99999
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
-radius = 880.12775
+radius = 746.68335
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5vj3"]
 size = Vector2(76.666664, 66.66666)
@@ -235,8 +235,9 @@ position = Vector2(-1, -18.999998)
 rotation = 3.1415925
 shape = SubResource("CapsuleShape2D_5ffra")
 
-[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("6_jcsf1")]
+[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body", "detaction_component") instance=ExtResource("6_jcsf1")]
 body = NodePath("../..")
+detaction_component = NodePath("../DetectionComponent")
 
 [node name="DetectionComponent" parent="Components" instance=ExtResource("7_l6gv4")]
 

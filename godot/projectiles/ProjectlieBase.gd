@@ -3,7 +3,6 @@ extends Area2D
 @export var speed: float = 600
 @export var target: Node2D
 @export var HarpoonFish_Stats: EnemyStat
-var damage: int = 0
 var direction: Vector2 = Vector2.ZERO
 
 func _ready() -> void:

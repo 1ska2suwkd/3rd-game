@@ -2,6 +2,7 @@ extends Node2D
 class_name MoveComponent
 
 @export var body: CharacterBody2D 
+@export var detaction_component: DetectionComponent
 var stats: EnemyStat
 
 # 움직임의 퀄리티를 결정하는 변수들 (직접 조절 가능)
