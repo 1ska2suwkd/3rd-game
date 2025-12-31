@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var ShamanStats: EnemyStat
 @export var player: CharacterBody2D
 
 var is_attack = false
@@ -33,7 +34,7 @@ func attack():
 	var projectile = preload("res://projectiles/Shaman_Projectile.tscn").instantiate()
 	projectile.target = player
 	projectile.global_position = projectile.target.global_position
-	projectile.damage = stat.damage
+	projectile.damage = ShamanStats.damage
 	# 현재 씬에서 YSort 노드 찾기
 	var ysort = get_tree().current_scene.get_node("Ysort")
 
