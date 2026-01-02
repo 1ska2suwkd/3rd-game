@@ -1,0 +1,12 @@
+res://Scene/TutorialScene/TutorialScene.tscn
+res://UI/Outline.tres
+res://Scene/Master/master.tscn
+res://Resources/Items/Scene/ItemScene.tscn
+res://UI/TextBox/Master_Text_Box.tscn
+res://Scene/TutorialScene/Script/tutorial_scene.gd
+res://UI/TextBox/Master/Master_Text_Box.tscn
+res://Scene/Master/Script/master.gd
+res://Scene/Master/Script/tutorial_master.gd
+res://UI/TextBox/Player/Player_Text_Box.tscn
+res://UI/TextBox/Player/player_textbox.gd
+res://Entities/player/player.gd
