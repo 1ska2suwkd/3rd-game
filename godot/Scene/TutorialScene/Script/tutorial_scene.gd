@@ -12,7 +12,7 @@ var INVENTORY_SIZE = 16
 @onready var WASD = $QuestUI/Hint/HintUI/CenterContainer/WASD
 @onready var MouseLeftClick = $QuestUI/Hint/HintUI/CenterContainer/MouseLeftClick
 @onready var E = $QuestUI/Hint/HintUI/CenterContainer/E
-var master_textbox_scene = preload("res://Scene/Master/Master_Text_Box.tscn")
+var master_textbox_scene = preload("res://UI/TextBox/Master/Master_Text_Box.tscn")
 
 var QuestQueue = ["Q1", "Q2", "Q3"]
 
@@ -42,7 +42,7 @@ func _ready() -> void:
 	
 	QuestText.text = "1. 신보기를 움직여라" #첫번째 퀘스트 내용으로 초기화
 	
-	var textbox = master_textbox_scene.instantiate()
+	var master_textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "PlayAnimation"))
 	
 	#CameraAnimation.play("SceneStart")
@@ -52,9 +52,12 @@ func _ready() -> void:
 	#StartAnimationCamera.queue_free()
 	
 	$StartScene.queue_free()
-	textbox.queue_text("자 오늘은 마지막 수업이야~")
-	textbox.queue_text("지금까지 배운 걸 전부 활용해서 나한테 와!")
-	get_tree().current_scene.add_child(textbox)
+	master_textbox.queue_text("신보기! 2주 동안 고생 많았어")
+	master_textbox.queue_text("이제 마음껏 혼자 다녀도 돼")
+	master_textbox.queue_text("그러니까 오늘 훈련도 스스로 목적지까지 도달할 수 있지?")
+	master_textbox.queue_text("먼저 가서 기다리고 있는다~")
+	
+	get_tree().current_scene.add_child(master_textbox)
 	
 func _process(_delta: float) -> void:
 	# 플레이어의 인벤토리에는 배열의 크기만큼 NULL이 들어가있음 
@@ -88,10 +91,10 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 
 func _on_q_2_start_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		var textbox = master_textbox_scene.instantiate()
-		textbox.queue_text("공격하는 법을 까먹진 않았겠지?")
-		textbox.queue_text("빨리 찾으러 와!")
-		get_tree().current_scene.add_child(textbox)
+		var master_textbox = master_textbox_scene.instantiate()
+		master_textbox.queue_text("공격하는 법을 까먹진 않았겠지?")
+		master_textbox.queue_text("빨리 찾으러 와!")
+		get_tree().current_scene.add_child(master_textbox)
 		$Trigger/Q2/Q2_start.queue_free()
 
 
@@ -108,10 +111,10 @@ func _on_q_2_finished_body_entered(body: Node2D) -> void:
 
 func _on_q_3_start_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		var textbox = master_textbox_scene.instantiate()
-		textbox.queue_text("잘하고있어! 이제 마지막 퀘스트야!")
-		textbox.queue_text("화이팅~")
-		get_tree().current_scene.add_child(textbox)
+		var master_textbox = master_textbox_scene.instantiate()
+		master_textbox.queue_text("잘하고있어! 이제 마지막 퀘스트야!")
+		master_textbox.queue_text("화이팅~")
+		get_tree().current_scene.add_child(master_textbox)
 		$Trigger/Q3/Q3_start.queue_free()
 
 
