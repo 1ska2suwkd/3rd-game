@@ -3493,7 +3493,7 @@ position = Vector2(3815, -2044)
 texture = ExtResource("23_n6sw0")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(4195, -46)
+position = Vector2(-179, 32)
 
 [node name="YsortDeco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
@@ -3662,6 +3662,7 @@ shape = SubResource("RectangleShape2D_vedem")
 position = Vector2(3840, -865)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q3/Q3_finished"]
+position = Vector2(0, 55)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_ub4mc")
 

@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu3ky04tqmsk7"]
+[gd_scene load_steps=7 format=3 uid="uid://bu3ky04tqmsk7"]
+
+[ext_resource type="Script" uid="uid://dhinlgthhfkgj" path="res://UI/HintUI/show_hint_ui.gd" id="1_uvcjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trab4"]
 bg_color = Color(1, 0.972549, 0.9882353, 1)
@@ -64,18 +66,20 @@ _data = {
 
 [node name="ShowHintUI" type="Panel"]
 modulate = Color(1, 1, 1, 0)
+z_index = 10
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 101.0
-offset_top = -96.0
-offset_right = 177.0
-offset_bottom = -62.0
+offset_left = -870.0
+offset_top = -490.0
+offset_right = -794.0
+offset_bottom = -456.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_trab4")
+script = ExtResource("1_uvcjc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

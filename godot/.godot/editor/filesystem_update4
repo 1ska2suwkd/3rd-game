@@ -14,3 +14,5 @@ res://UI/TextBox/Master/master_textbox.gd
 res://Scene/Dungeon/Chest/chest.tscn
 res://Scene/Dungeon/Chest/chest.gd
 res://UI/HintUI/show_hint_ui.tscn
+res://Autoload/event_bus.gd
+res://UI/HintUI/show_hint_ui.gd

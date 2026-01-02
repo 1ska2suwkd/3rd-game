@@ -6,3 +6,7 @@ signal EndTextBox()
 
 #enemy signal
 signal target_enter_range()
+
+#Ui signal
+signal show_hint_ui()
+signal hide_hint_ui()

@@ -26,10 +26,12 @@ func _process(_delta):
 func _on_talk_to_master_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		ready_master = true
+		EventBus.emit_signal("show_hint_ui")
 		Master_sprite.material = outline_material
 		
 func _on_talk_to_master_body_exited(body: Node2D) -> void:
 	if Input.is_action_just_pressed("Interaction"): return
 	if body.is_in_group("player"):
 		ready_master = false
+		EventBus.emit_signal("hide_hint_ui")
 		Master_sprite.material = null
