@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7h8u1y4lol6j"]
+[gd_scene load_steps=5 format=3 uid="uid://b7h8u1y4lol6j"]
 
 [ext_resource type="Script" uid="uid://dp4dvdo7d7d6" path="res://UI/TextBox/Player/player_textbox.gd" id="1_jbmid"]
-[ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_prb44"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_7m2ma"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03uyg"]
@@ -34,13 +33,12 @@ color = Color(0, 0, 0, 0.5882353)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -510.0
-offset_top = -756.0
-offset_right = 1019.40405
-offset_bottom = 527.0
+offset_left = 2230.0
+offset_top = -1052.0
+offset_right = 3759.404
+offset_bottom = 231.0
 grow_vertical = 0
-texture = ExtResource("2_prb44")
-region_rect = Rect2(0, 0, 200, 192)
+scale = Vector2(-1, 1)
 
 [node name="TextboxContainer" type="MarginContainer" parent="."]
 anchors_preset = 12

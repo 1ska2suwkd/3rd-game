@@ -1,4 +1,4 @@
-[gd_scene load_steps=163 format=4 uid="uid://u4mj3g2udqas"]
+[gd_scene load_steps=164 format=4 uid="uid://u4mj3g2udqas"]
 
 [ext_resource type="Script" uid="uid://bfg4othh08fox" path="res://Scene/TutorialScene/Script/tutorial_scene.gd" id="1_ri83b"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_wkfk2"]
@@ -1077,13 +1077,6 @@ texture = ExtResource("23_7feyj")
 5:0/0 = 0
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -4, 6, -4, 6, -4, 11, 4, 3, 15, -2, 15, -10, 4)
 2:0/size_in_atlas = Vector2i(3, 3)
-2:0/animation_columns = 1
-2:0/animation_frame_0/duration = 1.0
-2:0/animation_frame_1/duration = 1.0
-2:0/animation_frame_2/duration = 1.0
-2:0/animation_frame_3/duration = 1.0
-2:0/animation_frame_4/duration = 1.0
-2:0/animation_frame_5/duration = 1.0
 2:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_eyeuw"]
@@ -3218,10 +3211,13 @@ sources/5 = SubResource("TileSetAtlasSource_cbpp1")
 sources/6 = SubResource("TileSetAtlasSource_q883m")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4q8n"]
-size = Vector2(275, 191)
+size = Vector2(37, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vedem"]
-size = Vector2(91, 192)
+size = Vector2(91, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub4mc"]
+size = Vector2(37, 247)
 
 [node name="TutorialScene" type="Node2D"]
 script = ExtResource("1_ri83b")
@@ -3632,46 +3628,44 @@ texture = ExtResource("29_e7f3h")
 [node name="Q1" type="Node2D" parent="Trigger"]
 
 [node name="Q1_finished" type="Area2D" parent="Trigger/Q1"]
-position = Vector2(1483, -14)
+position = Vector2(1169, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q1/Q1_finished"]
-position = Vector2(-63.5, 9.5)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_c4q8n")
 
 [node name="Q2" type="Node2D" parent="Trigger"]
 
-[node name="Q2_finished" type="Area2D" parent="Trigger/Q2"]
-position = Vector2(3212, -14)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q2/Q2_finished"]
-position = Vector2(-63.5, 9.5)
-shape = SubResource("RectangleShape2D_c4q8n")
-
 [node name="Q2_start" type="Area2D" parent="Trigger/Q2"]
-position = Vector2(1629, -17)
+position = Vector2(1651, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q2/Q2_start"]
-position = Vector2(-1.5, 12)
+position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_vedem")
+
+[node name="Q2_finished" type="Area2D" parent="Trigger/Q2"]
+position = Vector2(2914, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q2/Q2_finished"]
+shape = SubResource("RectangleShape2D_c4q8n")
 
 [node name="Q3" type="Node2D" parent="Trigger"]
 
 [node name="Q3_start" type="Area2D" parent="Trigger/Q3"]
-position = Vector2(3360, -17)
+position = Vector2(3401, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q3/Q3_start"]
-position = Vector2(-1.5, 12)
 shape = SubResource("RectangleShape2D_vedem")
 
 [node name="Q3_finished" type="Area2D" parent="Trigger/Q3"]
-position = Vector2(3902, -865)
+position = Vector2(3840, -865)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger/Q3/Q3_finished"]
-position = Vector2(-63.5, 9.5)
-shape = SubResource("RectangleShape2D_c4q8n")
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_ub4mc")
 
 [connection signal="body_entered" from="Trigger/Q1/Q1_finished" to="." method="_on_q_1_finished_body_entered"]
-[connection signal="body_entered" from="Trigger/Q2/Q2_finished" to="." method="_on_q_2_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_start" to="." method="_on_q_2_start_body_entered"]
+[connection signal="body_entered" from="Trigger/Q2/Q2_finished" to="." method="_on_q_2_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q3/Q3_start" to="." method="_on_q_3_start_body_entered"]
 [connection signal="body_entered" from="Trigger/Q3/Q3_finished" to="." method="_on_q_3_finished_body_entered"]

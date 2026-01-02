@@ -10,3 +10,4 @@ res://Scene/Master/Script/tutorial_master.gd
 res://UI/TextBox/Player/Player_Text_Box.tscn
 res://UI/TextBox/Player/player_textbox.gd
 res://Entities/player/player.gd
+res://UI/TextBox/Master/master_textbox.gd

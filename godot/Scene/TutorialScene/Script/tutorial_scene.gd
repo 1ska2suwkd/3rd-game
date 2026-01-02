@@ -91,10 +91,11 @@ func _on_q_1_finished_body_entered(body: Node2D) -> void:
 
 func _on_q_2_start_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		var master_textbox = master_textbox_scene.instantiate()
-		master_textbox.queue_text("공격하는 법을 까먹진 않았겠지?")
-		master_textbox.queue_text("빨리 찾으러 와!")
-		get_tree().current_scene.add_child(master_textbox)
+		#var master_textbox = master_textbox_scene.instantiate()
+		#master_textbox.queue_text("공격하는 법을 까먹진 않았겠지?")
+		#master_textbox.queue_text("빨리 찾으러 와!")
+		#get_tree().current_scene.add_child(master_textbox)
+		PlayAnimation()
 		$Trigger/Q2/Q2_start.queue_free()
 
 
@@ -111,10 +112,11 @@ func _on_q_2_finished_body_entered(body: Node2D) -> void:
 
 func _on_q_3_start_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		var master_textbox = master_textbox_scene.instantiate()
-		master_textbox.queue_text("잘하고있어! 이제 마지막 퀘스트야!")
-		master_textbox.queue_text("화이팅~")
-		get_tree().current_scene.add_child(master_textbox)
+		#var master_textbox = master_textbox_scene.instantiate()
+		#master_textbox.queue_text("잘하고있어! 이제 마지막 퀘스트야!")
+		#master_textbox.queue_text("화이팅~")
+		#get_tree().current_scene.add_child(master_textbox)
+		PlayAnimation()
 		$Trigger/Q3/Q3_start.queue_free()
 
 
