@@ -11,3 +11,6 @@ res://UI/TextBox/Player/Player_Text_Box.tscn
 res://UI/TextBox/Player/player_textbox.gd
 res://Entities/player/player.gd
 res://UI/TextBox/Master/master_textbox.gd
+res://Scene/Dungeon/Chest/chest.tscn
+res://Scene/Dungeon/Chest/chest.gd
+res://UI/HintUI/show_hint_ui.tscn

@@ -3470,16 +3470,17 @@ energy = 2.0
 texture = ExtResource("24_ub4mc")
 texture_scale = 10.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Ysort"]
+[node name="House" type="StaticBody2D" parent="Ysort"]
 y_sort_enabled = true
+position = Vector2(-7, 0)
 
-[node name="HouseYellow" type="Sprite2D" parent="Ysort/StaticBody2D"]
+[node name="HouseYellow" type="Sprite2D" parent="Ysort/House"]
 position = Vector2(3966, -1999)
 scale = Vector2(2, 2)
 texture = ExtResource("24_aixkm")
 offset = Vector2(0, -60)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/House"]
 position = Vector2(3967, -2047.5)
 shape = SubResource("RectangleShape2D_7feyj")
 
@@ -3492,7 +3493,7 @@ position = Vector2(3815, -2044)
 texture = ExtResource("23_n6sw0")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(-158, 28)
+position = Vector2(4195, -46)
 
 [node name="YsortDeco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true

@@ -23,6 +23,8 @@ func OpenChest():
 	if opend:	return
 	opend = true
 	$AnimatedSprite2D.play("open")
+	$ShowHintUI/AnimationPlayer.play("hide")
+	
 	await $AnimatedSprite2D.animation_finished
 	sprite.material = null
 	
@@ -36,10 +38,12 @@ func OpenChest():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
 		ready_open = true
+		$ShowHintUI/AnimationPlayer.play("show")
 		sprite.material = outline_material
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
 		ready_open = false
+		$ShowHintUI/AnimationPlayer.play("RESET")
 		sprite.material = null
