@@ -82,6 +82,7 @@ script = ExtResource("1_ju63l")
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2(0, 84)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_kgrc2")
@@ -95,6 +96,7 @@ speed_scale = 2.0
 offset = Vector2(0, -10)
 
 [node name="Talk_to_Master" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_to_Master"]
 position = Vector2(1.0000191, 81)
