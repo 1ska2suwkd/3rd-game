@@ -3496,7 +3496,7 @@ position = Vector2(3815, -2044)
 texture = ExtResource("23_n6sw0")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(3844, -1254)
+position = Vector2(4176, -165)
 
 [node name="YsortDeco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
@@ -3519,7 +3519,7 @@ position = Vector2(3871, -1977)
 script = ExtResource("20_jknon")
 
 [node name="Chest" parent="Ysort" instance=ExtResource("26_sroei")]
-position = Vector2(4216, -280)
+position = Vector2(4192, -291)
 
 [node name="Door" type="AnimatedSprite2D" parent="Ysort"]
 position = Vector2(3838, -552)
