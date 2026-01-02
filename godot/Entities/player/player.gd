@@ -78,7 +78,8 @@ func _process(_delta):
 func _physics_process(_delta):
 	if dead: 
 		return
-	elif global.is_stop:
+	if global.is_stop:
+		await $AnimatedSprite2D.animation_finished
 		$AnimatedSprite2D.play("idle")
 		return
 	
