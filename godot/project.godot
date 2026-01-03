@@ -20,7 +20,7 @@ MasterSkill="*res://Scene/Master/Skill/Master_Skill.gd"
 EventBus="*res://Autoload/event_bus.gd"
 AllItem="*res://Autoload/all_item.gd"
 global="*res://Autoload/global.gd"
-SceneManager="*res://Scene/SceneManager/Scene_Manager.tscn"
+SceneManager="*res://Autoload/SceneManager/Scene_Manager.tscn"
 
 [debug]
 
