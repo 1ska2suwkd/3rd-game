@@ -5,3 +5,8 @@ res://Scene/TutorialScene/TutorialScene.tscn
 res://Scene/Master/Script/tutorial_master.gd
 res://Scene_Manager.tscn
 res://Scene/Village/Village.tscn
+res://Scene/SceneManager/Scene_Manager.tscn
+res://Autoload/event_bus.gd
+res://Scene/SceneManager/scene_manager.gd
+res://Scene/TutorialScene/Script/tutorial_scene.gd
+res://Scene/Village/Village.gd

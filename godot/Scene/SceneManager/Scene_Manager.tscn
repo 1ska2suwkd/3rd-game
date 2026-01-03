@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b13j4y6b2synt"]
 
-[ext_resource type="Script" uid="uid://crrtm0oqf3v6b" path="res://Autoload/global.gd" id="1_ormtn"]
+[ext_resource type="Script" uid="uid://brswkwf1cauhq" path="res://Scene/SceneManager/scene_manager.gd" id="1_gkm7q"]
 
 [sub_resource type="Animation" id="Animation_ormtn"]
 length = 0.001
@@ -67,7 +67,7 @@ _data = {
 }
 
 [node name="Scene_Manager" type="CanvasLayer"]
-script = ExtResource("1_ormtn")
+script = ExtResource("1_gkm7q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(0, 0, 0, 0)

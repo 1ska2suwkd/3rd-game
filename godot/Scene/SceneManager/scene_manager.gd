@@ -1,11 +1,18 @@
 extends CanvasLayer
 
+@onready var Scene_Animation = $AnimationTree
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	EventBus.scene_transition_out.connect(Transition_Out)
+	EventBus.scene_transition_in.connect(Transition_In)
 
+func Transition_Out():
+	Scene_Animation.play("transition_out")
+	await Scene_Animation.animation_finished
+	global.transition_scene = true
+	global.is_stop = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func Transition_In():
+	Scene_Animation.play("transition_in")
+	await Scene_Animation.animation_finished
+	global.is_stop = false
