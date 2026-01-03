@@ -4,7 +4,6 @@ extends Node2D
 @onready var Master_sprite := $Ysort/Master/StaticBody2D/Master_Animation
 @onready var Dungeon_sprite := $Dungeon/Dungeon
 @onready var Store_sprite := $Ysort/Store/store
-@onready var transition_out = $SceneManager/AnimationTree
 
 
 var ready_store = false
@@ -18,11 +17,7 @@ func _ready() -> void:
 func _process(_delta):
 	if global.transition_scene:
 		if Input.is_action_just_pressed("Interaction"):
-			global.is_stop = true
-			transition_out.play("transition_out")
-			await transition_out.animation_finished
-			global.change_scene("res://Scene/Dungeon/Room/Room0.tscn")
-			global.is_stop = false
+			SceneManager.change_scene("res://Scene/Dungeon/Room/Room0.tscn")
 	elif ready_store:
 		pass
 

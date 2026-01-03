@@ -83,9 +83,9 @@ _data = {
 &"transition_out": SubResource("Animation_6hqft")
 }
 
-[node name="Scene_Manager" type="CanvasLayer" node_paths=PackedStringArray("Scene_Animation")]
+[node name="Scene_Manager" type="CanvasLayer"]
+layer = 5
 script = ExtResource("1_gkm7q")
-Scene_Animation = NodePath("AnimationTree")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(0, 0, 0, 0)

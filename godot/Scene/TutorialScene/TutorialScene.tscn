@@ -3493,7 +3493,7 @@ position = Vector2(3815, -2044)
 texture = ExtResource("23_n6sw0")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(3852, -1282)
+position = Vector2(4160, 203)
 
 [node name="YsortDeco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
