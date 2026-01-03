@@ -10,3 +10,7 @@ res://Autoload/event_bus.gd
 res://Scene/SceneManager/scene_manager.gd
 res://Scene/TutorialScene/Script/tutorial_scene.gd
 res://Scene/Village/Village.gd
+res://Entities/enemies/Common/Shaman/Shaman.tscn
+res://Object/BigGrass.tscn
+res://Scene/Dungeon/Room/Room0.tscn
+res://Scene/SceneManager/Scene_Manager.gd

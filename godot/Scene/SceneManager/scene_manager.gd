@@ -13,3 +13,5 @@ func change_scene(scene_path):
 	Scene_Animation.play("transition_in")
 	await Scene_Animation.animation_finished
 	global.is_stop = false
+	Scene_Animation.play("RESET")
+	

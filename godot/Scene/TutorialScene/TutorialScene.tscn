@@ -42,7 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dvbm8opr1mvkf" path="res://assets/Image/Resources/Trees/Tree2.png" id="23_37w05"]
 [ext_resource type="Texture2D" uid="uid://bcw43gmvosypr" path="res://assets/Image/Factions/Knights/Buildings/House/House_Destroyed.png" id="23_n6sw0"]
 [ext_resource type="Texture2D" uid="uid://rn8d4ujkduxl" path="res://assets/Image/Factions/Knights/Buildings/House/House_Yellow.png" id="24_aixkm"]
-[ext_resource type="PackedScene" uid="uid://v48d8spfwy3j" path="res://Entities/BigGrass.tscn" id="24_lxwxn"]
+[ext_resource type="PackedScene" uid="uid://v48d8spfwy3j" path="res://Object/BigGrass.tscn" id="24_lxwxn"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="24_ub4mc"]
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_vedem"]
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_oox1i"]
@@ -3493,7 +3493,7 @@ position = Vector2(3815, -2044)
 texture = ExtResource("23_n6sw0")
 
 [node name="player" parent="Ysort" instance=ExtResource("17_0cr78")]
-position = Vector2(4160, 203)
+position = Vector2(3853, -1192)
 
 [node name="YsortDeco" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true

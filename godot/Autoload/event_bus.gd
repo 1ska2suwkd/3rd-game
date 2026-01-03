@@ -15,6 +15,3 @@ signal update_inv_ui()
 #Animation
 signal show_hint_ui()
 signal hide_hint_ui()
-
-signal scene_transition_out(scene_path)
-signal scene_transition_in()

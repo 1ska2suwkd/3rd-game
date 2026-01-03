@@ -9,8 +9,6 @@ extends Node2D
 var ready_store = false
 
 func _ready() -> void:
-	print("Village")
-	#EventBus.scene_transition_in.emit()
 	outline_material.set_shader_parameter("outline_size", 3)
 	Master_sprite.material = null
 
