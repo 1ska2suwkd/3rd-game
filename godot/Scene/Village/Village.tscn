@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 [ext_resource type="Texture2D" uid="uid://bre3rl1nxq6at" path="res://assets/Image/Factions/Knights/Buildings/Castle/Shadow.png" id="26_p4s3d"]
 [ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Scene/Master/master.tscn" id="30_iyi5a"]
-[ext_resource type="PackedScene" uid="uid://b13j4y6b2synt" path="res://Scene_Manager.tscn" id="34_6lqix"]
+[ext_resource type="PackedScene" uid="uid://b13j4y6b2synt" path="res://Scene/SceneManager/Scene_Manager.tscn" id="34_6lqix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 resource_name = "Collision_water"

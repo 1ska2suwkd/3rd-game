@@ -20,7 +20,8 @@ func _process(_delta):
 			var master_textbox = preload("res://UI/TextBox/Master/Master_Text_Box.tscn").instantiate()
 			master_textbox.is_skilltree = false
 			master_textbox.queue_text("안녕!")
-			master_textbox.queue_text("수고많았어 이제 마을로 돌아가자")
+			master_textbox.queue_text("어렵지 않았지?")
+			master_textbox.queue_text("수고많았다 이제 마을로 돌아가자")
 			get_tree().current_scene.add_child(master_textbox)
 	
 func _on_talk_to_master_body_entered(body: Node2D) -> void:
