@@ -13,6 +13,7 @@ var ready_store = false
 
 func _ready() -> void:
 	if global.first_enter_village:
+		
 		player.get_node("AnimatedSprite2D").flip_h = true
 		player.global_position = Vector2(-1037.0, 217.0)
 		
@@ -23,14 +24,16 @@ func _ready() -> void:
 		master_textbox.queue_text("시간이 없어 너가 모두를 구해야해!")
 		master_textbox.queue_text("... 나는 뭐하고있을 거냐고?")
 		master_textbox.queue_text("미안하지만 난 이제 할 짬이 아니야.")
-		master_textbox.queue_text("나도 시간이 얼마 안남았다고! 그래서 2주동안 널 열심히 가르친거야.")
+		master_textbox.queue_text("나도 시간이 얼마 안남았다고!\n그래서 2주동안 널 열심히 가르친거야.")
 		master_textbox.queue_text("어쨌든 [color=red]던전은 우리 마을 북쪽에 있어")
 		master_textbox.queue_text("던전에서 재료를 가져오면 [color=red]너에게 나의 마지막 기술을 알려줄게")
 		master_textbox.queue_text("신보기.. 행운을 빌게")
 		get_tree().current_scene.add_child(master_textbox)
 		
 		global.first_enter_village = false
-	
+	else:
+		player.global_position = Vector2(0, 0)
+		
 	outline_material.set_shader_parameter("outline_size", 3)
 	Master_sprite.material = null
 

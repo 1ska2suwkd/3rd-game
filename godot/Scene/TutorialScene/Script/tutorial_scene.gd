@@ -18,8 +18,8 @@ var QuestQueue = ["Q1", "Q2", "Q3"]
 
 
 func _ready() -> void:
-	#$Ysort/player.global_position.x = -158
-	#$Ysort/player.global_position.y = 16
+	$Ysort/player.global_position.x = -158
+	$Ysort/player.global_position.y = 16
 		
 	# 렉을 유발하는 파티클들을 리스트업
 	var particles_to_cache = [
@@ -28,8 +28,8 @@ func _ready() -> void:
 		preload("res://Particle/BoxParticle.tscn")
 	]
 	
-	StartAnimationCamera.queue_free()
-	#CameraAnimation.play("SceneStart")
+	#StartAnimationCamera.queue_free()
+	CameraAnimation.play("SceneStart")
 	PlayerUI.visible = false
 		
 	for p in particles_to_cache:
@@ -49,11 +49,11 @@ func _ready() -> void:
 	var master_textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "FinishTextbox"))
 	
-	#CameraAnimation.play("SceneStart")
-	#await CameraAnimation.animation_finished
-	#CameraAnimation.play("CameraMove")
-	#await CameraAnimation.animation_finished
-	#StartAnimationCamera.queue_free()
+	CameraAnimation.play("SceneStart")
+	await CameraAnimation.animation_finished
+	CameraAnimation.play("CameraMove")
+	await CameraAnimation.animation_finished
+	StartAnimationCamera.queue_free()
 	
 	$StartScene.queue_free()
 	master_textbox.queue_text("신보기! 2주 동안 고생 많았어")
@@ -82,6 +82,8 @@ func FinishTextbox():
 		QuestUIAnimation.play("ShowTutorialUI")
 	else:
 		SceneManager.change_scene("res://Scene/Village/Village.tscn")
+		global.init_game()
+
 
 
 func _on_q_1_finished_body_entered(body: Node2D) -> void:

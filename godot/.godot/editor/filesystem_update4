@@ -9,3 +9,4 @@ res://UI/TextBox/Master/Master_Text_Box.tscn
 res://Scene/Master/Script/master.gd
 res://UI/TextBox/Master/master_textbox.gd
 res://Scene/Master/master.tscn
+res://Scene/TutorialScene/Script/tutorial_scene.gd
