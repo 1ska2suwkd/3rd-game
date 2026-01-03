@@ -98,7 +98,6 @@ speed_scale = 2.0
 offset = Vector2(0, -10)
 
 [node name="Talk_to_Master" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_to_Master"]
 position = Vector2(1.0000191, 81)

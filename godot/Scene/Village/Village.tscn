@@ -645,7 +645,7 @@ shape = SubResource("CapsuleShape2D_bv0wd")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
-position = Vector2(-1077, 268.00003)
+position = Vector2(-1037, 217.00003)
 
 [node name="Collision" type="TileMapLayer" parent="Ysort" groups=["Wall"]]
 y_sort_enabled = true
