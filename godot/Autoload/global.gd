@@ -1,6 +1,7 @@
 extends Node
 
 var start_game = false
+var first_enter_village = true
 var current_scene = "Village"
 var transition_scene = false
 var last_num = 0

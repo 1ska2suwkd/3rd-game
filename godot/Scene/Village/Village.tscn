@@ -570,8 +570,9 @@ height = 270.093
 radius = 37.235046
 height = 94.47699
 
-[node name="Village" type="Node2D"]
+[node name="Village" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_1fguw")
+player = NodePath("Ysort/player")
 
 [node name="tilemaplayer" type="Node2D" parent="."]
 position = Vector2(-2.38419e-07, -0.00012207)
@@ -644,6 +645,7 @@ shape = SubResource("CapsuleShape2D_bv0wd")
 y_sort_enabled = true
 
 [node name="player" parent="Ysort" instance=ExtResource("18_oej4l")]
+position = Vector2(-1077, 268.00003)
 
 [node name="Collision" type="TileMapLayer" parent="Ysort" groups=["Wall"]]
 y_sort_enabled = true

@@ -21,6 +21,7 @@ font = ExtResource("3_ca3fq")
 font_size = 40
 
 [node name="TextBox" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_qgo7q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
