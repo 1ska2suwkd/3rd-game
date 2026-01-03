@@ -16,5 +16,5 @@ signal update_inv_ui()
 signal show_hint_ui()
 signal hide_hint_ui()
 
-signal scene_transition_out()
+signal scene_transition_out(scene_path)
 signal scene_transition_in()

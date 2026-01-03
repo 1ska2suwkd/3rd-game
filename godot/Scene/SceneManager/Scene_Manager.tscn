@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b13j4y6b2synt"]
+[gd_scene load_steps=7 format=3 uid="uid://b13j4y6b2synt"]
 
 [ext_resource type="Script" uid="uid://brswkwf1cauhq" path="res://Scene/SceneManager/scene_manager.gd" id="1_gkm7q"]
 
@@ -59,15 +59,33 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_gkm7q"]
+resource_name = "SceneReady"
+length = 0.005
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2kmsa"]
 _data = {
 &"RESET": SubResource("Animation_ormtn"),
+&"SceneReady": SubResource("Animation_gkm7q"),
 &"transition_in": SubResource("Animation_2kmsa"),
 &"transition_out": SubResource("Animation_6hqft")
 }
 
-[node name="Scene_Manager" type="CanvasLayer"]
+[node name="Scene_Manager" type="CanvasLayer" node_paths=PackedStringArray("Scene_Animation")]
 script = ExtResource("1_gkm7q")
+Scene_Animation = NodePath("AnimationTree")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(0, 0, 0, 0)

@@ -77,8 +77,9 @@ func FinishTextbox():
 		
 		QuestUIAnimation.play("ShowTutorialUI")
 	else:
-		EventBus.emit_signal("scene_transition_out")
-		global.change_scene("res://Scene/Village/Village.tscn")
+		SceneManager.change_scene("res://Scene/Village/Village.tscn")
+		#EventBus.scene_transition_out.emit("res://Scene/Village/Village.tscn")
+		#global.change_scene("res://Scene/Village/Village.tscn")	
 
 
 func _on_q_1_finished_body_entered(body: Node2D) -> void:
