@@ -1,12 +1,6 @@
-res://Autoload/SceneManager/Scene_Manager.tscn
+res://Scene/Dungeon/Room/Room0.tscn
 res://UI/Outline.tres
-res://Scene/Village/Village.tscn
-res://Autoload/global.gd
-res://Scene/Village/Village.gd
-res://Entities/player/player.tscn
-res://Scene/TutorialScene/TutorialScene.tscn
-res://UI/TextBox/Master/Master_Text_Box.tscn
-res://Scene/Master/Script/master.gd
-res://UI/TextBox/Master/master_textbox.gd
-res://Scene/Master/master.tscn
-res://Scene/TutorialScene/Script/tutorial_scene.gd
+res://Entities/enemies/Common/Skull/Skull.tscn
+res://Entities/enemies/Common/Skull/Skull.gd
+res://Components/Enemies/Attack_Detection_component/attack_detection.gd
+res://Entities/enemies/Common/HarpoonFish/HarpoonFish.tscn

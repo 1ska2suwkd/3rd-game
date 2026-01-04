@@ -21,7 +21,7 @@ func _physics_process(_delta: float) -> void:
 		# --- 방향 계산 ---
 		var dir = Vector2.ZERO
 		# 플레이어를 쫓는 상황이면 네비게이션으로 방향을 구함
-		if detection_component.player_chase and detection_component.player:
+		if detection_component.player_chase:
 			# get_next_path_position()은 전역 좌표이므로 to_local로 로컬 방향으로 변환
 			dir = to_local(nav_agent.get_next_path_position()).normalized()
 		

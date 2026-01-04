@@ -192,7 +192,7 @@ height = 59.33333
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ffra"]
 radius = 36.333332
-height = 83.99999
+height = 95.33333
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5vj3"]
 radius = 746.68335
@@ -231,7 +231,7 @@ shape = SubResource("CapsuleShape2D_p200p")
 [node name="ContactDamageComponent" parent="Components" instance=ExtResource("5_5c0bm")]
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Components/ContactDamageComponent"]
-position = Vector2(-1, -18.999998)
+position = Vector2(-1, -23.999998)
 rotation = 3.1415925
 shape = SubResource("CapsuleShape2D_5ffra")
 
@@ -240,6 +240,7 @@ body = NodePath("../..")
 detaction_component = NodePath("../DetectionComponent")
 
 [node name="DetectionComponent" parent="Components" instance=ExtResource("7_l6gv4")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Components/DetectionComponent"]
 shape = SubResource("CircleShape2D_y5vj3")
@@ -248,6 +249,7 @@ shape = SubResource("CircleShape2D_y5vj3")
 body = NodePath("../..")
 
 [node name="HitboxComponent" parent="Components" node_paths=PackedStringArray("health_component", "knockback_component") instance=ExtResource("9_bsni6")]
+visible = false
 health_component = NodePath("../HealthComponent")
 knockback_component = NodePath("../KnockbackComponent")
 
