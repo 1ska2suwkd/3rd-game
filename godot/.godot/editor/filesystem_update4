@@ -12,3 +12,10 @@ res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.tscn
 res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.gd
 res://Entities/enemies/Common/HarpoonFish/harpoon_fish.gd
 res://Autoload/event_bus.gd
+res://Scene/Village/Village.tscn
+res://Entities/Master/Skill/Master_Skill.gd
+res://UI/TextBox/Master/master_textbox.gd
+res://Entities/player/playerStat.gd
+res://Resources/Items/Scene/ItemScene.tscn
+res://Resources/Items/Script/add_Item.gd
+res://Entities/Master/Script/master_skilltree.gd

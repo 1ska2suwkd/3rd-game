@@ -46,7 +46,7 @@ func _process(_delta: float) -> void:
 					EventBus.emit_signal("EndTextBox")
 				elif text_queue.is_empty() and is_skilltree:
 					hide_textbox()
-					var master_skilltree = preload("res://Scene/Master/Master_Skilltree.tscn").instantiate()
+					var master_skilltree = preload("res://Entities/Master/Master_Skilltree.tscn").instantiate()
 					get_tree().current_scene.add_child(master_skilltree)
 				else:
 					start_symbol.text = ""

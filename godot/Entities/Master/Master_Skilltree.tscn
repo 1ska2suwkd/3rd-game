@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bfulsq0v1trwe"]
 
-[ext_resource type="Script" uid="uid://cu6oa557x2x8l" path="res://Scene/Master/Script/master_skilltree.gd" id="1_7sbki"]
+[ext_resource type="Script" uid="uid://cu6oa557x2x8l" path="res://Entities/Master/Script/master_skilltree.gd" id="1_7sbki"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_lrl4c"]
 [ext_resource type="Texture2D" uid="uid://coqypbnlh4yoo" path="res://assets/Image/UI/Icons/slash_icon.png" id="2_rfvd1"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_1dgr8"]

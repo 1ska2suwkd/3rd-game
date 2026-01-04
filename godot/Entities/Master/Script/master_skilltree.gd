@@ -16,7 +16,7 @@ func _on_buy_skill_pressed() -> void:
 		PlayerStat.set_gold(-10)
 		MasterSkill.Crescent_Slash = true
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
-		EventBus.emit_signal("add_item")
+		EventBus.update_inv_ui.emit()
 		Check.show()
 
 func _on_buy_skill_button_down() -> void:

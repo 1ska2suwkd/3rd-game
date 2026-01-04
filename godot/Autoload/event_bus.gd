@@ -12,3 +12,5 @@ signal update_inv_ui()
 #Animation
 signal show_hint_ui()
 signal hide_hint_ui()
+
+signal add_master_skill()

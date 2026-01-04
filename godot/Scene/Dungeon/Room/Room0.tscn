@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://ch53v6eldhf5g"]
+[gd_scene load_steps=47 format=4 uid="uid://ch53v6eldhf5g"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Scene/Dungeon/Room/Room.gd" id="1_efkbg"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/Stage1/decorative_cracks_coasts_animation.png" id="2_1lqhy"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://2khegxjt2sge" path="res://Entities/player/player.tscn" id="13_4j7ql"]
 [ext_resource type="Texture2D" uid="uid://ccfl5mj1f4sw8" path="res://assets/Image/Deco/scarecrow.png" id="14_buxqe"]
 [ext_resource type="PackedScene" uid="uid://bwj7g18bcuaxv" path="res://UI/Room_Probability.tscn" id="15_jw8qa"]
-[ext_resource type="PackedScene" uid="uid://blustjpt4gi0x" path="res://Entities/enemies/Common/Skull/Skull.tscn" id="15_um5o7"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="17_1hjre"]
 [ext_resource type="PackedScene" uid="uid://dqmfgsrxa2y83" path="res://Components/Dungeon/Door/NorthDoor.tscn" id="17_t5fv8"]
 [ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Components/Dungeon/Door/SouthDoor.tscn" id="18_mlwnb"]
@@ -4866,14 +4865,6 @@ color = Color(1, 0.40119168, 0.29666862, 1)
 energy = 2.0
 texture = ExtResource("17_1hjre")
 texture_scale = 1.3
-
-[node name="Skull" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_um5o7")]
-position = Vector2(-280, -34)
-player = NodePath("../player")
-
-[node name="Skull2" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("15_um5o7")]
-position = Vector2(334, 45)
-player = NodePath("../player")
 
 [node name="NorthDoor" parent="." instance=ExtResource("17_t5fv8")]
 position = Vector2(-2, -405)
