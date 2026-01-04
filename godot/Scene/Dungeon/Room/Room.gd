@@ -4,6 +4,9 @@ extends Node2D
 @onready var transtion_animation = $Dungeon_Scene_Manager/animation
 
 func _ready() -> void:
+	EventBus.check_room_clear.connect(check_enemies)
+	check_enemies()
+	
 	$Ysort/player.position.x = global.player_position_x
 	$Ysort/player.position.y = global.player_position_y
 	$Ysort/player/AnimatedSprite2D.flip_h = global.player_flip_h
@@ -38,16 +41,17 @@ func check_enemies():
 			alive_enemies.append(i)
 	if alive_enemies.is_empty():
 		_on_all_enemies_cleared()
+	print(alive_enemies)
 
 func _on_all_enemies_cleared():
 	global.clear_room_count += 1
-	#print("현재 클리어한 방의 수 : ", global.clear_room_count)
-	#print("다음 방이 상자 방일 확률: ", global.probabilities[global.chest_room_stack]*100,"%")
-	#$NorthDoor/Door_animation.play("open")
-	#$SouthDoor/Door_animation.play("open")
-	#$EastDoor/Door_animation.play("open")
-	#$WestDoor/Door_animation.play("open")
-	#$Door_locked/CollisionPolygon2D.disabled = true
+	print("현재 클리어한 방의 수 : ", global.clear_room_count)
+	print("다음 방이 상자 방일 확률: ", global.probabilities[global.chest_room_stack]*100,"%")
+	$NorthDoor/Door_animation.play("open")
+	$SouthDoor/Door_animation.play("open")
+	$EastDoor/Door_animation.play("open")
+	$WestDoor/Door_animation.play("open")
+	$Door_locked/CollisionPolygon2D.disabled = true
 	
 
 func change_room(direction):

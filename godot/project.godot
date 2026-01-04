@@ -17,7 +17,7 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 
 PlayerStat="*res://Entities/player/playerStat.gd"
 MasterSkill="*res://Entities/Master/Skill/Master_Skill.gd"
-EventBus="*res://Autoload/event_bus.gd"
+EventBus="*res://Autoload/SceneManager/event_bus.gd"
 AllItem="*res://Autoload/all_item.gd"
 global="*res://Autoload/global.gd"
 SceneManager="*res://Autoload/SceneManager/Scene_Manager.tscn"

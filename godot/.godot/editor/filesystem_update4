@@ -5,3 +5,8 @@ res://Entities/player/player.gd
 res://Entities/player/player.tscn
 res://Entities/Master/Skill/Master_Skill.gd
 res://Entities/Master/Script/master_skilltree.gd
+res://Scene/Dungeon/Room/Room6.tscn
+res://Scene/Dungeon/Room/Room.gd
+res://Components/Common/Death_Component/death_component.tscn
+res://Components/Common/Death_Component/death_component.gd
+res://Autoload/SceneManager/event_bus.gd
