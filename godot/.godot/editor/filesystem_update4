@@ -5,3 +5,6 @@ res://Entities/enemies/Common/Skull/Skull.gd
 res://Components/Enemies/Attack_Detection_component/attack_detection.gd
 res://Entities/enemies/Common/HarpoonFish/HarpoonFish.tscn
 res://Entities/enemies/Common/Turtle/Turtle.tscn
+res://Entities/enemies/Common/Shaman/Shaman.tscn
+res://Entities/enemies/Common/Shaman/Shaman.gd
+res://Components/Enemies/Detection_Component/detection_component.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bfh82f0egxqxa"]
+[gd_scene load_steps=40 format=3 uid="uid://bfh82f0egxqxa"]
 
 [ext_resource type="Script" uid="uid://depc8huxdfpap" path="res://Entities/enemies/Common/Shaman/Shaman.gd" id="1_0l7tv"]
 [ext_resource type="Texture2D" uid="uid://sxceghaqg13x" path="res://assets/enemy/Shaman/Shaman_Attack.png" id="1_0obk6"]
@@ -6,6 +6,12 @@
 [ext_resource type="Resource" uid="uid://dwyfbs54bebkx" path="res://Resources/Stat/Shaman.tres" id="2_21mfc"]
 [ext_resource type="Texture2D" uid="uid://bcickt512odvy" path="res://assets/enemy/Shaman/Shaman_Run.png" id="3_5ay7n"]
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_ukl5b"]
+[ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="6_ur5d3"]
+[ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="7_qav8r"]
+[ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="8_pot1r"]
+[ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="9_83kvn"]
+[ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/ContactDamage_Component/contact_damage_component.tscn" id="11_hplvj"]
+[ext_resource type="PackedScene" uid="uid://ctd5ah1sqp6k3" path="res://Components/Enemies/Detection_Component/detection_component.tscn" id="12_1xluf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_51vr7"]
 atlas = ExtResource("1_0obk6")
@@ -179,19 +185,19 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sycyy"]
+radius = 17.0
+height = 36.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5o11"]
 size = Vector2(58, 65)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_p6tip"]
-radius = 253.23705
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m160p"]
 radius = 22.0
 height = 58.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sycyy"]
-radius = 17.0
-height = 36.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6tip"]
+radius = 249.00201
 
 [node name="Shaman" type="CharacterBody2D" groups=["enemy"]]
 collision_mask = 65
@@ -201,14 +207,6 @@ script = ExtResource("1_0l7tv")
 ShamanStats = ExtResource("2_21mfc")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[node name="HitFlashTimer" type="Timer" parent="."]
-wait_time = 0.1
-one_shot = true
-
-[node name="Start_move" type="Timer" parent="."]
-one_shot = true
-autostart = true
 
 [node name="Pathfinding" type="Timer" parent="."]
 wait_time = 0.2
@@ -225,38 +223,46 @@ animation = &"attack"
 frame = 9
 offset = Vector2(0, -25)
 
-[node name="HitboxComponent" parent="." instance=ExtResource("6_ukl5b")]
-
-[node name="hitbox2" type="CollisionShape2D" parent="HitboxComponent"]
-visible = false
-position = Vector2(-2, -23.5)
-shape = SubResource("RectangleShape2D_e5o11")
-
-[node name="detection_area" type="Area2D" parent="."]
-visible = false
-collision_layer = 128
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-shape = SubResource("CircleShape2D_p6tip")
-
-[node name="Contact_Damage" type="Area2D" parent="."]
-position = Vector2(-1, -31)
-
-[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Contact_Damage"]
-position = Vector2(0, 10)
-rotation = -3.1415927
-shape = SubResource("CapsuleShape2D_m160p")
-
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_sycyy")
 
-[connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
+[node name="Components" type="Node2D" parent="."]
+
+[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body", "detaction_component") instance=ExtResource("6_ur5d3")]
+body = NodePath("../..")
+detaction_component = NodePath("../DetectionComponent")
+
+[node name="DeathComponent" parent="Components" instance=ExtResource("7_qav8r")]
+
+[node name="HealthComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("8_pot1r")]
+death_component = NodePath("../DeathComponent")
+
+[node name="KnockbackComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("9_83kvn")]
+body = NodePath("../..")
+
+[node name="HitboxComponent" parent="Components" node_paths=PackedStringArray("health_component", "knockback_component") instance=ExtResource("6_ukl5b")]
+health_component = NodePath("../HealthComponent")
+knockback_component = NodePath("../KnockbackComponent")
+
+[node name="hitbox" type="CollisionShape2D" parent="Components/HitboxComponent"]
+position = Vector2(-2, -23.5)
+shape = SubResource("RectangleShape2D_e5o11")
+
+[node name="ContactDamageComponent" parent="Components" instance=ExtResource("11_hplvj")]
+
+[node name="ContactDamage_Collision" type="CollisionShape2D" parent="Components/ContactDamageComponent"]
+position = Vector2(-1, -21)
+rotation = 3.1415925
+shape = SubResource("CapsuleShape2D_m160p")
+
+[node name="DetectionComponent" parent="Components" instance=ExtResource("12_1xluf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Components/DetectionComponent"]
+shape = SubResource("CircleShape2D_p6tip")
+
 [connection signal="timeout" from="Pathfinding" to="." method="_on_pathfinding_timeout"]
 [connection signal="timeout" from="attack" to="." method="_on_attack_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
-[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
-[connection signal="area_entered" from="Contact_Damage" to="." method="_on_contact_damage_area_entered"]

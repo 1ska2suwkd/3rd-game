@@ -343,8 +343,9 @@ death_component = NodePath("../DeathComponent")
 [node name="KnockbackComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("11_xn0n7")]
 body = NodePath("../..")
 
-[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body") instance=ExtResource("12_mye0v")]
+[node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body", "detaction_component") instance=ExtResource("12_mye0v")]
 body = NodePath("../..")
+detaction_component = NodePath("../DetectionComponent")
 
 [node name="DeathComponent" parent="Components" instance=ExtResource("14_xn0n7")]
 
