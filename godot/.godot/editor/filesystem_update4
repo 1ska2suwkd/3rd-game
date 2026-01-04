@@ -8,3 +8,5 @@ res://Entities/enemies/Common/Turtle/Turtle.tscn
 res://Entities/enemies/Common/Shaman/Shaman.tscn
 res://Entities/enemies/Common/Shaman/Shaman.gd
 res://Components/Enemies/Detection_Component/detection_component.gd
+res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.tscn
+res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.gd
