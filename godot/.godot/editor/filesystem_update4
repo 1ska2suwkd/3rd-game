@@ -10,3 +10,4 @@ res://Scene/Dungeon/Room/Room.gd
 res://Components/Common/Death_Component/death_component.tscn
 res://Components/Common/Death_Component/death_component.gd
 res://Autoload/SceneManager/event_bus.gd
+res://Scene/Dungeon/Room/Room1.tscn

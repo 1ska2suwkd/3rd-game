@@ -2,9 +2,10 @@
 extends Node2D
 
 @onready var transtion_animation = $Dungeon_Scene_Manager/animation
+var alive_enemies = []
 
 func _ready() -> void:
-	EventBus.check_room_clear.connect(check_enemies)
+	EventBus.check_room_clear.connect(remove_enemy)
 	check_enemies()
 	
 	$Ysort/player.position.x = global.player_position_x
@@ -34,13 +35,17 @@ func _ready() -> void:
 
 func check_enemies():
 	var enemies = get_tree().get_nodes_in_group("enemy")
-	var alive_enemies = []
 	
 	for i in enemies:
 		if is_instance_valid(i) and i.is_inside_tree() and self.is_ancestor_of(i):
 			alive_enemies.append(i)
+	
+func remove_enemy():
+	alive_enemies.pop_back()
+	
 	if alive_enemies.is_empty():
 		_on_all_enemies_cleared()
+	
 	print(alive_enemies)
 
 func _on_all_enemies_cleared():
@@ -51,7 +56,8 @@ func _on_all_enemies_cleared():
 	$SouthDoor/Door_animation.play("open")
 	$EastDoor/Door_animation.play("open")
 	$WestDoor/Door_animation.play("open")
-	$Door_locked/CollisionPolygon2D.disabled = true
+	
+	$Door_locked/CollisionPolygon2D.set_deferred("disabled", true)
 	
 
 func change_room(direction):
