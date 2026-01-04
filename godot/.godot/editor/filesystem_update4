@@ -10,3 +10,5 @@ res://Entities/enemies/Common/Shaman/Shaman.gd
 res://Components/Enemies/Detection_Component/detection_component.gd
 res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.tscn
 res://Components/Enemies/Locomotion/Fleeing_Component/fleeing_component.gd
+res://Entities/enemies/Common/HarpoonFish/harpoon_fish.gd
+res://Autoload/event_bus.gd

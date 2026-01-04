@@ -6,9 +6,6 @@ signal stats_changed()  # 현재 gd의 stats_changed()라는 함수 시그널 �
 #Text Box
 signal EndTextBox()
 
-#Enemy signal
-signal target_enter_range()
-
 #Inventory signal
 signal update_inv_ui()
 

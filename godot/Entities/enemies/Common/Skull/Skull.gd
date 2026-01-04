@@ -9,7 +9,7 @@ extends CharacterBody2D
 var is_attack = false
 
 func _ready() -> void:
-	EventBus.target_enter_range.connect(attack)
+	$Components/Attack_detection.target_enter_range.connect(attack)
 	
 	$Components/ContactDamage.stats = SkullStat
 	$Components/HealthComponent.stats = SkullStat
