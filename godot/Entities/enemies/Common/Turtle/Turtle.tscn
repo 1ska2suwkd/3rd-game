@@ -224,10 +224,10 @@ radius = 74.0
 height = 228.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xlya"]
-radius = 78.025635
+radius = 80.024994
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtobv"]
-radius = 65.0
+radius = 54.0
 
 [node name="Turtle" type="CharacterBody2D" node_paths=PackedStringArray("movement_component") groups=["enemy"]]
 position = Vector2(1, 0)
@@ -287,7 +287,7 @@ shape = SubResource("CapsuleShape2D_0021k")
 [node name="ContactDamageComponent" parent="Components" instance=ExtResource("12_dl7wn")]
 
 [node name="ContactDamage_Collision" type="CollisionShape2D" parent="Components/ContactDamageComponent"]
-position = Vector2(0, -24)
+position = Vector2(-10, -44)
 shape = SubResource("CircleShape2D_6xlya")
 
 [node name="Collision" type="CollisionShape2D" parent="."]

@@ -4,3 +4,4 @@ res://Entities/enemies/Common/Skull/Skull.tscn
 res://Entities/enemies/Common/Skull/Skull.gd
 res://Components/Enemies/Attack_Detection_component/attack_detection.gd
 res://Entities/enemies/Common/HarpoonFish/HarpoonFish.tscn
+res://Entities/enemies/Common/Turtle/Turtle.tscn
