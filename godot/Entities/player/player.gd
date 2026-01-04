@@ -1,6 +1,8 @@
 # player.gd
 extends CharacterBody2D
 
+@export var Crescent_Slash: bool = false
+
 var dead = false
 
 # 공격하면서 이동 시 이동속도 감소
@@ -35,7 +37,7 @@ func _ready():
 		hearts_list.append(child)
 	init_heart_display()
 
-	if MasterSkill.Crescent_Slash:
+	if Crescent_Slash:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		EventBus.emit_signal("update_inv_ui")
 
@@ -146,7 +148,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			combo = "1"
 			
 func spawn_crescent_slash(scene_resource: PackedScene, direction):
-	if MasterSkill.Crescent_Slash and not PlayerStat.is_player_hit:
+	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item and not PlayerStat.is_player_hit:
 		var projectile = scene_resource.instantiate()
 		projectile.global_position = global_position
 		projectile.damage = PlayerStat.TotalDamage

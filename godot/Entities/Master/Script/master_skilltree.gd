@@ -14,7 +14,6 @@ func _ready() -> void:
 func _on_buy_skill_pressed() -> void:
 	if PlayerStat.gold >= 10 and not MasterSkill.Crescent_Slash:
 		PlayerStat.set_gold(-10)
-		MasterSkill.Crescent_Slash = true
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		EventBus.update_inv_ui.emit()
 		Check.show()

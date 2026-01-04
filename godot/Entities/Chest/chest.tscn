@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://be4cdt0bxxe8q"]
 
-[ext_resource type="Script" uid="uid://53wvjdmdq8yb" path="res://Scene/Dungeon/Chest/chest.gd" id="1_yx8lr"]
+[ext_resource type="Script" uid="uid://53wvjdmdq8yb" path="res://Entities/Chest/chest.gd" id="1_yx8lr"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://UI/Outline.tres" id="2_bfsuy"]
 [ext_resource type="Texture2D" uid="uid://f0aok880wmew" path="res://assets/Image/Chests/32x32.png" id="3_bfsuy"]
 [ext_resource type="Texture2D" uid="uid://cb5fh02u6w3s4" path="res://assets/Image/UI/Icons/Space.png" id="4_6sw53"]

@@ -47,7 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://djsaae8msu4gh" path="res://assets/Image/Resources/Trees/Tree3.png" id="24_vedem"]
 [ext_resource type="Texture2D" uid="uid://b8e2vn8boyck2" path="res://assets/Image/Resources/Trees/Tree4.png" id="25_oox1i"]
 [ext_resource type="Texture2D" uid="uid://bre3rl1nxq6at" path="res://assets/Image/Factions/Knights/Buildings/Castle/Shadow.png" id="26_hntwa"]
-[ext_resource type="PackedScene" uid="uid://be4cdt0bxxe8q" path="res://Scene/Dungeon/Chest/chest.tscn" id="26_sroei"]
+[ext_resource type="PackedScene" uid="uid://be4cdt0bxxe8q" path="res://Entities/Chest/chest.tscn" id="26_sroei"]
 [ext_resource type="Texture2D" uid="uid://c6cilsybm1kau" path="res://assets/Image/Factions/Knights/Buildings/Castle/Castle_Yellow.png" id="27_sroei"]
 [ext_resource type="Texture2D" uid="uid://yianeqis5bad" path="res://assets/Image/Resources/Gold Mine/Dungeon.png" id="28_c4q8n"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="29_e7f3h"]
