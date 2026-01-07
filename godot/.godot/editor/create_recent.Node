@@ -1,3 +1,5 @@
+PointLight2D
+LightOccluder2D
 Node2D
 RichTextLabel
 AnimationPlayer

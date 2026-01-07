@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://5iindhkdc5w2"]
+[gd_scene load_steps=10 format=3 uid="uid://5iindhkdc5w2"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_jnfef"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_ycgtw"]
 [ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Sword_attack_vfx.png" id="2_ypb0s"]
+[ext_resource type="Texture2D" uid="uid://ccdao7wrq4kvo" path="res://assets/Image/Skill/Speer.PNG" id="4_ycgtw"]
+[ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="5_f2mls"]
 
 [sub_resource type="Curve" id="Curve_f2mls"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
@@ -75,7 +77,7 @@ color_ramp = SubResource("Gradient_q5bs7")
 position = Vector2(50, -8)
 scale = Vector2(0.3, 0.182)
 sprite_frames = SubResource("SpriteFrames_hcvlx")
-animation = &"left"
+animation = &"right"
 offset = Vector2(200, -20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -83,6 +85,19 @@ position = Vector2(127, -9)
 rotation = 1.5707964
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_rm78g")
+
+[node name="Speer" type="Sprite2D" parent="."]
+position = Vector2(109, 42)
+rotation = 7.0685835
+scale = Vector2(2, 2)
+texture = ExtResource("4_ycgtw")
+
+[node name="PointLight2D" type="PointLight2D" parent="Speer"]
+position = Vector2(2.2980986, 1.2374353)
+rotation = -0.7853982
+scale = Vector2(1.2109376, 0.09374997)
+color = Color(1, 1, 0.47843137, 1)
+texture = ExtResource("5_f2mls")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
