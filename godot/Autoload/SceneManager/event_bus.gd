@@ -13,4 +13,4 @@ signal update_inv_ui()
 signal show_hint_ui()
 signal hide_hint_ui()
 
-signal check_room_clear()
+signal enemy_die()

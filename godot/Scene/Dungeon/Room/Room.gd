@@ -2,11 +2,14 @@
 extends Node2D
 
 @onready var transtion_animation = $Dungeon_Scene_Manager/animation
-var alive_enemies = []
+var enemy_count = 0
 
 func _ready() -> void:
-	EventBus.check_room_clear.connect(remove_enemy)
-	check_enemies()
+	EventBus.enemy_die.connect(update_enemy_count)
+	
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	enemy_count = len(enemies)
+	print(enemy_count)
 	
 	$Ysort/player.position.x = global.player_position_x
 	$Ysort/player.position.y = global.player_position_y
@@ -33,20 +36,13 @@ func _ready() -> void:
 			if not area.is_connected("body_entered", Callable(self, method_name)):
 				area.connect("body_entered", Callable(self, method_name))
 
-func check_enemies():
-	var enemies = get_tree().get_nodes_in_group("enemy")
+func update_enemy_count():
+	enemy_count -= 1
+	print(enemy_count)
 	
-	for i in enemies:
-		if is_instance_valid(i) and i.is_inside_tree() and self.is_ancestor_of(i):
-			alive_enemies.append(i)
-	
-func remove_enemy():
-	alive_enemies.pop_back()
-	
-	if alive_enemies.is_empty():
+	if enemy_count == 0:
 		_on_all_enemies_cleared()
 	
-	print(alive_enemies)
 
 func _on_all_enemies_cleared():
 	global.clear_room_count += 1

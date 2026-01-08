@@ -1,3 +1,5 @@
-res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn
-res://UI/Outline.tres
 res://Scene/Dungeon/Room/Room0.tscn
+res://UI/Outline.tres
+res://Autoload/SceneManager/event_bus.gd
+res://Scene/Dungeon/Room/Room.gd
+res://Components/Common/Death_Component/death_component.gd

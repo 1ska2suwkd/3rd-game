@@ -1,10 +1,13 @@
 extends Node2D
 class_name DeathComponent
 
-	
+var is_die = false
+
 func die():
-	EventBus.check_room_clear.emit()
+	if is_die: return
+	is_die = true
 	
+	EventBus.enemy_die.emit()	
 		
 	var ysort = get_tree().current_scene.get_node("Ysort")
 	var particle = preload("res://Particle/EnemyDeadParticle.tscn").instantiate()
