@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dgryxobep2mhd"]
+[gd_scene load_steps=46 format=3 uid="uid://dgryxobep2mhd"]
 
 [ext_resource type="Texture2D" uid="uid://ml86fs1uhoev" path="res://assets/enemy/Turtle/Turtle_Guard_In.png" id="1_2gx6n"]
 [ext_resource type="Script" uid="uid://couki1dh63g56" path="res://Entities/enemies/Common/Turtle/turtle.gd" id="1_0021k"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="9_peqer"]
 [ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="11_cx5wt"]
 [ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/Combat/ContactDamage_Component/contact_damage_component.tscn" id="12_dl7wn"]
+[ext_resource type="PackedScene" uid="uid://bj01s28atb4fl" path="res://Components/Enemies/Particle/death_particle_component.tscn" id="13_peqer"]
+[ext_resource type="PackedScene" uid="uid://b2elanspxh4oy" path="res://Particle/EnemyDeadParticle.tscn" id="14_f3me8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svdd1"]
 atlas = ExtResource("1_2gx6n")
@@ -283,6 +285,10 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_0021k")
 
 [node name="DeathComponent" parent="Components" instance=ExtResource("11_cx5wt")]
+
+[node name="DeathParticleComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("13_peqer")]
+death_component = NodePath("../DeathComponent")
+death_particle = ExtResource("14_f3me8")
 
 [node name="ContactDamageComponent" parent="Components" instance=ExtResource("12_dl7wn")]
 

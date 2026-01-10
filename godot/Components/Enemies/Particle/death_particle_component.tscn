@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bj01s28atb4fl"]
+[gd_scene load_steps=2 format=3 uid="uid://bj01s28atb4fl"]
+
+[ext_resource type="Script" uid="uid://c7uwo450wjcic" path="res://Components/Enemies/Particle/death_particle_component.gd" id="1_56dsm"]
 
 [node name="DeathParticleComponent" type="Node2D"]
+script = ExtResource("1_56dsm")
