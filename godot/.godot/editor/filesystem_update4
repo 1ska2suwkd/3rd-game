@@ -19,3 +19,8 @@ res://Components/Enemies/Particle/death_particle_component.tscn
 res://Entities/enemies/Common/Shaman/Shaman.tscn
 res://Entities/enemies/Common/Skull/Skull.tscn
 res://Entities/enemies/Common/Turtle/Turtle.tscn
+res://Entities/player/player.tscn
+res://Resources/Inventory/Player_Inventory.tres
+res://Components/Enemies/ItemDropComponent/item_drop_component.gd
+res://Components/Enemies/ItemDropComponent/ItemDropComponent.tscn
+res://PickUp/gold.gd
