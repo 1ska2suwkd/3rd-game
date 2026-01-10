@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://486njm2a03pv" path="res://projectiles/ProjectlieBase.gd" id="1_rm78g"]
 [ext_resource type="Texture2D" uid="uid://qxbqbirph3tw" path="res://assets/enemy/Harpoon Fish/Harpoon.png" id="2_367g4"]
-[ext_resource type="Resource" uid="uid://bjtmp64k5yp2" path="res://Resources/Stat/HarpoonFishStat.tres" id="2_eedlp"]
+[ext_resource type="Resource" uid="uid://bjtmp64k5yp2" path="res://Entities/enemies/Common/HarpoonFish/HarpoonFishStat.tres" id="2_eedlp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rm78g"]
 radius = 8.0

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://depc8huxdfpap" path="res://Entities/enemies/Common/Shaman/Shaman.gd" id="1_0l7tv"]
 [ext_resource type="Texture2D" uid="uid://sxceghaqg13x" path="res://assets/enemy/Shaman/Shaman_Attack.png" id="1_0obk6"]
 [ext_resource type="Texture2D" uid="uid://daw8w47xr1eyl" path="res://assets/enemy/Shaman/Shaman_Idle.png" id="2_0l7tv"]
-[ext_resource type="Resource" uid="uid://dwyfbs54bebkx" path="res://Resources/Stat/Shaman.tres" id="2_21mfc"]
+[ext_resource type="Resource" uid="uid://dwyfbs54bebkx" path="res://Entities/enemies/Common/Shaman/ShamanStat.tres" id="2_21mfc"]
 [ext_resource type="Texture2D" uid="uid://bcickt512odvy" path="res://assets/enemy/Shaman/Shaman_Run.png" id="3_5ay7n"]
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_ukl5b"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="6_ur5d3"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cehjf26uxtsy3" path="res://Entities/enemies/Common/HarpoonFish/harpoon_fish.gd" id="1_ujw4y"]
 [ext_resource type="Texture2D" uid="uid://bn28s8kbgp233" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Throw.png" id="2_g3c42"]
-[ext_resource type="Resource" uid="uid://bjtmp64k5yp2" path="res://Resources/Stat/HarpoonFishStat.tres" id="2_jcsf1"]
+[ext_resource type="Resource" uid="uid://bjtmp64k5yp2" path="res://Entities/enemies/Common/HarpoonFish/HarpoonFishStat.tres" id="2_jcsf1"]
 [ext_resource type="Texture2D" uid="uid://bcdwb1gnvqobq" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Idle.png" id="3_m2fsh"]
 [ext_resource type="Texture2D" uid="uid://dwrgivcj73ub8" path="res://assets/enemy/Harpoon Fish/HarpoonFish_Run.png" id="4_q8f30"]
 [ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/ContactDamage_Component/contact_damage_component.tscn" id="5_5c0bm"]

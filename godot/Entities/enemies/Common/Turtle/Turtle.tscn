@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ml86fs1uhoev" path="res://assets/enemy/Turtle/Turtle_Guard_In.png" id="1_2gx6n"]
 [ext_resource type="Script" uid="uid://couki1dh63g56" path="res://Entities/enemies/Common/Turtle/turtle.gd" id="1_0021k"]
 [ext_resource type="Texture2D" uid="uid://c06k0cly6ri2k" path="res://assets/enemy/Turtle/Turtle_Guard_Out.png" id="2_0021k"]
-[ext_resource type="Resource" uid="uid://cra10rpls4p4t" path="res://Resources/Stat/TurtleStat.tres" id="2_c2ajo"]
+[ext_resource type="Resource" uid="uid://cra10rpls4p4t" path="res://Entities/enemies/Common/Turtle/TurtleStat.tres" id="2_c2ajo"]
 [ext_resource type="Texture2D" uid="uid://c4frg82cidujv" path="res://assets/enemy/Turtle/Turtle_Idle.png" id="3_6xlya"]
 [ext_resource type="Texture2D" uid="uid://djldeh1x5j82j" path="res://assets/enemy/Turtle/Turtle_Walk.png" id="4_jtobv"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="6_4863w"]

@@ -1,7 +1,7 @@
 
 extends CharacterBody2D
 
-var stat: Stat
+@export var ButaStat: EnemyStat
 
 var dead = false
 var player_chase = false
@@ -18,9 +18,10 @@ var dash_speed = 500
 @onready var healthbar = $백성우/Healthbar
 
 func _ready():
-	stat = Stat.new(300, 300, 1) # speed, hp, damage
+	$Component/HealthComponent.stats = ButaStat
+	
 	$cooldown.start()
-	healthbar.init_health(stat.hp)
+	healthbar.init_health(ButaStat.max_hp)
 	
 	
 func _physics_process(_delta: float) -> void:
@@ -33,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 	elif not is_attack:
 		var dir = to_local(nav_agent.get_next_path_position()).normalized()
 		if player_chase and player:
-			velocity = dir * stat.speed
+			velocity = dir * ButaStat.speed
 		move_and_slide()  # ← 물리 이동 (충돌 적용)
 		
 		if velocity.length() > 1.0 :
@@ -43,10 +44,6 @@ func _physics_process(_delta: float) -> void:
 		else:
 			$AnimatedSprite2D.play("idle")
 
-func take_damage(p_damage:int):
-	stat.hp -= p_damage
-	if stat.hp <= 0:
-		die()
 
 func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
 	nav_agent.target_position = player.global_position
@@ -58,8 +55,7 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player_attack") and not dead:
 		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
 		$HitFlashTimer.start()
-		take_damage(PlayerStat.TotalDamage)
-		healthbar.health = stat.hp
+		healthbar.health = ButaStat.max_hp
 
 
 func _on_hit_flash_timer_timeout() -> void:
@@ -112,11 +108,11 @@ func _on_animated_sprite_2d_animation_changed() -> void:
 
 func _on_attack_hitbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.apply_knockback(global_position, 1000.0, 0.5, stat.damage)
+		body.apply_knockback(global_position, 1000.0, 0.5, ButaStat.damage)
 		
 func _on_contact_damage_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not dead:
-		body.apply_knockback(global_position, 1000.0, 0.2, stat.damage)
+		body.apply_knockback(global_position, 1000.0, 0.2, ButaStat.damage)
 	
 
 func die():

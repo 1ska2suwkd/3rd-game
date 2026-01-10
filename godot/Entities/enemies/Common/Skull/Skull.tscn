@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://efq4u3d5k488" path="res://Components/Enemies/Attack_Detection_component/attack_detection.tscn" id="7_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/ContactDamage_Component/contact_damage_component.tscn" id="8_6cdlu"]
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="10_gw138"]
-[ext_resource type="Resource" uid="uid://bs15aiytc4x1a" path="res://Resources/Stat/SkullStat.tres" id="10_mye0v"]
+[ext_resource type="Resource" uid="uid://bs15aiytc4x1a" path="res://Entities/enemies/Common/Skull/SkullStat.tres" id="10_mye0v"]
 [ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="11_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="12_mye0v"]
 [ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="14_xn0n7"]
