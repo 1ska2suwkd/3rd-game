@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bh4cj0nfj8sr6"]
+[gd_scene load_steps=3 format=3 uid="uid://bh4cj0nfj8sr6"]
 
 [ext_resource type="Script" uid="uid://cvtxgo52ki2u3" path="res://Components/Enemies/ItemDropComponent/item_drop_component.gd" id="1_2u1b1"]
+[ext_resource type="PackedScene" uid="uid://fxfo6y3umxis" path="res://PickUp/gold.tscn" id="2_nx27t"]
 
 [node name="ItemDropComponent" type="Node2D"]
 script = ExtResource("1_2u1b1")
+drop_item_list = Array[PackedScene]([ExtResource("2_nx27t"), null, null, null, null])

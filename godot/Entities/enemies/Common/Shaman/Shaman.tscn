@@ -1,12 +1,14 @@
-[gd_scene load_steps=43 format=3 uid="uid://bfh82f0egxqxa"]
+[gd_scene load_steps=45 format=3 uid="uid://bfh82f0egxqxa"]
 
 [ext_resource type="Script" uid="uid://depc8huxdfpap" path="res://Entities/enemies/Common/Shaman/Shaman.gd" id="1_0l7tv"]
 [ext_resource type="Texture2D" uid="uid://sxceghaqg13x" path="res://assets/enemy/Shaman/Shaman_Attack.png" id="1_0obk6"]
 [ext_resource type="Texture2D" uid="uid://daw8w47xr1eyl" path="res://assets/enemy/Shaman/Shaman_Idle.png" id="2_0l7tv"]
 [ext_resource type="Resource" uid="uid://dwyfbs54bebkx" path="res://Entities/enemies/Common/Shaman/ShamanStat.tres" id="2_21mfc"]
 [ext_resource type="Texture2D" uid="uid://bcickt512odvy" path="res://assets/enemy/Shaman/Shaman_Run.png" id="3_5ay7n"]
+[ext_resource type="PackedScene" uid="uid://bh4cj0nfj8sr6" path="res://Components/Enemies/ItemDropComponent/ItemDropComponent.tscn" id="6_hplvj"]
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_ukl5b"]
 [ext_resource type="PackedScene" uid="uid://dc3v1kmk4vbwx" path="res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn" id="6_ur5d3"]
+[ext_resource type="PackedScene" uid="uid://fxfo6y3umxis" path="res://PickUp/gold.tscn" id="7_1xluf"]
 [ext_resource type="PackedScene" uid="uid://bcp8se18liu1" path="res://Components/Common/Death_Component/death_component.tscn" id="7_qav8r"]
 [ext_resource type="PackedScene" uid="uid://bj01s28atb4fl" path="res://Components/Enemies/Particle/death_particle_component.tscn" id="8_83kvn"]
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="8_pot1r"]
@@ -226,6 +228,10 @@ rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_sycyy")
 
 [node name="Components" type="Node2D" parent="."]
+
+[node name="ItemDropComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("6_hplvj")]
+death_component = NodePath("../DeathComponent")
+drop_item_list = Array[PackedScene]([ExtResource("7_1xluf")])
 
 [node name="MovementComponent" parent="Components" node_paths=PackedStringArray("body", "detaction_component") instance=ExtResource("6_ur5d3")]
 body = NodePath("../..")

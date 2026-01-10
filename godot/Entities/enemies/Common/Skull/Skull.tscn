@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://blustjpt4gi0x"]
+[gd_scene load_steps=57 format=3 uid="uid://blustjpt4gi0x"]
 
 [ext_resource type="Script" uid="uid://y24af3mavdmp" path="res://Entities/enemies/Common/Skull/Skull.gd" id="1_ks2w7"]
 [ext_resource type="Texture2D" uid="uid://cjieyk57jg3ne" path="res://assets/enemy/Skull/Skull_Attack.png" id="2_q6mhb"]
@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_q6mhb"]
 [ext_resource type="PackedScene" uid="uid://ctd5ah1sqp6k3" path="res://Components/Enemies/Combat/Detection_Component/detection_component.tscn" id="6_vnird"]
 [ext_resource type="PackedScene" uid="uid://cgek6f2kva1yr" path="res://Components/Enemies/Combat/Attack_Hitbox_Component/attack_hitbox_component.tscn" id="7_gw138"]
+[ext_resource type="PackedScene" uid="uid://bh4cj0nfj8sr6" path="res://Components/Enemies/ItemDropComponent/ItemDropComponent.tscn" id="7_hccep"]
 [ext_resource type="PackedScene" uid="uid://efq4u3d5k488" path="res://Components/Enemies/Combat/Attack_Detection_component/attack_detection.tscn" id="7_xn0n7"]
 [ext_resource type="PackedScene" uid="uid://cqmc7ebhwjn8f" path="res://Components/Enemies/Combat/ContactDamage_Component/contact_damage_component.tscn" id="8_6cdlu"]
+[ext_resource type="PackedScene" uid="uid://fxfo6y3umxis" path="res://PickUp/gold.tscn" id="8_h6lsc"]
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="10_gw138"]
 [ext_resource type="Resource" uid="uid://bs15aiytc4x1a" path="res://Entities/enemies/Common/Skull/SkullStat.tres" id="10_mye0v"]
 [ext_resource type="PackedScene" uid="uid://k76vye5mtty1" path="res://Components/Common/Knockback_Component/knockback_component.tscn" id="11_xn0n7"]
@@ -298,6 +300,10 @@ animation = &"attack"
 offset = Vector2(0, -15)
 
 [node name="Components" type="Node2D" parent="."]
+
+[node name="ItemDropComponent" parent="Components" node_paths=PackedStringArray("death_component") instance=ExtResource("7_hccep")]
+death_component = NodePath("../DeathComponent")
+drop_item_list = Array[PackedScene]([ExtResource("8_h6lsc")])
 
 [node name="Attack_detection" parent="Components" instance=ExtResource("7_xn0n7")]
 collision_layer = 0

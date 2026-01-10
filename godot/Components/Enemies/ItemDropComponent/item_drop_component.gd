@@ -15,7 +15,11 @@ func drop_item():
 		return
 		
 	var item_scene = drop_item_list.pick_random()
+	if item_scene == null:
+		return
+	
 	var item_instance = item_scene.instantiate()
+	
 	
 	item_instance.global_position = owner.global_position
 	ysort.add_child(item_instance)
