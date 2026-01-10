@@ -22,4 +22,4 @@ func drop_item():
 	
 	
 	item_instance.global_position = owner.global_position
-	ysort.add_child(item_instance)
+	ysort.call_deferred("add_child", item_instance)
