@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgek6f2kva1yr"]
 
-[ext_resource type="Script" uid="uid://0xpq24ibrtpy" path="res://Components/Enemies/Attack_Hitbox_Component/attack_hitbox_component.gd" id="1_muj8s"]
+[ext_resource type="Script" uid="uid://0xpq24ibrtpy" path="res://Components/Enemies/Combat/Attack_Hitbox_Component/attack_hitbox_component.gd" id="1_muj8s"]
 
 [node name="AttackHitboxComponent" type="Area2D"]
 collision_layer = 0

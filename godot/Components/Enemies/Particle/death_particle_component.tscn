@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bj01s28atb4fl"]
+
+[node name="DeathParticleComponent" type="Node2D"]

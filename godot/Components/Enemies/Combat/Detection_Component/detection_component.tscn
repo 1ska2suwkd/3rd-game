@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctd5ah1sqp6k3"]
 
-[ext_resource type="Script" uid="uid://tw6uvxwwq0nd" path="res://Components/Enemies/Detection_Component/detection_component.gd" id="1_p0uyw"]
+[ext_resource type="Script" uid="uid://tw6uvxwwq0nd" path="res://Components/Enemies/Combat/Detection_Component/detection_component.gd" id="1_p0uyw"]
 
 [node name="DetectionComponent" type="Area2D"]
 collision_layer = 128
