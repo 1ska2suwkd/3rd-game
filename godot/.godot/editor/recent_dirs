@@ -1,3 +1,4 @@
+res://Components/Enemies/UI/Healthbar_Coponent
 res://Entities/enemies/Bosses/Buta
 res://Components/Enemies/Locomotion/Fleeing_Component
 res://UI/HintUI

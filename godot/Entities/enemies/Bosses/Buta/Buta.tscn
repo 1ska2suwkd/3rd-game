@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://pm5gdcak0xg8"]
+[gd_scene load_steps=74 format=3 uid="uid://pm5gdcak0xg8"]
 
 [ext_resource type="Script" uid="uid://h4qd5xu72aoc" path="res://Entities/enemies/Bosses/Buta/Buta.gd" id="1_ofsxj"]
 [ext_resource type="PackedScene" uid="uid://6m6bj2quuagt" path="res://Entities/enemies/Bosses/healthbar.tscn" id="2_5ffra"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://drenvy30uh7mq" path="res://Components/Common/Health_Component/health_component.tscn" id="5_kablb"]
 [ext_resource type="Texture2D" uid="uid://bgq6fvfc5no0s" path="res://assets/enemy/Troll/Troll_Walk.png" id="5_y5vj3"]
 [ext_resource type="PackedScene" uid="uid://y7a41xekksbp" path="res://Components/Common/Hitbox_Component/hitbox_component.tscn" id="6_422u8"]
+[ext_resource type="PackedScene" uid="uid://dwh3esao6gfon" path="res://Components/Enemies/UI/Healthbar_Coponent/healthbar_component.tscn" id="7_1t07r"]
 [ext_resource type="Texture2D" uid="uid://c5bovaxcnlku0" path="res://assets/enemy/Troll/Troll_Windup.png" id="7_5ffra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5vj3"]
@@ -436,7 +437,7 @@ height = 152.0
 radius = 124.0
 height = 500.0
 
-[node name="Buta" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
+[node name="백성우" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
 position = Vector2(1, 0)
 collision_mask = 67
 motion_mode = 1
@@ -465,18 +466,22 @@ shape = SubResource("RectangleShape2D_y5vj3")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[node name="백성우" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Healthbar" parent="백성우" instance=ExtResource("2_5ffra")]
+[node name="HealthbarComponent" parent="CanvasLayer" node_paths=PackedStringArray("health_component") instance=ExtResource("7_1t07r")]
+position = Vector2(1, 0)
+health_component = NodePath("../../Component/HealthComponent")
+
+[node name="Healthbar" parent="CanvasLayer/HealthbarComponent" instance=ExtResource("2_5ffra")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -48.0
-offset_right = 120.0
-offset_bottom = -38.0
+offset_left = 749.0
+offset_top = 932.0
+offset_right = 989.0
+offset_bottom = 942.0
 grow_horizontal = 2
 grow_vertical = 0
 max_value = 300.0

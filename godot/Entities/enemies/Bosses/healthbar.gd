@@ -7,8 +7,8 @@ extends ProgressBar
 var health = 0 : set = _set_health
 
 func _ready() -> void:
-	var parent_node = get_parent()
-	label.text = parent_node.get_name()
+	var Boss_name = owner.get_name()
+	label.text = Boss_name
 
 func _set_health(new_health):
 	var prev_health = health

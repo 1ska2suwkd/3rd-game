@@ -15,11 +15,10 @@ var dash_speed = 500
 
 @onready var anim = $AnimatedSprite2D.animation
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
-@onready var healthbar = $백성우/Healthbar
+@onready var healthbar = $CanvasLayer/HealthbarComponent/Healthbar
 
 func _ready():
 	$Component/HealthComponent.stats = ButaStat
-	
 	$cooldown.start()
 	healthbar.init_health(ButaStat.max_hp)
 	
@@ -51,15 +50,6 @@ func makepath() -> void: #플레이어를 찾기위한 경로탐색 함수?
 func _on_pathfinding_timeout() -> void:
 	makepath()
 
-func _on_area_2d_area_entered(area):
-	if area.is_in_group("Player_attack") and not dead:
-		$AnimatedSprite2D.modulate = Color(0.847, 0.0, 0.102)
-		$HitFlashTimer.start()
-		healthbar.health = ButaStat.max_hp
-
-
-func _on_hit_flash_timer_timeout() -> void:
-	$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 func _on_detection_area_body_entered(body):
 	if body.is_in_group("player"):

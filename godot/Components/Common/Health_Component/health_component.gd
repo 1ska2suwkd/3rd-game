@@ -3,6 +3,8 @@ class_name HealthComponent
 
 @export var death_component: DeathComponent
 
+signal change_hp(hp)
+
 var hp = 0
 var stats: EnemyStat:
 	set(new_stats):
@@ -13,5 +15,6 @@ var stats: EnemyStat:
 
 func damage(p_damage):
 	hp -= p_damage
+	change_hp.emit(hp)
 	if hp <= 0:
 		death_component.die()

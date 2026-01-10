@@ -2994,7 +2994,7 @@ y_sort_enabled = true
 [node name="player" parent="Ysort" instance=ExtResource("5_2qvu0")]
 position = Vector2(4, 579)
 
-[node name="백성우" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_4tl4b")]
+[node name="Buta" parent="Ysort" node_paths=PackedStringArray("player") instance=ExtResource("6_4tl4b")]
 position = Vector2(-6, -2)
 player = NodePath("../player")
 

@@ -6,3 +6,6 @@ res://Entities/enemies/Bosses/Buta/ButaStat.tres
 res://Entities/enemies/Bosses/Buta/Buta.gd
 res://Components/Common/Hitbox_Component/hitbox_component.gd
 res://Scene/Dungeon/Room/Stage1_Boss.tscn
+res://Components/Enemies/UI/Healthbar_Coponent/healthbar_component.gd
+res://Components/Common/Health_Component/health_component.gd
+res://Entities/enemies/Bosses/healthbar.gd
