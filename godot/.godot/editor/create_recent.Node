@@ -1,7 +1,12 @@
+NinePatchRect
+AnimatedSprite2D
 Node2D
+Label
+RichTextLabel
+TextureRect
+CanvasLayer
 PointLight2D
 LightOccluder2D
-RichTextLabel
 AnimationPlayer
 Panel
 Sprite2D
