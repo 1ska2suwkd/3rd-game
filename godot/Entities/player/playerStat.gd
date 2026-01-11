@@ -7,7 +7,7 @@ var hp = 3
 var PlayerAttackSlow = 0.7
 var gold = 0
 
-var PlayerDamage = 100
+var PlayerDamage = 10
 var ItemDamage = 0
 var TotalDamage = PlayerDamage + ItemDamage
 
