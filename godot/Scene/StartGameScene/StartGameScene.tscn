@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://dgh2cpd6snbu7"]
+[gd_scene load_steps=55 format=4 uid="uid://dgh2cpd6snbu7"]
 
 [ext_resource type="Script" uid="uid://d2jb5mrq0fyna" path="res://Scene/StartGameScene/start_game_scene.gd" id="1_6x3t6"]
 [ext_resource type="Texture2D" uid="uid://c5wn7ujx2qscu" path="res://assets/Image/Resources/Gold Mine/GoldMine_Destroyed.png" id="1_21bk3"]
@@ -19,13 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://dydr05ymq535b" path="res://assets/Image/Deco/06.png" id="15_6x3t6"]
 [ext_resource type="Texture2D" uid="uid://dm3jyqi1yc45n" path="res://assets/Image/Factions/Goblins/Buildings/Wood_House/Goblin_House_Destroyed.png" id="16_khpsf"]
 [ext_resource type="Texture2D" uid="uid://cp3ssuhqo82so" path="res://assets/Image/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="18_khpsf"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_21bk3"]
-font_size = 120
-outline_size = 20
-outline_color = Color(0.24313726, 0.5254902, 0.59607846, 1)
-shadow_size = 40
-shadow_color = Color(0.08627451, 0.10980392, 0.18039216, 1)
+[ext_resource type="Texture2D" uid="uid://dshu5thlwkh74" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides.png" id="22_3ws1e"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="22_ckawb"]
+[ext_resource type="Texture2D" uid="uid://ilaqimmd4up0" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="23_dmdy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbdh7"]
 resource_name = "Flat"
@@ -553,51 +549,21 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_21bk3"]
+font_size = 120
+outline_size = 20
+outline_color = Color(0.24313726, 0.5254902, 0.59607846, 1)
+shadow_size = 40
+shadow_color = Color(0.08627451, 0.10980392, 0.18039216, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ws1e"]
+font = ExtResource("22_ckawb")
+font_size = 80
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_6x3t6")
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-z_index = -1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -191.0
-offset_top = 149.0
-offset_right = 1.0
-offset_bottom = 277.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
-texture = ExtResource("1_21bk3")
-stretch_mode = 3
-
-[node name="RichTextLabel" type="Label" parent="."]
-modulate = Color(0.95596343, 0.9559633, 0.95596343, 1)
-z_index = 20
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -298.5
-offset_top = 26.0
-offset_right = 298.5
-offset_bottom = 165.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-text = "중앙통제던전"
-label_settings = SubResource("LabelSettings_21bk3")
-
-[node name="NinePatchRect" type="NinePatchRect" parent="RichTextLabel"]
-z_index = 10
-layout_mode = 0
-offset_left = -143.5
-offset_top = -11.0
-offset_right = 158.16669
-offset_bottom = 64.666664
-scale = Vector2(3, 3)
-texture = ExtResource("2_aevo6")
-patch_margin_left = 26
-patch_margin_top = 9
-patch_margin_right = 16
-patch_margin_bottom = 24
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -650,3 +616,177 @@ sprite_frames = SubResource("SpriteFrames_6yd0q")
 animation = &"idle"
 frame_progress = 0.8725981
 flip_h = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -191.0
+offset_top = 149.0
+offset_right = 1.0
+offset_bottom = 277.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_21bk3")
+stretch_mode = 3
+
+[node name="RichTextLabel" type="Label" parent="."]
+modulate = Color(0.95596343, 0.9559633, 0.95596343, 1)
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -298.5
+offset_top = 45.0
+offset_right = 298.5
+offset_bottom = 184.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "중앙통제던전"
+label_settings = SubResource("LabelSettings_21bk3")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="RichTextLabel"]
+z_index = 10
+z_as_relative = false
+layout_mode = 0
+offset_left = -143.5
+offset_top = -11.0
+offset_right = 158.16669
+offset_bottom = 64.666664
+scale = Vector2(3, 3)
+texture = ExtResource("2_aevo6")
+patch_margin_left = 26
+patch_margin_top = 9
+patch_margin_right = 16
+patch_margin_bottom = 24
+
+[node name="game_start" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -10.0
+offset_right = 96.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(96, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+keep_pressed_outside = true
+texture_normal = ExtResource("22_3ws1e")
+texture_pressed = ExtResource("23_dmdy4")
+stretch_mode = 0
+
+[node name="gmae_start_text" type="Label" parent="game_start"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -55.0
+offset_right = 240.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(240, 0)
+text = "게임시작"
+label_settings = SubResource("LabelSettings_3ws1e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 140.0
+offset_right = 96.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(96, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+keep_pressed_outside = true
+texture_normal = ExtResource("22_3ws1e")
+texture_pressed = ExtResource("23_dmdy4")
+stretch_mode = 0
+
+[node name="settings_text" type="Label" parent="settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -55.0
+offset_right = 240.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(240, 0)
+text = "설정"
+label_settings = SubResource("LabelSettings_3ws1e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 290.0
+offset_right = 96.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(96, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+keep_pressed_outside = true
+texture_normal = ExtResource("22_3ws1e")
+texture_pressed = ExtResource("23_dmdy4")
+stretch_mode = 0
+
+[node name="quit_text" type="Label" parent="quit"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -241.5
+offset_top = -55.0
+offset_right = 240.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(240, 0)
+text = "종료"
+label_settings = SubResource("LabelSettings_3ws1e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="game_start" to="." method="_on_game_start_button_down"]
+[connection signal="button_up" from="game_start" to="." method="_on_game_start_button_up"]
+[connection signal="button_down" from="settings" to="." method="_on_settings_button_down"]
+[connection signal="button_up" from="settings" to="." method="_on_settings_button_up"]
+[connection signal="button_down" from="quit" to="." method="_on_quit_button_down"]
+[connection signal="button_up" from="quit" to="." method="_on_quit_button_up"]

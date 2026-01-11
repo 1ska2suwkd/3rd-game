@@ -1,4 +1,6 @@
 Button
+MenuButton
+TextureButton
 NinePatchRect
 AnimatedSprite2D
 Node2D
@@ -10,6 +12,3 @@ PointLight2D
 LightOccluder2D
 AnimationPlayer
 Panel
-Sprite2D
-CollisionShape2D
-StaticBody2D

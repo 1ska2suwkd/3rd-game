@@ -177,6 +177,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
 pivot_offset = Vector2(96, 0)
+keep_pressed_outside = true
 texture_normal = ExtResource("5_cb2jk")
 texture_pressed = ExtResource("6_w3niy")
 
