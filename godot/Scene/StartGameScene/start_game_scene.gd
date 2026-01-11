@@ -10,6 +10,18 @@ func _ready() -> void:
 	$Node2D/AnimatedSprite2D2.play("idle")
 
 
+func _on_game_start_pressed() -> void:
+	SceneManager.change_scene("res://Scene/IntroScene/IntroScene.tscn")
+	
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+
+
 func button_down_text_setting(text_name):
 	text_name.modulate = Color(Color(1.0, 1.0, 1.0, 0.667))
 	text_name.position.y += 3
