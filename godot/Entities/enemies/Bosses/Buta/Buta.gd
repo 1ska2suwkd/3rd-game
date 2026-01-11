@@ -116,9 +116,10 @@ func die():
 	player_chase = false
 	velocity = Vector2.ZERO
 	
-	$Component/HitboxComponent.collision_layer2 = false
 	
 	$cooldown.stop()
 	$windup.stop()
 	
 	$AnimatedSprite2D.play("dead")
+	
+	$Component/HitboxComponent.collision_layer = false
