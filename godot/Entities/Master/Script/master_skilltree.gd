@@ -5,14 +5,14 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	if MasterSkill.Crescent_Slash:
+	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
 		Check.show()
 	else: 
 		Check.hide()
 
 
 func _on_buy_skill_pressed() -> void:
-	if PlayerStat.gold >= 10 and not MasterSkill.Crescent_Slash:
+	if PlayerStat.gold >= 10 and not PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
 		PlayerStat.set_gold(-10)
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		EventBus.update_inv_ui.emit()

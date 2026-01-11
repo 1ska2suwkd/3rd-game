@@ -12,6 +12,7 @@ var _dash_t := 0.0
 var dash_speed = 500
 
 @export var player: Node2D
+@export var death_component: DeathComponent
 
 @onready var anim = $AnimatedSprite2D.animation
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
@@ -22,6 +23,7 @@ func _ready():
 	$cooldown.start()
 	healthbar.init_health(ButaStat.max_hp)
 	
+	death_component._die.connect(die)
 	
 func _physics_process(_delta: float) -> void:
 	if dead: return
@@ -113,6 +115,8 @@ func die():
 	is_dash = false
 	player_chase = false
 	velocity = Vector2.ZERO
+	
+	$Component/HitboxComponent.collision_layer2 = false
 	
 	$cooldown.stop()
 	$windup.stop()

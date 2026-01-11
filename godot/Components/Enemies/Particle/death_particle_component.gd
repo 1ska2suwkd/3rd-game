@@ -13,3 +13,5 @@ func create_particle():
 	ysort.add_child(instance)
 	instance.emitting = true
 	instance.global_position = owner.global_position
+	
+	owner.queue_free()

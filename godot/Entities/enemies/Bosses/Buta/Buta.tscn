@@ -437,7 +437,7 @@ height = 152.0
 radius = 124.0
 height = 500.0
 
-[node name="백성우" type="CharacterBody2D" node_paths=PackedStringArray("player") groups=["enemy"]]
+[node name="백성우" type="CharacterBody2D" node_paths=PackedStringArray("player", "death_component") groups=["enemy"]]
 position = Vector2(1, 0)
 collision_mask = 67
 motion_mode = 1
@@ -445,6 +445,7 @@ wall_min_slide_angle = 0.017453292
 script = ExtResource("1_ofsxj")
 ButaStat = ExtResource("2_r6lm1")
 player = NodePath("AnimatedSprite2D")
+death_component = NodePath("Component/DeathComponent")
 
 [node name="Component" type="Node2D" parent="."]
 

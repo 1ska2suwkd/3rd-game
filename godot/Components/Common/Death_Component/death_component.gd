@@ -11,4 +11,3 @@ func die():
 	EventBus.enemy_die.emit()
 	_die.emit()
 	
-	owner.call_deferred("queue_free")
