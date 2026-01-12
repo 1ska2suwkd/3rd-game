@@ -1,4 +1,6 @@
 Node2D
+CollisionShape2D
+Area2D
 AnimatedSprite2D
 AnimationPlayer
 TileMapLayer
@@ -10,5 +12,3 @@ Label
 RichTextLabel
 TextureRect
 CanvasLayer
-PointLight2D
-LightOccluder2D

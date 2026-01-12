@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://2khegxjt2sge"]
+[gd_scene load_steps=96 format=3 uid="uid://2khegxjt2sge"]
 
 [ext_resource type="Texture2D" uid="uid://brjwq3qwttxi" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://sijoxyauulai" path="res://Entities/player/player.gd" id="1_onrkg"]
@@ -590,6 +590,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3hes"]
+radius = 100.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yllr7"]
 radius = 13.0
 height = 34.481186
@@ -632,6 +635,12 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
 animation = &"idle"
 offset = Vector2(0, -20)
+
+[node name="AttackRange" type="Area2D" parent="."]
+monitoring = false
+
+[node name="AttackRangeCollision" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_v3hes")
 
 [node name="HitBoxArea" type="Area2D" parent="."]
 collision_layer = 2

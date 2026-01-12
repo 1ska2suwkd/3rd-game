@@ -22,11 +22,15 @@ const SLASH_DOWN = preload("res://projectiles/Crescent_Slash/down_Crescent_Slash
 const SLASH_LEFT = preload("res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn")
 const SLASH_RIGHT = preload("res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn")
 
+const SPEER = preload("res://projectiles/Speer/speer.tscn")
+
 @onready var INVENTORY_UI = $UI/InventoryUi
 @onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
 @onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
+@onready var attack_range_collision: CollisionShape2D = $AttackRange/AttackRangeCollision
+
 
 #@export var player_inv = preload("res://Resources/Inventory/Player_Inventory.tres")
 
@@ -40,7 +44,8 @@ func _ready():
 	if Crescent_Slash:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		EventBus.emit_signal("update_inv_ui")
-
+	
+	attack_range_collision.scale *= PlayerStat.TotalAttackRange
 
 	#MasterSkill.Crescent_Slash = true # 임시
 
@@ -126,6 +131,11 @@ func _do_attack():
 	PlayerStat.attacking = true
 	var mouse_pos = get_global_mouse_position()
 	var to_mouse = mouse_pos - global_position
+	
+	var speer_instance = SPEER.instantiate()
+	speer_instance.global_position = mouse_pos
+	
+	get_tree().current_scene.add_child(speer_instance)
 	
 	if abs(to_mouse.x) > abs(to_mouse.y):
 		attackDir = "right" if to_mouse.x > 0 else "left"

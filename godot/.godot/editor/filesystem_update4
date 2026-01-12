@@ -3,3 +3,5 @@ res://TileMap/Water_deco.tres
 res://UI/Outline.tres
 res://projectiles/Speer/speer.tscn
 res://projectiles/Speer/speer.gd
+res://Entities/player/player.tscn
+res://Entities/player/player.gd
