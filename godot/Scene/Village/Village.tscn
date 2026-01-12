@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://br2w02siuqlt"]
+[gd_scene load_steps=72 format=4 uid="uid://br2w02siuqlt"]
 
 [ext_resource type="Script" uid="uid://dhhqce60ww1e3" path="res://Scene/Village/Village.gd" id="1_1fguw"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_tke64"]
@@ -29,6 +29,11 @@
 [ext_resource type="Texture2D" uid="uid://rfkixmfsti56" path="res://assets/Image/Deco/10.png" id="25_ri4fu"]
 [ext_resource type="Texture2D" uid="uid://bre3rl1nxq6at" path="res://assets/Image/Factions/Knights/Buildings/Castle/Shadow.png" id="26_p4s3d"]
 [ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Entities/Master/master.tscn" id="30_iyi5a"]
+[ext_resource type="Texture2D" uid="uid://b3sjbhjraf58f" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_02.png" id="30_xfmo7"]
+[ext_resource type="Texture2D" uid="uid://dutu33cnu6dp2" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_05.png" id="31_ontcc"]
+[ext_resource type="Texture2D" uid="uid://1lbggp24xil8" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_07.png" id="33_o0fjy"]
+[ext_resource type="Texture2D" uid="uid://d3xen3sh4qovw" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_03.png" id="34_8ynrw"]
+[ext_resource type="Texture2D" uid="uid://c6kxta0ih5cqm" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/Clouds_01.png" id="34_77nxw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dw050"]
 resource_name = "Collision_water"
@@ -53,7 +58,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dw050")
 sources/1 = SubResource("TileSetAtlasSource_1fguw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk6ix"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77nxw"]
 texture = ExtResource("3_yi20g")
 texture_region_size = Vector2i(192, 192)
 0:0/animation_columns = 8
@@ -70,7 +75,7 @@ texture_region_size = Vector2i(192, 192)
 
 [sub_resource type="TileSet" id="TileSet_apmjc"]
 tile_size = Vector2i(64, 64)
-sources/3 = SubResource("TileSetAtlasSource_hk6ix")
+sources/3 = SubResource("TileSetAtlasSource_77nxw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgrc2"]
 texture = ExtResource("3_hk6ix")
@@ -688,6 +693,76 @@ shape = SubResource("CapsuleShape2D_p4s3d")
 
 [node name="Master" parent="Ysort" instance=ExtResource("30_iyi5a")]
 position = Vector2(-1175, 138)
+
+[node name="Clouds" type="Node2D" parent="."]
+
+[node name="Clouds04" type="Sprite2D" parent="Clouds"]
+position = Vector2(723, -899)
+texture = ExtResource("34_77nxw")
+
+[node name="Clouds05" type="Sprite2D" parent="Clouds"]
+position = Vector2(-1118, -1255)
+texture = ExtResource("30_xfmo7")
+
+[node name="Clouds02" type="Sprite2D" parent="Clouds"]
+position = Vector2(-624, -941)
+texture = ExtResource("30_xfmo7")
+
+[node name="Clouds13" type="Sprite2D" parent="Clouds"]
+position = Vector2(-1406, -873)
+texture = ExtResource("30_xfmo7")
+
+[node name="Clouds03" type="Sprite2D" parent="Clouds"]
+position = Vector2(786, -677)
+texture = ExtResource("30_xfmo7")
+
+[node name="Clouds07" type="Sprite2D" parent="Clouds"]
+position = Vector2(1089, -570)
+texture = ExtResource("31_ontcc")
+
+[node name="Clouds08" type="Sprite2D" parent="Clouds"]
+position = Vector2(657, -1240)
+texture = ExtResource("31_ontcc")
+
+[node name="Clouds09" type="Sprite2D" parent="Clouds"]
+position = Vector2(-862, -822)
+texture = ExtResource("31_ontcc")
+
+[node name="Clouds10" type="Sprite2D" parent="Clouds"]
+position = Vector2(-1363, -993)
+texture = ExtResource("31_ontcc")
+
+[node name="Clouds15" type="Sprite2D" parent="Clouds"]
+position = Vector2(-524, -1433)
+texture = ExtResource("31_ontcc")
+
+[node name="Clouds11" type="Sprite2D" parent="Clouds"]
+position = Vector2(-707, -728)
+texture = ExtResource("33_o0fjy")
+
+[node name="Clouds16" type="Sprite2D" parent="Clouds"]
+position = Vector2(-392, -1355)
+texture = ExtResource("33_o0fjy")
+
+[node name="Clouds12" type="Sprite2D" parent="Clouds"]
+position = Vector2(802, -1154)
+texture = ExtResource("34_8ynrw")
+
+[node name="Clouds17" type="Sprite2D" parent="Clouds"]
+position = Vector2(-587, -1347)
+texture = ExtResource("34_8ynrw")
+
+[node name="Clouds18" type="Sprite2D" parent="Clouds"]
+position = Vector2(366, -1510)
+texture = ExtResource("30_xfmo7")
+
+[node name="Clouds01" type="Sprite2D" parent="Clouds"]
+position = Vector2(74, -1605)
+texture = ExtResource("34_77nxw")
+
+[node name="Clouds06" type="Sprite2D" parent="Clouds"]
+position = Vector2(1137, -1491)
+texture = ExtResource("34_77nxw")
 
 [connection signal="body_entered" from="Dungeon/Enter_ready" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dungeon/Enter_ready" to="." method="_on_area_2d_body_exited"]
