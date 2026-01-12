@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=4 uid="uid://u4mj3g2udqas"]
+[gd_scene load_steps=162 format=4 uid="uid://u4mj3g2udqas"]
 
 [ext_resource type="Script" uid="uid://bfg4othh08fox" path="res://Scene/TutorialScene/Script/tutorial_scene.gd" id="1_ri83b"]
 [ext_resource type="Texture2D" uid="uid://by3sibgm10qre" path="res://assets/Image/Terrain/Water/Water.png" id="1_wkfk2"]
@@ -52,10 +52,6 @@
 [ext_resource type="Texture2D" uid="uid://yianeqis5bad" path="res://assets/Image/Resources/Gold Mine/Dungeon.png" id="28_c4q8n"]
 [ext_resource type="Texture2D" uid="uid://c0lgbbiji2buy" path="res://assets/Image/Resources/Gold Mine/GoldMine_Active.png" id="29_e7f3h"]
 [ext_resource type="PackedScene" uid="uid://b4nl6h3rgkbl1" path="res://Object/Box.tscn" id="43_k70om"]
-[ext_resource type="SpriteFrames" uid="uid://b7m007u24em4t" path="res://Animation/Bushe.tres" id="53_ad16h"]
-[ext_resource type="SpriteFrames" uid="uid://pxscalcugvur" path="res://Animation/Particle Fx.tres" id="54_iqbe1"]
-[ext_resource type="SpriteFrames" uid="uid://rttf5txuq6s4" path="res://Animation/Water_Rocks.tres" id="55_bk4sg"]
-[ext_resource type="TileSet" uid="uid://dc3twpemqh3c5" path="res://TileMap/Water_deco.tres" id="56_yqjx7"]
 
 [sub_resource type="Animation" id="Animation_m0qp3"]
 resource_name = "CameraMove"
@@ -3652,28 +3648,6 @@ position = Vector2(3840, -865)
 position = Vector2(0, 55)
 rotation = -1.5707964
 shape = SubResource("RectangleShape2D_ub4mc")
-
-[node name="bushe" type="AnimatedSprite2D" parent="."]
-position = Vector2(493, -79)
-sprite_frames = ExtResource("53_ad16h")
-animation = &"Bushe4"
-frame_progress = 0.34827742
-
-[node name="particle fx" type="AnimatedSprite2D" parent="."]
-position = Vector2(-434, -347)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("54_iqbe1")
-animation = &"explosion2"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-262, -180)
-sprite_frames = ExtResource("55_bk4sg")
-animation = &"Water_Rocks1"
-frame_progress = 0.03821026
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD4////BgAAAAAAAAD3////BAAAAAAAAAD3/wAAAQAAAAAAAAA=")
-tile_set = ExtResource("56_yqjx7")
 
 [connection signal="body_entered" from="Trigger/Q1/Q1_finished" to="." method="_on_q_1_finished_body_entered"]
 [connection signal="body_entered" from="Trigger/Q2/Q2_start" to="." method="_on_q_2_start_body_entered"]

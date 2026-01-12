@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="1_lrl4c"]
 [ext_resource type="Texture2D" uid="uid://coqypbnlh4yoo" path="res://assets/Image/UI/Icons/slash_icon.png" id="2_rfvd1"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_1dgr8"]
-[ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="4_ipbgu"]
 [ext_resource type="Texture2D" uid="uid://dshu5thlwkh74" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides.png" id="5_cb2jk"]
+[ext_resource type="Texture2D" uid="uid://68eug8cjicig" path="res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_03.png" id="5_ds1gf"]
 [ext_resource type="Texture2D" uid="uid://ilaqimmd4up0" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="6_w3niy"]
 [ext_resource type="Texture2D" uid="uid://0bvcg5qjn0hv" path="res://assets/Image/UI/Icons/check.png" id="7_w3niy"]
 [ext_resource type="PackedScene" uid="uid://b5grtfllhwruo" path="res://UI/exit_button.tscn" id="9_jwj7w"]
@@ -152,15 +152,14 @@ size_flags_horizontal = 0
 alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Panel2/HBoxContainer4"]
-modulate = Color(1, 0.8352941, 0, 1)
 layout_mode = 2
-texture = ExtResource("4_ipbgu")
+texture = ExtResource("5_ds1gf")
 expand_mode = 2
 
 [node name="prise" type="Label" parent="Panel2/HBoxContainer4"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "10"
+text = "5"
 label_settings = SubResource("LabelSettings_lc638")
 
 [node name="Buy_Skill" type="TextureButton" parent="."]

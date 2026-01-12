@@ -8,10 +8,10 @@
 [ext_resource type="Script" uid="uid://d3hkbwoic0hox" path="res://UI/Script/player_stat_ui.gd" id="5_8t03j"]
 [ext_resource type="PackedScene" uid="uid://cck6ejbbut60o" path="res://UI/Inventory/Inventory_UI.tscn" id="6_ebec5"]
 [ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="7_rgyib"]
-[ext_resource type="Texture2D" uid="uid://b4fl0y7yn1uto" path="res://assets/Image/UI/Icons/attack_speed_icon.png" id="8_8t03j"]
-[ext_resource type="Texture2D" uid="uid://bqgbfmivdqvyx" path="res://assets/Image/UI/Icons/icon_sword.png" id="8_hg6s5"]
-[ext_resource type="Texture2D" uid="uid://dvhkk4t0je8nd" path="res://assets/Image/UI/Icons/canon_2.png" id="9_2ieo8"]
-[ext_resource type="Texture2D" uid="uid://c81ogq2mdtnxy" path="res://assets/Image/UI/Icons/icon_coin.png" id="9_hg6s5"]
+[ext_resource type="Texture2D" uid="uid://c10mpwm2nsl6g" path="res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_05.png" id="7_v3hes"]
+[ext_resource type="Texture2D" uid="uid://df445dbm2m52e" path="res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/attack_speedt.png" id="9_v3hes"]
+[ext_resource type="Texture2D" uid="uid://yvnx1eblejc2" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Archer/Arrow.png" id="10_5udp2"]
+[ext_resource type="Texture2D" uid="uid://68eug8cjicig" path="res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_03.png" id="11_pgwtq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
 atlas = ExtResource("2_g1dw6")
@@ -721,7 +721,7 @@ size_flags_horizontal = 0
 
 [node name="TextureRect2" type="TextureRect" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
-texture = ExtResource("8_hg6s5")
+texture = ExtResource("7_v3hes")
 expand_mode = 2
 
 [node name="Damage" type="Label" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer3"]
@@ -737,7 +737,7 @@ size_flags_horizontal = 0
 
 [node name="TextureRect2" type="TextureRect" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer4"]
 layout_mode = 2
-texture = ExtResource("8_8t03j")
+texture = ExtResource("9_v3hes")
 expand_mode = 2
 
 [node name="attack_speed" type="Label" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer4"]
@@ -753,7 +753,7 @@ size_flags_horizontal = 0
 
 [node name="TextureRect2" type="TextureRect" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer5"]
 layout_mode = 2
-texture = ExtResource("9_2ieo8")
+texture = ExtResource("10_5udp2")
 expand_mode = 2
 
 [node name="range" type="Label" parent="UI/PlayerUI/StatUI/VBoxContainer2/HBoxContainer5"]
@@ -773,9 +773,8 @@ scale = Vector2(1.5, 1.5)
 size_flags_horizontal = 0
 
 [node name="TextureRect2" type="TextureRect" parent="UI/PlayerUI/StatUI/HBoxContainer4"]
-modulate = Color(1, 0.8352941, 0, 1)
 layout_mode = 2
-texture = ExtResource("9_hg6s5")
+texture = ExtResource("11_pgwtq")
 expand_mode = 2
 
 [node name="current_gold" type="Label" parent="UI/PlayerUI/StatUI/HBoxContainer4"]

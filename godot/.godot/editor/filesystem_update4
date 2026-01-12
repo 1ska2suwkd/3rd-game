@@ -6,3 +6,6 @@ res://Animation/Particle Fx.tres
 res://Scene/TutorialScene/Script/tutorial_scene.gd
 res://Scene/StartGameScene/StartGameScene.tscn
 res://Scene/StartGameScene/start_game_scene.gd
+res://Entities/player/player.tscn
+res://Entities/Master/Master_Skilltree.tscn
+res://Entities/Master/Script/master_skilltree.gd

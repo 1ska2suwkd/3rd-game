@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var Check = $Check
 @onready var buy_text = $Buy_Skill/Buy_text
 
+const CRESCENTSLASH_PRISE = 5
+
 
 func _ready() -> void:
 	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
@@ -12,8 +14,8 @@ func _ready() -> void:
 
 
 func _on_buy_skill_pressed() -> void:
-	if PlayerStat.gold >= 10 and not PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
-		PlayerStat.set_gold(-10)
+	if PlayerStat.gold >= CRESCENTSLASH_PRISE and not PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
+		PlayerStat.set_gold(-CRESCENTSLASH_PRISE)
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		EventBus.update_inv_ui.emit()
 		Check.show()
