@@ -1,14 +1,14 @@
+Node2D
+AnimationPlayer
+TileMapLayer
 AnimatedSprite2D
 Button
 MenuButton
 TextureButton
 NinePatchRect
-Node2D
 Label
 RichTextLabel
 TextureRect
 CanvasLayer
 PointLight2D
 LightOccluder2D
-AnimationPlayer
-Panel

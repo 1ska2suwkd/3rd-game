@@ -8,7 +8,7 @@ extends CanvasLayer
 func _ready() -> void:
 	$Node2D/AnimatedSprite2D.play("idle")
 	$Node2D/AnimatedSprite2D2.play("idle")
-
+	$Node2D/Clouds/AnimationPlayer.play("move_clouds")
 
 func _on_game_start_pressed() -> void:
 	SceneManager.change_scene("res://Scene/IntroScene/IntroScene.tscn")

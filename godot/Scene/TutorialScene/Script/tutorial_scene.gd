@@ -18,7 +18,7 @@ var QuestQueue = ["Q1", "Q2", "Q3"]
 
 
 func _ready() -> void:
-	CameraAnimation.play("SceneStart")
+	#CameraAnimation.play("SceneStart")
 	PlayerUI.visible = false
 	## 렉을 유발하는 파티클들을 리스트업
 	#var particles_to_cache = [
@@ -41,7 +41,7 @@ func _ready() -> void:
 	$Ysort/player.global_position.y = 16
 		
 	
-	#StartAnimationCamera.queue_free()
+	StartAnimationCamera.queue_free()
 		
 	
 	QuestText.text = "1. 신보기를 움직여라" #첫번째 퀘스트 내용으로 초기화
@@ -49,12 +49,12 @@ func _ready() -> void:
 	var master_textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "FinishTextbox"))
 	
-	CameraAnimation.play("SceneStart")
-	await CameraAnimation.animation_finished
-	CameraAnimation.play("CameraMove")
-	await CameraAnimation.animation_finished
-	StartAnimationCamera.queue_free()
-	
+	#CameraAnimation.play("SceneStart")
+	#await CameraAnimation.animation_finished
+	#CameraAnimation.play("CameraMove")
+	#await CameraAnimation.animation_finished
+	#StartAnimationCamera.queue_free()
+	#
 	$StartScene.queue_free()
 	master_textbox.queue_text("신보기! 2주 동안 고생 많았어")
 	master_textbox.queue_text("이제 마음껏 혼자 다녀도 돼")

@@ -1,3 +1,8 @@
 res://Entities/enemies/Common/Shaman/Shaman.tscn
 res://UI/Outline.tres
 res://Entities/enemies/Common/Shaman/Shaman.gd
+res://Scene/TutorialScene/TutorialScene.tscn
+res://Animation/Particle Fx.tres
+res://Scene/TutorialScene/Script/tutorial_scene.gd
+res://Scene/StartGameScene/StartGameScene.tscn
+res://Scene/StartGameScene/start_game_scene.gd
