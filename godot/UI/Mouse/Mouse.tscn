@@ -9,12 +9,10 @@ layer = 100
 script = ExtResource("1_7m5f8")
 
 [node name="white_mouse" type="Sprite2D" parent="."]
-scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_ek1j4")
-offset = Vector2(8, 13)
+offset = Vector2(10, 15)
 
 [node name="yellow_mouse" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_7m5f8")
 offset = Vector2(8, 13)

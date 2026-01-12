@@ -132,11 +132,6 @@ func _do_attack():
 	var mouse_pos = get_global_mouse_position()
 	var to_mouse = mouse_pos - global_position
 	
-	var speer_instance = SPEER.instantiate()
-	speer_instance.global_position = mouse_pos
-	
-	get_tree().current_scene.add_child(speer_instance)
-	
 	if abs(to_mouse.x) > abs(to_mouse.y):
 		attackDir = "right" if to_mouse.x > 0 else "left"
 	else:
@@ -169,6 +164,18 @@ func spawn_crescent_slash(scene_resource: PackedScene, direction):
 		else:
 			push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
 			get_tree().current_scene.add_child(projectile)
+
+
+func spawn_speer():
+	var ysort = get_tree().current_scene.get_node("Ysort")
+	var mouse_pos = get_global_mouse_position()
+	
+	var speer_instance = SPEER.instantiate()
+	speer_instance.global_position = mouse_pos
+	
+	ysort.add_child(speer_instance)
+	
+
 			
 func _on_animated_sprite_2d_frame_changed():
 	var anim = $AnimatedSprite2D.animation
@@ -178,24 +185,28 @@ func _on_animated_sprite_2d_frame_changed():
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
 			spawn_crescent_slash(SLASH_UP, Vector2(0,-1))
+			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
 			spawn_crescent_slash(SLASH_DOWN, Vector2(0,1))
+			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
 			spawn_crescent_slash(SLASH_LEFT, Vector2(-1,0))
+			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
 			spawn_crescent_slash(SLASH_RIGHT, Vector2(1,0))
+			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
 
