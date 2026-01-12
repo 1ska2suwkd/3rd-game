@@ -1,7 +1,7 @@
-res://Scene/Dungeon/Room/Room0.tscn
+res://projectiles/Speer/speer.tscn
 res://TileMap/Water_deco.tres
 res://UI/Outline.tres
-res://projectiles/Speer/speer.tscn
-res://projectiles/Speer/speer.gd
-res://Entities/player/player.tscn
-res://Entities/player/player.gd
+res://UI/Mouse/Mouse.tscn
+res://UI/Mouse/mouse.gd
+res://Scene/Dungeon/Room/Stage1_chest_Room.tscn
+res://UI/Inventory/Inventory_slot_UI.tscn

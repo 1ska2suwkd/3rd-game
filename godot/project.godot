@@ -22,6 +22,7 @@ EventBus="*res://Autoload/SceneManager/event_bus.gd"
 AllItem="*res://Autoload/all_item.gd"
 global="*res://Autoload/global.gd"
 SceneManager="*res://Autoload/SceneManager/Scene_Manager.tscn"
+Mouse="*res://UI/Mouse/Mouse.tscn"
 
 [debug]
 
@@ -32,7 +33,6 @@ gdscript/warnings/unused_signal=0
 window/size/viewport_width=1740
 window/size/viewport_height=980
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://yojvp06umfqn"
 
 [global_group]

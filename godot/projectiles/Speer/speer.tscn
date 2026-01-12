@@ -200,28 +200,30 @@ animations = [{
 }]
 
 [node name="Speer" type="Node2D"]
-position = Vector2(127, 0)
+position = Vector2(0, -37)
 scale = Vector2(1.2, 1.2)
 script = ExtResource("1_cgr72")
 
 [node name="speer_animation" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Speer2")
+root_node = NodePath("../sprite/Speer2")
 libraries = {
 &"": SubResource("AnimationLibrary_nvsso")
 }
 autoplay = "spawn_speer"
 
-[node name="Speer2" type="Sprite2D" parent="."]
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="Speer2" type="Sprite2D" parent="sprite"]
 z_index = 1
-position = Vector2(3.178914e-05, -126.33331)
+position = Vector2(3.0517578e-05, -153.83322)
 rotation = -3.1415925
 texture = ExtResource("1_rfl1w")
 offset = Vector2(-1, -79)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sprite"]
 modulate = Color(5.1105056, 5.1105056, 5.1105056, 1)
 z_index = -1
-position = Vector2(3.1789143e-05, -126.33331)
+position = Vector2(3.0517578e-05, -153.83331)
 rotation = -3.1415925
 scale = Vector2(1.2880684, 3.7742324)
 sprite_frames = SubResource("SpriteFrames_o4vcm")
