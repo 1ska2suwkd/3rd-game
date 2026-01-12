@@ -10,3 +10,4 @@ res://Entities/player/player.tscn
 res://Entities/Master/Master_Skilltree.tscn
 res://Entities/Master/Script/master_skilltree.gd
 res://Scene/Village/Village.tscn
+res://Scene/Dungeon/Room/Room0.tscn

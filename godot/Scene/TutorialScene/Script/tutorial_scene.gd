@@ -45,8 +45,8 @@ func _ready() -> void:
 	var master_textbox = master_textbox_scene.instantiate()
 	EventBus.connect("EndTextBox", Callable(self, "FinishTextbox"))
 	
-	#CameraAnimation.play("SceneStart")
-	#await CameraAnimation.animation_finished
+	CameraAnimation.play("SceneStart")
+	await CameraAnimation.animation_finished
 	CameraAnimation.play("CameraMove")
 	await CameraAnimation.animation_finished
 	StartAnimationCamera.queue_free()
