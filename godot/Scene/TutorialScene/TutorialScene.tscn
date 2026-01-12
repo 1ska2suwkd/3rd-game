@@ -3247,6 +3247,7 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_jknon")
 }
+autoplay = "SceneStart"
 
 [node name="StartAnimationCamera" type="Camera2D" parent="SceneStart"]
 position = Vector2(2243, -4087)
@@ -3263,6 +3264,18 @@ texture = ExtResource("55_iqbe1")
 
 [node name="Clouds03" type="Sprite2D" parent="SceneStart/Clouds"]
 position = Vector2(-260, -1354)
+texture = ExtResource("58_t0q43")
+
+[node name="Clouds23" type="Sprite2D" parent="SceneStart/Clouds"]
+position = Vector2(1889, -704)
+texture = ExtResource("54_ad16h")
+
+[node name="Clouds24" type="Sprite2D" parent="SceneStart/Clouds"]
+position = Vector2(2134, -559)
+texture = ExtResource("55_iqbe1")
+
+[node name="Clouds25" type="Sprite2D" parent="SceneStart/Clouds"]
+position = Vector2(1789, -579)
 texture = ExtResource("58_t0q43")
 
 [node name="Clouds20" type="Sprite2D" parent="SceneStart/Clouds"]
