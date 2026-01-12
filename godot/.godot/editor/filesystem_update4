@@ -1,13 +1,5 @@
-res://Entities/enemies/Common/Shaman/Shaman.tscn
-res://UI/Outline.tres
-res://Entities/enemies/Common/Shaman/Shaman.gd
-res://Scene/TutorialScene/TutorialScene.tscn
-res://Animation/Particle Fx.tres
-res://Scene/TutorialScene/Script/tutorial_scene.gd
-res://Scene/StartGameScene/StartGameScene.tscn
-res://Scene/StartGameScene/start_game_scene.gd
-res://Entities/player/player.tscn
-res://Entities/Master/Master_Skilltree.tscn
-res://Entities/Master/Script/master_skilltree.gd
-res://Scene/Village/Village.tscn
 res://Scene/Dungeon/Room/Room0.tscn
+res://TileMap/Water_deco.tres
+res://UI/Outline.tres
+res://projectiles/Speer/speer.tscn
+res://projectiles/Speer/speer.gd
