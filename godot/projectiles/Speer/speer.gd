@@ -5,4 +5,4 @@ extends Node2D
 @onready var speer: Node2D = $"."
 
 func _ready() -> void:
-	speer.rotation_degrees = randf_range(-60, 60)
+	speer.rotation_degrees += randf_range(-10, 10)

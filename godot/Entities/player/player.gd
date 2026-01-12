@@ -74,6 +74,10 @@ func take_damage(p_damage:int):
 	if PlayerStat.hp <= 0:
 		is_dead()
 		
+const MAX_ANGLE = 45.0
+const MAX_VELOCITY = 2000.0 
+const SMOOTH_SPEED = 10.0 # 숫자가 클수록 반응이 빠름
+var current_speer_angle = 0.0
 		
 func _process(_delta):
 	if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
@@ -81,6 +85,21 @@ func _process(_delta):
 	else:
 		$AnimatedSprite2D.speed_scale = PlayerStat.TotalAttackSpeed
 	
+	
+	# 1. 마우스의 현재 속도(Vector2)를 가져옵니다.
+	var mouse_velocity = Input.get_last_mouse_velocity()
+	
+	# 2. X축 속도를 이용해 목표 각도 계산
+	# 왼쪽(-)으로 가면 양수(+) 각도가 나와야 하므로 - 부호 붙임
+	var target_angle = -(mouse_velocity.x / MAX_VELOCITY) * MAX_ANGLE
+	
+	# 3. 각도 제한
+	target_angle = clamp(target_angle, -MAX_ANGLE, MAX_ANGLE)
+	
+	# 4. 부드러운 움직임 (Lerp)
+	# 마우스가 멈추면 velocity가 자동으로 0이 되므로, 알아서 0도로 돌아옵니다.
+	# 하지만 너무 확확 바뀌지 않게 lerp로 부드럽게 따라가게 해줍니다.
+	current_speer_angle = lerp(current_speer_angle, target_angle, _delta * SMOOTH_SPEED)
 	
 func _physics_process(_delta):
 	if dead: 
@@ -171,6 +190,7 @@ func spawn_speer():
 	var mouse_pos = get_global_mouse_position()
 	
 	var speer_instance = SPEER.instantiate()
+	speer_instance.rotation_degrees = current_speer_angle
 	speer_instance.global_position = mouse_pos
 	
 	ysort.add_child(speer_instance)
