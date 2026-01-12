@@ -1,8 +1,8 @@
+AnimatedSprite2D
 Button
 MenuButton
 TextureButton
 NinePatchRect
-AnimatedSprite2D
 Node2D
 Label
 RichTextLabel

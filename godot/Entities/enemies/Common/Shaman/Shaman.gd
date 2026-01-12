@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var player: CharacterBody2D
 @onready var movement_component = $Components/MovementComponent
 @onready var detection_component = $Components/DetectionComponent
+@onready var contact_damage_component: ContactDamageComponent = $Components/ContactDamageComponent
+@onready var health_component: HealthComponent = $Components/HealthComponent
 
 var is_attack = false
 
@@ -11,8 +13,8 @@ const PATH_UPDATE_INTERVAL := 0.15
 const PLAYER_MOVE_THRESHOLD := 24.0 # 플레이어가 이만큼 이동하면 강제 갱신
 
 func _ready() -> void:
-	$Components/ContactDamageComponent.stats = ShamanStats
-	$Components/HealthComponent.stats = ShamanStats
+	contact_damage_component.stats = ShamanStats
+	health_component.stats = ShamanStats
 	movement_component.stats = ShamanStats
 	
 	randomize()
