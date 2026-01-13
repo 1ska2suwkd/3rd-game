@@ -5,6 +5,7 @@ enum ItemGrade {
 	COMMON,
 	RARE,
 	EPIC,
+	UNIQUE,
 	LEGENDARY
 }
 

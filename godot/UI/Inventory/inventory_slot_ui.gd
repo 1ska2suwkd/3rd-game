@@ -29,6 +29,8 @@ func update(item: Item):
 				item_color_code = "[color=green]"
 			item.ItemGrade.EPIC:
 				item_color_code = "[color=purple]"
+			item.ItemGrade.UNIQUE:
+				item_color_code = "[color=yellow]"
 			item.ItemGrade.LEGENDARY:
 				item_color_code = "[color=red]"
 				
