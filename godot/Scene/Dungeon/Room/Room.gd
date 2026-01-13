@@ -53,7 +53,7 @@ func _on_all_enemies_cleared():
 	$EastDoor/Door_animation.play("open")
 	$WestDoor/Door_animation.play("open")
 	
-	$Door_locked/CollisionPolygon2D.set_deferred("disabled", true)
+	#$Door_locked/CollisionPolygon2D.set_deferred("disabled", true)
 	
 
 func change_room(direction):

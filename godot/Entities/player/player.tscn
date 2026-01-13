@@ -637,6 +637,7 @@ animation = &"idle"
 offset = Vector2(0, -20)
 
 [node name="AttackRange" type="Area2D" parent="."]
+visible = false
 monitoring = false
 
 [node name="AttackRangeCollision" type="CollisionShape2D" parent="AttackRange"]
