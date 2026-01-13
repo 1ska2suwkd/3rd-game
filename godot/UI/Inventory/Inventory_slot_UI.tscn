@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bjeq2gfi4hunq"]
+[gd_scene load_steps=9 format=3 uid="uid://bjeq2gfi4hunq"]
 
 [ext_resource type="Script" uid="uid://dola0eak4m1hq" path="res://UI/Inventory/inventory_slot_ui.gd" id="1_0jkrt"]
 [ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
-[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="4_t8dft"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fknvb"]
 bg_color = Color(0.8, 0.72156864, 0.5529412, 1)
@@ -37,19 +36,20 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="LabelSettings" id="LabelSettings_t8dft"]
-font = ExtResource("4_t8dft")
-font_size = 40
-font_color = Color(1, 1, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtguw"]
+bg_color = Color(0.1254902, 0.11764706, 0.16862746, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
-[sub_resource type="LabelSettings" id="LabelSettings_fknvb"]
-font = ExtResource("4_t8dft")
-font_size = 40
-
-[sub_resource type="LabelSettings" id="LabelSettings_vdi84"]
-font = ExtResource("4_t8dft")
-font_size = 40
-font_color = Color(1, 0, 0, 1)
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xtguw"]
+color = Color(0.2627451, 0.2509804, 0.33333334, 1)
+thickness = 5
 
 [node name="InventorySlotUi" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -92,7 +92,6 @@ offset_bottom = 108.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0jkrt")
 
 [node name="Panel2" type="Panel" parent="."]
-visible = false
 z_index = 40
 layout_mode = 1
 anchors_preset = 8
@@ -137,32 +136,53 @@ offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 10
 
-[node name="name" type="Label" parent="Panel2/Panel/HBoxContainer"]
+[node name="Panel" type="PanelContainer" parent="Panel2/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtguw")
+
+[node name="name" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer/Panel"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
 text = "item name"
-label_settings = SubResource("LabelSettings_t8dft")
-autowrap_mode = 1
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
 
-[node name="descript" type="Label" parent="Panel2/Panel/HBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Panel2/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+theme_override_styles/separator = SubResource("StyleBoxLine_xtguw")
+
+[node name="descript" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
 text = "item story"
-label_settings = SubResource("LabelSettings_fknvb")
+fit_content = true
+scroll_active = false
 autowrap_mode = 1
 
-[node name="ability" type="Label" parent="Panel2/Panel/HBoxContainer"]
+[node name="ability" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
 text = "item ability"
-label_settings = SubResource("LabelSettings_vdi84")
+fit_content = true
+scroll_active = false
 autowrap_mode = 1
 
 [connection signal="mouse_entered" from="is_item" to="." method="_on_mouse_entered"]

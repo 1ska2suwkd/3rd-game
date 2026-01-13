@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_sjpb7")
 item_number = 4
+item_grade = 3
 item_name = "관통의 화살"
 item_description = "상대의 약점을 겨냥하는 정확한 조준은 그 너머를 볼 수 있다."
 item_ability = "플레이어의 공격이 관통효과를 가진다."

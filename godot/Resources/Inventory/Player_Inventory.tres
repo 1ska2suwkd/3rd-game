@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://bp60isr3xfqhu"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://bp60isr3xfqhu"]
 
 [ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_2o5ws"]
 [ext_resource type="Script" uid="uid://q8gcp640llee" path="res://Resources/Custom_Resources/inventory.gd" id="2_3p7cu"]
+[ext_resource type="Resource" uid="uid://cflmkcmlowg63" path="res://Resources/Items/ATK_damage_book.tres" id="2_xyh7s"]
+[ext_resource type="Resource" uid="uid://l4bx2lbja41o" path="res://Resources/Items/ATK_speed_book.tres" id="3_ervv0"]
+[ext_resource type="Resource" uid="uid://73kkj3o3rn4x" path="res://Resources/Items/maid_costume.tres" id="4_od3qd"]
+[ext_resource type="Resource" uid="uid://8bjyk62ro1ic" path="res://Resources/Items/Piercing_Attack.tres" id="5_vesg5"]
 
 [resource]
 script = ExtResource("2_3p7cu")
-items = Array[ExtResource("1_2o5ws")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_2o5ws")]([null, ExtResource("2_xyh7s"), ExtResource("3_ervv0"), ExtResource("4_od3qd"), ExtResource("5_vesg5"), null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://q8gcp640llee"
