@@ -7,7 +7,6 @@
 [resource]
 script = ExtResource("1_8tved")
 item_number = 3
-item_grade = 2
 item_name = "임재근의 메이드복"
 item_description = "메이드 카페 알바는 쉬운 게 아니야 그치?"
 item_ability = "공격 사거리 2 증가"
