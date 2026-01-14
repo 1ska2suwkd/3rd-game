@@ -1,16 +1,2 @@
-res://projectiles/Crescent_Slash/down_Crescent_Slash.tscn
+res://Scene/TutorialScene/TutorialScene.tscn
 res://UI/Outline.tres
-res://Entities/player/player.tscn
-res://Entities/Master/Skill/Master_Skill.gd
-res://Entities/player/player.gd
-res://Resources/Inventory/Player_Inventory.tres
-res://Scene/Dungeon/Room/Room0.tscn
-res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn
-res://projectiles/Crescent_Slash/crescent_slash.tscn
-res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn
-res://projectiles/Crescent_Slash/up_Crescent_Slash.tscn
-res://Entities/player/playerStat.gd
-res://projectiles/Speer/speer.tscn
-res://Resources/Items/Speer.tres
-res://Entities/Master/Master_Skilltree.tscn
-res://projectiles/Speer/speer.gd
