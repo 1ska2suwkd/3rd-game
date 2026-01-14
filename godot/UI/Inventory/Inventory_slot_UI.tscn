@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjeq2gfi4hunq"]
+[gd_scene load_steps=11 format=3 uid="uid://bjeq2gfi4hunq"]
 
 [ext_resource type="Script" uid="uid://dola0eak4m1hq" path="res://UI/Inventory/inventory_slot_ui.gd" id="1_0jkrt"]
 [ext_resource type="Texture2D" uid="uid://qdi7cyhjew0e" path="res://assets/Image/UI/slot.png" id="1_xtguw"]
+[ext_resource type="Texture2D" uid="uid://dmvcy6jjxsibx" path="res://assets/Image/UI/slot_background.png" id="3_0jkrt"]
+[ext_resource type="Texture2D" uid="uid://b7waoc7h5ayy5" path="res://assets/Image/Item/2권.png" id="4_t8dft"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fknvb"]
 bg_color = Color(0.8, 0.72156864, 0.5529412, 1)
@@ -67,18 +69,27 @@ offset_bottom = 115.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fknvb")
 
 [node name="slot" type="Sprite2D" parent="."]
+z_index = 1
 scale = Vector2(2.2, 2.2)
 texture = ExtResource("1_xtguw")
 centered = false
 region_enabled = true
 region_rect = Rect2(7, 0, 50, 49)
 
-[node name="item_display" type="Sprite2D" parent="."]
-position = Vector2(16, 15)
-scale = Vector2(1.2000002, 1.2000002)
+[node name="slot_background" type="Sprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("3_0jkrt")
 centered = false
+region_enabled = true
+region_rect = Rect2(7, 0, 50, 49)
+
+[node name="item_display" type="Sprite2D" parent="."]
+position = Vector2(54.999996, 53.999996)
+scale = Vector2(1.2000002, 1.2000002)
+texture = ExtResource("4_t8dft")
 
 [node name="not_item" type="Panel" parent="."]
+z_index = 5
 layout_mode = 0
 offset_right = 110.0
 offset_bottom = 108.0
@@ -161,6 +172,19 @@ layout_mode = 2
 theme_override_constants/separation = 9
 theme_override_styles/separator = SubResource("StyleBoxLine_xtguw")
 
+[node name="ability" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer"]
+modulate = Color(0.99999994, 0.6704095, 0.99554867, 1)
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "item ability"
+fit_content = true
+scroll_active = false
+autowrap_mode = 1
+
 [node name="descript" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
@@ -169,18 +193,6 @@ size_flags_vertical = 0
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "item story"
-fit_content = true
-scroll_active = false
-autowrap_mode = 1
-
-[node name="ability" type="RichTextLabel" parent="Panel2/Panel/HBoxContainer"]
-custom_minimum_size = Vector2(1, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "item ability"
 fit_content = true
 scroll_active = false
 autowrap_mode = 1

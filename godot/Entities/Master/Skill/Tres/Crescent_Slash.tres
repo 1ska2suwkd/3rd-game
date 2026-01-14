@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_2siru")
-item_grade = 3
+item_grade = 4
 item_name = "Crescent Slash"
 item_description = "마스터에게 전수받은 첫번째 기술 "
 item_ability = "달 모양의 검기를 날린다. 방에서 체력을 잃을 경우 그 방에서 Crescent Slash를 사용할 수 없게 된다."

@@ -4767,6 +4767,7 @@ sources/0 = SubResource("TileSetAtlasSource_dgg64")
 sources/1 = SubResource("TileSetAtlasSource_i83dt")
 
 [node name="Room0" type="Node2D"]
+position = Vector2(0, 2)
 script = ExtResource("1_efkbg")
 
 [node name="Dungeon_Scene_Manager" parent="." instance=ExtResource("2_v460w")]
