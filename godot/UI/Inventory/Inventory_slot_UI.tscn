@@ -83,9 +83,14 @@ centered = false
 region_enabled = true
 region_rect = Rect2(7, 0, 50, 49)
 
-[node name="item_display" type="Sprite2D" parent="."]
-position = Vector2(54.999996, 53.999996)
-scale = Vector2(1.2000002, 1.2000002)
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 98.181816
+scale = Vector2(1.1, 1.1)
+
+[node name="item_display" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
 texture = ExtResource("4_t8dft")
 
 [node name="not_item" type="Panel" parent="."]

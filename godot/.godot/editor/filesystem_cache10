@@ -218,11 +218,11 @@ Warrior_Guard.png::CompressedTexture2D::8309769470997040576::1764473390::1768190
 Warrior_Idle.png::CompressedTexture2D::8103515507025839414::1764473390::1768190814::1::::<><><>0<>0<>996c23b3d69aa9da237fd9593e0ce4df<>res://.godot/imported/Warrior_Idle.png-7aa2723ed48adab26955d89d7dc507e9.ctex::
 Warrior_Run.png::CompressedTexture2D::6509445555000517479::1764473390::1768190814::1::::<><><>0<>0<>5699b363d5a76baf38216ec2f79ecccc<>res://.godot/imported/Warrior_Run.png-807b3d75a4868ed91789a2965651b118.ctex::
 Warrior_Yellow.png::CompressedTexture2D::5181125742850262928::1764473390::1768190814::1::::<><><>0<>0<>0c161d749b7bde058efbefc586611721<>res://.godot/imported/Warrior_Yellow.png-20aab5d049e6aa5a8c42480c174f6770.ctex::
-::res://assets/Image/Item/::1768396052
+::res://assets/Image/Item/::1768397242
 1권.png::CompressedTexture2D::3222129541594784253::1764473390::1768190810::1::::<><><>0<>0<>8d3b6ee57ab28138f6774664f29f4fae<>res://.godot/imported/1권.png-f2d80f1dbc30c23febe8098ef2bf664a.ctex::
 2권.png::CompressedTexture2D::4677905146652729198::1764473390::1768190810::1::::<><><>0<>0<>e99917f49d7bff8b70f44b5a53d1f38e<>res://.godot/imported/2권.png-f5b8baa0e7fc60d79e3dac06856566b5.ctex::
 64x64.png::CompressedTexture2D::2401421369732269695::1764473392::1768190815::1::::<><><>0<>0<>e8af3df27269ff2966153ce542c6a847<>res://.godot/imported/64x64.png-18f32ebb4a4db66c221ccff839e5d09a.ctex::
-slash_item.png::CompressedTexture2D::8379658929393734630::1768396051::1768396052::1::::<><><>0<>0<>9685ace80e4e461994d1d1b5edfe4f1c<>res://.godot/imported/slash_item.png-2868cc118d2d0bc93d23b4f3402c6e6c.ctex::
+slash_item.png::CompressedTexture2D::8379658929393734630::1768397910::1768397919::1::::<><><>0<>0<>9685ace80e4e461994d1d1b5edfe4f1c<>res://.godot/imported/slash_item.png-2868cc118d2d0bc93d23b4f3402c6e6c.ctex::
 관통화살.png::CompressedTexture2D::8769758332644140827::1764473392::1768190810::1::::<><><>0<>0<>5e1c2e12f5598df1dab15e14c5c92949<>res://.godot/imported/관통화살.png-ee8f3c06491a62401385c57d942c8c93.ctex::
 임재근의 메이드복.png::CompressedTexture2D::1941301364381818638::1764473392::1768190810::1::::<><><>0<>0<>b6ca3bef53788e9e5be9c84f3809c731<>res://.godot/imported/임재근의 메이드복.png-2d88a4607946ccf362995ad46344a0ad.ctex::
 ::res://assets/Image/Resources/::1768190793
@@ -285,7 +285,7 @@ BoxParticleSpriteSheet.png::CompressedTexture2D::4890555778531208069::1766213796
 GrassParticle.png::CompressedTexture2D::3677960746889294521::1766206196::1768190812::1::::<><><>0<>0<>9cd643bfea5786950c00aa256ec6788f<>res://.godot/imported/GrassParticle.png-682a18c9d1cecab0d174ebb4387a67b6.ctex::
 Light Texture.png::CompressedTexture2D::4913812168853173388::1764586082::1768190811::1::::<><><>0<>0<>d7c7bb96210ea9b6051d07206e0189ff<>res://.godot/imported/Light Texture.png-b07b05e560a9ae4da26b25a7e9305d27.ctex::
 Particle Texture.png::CompressedTexture2D::812518487035492535::1764588382::1768190811::1::::<><><>0<>0<>2ee49328e7b3481a4d7065e0baea530c<>res://.godot/imported/Particle Texture.png-fee33c3ff326be7814b5e0ab3f320776.ctex::
-::res://assets/Image/UI/::1768396505
+::res://assets/Image/UI/::1768396506
 slot.png::CompressedTexture2D::1129757655270050622::1768396453::1768396455::1::::<><><>0<>0<>a6d8c0416b81598f771c906552856b19<>res://.godot/imported/slot.png-e1e2f447c8e3a92f9be350984fe30442.ctex::
 slot_background.png::CompressedTexture2D::8045046043177663033::1768396505::1768396506::1::::<><><>0<>0<>3e6ffff2e7c5d0e0c512fe0a212b82c0<>res://.godot/imported/slot_background.png-c904f93b9348f69cc512f309979d9761.ctex::
 Sword_attack.png::CompressedTexture2D::7486087275127214001::1764473392::1768190812::1::::<><><>0<>0<>9be9c42a65c894f91ffab821a0657a62<>res://.godot/imported/Sword_attack.png-ae3624351e8deb7433a4cf18222cc64b.ctex::
@@ -1041,8 +1041,8 @@ ATK_speed_book.tres::Resource/Item::832047460319468134::1768276708::0::1::::<><>
 maid_costume.tres::Resource/Item::2304471118036296109::1768277035::0::1::::<><><>0<>0<><>::uid://bwn7cbk2vsf0k::::res://Resources/Custom_Resources/Item.gd<>uid://yr2wwijieck3::::res://Resources/Items/Script/maid_costume.gd<>uid://2wm7kawk1hys::::res://assets/Image/Item/임재근의 메이드복.png
 Piercing_Attack.tres::Resource/Item::2318886104170237210::1768276708::0::1::::<><><>0<>0<><>::uid://bwn7cbk2vsf0k::::res://Resources/Custom_Resources/Item.gd<>uid://dw7evycckw3et::::res://assets/Image/Item/관통화살.png
 Speer.tres::Resource/Item::5917626750941664087::1768276708::0::1::::<><><>0<>0<><>::uid://bwn7cbk2vsf0k::::res://Resources/Custom_Resources/Item.gd
-::res://Resources/Items/Scene/::1768275484
-ItemScene.tscn::PackedScene::5322815958039639240::1768275484::0::1::::<><><>0<>0<><>::uid://dphy1o3sw5nov::::res://Resources/Items/Script/add_Item.gd<>uid://bl53adhx1qcun::::res://assets/Image/Item/1권.png
+::res://Resources/Items/Scene/::1768396832
+ItemScene.tscn::PackedScene::5322815958039639240::1768396832::0::1::::<><><>0<>0<><>::uid://dphy1o3sw5nov::::res://Resources/Items/Script/add_Item.gd<>uid://bl53adhx1qcun::::res://assets/Image/Item/1권.png
 ::res://Resources/Items/Script/::1768190757
 add_Item.gd::GDScript::8228049767825987125::1768190727::0::1::::<>Area2D<><>0<>0<><>::
 atk_damage_book.gd::GDScript::8756746768949715285::1768190727::0::1::::<>Resource<><>0<>0<><>::
@@ -1097,10 +1097,10 @@ Room_Probability.tscn::PackedScene::3951109718682852163::1768190727::0::1::::<><
 ::res://UI/HintUI/::1768190756
 show_hint_ui.gd::GDScript::7667908288035921333::1768190727::0::1::::<>Panel<><>0<>0<><>::
 show_hint_ui.tscn::PackedScene::3848651521317033532::1768190727::0::1::::<><><>0<>0<><>::uid://dhinlgthhfkgj::::res://UI/HintUI/show_hint_ui.gd
-::res://UI/Inventory/::1768396305
+::res://UI/Inventory/::1768397303
 InventoryUI.tscn::PackedScene::1206322980173479860::1768190727::0::1::::<><><>0<>0<><>::uid://d1gecday3kc5e::::res://assets/Image/UI/Banners/Banner_Connection_Up.png<>uid://dr3bk3rriouu3::::res://UI/Script/inventory_ui.gd<>uid://dfij6wgtytcpa::::res://assets/Image/UI/Buttons/Button_Disable_3Slides.png<>uid://bjeq2gfi4hunq::::res://UI/Inventory/Inventory_slot_UI.tscn
-inventory_slot_ui.gd::GDScript::8164658872741046998::1768277010::0::1::::<>Panel<><>0<>0<><>::
-Inventory_slot_UI.tscn::PackedScene::3027397799037986018::1768396305::0::1::::<><><>0<>0<><>::uid://dola0eak4m1hq::::res://UI/Inventory/inventory_slot_ui.gd<>uid://qdi7cyhjew0e::::res://assets/Image/UI/slot.png
+inventory_slot_ui.gd::GDScript::8164658872741046998::1768397100::0::1::::<>Panel<><>0<>0<><>::
+Inventory_slot_UI.tscn::PackedScene::3027397799037986018::1768397303::0::1::::<><><>0<>0<><>::uid://dola0eak4m1hq::::res://UI/Inventory/inventory_slot_ui.gd<>uid://qdi7cyhjew0e::::res://assets/Image/UI/slot.png<>uid://dmvcy6jjxsibx::::res://assets/Image/UI/slot_background.png<>uid://b7waoc7h5ayy5::::res://assets/Image/Item/2권.png
 Inventory_UI.tscn::PackedScene::4935752676482145940::1768190727::0::1::::<><><>0<>0<><>::uid://dr3bk3rriouu3::::res://UI/Script/inventory_ui.gd<>uid://d1gecday3kc5e::::res://assets/Image/UI/Banners/Banner_Connection_Up.png<>uid://bjeq2gfi4hunq::::res://UI/Inventory/Inventory_slot_UI.tscn<>uid://dfij6wgtytcpa::::res://assets/Image/UI/Buttons/Button_Disable_3Slides.png
 ::res://UI/Mouse/::1768228851
 mouse.gd::GDScript::20815477732759765::1768228806::0::1::::<>CanvasLayer<><>0<>0<><>::

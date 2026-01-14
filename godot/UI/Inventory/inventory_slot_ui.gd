@@ -1,6 +1,6 @@
 extends Panel
 
-@onready var item_visual : Sprite2D = $item_display
+@onready var item_display: TextureRect = $CenterContainer/item_display
 @onready var item_name_label = $Panel2/Panel/HBoxContainer/Panel/name
 @onready var item_descript_label = $Panel2/Panel/HBoxContainer/descript
 @onready var item_ability_label = $Panel2/Panel/HBoxContainer/ability
@@ -20,7 +20,7 @@ func update(item: Item):
 	if !item:
 		not_item.visible = true
 		is_item.visible = false
-		item_visual.visible = false
+		item_display.visible = false
 	else:
 		match item.item_grade:
 			item.ItemGrade.COMMON:
@@ -36,8 +36,8 @@ func update(item: Item):
 				
 		not_item.visible = false
 		is_item.visible = true
-		item_visual.visible = true
-		item_visual.texture = item.sprite
+		item_display.visible = true
+		item_display.texture = item.sprite
 		item_name_label.text = item_color_code+item.item_name
 		item_descript_label.text = item.item_description
 		item_ability_label.text = item.item_ability

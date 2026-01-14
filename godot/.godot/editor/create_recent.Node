@@ -1,3 +1,5 @@
+TextureRect
+CenterContainer
 HSeparator
 Panel
 PanelContainer
@@ -11,5 +13,3 @@ AnimatedSprite2D
 AnimationPlayer
 TileMapLayer
 Button
-MenuButton
-TextureButton
