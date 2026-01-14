@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_5gpst")
-item_number = 1
+item_number = 2
 item_grade = 1
 item_name = "더 강하게!  더 박력있게!"
 item_description = "마스터가 잃어버린 책 제 2권, 강력한 공격을 하기 위한 연습법이 자세하게 적혀있다."

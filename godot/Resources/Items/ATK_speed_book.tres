@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_7i0vr")
-item_number = 2
+item_number = 3
 item_grade = 2
 item_name = "칼을 뽑았으면 휘둘러라"
 item_description = "마스터가 잃어버린 책 제 1권, 무기를 빠르게 휘두르는 방법이 자세하게 적혀있다."

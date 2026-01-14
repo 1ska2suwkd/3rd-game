@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbrrf2repa0hn"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_11quk"]
-[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Sword_attack_vfx.png" id="2_i7ali"]
+[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="2_i7ali"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_o7p7s"]
 
 [sub_resource type="Curve" id="Curve_piat3"]

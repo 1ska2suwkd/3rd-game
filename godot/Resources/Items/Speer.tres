@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cqksph5wptsyx"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cqksph5wptsyx"]
 
 [ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_unqow"]
+[ext_resource type="Texture2D" uid="uid://dihtkruq6koqb" path="res://assets/Image/Item/speer_item.png" id="2_25gwt"]
 
 [resource]
 script = ExtResource("1_unqow")
-item_grade = 3
+item_number = 2
+item_grade = 4
+item_name = "Speer"
+sprite = ExtResource("2_25gwt")
 metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

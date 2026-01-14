@@ -1,7 +1,0 @@
-res://UI/Inventory/Inventory_slot_UI.tscn
-res://Entities/player/player.tscn
-res://Scene/Dungeon/Room/Room0.tscn
-res://Entities/Master/Skill/Tres/Crescent_Slash.tres
-res://UI/Outline.tres
-res://Resources/Items/Scene/ItemScene.tscn
-res://UI/Inventory/inventory_slot_ui.gd

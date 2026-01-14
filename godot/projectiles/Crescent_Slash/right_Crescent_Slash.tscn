@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_jnfef"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_ycgtw"]
-[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Factions/Knights/Troops/Warrior/Blue/Sword_attack_vfx.png" id="2_ypb0s"]
+[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="2_ypb0s"]
 
 [sub_resource type="Curve" id="Curve_f2mls"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
