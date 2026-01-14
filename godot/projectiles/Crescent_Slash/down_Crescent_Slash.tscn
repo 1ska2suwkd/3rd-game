@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_401d5"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_dec6q"]
-[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="2_efnfs"]
+[ext_resource type="PackedScene" uid="uid://cgseahk0epolb" path="res://projectiles/Crescent_Slash/crescent_slash.tscn" id="3_efnfs"]
 
 [sub_resource type="Curve" id="Curve_2mivr"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
@@ -37,12 +37,7 @@ scale_amount_max = 1.5
 scale_amount_curve = SubResource("Curve_2mivr")
 color_ramp = SubResource("Gradient_4wwtp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(62, 4.000003)
-scale = Vector2(1, 0.607)
-texture = ExtResource("2_efnfs")
-offset = Vector2(-200, -20)
-flip_h = true
+[node name="CrescentSlash" parent="." instance=ExtResource("3_efnfs")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

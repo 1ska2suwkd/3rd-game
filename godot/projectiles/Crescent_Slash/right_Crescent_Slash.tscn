@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://5iindhkdc5w2"]
+[gd_scene load_steps=7 format=3 uid="uid://5iindhkdc5w2"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_jnfef"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_ycgtw"]
-[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="2_ypb0s"]
+[ext_resource type="PackedScene" uid="uid://cgseahk0epolb" path="res://projectiles/Crescent_Slash/crescent_slash.tscn" id="3_ypb0s"]
 
 [sub_resource type="Curve" id="Curve_f2mls"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.30337083), 0.0, 0.0, 0, 0]
@@ -11,41 +11,6 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_q5bs7"]
 offsets = PackedFloat32Array(0, 0.5, 1)
 colors = PackedColorArray(0.8871895, 0.6973419, 0.33317584, 1, 0.95400494, 0.87931633, 0.72136337, 1, 1, 1, 1, 1)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hcvlx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ypb0s")
-}],
-"loop": false,
-"name": &"left",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ypb0s")
-}],
-"loop": false,
-"name": &"right",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ypb0s")
-}],
-"loop": false,
-"name": &"right_2",
-"speed": 20.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_ypb0s")
-}],
-"loop": false,
-"name": &"right_3",
-"speed": 20.0
-}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rm78g"]
 radius = 9.5
@@ -71,18 +36,14 @@ scale_amount_max = 1.5
 scale_amount_curve = SubResource("Curve_f2mls")
 color_ramp = SubResource("Gradient_q5bs7")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(50, -8)
-scale = Vector2(0.3, 0.182)
-sprite_frames = SubResource("SpriteFrames_hcvlx")
-animation = &"right"
-offset = Vector2(200, -20)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(127, -9)
 rotation = 1.5707964
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_rm78g")
+
+[node name="CrescentSlash" parent="." instance=ExtResource("3_ypb0s")]
+scale = Vector2(-1, 0.607)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

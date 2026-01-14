@@ -2,6 +2,7 @@
 extends CharacterBody2D
 
 @export var Crescent_Slash: bool = false
+@export var speer: bool = false
 
 var dead = false
 
@@ -43,6 +44,9 @@ func _ready():
 
 	if Crescent_Slash:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
+		EventBus.emit_signal("update_inv_ui")
+	if speer:
+		PlayerStat.player_inv.items[1] = MasterSkill.speer_item
 		EventBus.emit_signal("update_inv_ui")
 	
 	attack_range_collision.scale *= PlayerStat.TotalAttackRange
@@ -186,14 +190,15 @@ func spawn_crescent_slash(scene_resource: PackedScene, direction):
 
 
 func spawn_speer():
-	var ysort = get_tree().current_scene.get_node("Ysort")
-	var mouse_pos = get_global_mouse_position()
-	
-	var speer_instance = SPEER.instantiate()
-	speer_instance.rotation_degrees = current_speer_angle
-	speer_instance.global_position = mouse_pos
-	
-	ysort.add_child(speer_instance)
+	if PlayerStat.player_inv.items[1] == MasterSkill.speer_item:
+		var ysort = get_tree().current_scene.get_node("Ysort")
+		var mouse_pos = get_global_mouse_position()
+		
+		var speer_instance = SPEER.instantiate()
+		speer_instance.rotation_degrees = current_speer_angle
+		speer_instance.global_position = mouse_pos
+		
+		ysort.add_child(speer_instance)
 	
 
 			

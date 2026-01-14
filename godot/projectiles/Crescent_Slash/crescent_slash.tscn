@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgseahk0epolb"]
+
+[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="1_4i1vj"]
+
+[node name="CrescentSlash" type="Sprite2D"]
+scale = Vector2(1, 0.607)
+texture = ExtResource("1_4i1vj")
+offset = Vector2(-120, -20)
+flip_h = true
