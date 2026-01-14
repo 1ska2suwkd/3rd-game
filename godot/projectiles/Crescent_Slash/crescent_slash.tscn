@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="1_4i1vj"]
 
 [node name="CrescentSlash" type="Sprite2D"]
-scale = Vector2(1, 0.607)
+scale = Vector2(2, 1.215)
 texture = ExtResource("1_4i1vj")
-offset = Vector2(-120, -20)
+offset = Vector2(-74, -10)
 flip_h = true
