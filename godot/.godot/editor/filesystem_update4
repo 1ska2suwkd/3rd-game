@@ -9,3 +9,8 @@ res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn
 res://projectiles/Crescent_Slash/crescent_slash.tscn
 res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn
 res://projectiles/Crescent_Slash/up_Crescent_Slash.tscn
+res://Entities/player/playerStat.gd
+res://projectiles/Speer/speer.tscn
+res://Resources/Items/Speer.tres
+res://Entities/Master/Master_Skilltree.tscn
+res://projectiles/Speer/speer.gd

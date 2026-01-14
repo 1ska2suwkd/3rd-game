@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://rsbnkhr5v5m5"]
+[gd_scene load_steps=25 format=3 uid="uid://rsbnkhr5v5m5"]
 
 [ext_resource type="Script" uid="uid://hlw3w7d2ucat" path="res://projectiles/Speer/speer.gd" id="1_cgr72"]
 [ext_resource type="Texture2D" uid="uid://dvbvnqwbir3qj" path="res://assets/Image/Skill/speer2.png" id="1_rfl1w"]
 [ext_resource type="Texture2D" uid="uid://co6oyda6q113r" path="res://assets/Image/Skill/Holy VFX 02.png" id="2_cgr72"]
 [ext_resource type="Script" uid="uid://d2aopl1ojwuiv" path="res://projectiles/Speer/attack_area.gd" id="4_to2fi"]
+[ext_resource type="Texture2D" uid="uid://icaxevfrtajv" path="res://assets/Image/Skill/speer_shadow2.png" id="5_jrew0"]
 
 [sub_resource type="Animation" id="Animation_um5o7"]
 length = 0.001
@@ -239,7 +240,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgr72"]
-size = Vector2(21.666666, 43.33333)
+size = Vector2(21.666666, 65.83333)
 
 [node name="Speer" type="Node2D"]
 scale = Vector2(1.2, 1.2)
@@ -262,7 +263,6 @@ rotation = -3.1415925
 scale = Vector2(1.2880684, 3.7742324)
 sprite_frames = SubResource("SpriteFrames_o4vcm")
 animation = &"spawn_speer"
-frame_progress = 0.088730484
 offset = Vector2(2, -24)
 
 [node name="Speer2" type="Sprite2D" parent="sprite"]
@@ -278,8 +278,13 @@ collision_mask = 2
 script = ExtResource("4_to2fi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(0, -4.166667)
+position = Vector2(0, 7.0833335)
 shape = SubResource("RectangleShape2D_cgr72")
 disabled = true
+
+[node name="SpeerShadow" type="Sprite2D" parent="."]
+position = Vector2(-1.667, 50)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_jrew0")
 
 [connection signal="area_entered" from="AttackArea" to="AttackArea" method="_on_area_entered"]
