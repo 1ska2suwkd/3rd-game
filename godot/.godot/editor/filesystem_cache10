@@ -253,11 +253,11 @@ Tree2.png::CompressedTexture2D::8636080439650713613::1764473392::1768190811::1::
 Tree3.png::CompressedTexture2D::7828120705036715847::1764473392::1768190811::1::::<><><>0<>0<>2fbb9def72b8337b88f3e348253de15f<>res://.godot/imported/Tree3.png-021db8ff07bdaa71d406d1d4f5531437.ctex::
 Tree4.png::CompressedTexture2D::4712587629088293879::1764473392::1768190811::1::::<><><>0<>0<>061c50e3e5df5444753ca67d2fb330fb<>res://.godot/imported/Tree4.png-5b781309a2c8ab90eb043aa6d019ad94.ctex::
 Tree.png::CompressedTexture2D::8517030058457412527::1764473392::1768190811::1::::<><><>0<>0<>02d8bb698ffafe5912bbb573537d8dd1<>res://.godot/imported/Tree.png-6e7efa5ff64abf4d4e4b89a0765ac0c8.ctex::
-::res://assets/Image/Skill/::1768398762
+::res://assets/Image/Skill/::1768399014
 Holy VFX 02.png::CompressedTexture2D::5820373944647939425::1768223144::1768226627::1::::<><><>0<>0<>a465114c845f778030927a2c8458c58e<>res://.godot/imported/Holy VFX 02.png-acd891b97ca259ee30a52c9a2f470fe8.ctex::
 speer2.png::CompressedTexture2D::8636591291817029057::1768199280::1768199390::1::::<><><>0<>0<>1ae770bc89b67794a33c885990a86cc2<>res://.godot/imported/speer2.png-31c31c749f501545aacc4bf5ff91be31.ctex::
 Speer.PNG::CompressedTexture2D::4919438904566952200::1767785098::1768190811::1::::<><><>0<>0<>54c357d198ebdd1715499438aa5f03ed<>res://.godot/imported/Speer.PNG-f468fd32a026be3aaa39f1e20bd42872.ctex::
-Sword_attack_vfx.png::CompressedTexture2D::3110381019742995925::1764473390::1768398775::1::::<><><>0<>0<>83592f6defb352db7569e61b61e62276<>res://.godot/imported/Sword_attack_vfx.png-912e5b521fed248a8d14316d84ea11ae.ctex::
+Sword_attack_vfx.png::CompressedTexture2D::3110381019742995925::1768399214::1768399215::1::::<><><>0<>0<>83592f6defb352db7569e61b61e62276<>res://.godot/imported/Sword_attack_vfx.png-912e5b521fed248a8d14316d84ea11ae.ctex::
 ::res://assets/Image/StageBackGround/::1768190812
 Gemini_Generated_Image_8ek2b08ek2b08ek2-removebg-preview.png::CompressedTexture2D::3920202875912291500::1764478798::1768190812::1::::<><><>0<>0<>f4372f989da8423fa07a45bc052776b8<>res://.godot/imported/Gemini_Generated_Image_8ek2b08ek2b08ek2-removebg-preview.png-642b7bd23bb7ba46c3293ae080eb1b69.ctex::
 Gemini_Generated_Image_u7t6rlu7t6rlu7t6-removebg-preview.png::CompressedTexture2D::5682078916281042397::1764478606::1768190812::1::::<><><>0<>0<>17ad74214a706a42d786af61d26fecb4<>res://.godot/imported/Gemini_Generated_Image_u7t6rlu7t6rlu7t6-removebg-preview.png-bc3ba52544dbb442887487d5b10f6a0e.ctex::
@@ -1020,9 +1020,9 @@ Harpoon.tscn::PackedScene::7575073600019353137::1768190727::0::1::::<><><>0<>0<>
 ProjectlieBase.gd::GDScript::2105506865959012011::1768190727::0::1::::<>Area2D<><>0<>0<><>::
 shaman_projectile.gd::GDScript::8646424804494403751::1768190727::0::1::::<>Area2D<><>0<>0<><>::
 Shaman_Projectile.tscn::PackedScene::1627900876078355973::1768190727::0::1::::<><><>0<>0<><>::uid://dvgnmam8qvi68::::res://projectiles/shaman_projectile.gd<>uid://bvg5gbf4qclg8::::res://assets/enemy/Shaman/Shaman_Explosion.png<>uid://pjjb0t2q651v::::res://assets/enemy/Shaman/Shaman_Projectile.png<>uid://ccaj1enjwh0ya::::res://assets/Image/Texture/Light Texture.png
-::res://projectiles/Crescent_Slash/::1768398762
+::res://projectiles/Crescent_Slash/::1768399067
 Crescent_Slash.gd::GDScript::1137486763258979824::1768190727::0::1::::<>Area2D<><>0<>0<><>::
-down_Crescent_Slash.tscn::PackedScene::8113591488646382986::1768398762::0::1::::<><><>0<>0<><>::uid://qhaigmqmbham::::res://projectiles/Crescent_Slash/Crescent_Slash.gd<>uid://ltuccisr41tr::::res://assets/Image/Texture/Particle Texture.png<>uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png
+down_Crescent_Slash.tscn::PackedScene::8113591488646382986::1768399067::0::1::::<><><>0<>0<><>::uid://qhaigmqmbham::::res://projectiles/Crescent_Slash/Crescent_Slash.gd<>uid://ltuccisr41tr::::res://assets/Image/Texture/Particle Texture.png<>uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png
 left_Crescent_Slash.tscn::PackedScene::4879167195283749903::1768398762::0::1::::<><><>0<>0<><>::uid://qhaigmqmbham::::res://projectiles/Crescent_Slash/Crescent_Slash.gd<>uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png<>uid://ltuccisr41tr::::res://assets/Image/Texture/Particle Texture.png
 right_Crescent_Slash.tscn::PackedScene::2122689451278503743::1768398762::0::1::::<><><>0<>0<><>::uid://qhaigmqmbham::::res://projectiles/Crescent_Slash/Crescent_Slash.gd<>uid://ltuccisr41tr::::res://assets/Image/Texture/Particle Texture.png<>uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png
 up_Crescent_Slash.tscn::PackedScene::5209551788346295758::1768398762::0::1::::<><><>0<>0<><>::uid://qhaigmqmbham::::res://projectiles/Crescent_Slash/Crescent_Slash.gd<>uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png<>uid://ltuccisr41tr::::res://assets/Image/Texture/Particle Texture.png
@@ -1090,11 +1090,11 @@ Village.tscn::PackedScene::106963267350456937::1768229629::0::1::::<><><>0<>0<><
 Store_UI.tscn::PackedScene::1704700239713604721::1768190727::0::1::::<><><>0<>0<><>::
 ::res://TileMap/::1768227063
 Water_deco.tres::TileSet::7358636020393896074::1768227063::0::1::::<><><>0<>0<><>::uid://xstrockltyop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_01.png<>uid://bo6hawdfbnd20::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_02.png<>uid://c5ppsint3lqop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_03.png<>uid://bu7vogyl62sim::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png<>uid://biuhpgloxhgr0::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck/Rubber duck.png
-::res://UI/::1768396305
+::res://UI/::1768399067
 exit_button.gd::GDScript::4558733323801806322::1768190727::0::1::::<>CanvasLayer<><>0<>0<><>::
 exit_button.tscn::PackedScene::4505538658439282490::1768190727::0::1::::<><><>0<>0<><>::uid://bjejavlx38hpb::::res://assets/Image/UI/Icons/Regular_01.png<>uid://083hgjpb8mun::::res://assets/Image/UI/Icons/Pressed_01.png<>uid://dfxyyefstgcd5::::res://assets/Image/UI/Icons/Disable_01.png
 Outline.gdshader::Shader::3195542742129899042::1768190727::0::1::::<><><>0<>0<><>::
-Outline.tres::ShaderMaterial::3405774997274516088::1768396305::0::1::::<><><>0<>0<><>::
+Outline.tres::ShaderMaterial::3405774997274516088::1768399067::0::1::::<><><>0<>0<><>::
 Room_Probability.tscn::PackedScene::3951109718682852163::1768190727::0::1::::<><><>0<>0<><>::uid://ns7sgsx5p2p7::::res://UI/Script/room_probability.gd<>uid://1g5iwlpyomlw::::res://assets/Image/UI/Icons/icon_skull.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf<>uid://dxywnl7teh6eh::::res://assets/Image/UI/Icons/icon_chest.png
 ::res://UI/HintUI/::1768190756
 show_hint_ui.gd::GDScript::7667908288035921333::1768190727::0::1::::<>Panel<><>0<>0<><>::

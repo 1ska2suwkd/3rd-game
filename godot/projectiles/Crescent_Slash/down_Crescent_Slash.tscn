@@ -38,8 +38,8 @@ scale_amount_curve = SubResource("Curve_2mivr")
 color_ramp = SubResource("Gradient_4wwtp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-50, -8)
-scale = Vector2(0.3, 0.182)
+position = Vector2(62, 4.000003)
+scale = Vector2(1, 0.607)
 texture = ExtResource("2_efnfs")
 offset = Vector2(-200, -20)
 flip_h = true
