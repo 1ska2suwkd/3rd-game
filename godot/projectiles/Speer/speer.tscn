@@ -240,7 +240,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgr72"]
-size = Vector2(21.666666, 65.83333)
+size = Vector2(30.833332, 65.83333)
 
 [node name="Speer" type="Node2D"]
 scale = Vector2(1.2, 1.2)
@@ -254,7 +254,7 @@ libraries = {
 autoplay = "spawn_speer"
 
 [node name="sprite" type="Node2D" parent="."]
-position = Vector2(0, 15)
+position = Vector2(0, -22.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sprite"]
 modulate = Color(5.1105056, 5.1105056, 5.1105056, 1)
@@ -271,6 +271,11 @@ rotation = -3.1415925
 texture = ExtResource("1_rfl1w")
 offset = Vector2(-1, -79)
 
+[node name="SpeerShadow" type="Sprite2D" parent="sprite"]
+position = Vector2(-1.667, 35.000004)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_jrew0")
+
 [node name="AttackArea" type="Area2D" parent="."]
 position = Vector2(-1.6666666, 6.6666665)
 collision_layer = 0
@@ -278,13 +283,8 @@ collision_mask = 2
 script = ExtResource("4_to2fi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(0, 7.0833335)
+position = Vector2(0, -26.667)
 shape = SubResource("RectangleShape2D_cgr72")
 disabled = true
-
-[node name="SpeerShadow" type="Sprite2D" parent="."]
-position = Vector2(-1.667, 50)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_jrew0")
 
 [connection signal="area_entered" from="AttackArea" to="AttackArea" method="_on_area_entered"]

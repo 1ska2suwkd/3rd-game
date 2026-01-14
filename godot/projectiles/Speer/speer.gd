@@ -6,4 +6,4 @@ extends Node2D
 
 func _ready() -> void:
 	speer.rotation_degrees += randf_range(-10, 10)
-	$SpeerShadow.global_rotation = 0.0
+	$sprite/SpeerShadow.global_rotation = 0.0
