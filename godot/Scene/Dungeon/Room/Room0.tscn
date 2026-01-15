@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://ch53v6eldhf5g"]
+[gd_scene load_steps=48 format=4 uid="uid://ch53v6eldhf5g"]
 
 [ext_resource type="Script" uid="uid://b41e28tlkdmnu" path="res://Scene/Dungeon/Room/Room.gd" id="1_efkbg"]
 [ext_resource type="Texture2D" uid="uid://jmcbvkmli56a" path="res://assets/Image/Dungeon/Stage1/decorative_cracks_coasts_animation.png" id="2_1lqhy"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Components/Dungeon/Door/SouthDoor.tscn" id="18_mlwnb"]
 [ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Components/Dungeon/Door/EastDoor.tscn" id="19_ylfab"]
 [ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Components/Dungeon/Door/WestDoor.tscn" id="20_kybqi"]
+[ext_resource type="PackedScene" uid="uid://ch3oabloq30wy" path="res://Resources/Items/Scene/ItemScene.tscn" id="22_ynk6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hjre"]
 texture = ExtResource("9_c8sjk")
@@ -4892,3 +4893,12 @@ offset_top = 4.0
 offset_bottom = 4.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
+
+[node name="Item" parent="." instance=ExtResource("22_ynk6m")]
+position = Vector2(-438, 58)
+
+[node name="Item2" parent="." instance=ExtResource("22_ynk6m")]
+position = Vector2(-339, -114)
+
+[node name="Item3" parent="." instance=ExtResource("22_ynk6m")]
+position = Vector2(-290, 229)

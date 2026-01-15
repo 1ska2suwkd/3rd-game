@@ -13,3 +13,10 @@ res://projectiles/Crescent_Slash/crescent_slash.gd
 res://Entities/player/player.gd
 res://Entities/Master/Skill/Master_Skill.gd
 res://Entities/Master/Script/master_skilltree.gd
+res://Resources/Items/Scene/ItemScene.tscn
+res://Resources/Items/Script/add_Item.gd
+res://Autoload/all_item.gd
+res://Resources/Items/Script/crescent_slash.gd
+res://Resources/Items/Script/speer.gd
+res://Resources/Items/Speer.tres
+res://Resources/Items/Crescent_Slash.tres
