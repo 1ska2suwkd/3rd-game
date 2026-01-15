@@ -14,3 +14,5 @@ res://projectiles/Crescent_Slash/Crescent_Slash.gd
 res://Resources/Items/Script/maid_costume.gd
 res://Scene/Village/Village.tscn
 res://Scene/Store/Store.tscn
+res://Scene/Store/store_master.gd
+res://Scene/Store/store.gd
