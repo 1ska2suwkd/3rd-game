@@ -1,5 +1,7 @@
-TextureRect
 CenterContainer
+Control
+VBoxContainer
+TextureRect
 HSeparator
 Panel
 PanelContainer
@@ -10,6 +12,3 @@ Sprite2D
 CanvasLayer
 Node2D
 AnimatedSprite2D
-AnimationPlayer
-TileMapLayer
-Button

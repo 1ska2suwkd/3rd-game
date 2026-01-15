@@ -1,2 +1,6 @@
-res://Scene/TutorialScene/TutorialScene.tscn
+res://Entities/player/player.tscn
 res://UI/Outline.tres
+res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn
+res://Scene/Dungeon/Room/Room0.tscn
+res://projectiles/Crescent_Slash/test.tscn
+res://projectiles/Crescent_Slash/Crescent_Slash.gd
