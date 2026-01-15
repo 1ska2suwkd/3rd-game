@@ -2,3 +2,11 @@ res://Entities/player/player.tscn
 res://UI/out_line_shine.gdshader
 res://UI/Outline.tres
 res://Entities/player/player.gd
+res://Resources/Items/Script/add_Item.gd
+res://Scene/Dungeon/Room/Room0.tscn
+res://Resources/Items/Spear.tres
+res://Entities/Master/Skill/Master_Skill.gd
+res://Autoload/all_item.gd
+res://projectiles/Spear/spear.gd
+res://projectiles/Spear/spear.tscn
+res://Resources/Items/Script/spear.gd

@@ -2,7 +2,7 @@
 extends CharacterBody2D
 
 @export var Crescent_Slash: bool = false
-@export var speer: bool = false
+@export var spear: bool = false
 
 var dead = false
 
@@ -19,17 +19,16 @@ var hearts_list : Array[TextureRect]
 
 
 const CRESCENT_SLASH = preload("res://projectiles/Crescent_Slash/XCrescent_Slash.tscn")
-const SPEER = preload("res://projectiles/Speer/speer.tscn")
+const SPEAR = preload("res://projectiles/Spear/spear.tscn")
 
 @onready var INVENTORY_UI = $UI/InventoryUi
 @onready var up_hit: CollisionShape2D = $AttackCollision/UpAttack
 @onready var down_hit: CollisionShape2D = $AttackCollision/DownAttack
 @onready var right_hit: CollisionShape2D = $AttackCollision/RightAttack
 @onready var left_hit: CollisionShape2D = $AttackCollision/LeftAttack
+
 @onready var attack_range_collision: CollisionShape2D = $AttackRange/AttackRangeCollision
 
-
-#@export var player_inv = preload("res://Resources/Inventory/Player_Inventory.tres")
 
 func _ready():
 	PlayerStat.attacking = false
@@ -42,9 +41,9 @@ func _ready():
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		MasterSkill.crescnet_count += 1
 		EventBus.emit_signal("update_inv_ui")
-	if speer:
-		PlayerStat.player_inv.items[1] = MasterSkill.speer_item
-		MasterSkill.crescnet_count += 1
+	if spear:
+		PlayerStat.player_inv.items[1] = MasterSkill.spear_item
+		MasterSkill.spear_count += 1
 		EventBus.emit_signal("update_inv_ui")
 	
 	attack_range_collision.scale *= PlayerStat.TotalAttackRange
@@ -79,7 +78,7 @@ func take_damage(p_damage:int):
 const MAX_ANGLE = 45.0
 const MAX_VELOCITY = 2000.0 
 const SMOOTH_SPEED = 10.0 # 숫자가 클수록 반응이 빠름
-var current_speer_angle = 0.0
+var current_spear_angle = 0.0
 		
 func _process(_delta):
 	if $AnimatedSprite2D.animation == "idle" or $AnimatedSprite2D.animation == "walk":
@@ -101,7 +100,7 @@ func _process(_delta):
 	# 4. 부드러운 움직임 (Lerp)
 	# 마우스가 멈추면 velocity가 자동으로 0이 되므로, 알아서 0도로 돌아옵니다.
 	# 하지만 너무 확확 바뀌지 않게 lerp로 부드럽게 따라가게 해줍니다.
-	current_speer_angle = lerp(current_speer_angle, target_angle, _delta * SMOOTH_SPEED)
+	current_spear_angle = lerp(current_spear_angle, target_angle, _delta * SMOOTH_SPEED)
 	
 func _physics_process(_delta):
 	if dead: 
@@ -206,17 +205,16 @@ func spawn_crescent_slash(direction):
 				get_tree().current_scene.add_child(projectile)
 
 
-func spawn_speer():
-	if PlayerStat.player_inv.items[1] == MasterSkill.speer_item:
-		for i in range(MasterSkill.speer_count):
+func spawn_spear():
+	if PlayerStat.player_inv.items[1] == MasterSkill.spear_item:
+		for i in range(MasterSkill.spear_count):
 			var ysort = get_tree().current_scene.get_node("Ysort")
 			var mouse_pos = get_global_mouse_position()
+			var spear_instance = SPEAR.instantiate()
+			spear_instance.rotation_degrees = current_spear_angle
+			spear_instance.global_position = mouse_pos
 			
-			var speer_instance = SPEER.instantiate()
-			speer_instance.rotation_degrees = current_speer_angle
-			speer_instance.global_position = mouse_pos
-			
-			ysort.add_child(speer_instance)
+			ysort.add_child(spear_instance)
 			
 			await get_tree().create_timer(0.1).timeout
 
@@ -229,28 +227,28 @@ func _on_animated_sprite_2d_frame_changed():
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
 			spawn_crescent_slash(Vector2(0,-1))
-			spawn_speer()
+			spawn_spear()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
 			spawn_crescent_slash(Vector2(0,1))
-			spawn_speer()
+			spawn_spear()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
 			spawn_crescent_slash(Vector2(-1,0))
-			spawn_speer()
+			spawn_spear()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
 			spawn_crescent_slash(Vector2(1,0))
-			spawn_speer()
+			spawn_spear()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true
 
@@ -288,3 +286,33 @@ func _on_pickup_area_area_entered(area: Area2D) -> void:
 	if area.has_method("use_item"):
 		area.use_item()
 		EventBus.emit_signal("update_inv_ui")
+
+#
+#func _unhandled_input(event: InputEvent) -> void:
+	## 마우스 왼쪽 클릭 시
+	#if event.is_action_pressed("attack"):
+		#spawn_spear()
+
+#func spawn_spear_at_target():
+	#var mouse_pos = get_global_mouse_position()
+	#var player_pos = global_position
+	#
+	## 1. 플레이어에서 마우스까지의 벡터(방향과 거리)를 구함
+	#var vector_to_mouse = mouse_pos - player_pos
+	#
+	## 2. ★핵심★ 벡터의 길이를 사거리(attack_range)로 제한함
+	## - 마우스가 사거리 안이면: 원래 위치 그대로 (변화 없음)
+	## - 마우스가 사거리 밖이면: 방향은 같지만 길이는 딱 150이 됨 (가장 가까운 경계선)
+	#var clamped_vector = vector_to_mouse.limit_length(attack_range)
+	#
+	## 3. 최종 소환 위치 계산 (플레이어 위치 + 제한된 벡터)
+	#var final_spawn_pos = player_pos + clamped_vector
+	#
+	## 4. 창 소환 로직
+	#var spear = spear_scene.instantiate()
+	#spear.global_position = final_spawn_pos
+	#
+	# (선택) 창의 각도를 플레이어->마우스 방향으로 회전시키고 싶다면:
+	# spear.rotation = vector_to_mouse.angle() 
+	
+	#get_tree().current_scene.add_child(spear)

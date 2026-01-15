@@ -1,10 +1,10 @@
 [gd_scene load_steps=25 format=3 uid="uid://rsbnkhr5v5m5"]
 
-[ext_resource type="Script" uid="uid://hlw3w7d2ucat" path="res://projectiles/Speer/speer.gd" id="1_cgr72"]
-[ext_resource type="Texture2D" uid="uid://dvbvnqwbir3qj" path="res://assets/Image/Skill/speer2.png" id="1_rfl1w"]
+[ext_resource type="Script" uid="uid://hlw3w7d2ucat" path="res://projectiles/Spear/spear.gd" id="1_cgr72"]
+[ext_resource type="Texture2D" uid="uid://dvbvnqwbir3qj" path="res://assets/Image/Skill/spear2.png" id="1_rfl1w"]
 [ext_resource type="Texture2D" uid="uid://co6oyda6q113r" path="res://assets/Image/Skill/Holy VFX 02.png" id="2_cgr72"]
-[ext_resource type="Script" uid="uid://d2aopl1ojwuiv" path="res://projectiles/Speer/attack_area.gd" id="4_to2fi"]
-[ext_resource type="Texture2D" uid="uid://icaxevfrtajv" path="res://assets/Image/Skill/speer_shadow2.png" id="5_jrew0"]
+[ext_resource type="Script" uid="uid://d2aopl1ojwuiv" path="res://projectiles/Spear/attack_area.gd" id="4_to2fi"]
+[ext_resource type="Texture2D" uid="uid://icaxevfrtajv" path="res://assets/Image/Skill/spear_shadow2.png" id="5_jrew0"]
 
 [sub_resource type="Animation" id="Animation_um5o7"]
 length = 0.001
@@ -46,7 +46,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_vtiwu"]
-resource_name = "spawn_speer"
+resource_name = "spawn_spear"
 length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -70,7 +70,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [&"spawn_speer"],
+"args": [&"spawn_spear"],
 "method": &"play"
 }]
 }
@@ -130,7 +130,7 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nvsso"]
 _data = {
 &"RESET": SubResource("Animation_um5o7"),
-&"spawn_speer": SubResource("Animation_vtiwu")
+&"spawn_spear": SubResource("Animation_vtiwu")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_um5o7"]
@@ -235,23 +235,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_wyjxi")
 }],
 "loop": true,
-"name": &"spawn_speer",
+"name": &"spawn_spear",
 "speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgr72"]
 size = Vector2(30.833332, 65.83333)
 
-[node name="Speer" type="Node2D"]
+[node name="Spear" type="Node2D"]
 scale = Vector2(1.2, 1.2)
 script = ExtResource("1_cgr72")
 
-[node name="speer_animation" type="AnimationPlayer" parent="."]
-root_node = NodePath("../sprite/Speer2")
+[node name="spear_animation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../sprite/Spear")
 libraries = {
 &"": SubResource("AnimationLibrary_nvsso")
 }
-autoplay = "spawn_speer"
+autoplay = "spawn_spear"
 
 [node name="sprite" type="Node2D" parent="."]
 position = Vector2(0, -22.5)
@@ -262,16 +262,16 @@ position = Vector2(3.0517578e-05, -153.83331)
 rotation = -3.1415925
 scale = Vector2(1.2880684, 3.7742324)
 sprite_frames = SubResource("SpriteFrames_o4vcm")
-animation = &"spawn_speer"
+animation = &"spawn_spear"
 offset = Vector2(2, -24)
 
-[node name="Speer2" type="Sprite2D" parent="sprite"]
+[node name="Spear" type="Sprite2D" parent="sprite"]
 position = Vector2(3.0517578e-05, -153.83322)
 rotation = -3.1415925
 texture = ExtResource("1_rfl1w")
 offset = Vector2(-1, -79)
 
-[node name="SpeerShadow" type="Sprite2D" parent="sprite"]
+[node name="SpearShadow" type="Sprite2D" parent="sprite"]
 position = Vector2(-1.667, 35.000004)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_jrew0")

@@ -626,6 +626,7 @@ y_sort_enabled = true
 scale = Vector2(1, 0.986045)
 collision_mask = 67
 script = ExtResource("1_onrkg")
+spear = true
 
 [node name="AimPivot" type="Marker2D" parent="."]
 position = Vector2(0, -10)
@@ -643,7 +644,6 @@ animation = &"idle"
 offset = Vector2(0, -20)
 
 [node name="AttackRange" type="Area2D" parent="."]
-visible = false
 monitoring = false
 
 [node name="AttackRangeCollision" type="CollisionShape2D" parent="AttackRange"]
@@ -828,6 +828,7 @@ layout_mode = 2
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="input_event" from="AttackRange" to="." method="_on_attack_range_input_event"]
 [connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
 [connection signal="area_entered" from="AttackCollision" to="." method="_on_attack_collision_area_entered"]
 [connection signal="timeout" from="HitFlashTimer" to="." method="_on_hit_flash_timer_timeout"]
