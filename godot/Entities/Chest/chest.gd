@@ -1,8 +1,9 @@
 extends StaticBody2D
 
 @onready var outline_material := preload("res://UI/Outline.tres")
-@onready var sprite := $AnimatedSprite2D
+@onready var chest: AnimatedSprite2D = $Chest
 @onready var item_scene = preload("res://Resources/Items/Scene/ItemScene.tscn")
+@onready var open_animation: AnimationPlayer = $open_animation
 
 
 var ready_open = false
@@ -10,7 +11,7 @@ var opend = false
 
 func _ready() -> void:
 	outline_material.set_shader_parameter("outline_size", 1)
-	sprite.material = null
+	chest.material = null
 
 
 func _process(_delta: float) -> void:
@@ -22,11 +23,11 @@ func _process(_delta: float) -> void:
 func OpenChest():
 	if opend:	return
 	opend = true
-	$AnimatedSprite2D.play("open")
+	open_animation.play("open_chest")
 	EventBus.emit_signal("hide_hint_ui")
 	
-	await $AnimatedSprite2D.animation_finished
-	sprite.material = null
+	await open_animation.animation_finished
+	chest.material = null
 	
 	var item = item_scene.instantiate()
 	var ysort = get_tree().current_scene.get_node("Ysort")
@@ -39,11 +40,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
 		ready_open = true
 		EventBus.emit_signal("show_hint_ui")
-		sprite.material = outline_material
+		chest.material = outline_material
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
 		ready_open = false
 		EventBus.emit_signal("hide_hint_ui")
-		sprite.material = null
+		chest.material = null

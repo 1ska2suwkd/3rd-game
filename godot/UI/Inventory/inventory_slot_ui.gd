@@ -37,7 +37,7 @@ func update(item: Item):
 		not_item.visible = false
 		is_item.visible = true
 		item_display.visible = true
-		item_display.texture = item.sprite
+		item_display.texture = item.item_inventory_texture
 		item_name_label.text = item_color_code+item.item_name
 		item_descript_label.text = item.item_description
 		item_ability_label.text = item.item_ability

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2d1wse6bbjlq" path="res://Resources/Items/Script/atk_speed_book.gd" id="1_2kp7h"]
 [ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_7i0vr"]
-[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_7i0vr"]
+[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/ingame_texture/1권.png" id="2_7i0vr"]
 
 [resource]
 script = ExtResource("1_7i0vr")
@@ -12,5 +12,6 @@ item_name = "칼을 뽑았으면 휘둘러라"
 item_description = "마스터가 잃어버린 책 제 1권, 무기를 빠르게 휘두르는 방법이 자세하게 적혀있다."
 item_ability = "공격속도 0.5 증가"
 effect_script = ExtResource("1_2kp7h")
-sprite = ExtResource("2_7i0vr")
+item_inventory_texture = ExtResource("2_7i0vr")
+item_ingame_texture = ExtResource("2_7i0vr")
 metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

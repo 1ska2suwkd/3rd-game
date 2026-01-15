@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ch3oabloq30wy"]
 
 [ext_resource type="Script" uid="uid://dphy1o3sw5nov" path="res://Resources/Items/Script/add_Item.gd" id="1_qvyix"]
-[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/1권.png" id="2_mhjr0"]
+[ext_resource type="Texture2D" uid="uid://bl53adhx1qcun" path="res://assets/Image/Item/ingame_texture/1권.png" id="2_mhjr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7mro"]
 size = Vector2(64, 64)

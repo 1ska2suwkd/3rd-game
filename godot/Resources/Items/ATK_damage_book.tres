@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_5gpst"]
 [ext_resource type="Script" uid="uid://dw03ls60e8t4h" path="res://Resources/Items/Script/atk_damage_book.gd" id="1_utnrh"]
-[ext_resource type="Texture2D" uid="uid://b7waoc7h5ayy5" path="res://assets/Image/Item/2권.png" id="2_5gpst"]
+[ext_resource type="Texture2D" uid="uid://b7waoc7h5ayy5" path="res://assets/Image/Item/ingame_texture/2권.png" id="2_5gpst"]
 
 [resource]
 script = ExtResource("1_5gpst")
@@ -12,5 +12,6 @@ item_name = "더 강하게!  더 박력있게!"
 item_description = "마스터가 잃어버린 책 제 2권, 강력한 공격을 하기 위한 연습법이 자세하게 적혀있다."
 item_ability = "공격력 5 증가"
 effect_script = ExtResource("1_utnrh")
-sprite = ExtResource("2_5gpst")
+item_inventory_texture = ExtResource("2_5gpst")
+item_ingame_texture = ExtResource("2_5gpst")
 metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

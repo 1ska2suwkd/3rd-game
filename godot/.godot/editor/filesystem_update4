@@ -20,3 +20,14 @@ res://Resources/Items/Script/crescent_slash.gd
 res://Resources/Items/Script/speer.gd
 res://Resources/Items/Speer.tres
 res://Resources/Items/Crescent_Slash.tres
+res://Resources/Custom_Resources/Item.gd
+res://Resources/Items/ATK_damage_book.tres
+res://Resources/Items/ATK_speed_book.tres
+res://Resources/Items/maid_costume.tres
+res://Resources/Items/Piercing_Attack.tres
+res://UI/Inventory/inventory_slot_ui.gd
+res://Resources/Items/Scene/CrescnetSlash_item.tscn
+res://UI/out_line_shine.gdshader
+res://Scene/Dungeon/Room/Stage1_chest_Room.tscn
+res://Entities/Chest/chest.gd
+res://Entities/Chest/chest.tscn

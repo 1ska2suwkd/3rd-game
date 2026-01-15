@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxc1p756uid7j"]
+
+[ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="1_dukm3"]
+[ext_resource type="Shader" uid="uid://bkcnjjf8u38h5" path="res://UI/out_line_shine.gdshader" id="1_jl5kh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8bxk8"]
+shader = ExtResource("1_jl5kh")
+shader_parameter/color_first = Color(1, 0.8, 0, 1)
+shader_parameter/color_second = Color(1, 0, 0, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/shine_speed = 1.0
+
+[node name="CrescnetSlashItem" type="Sprite2D"]
+modulate = Color(1, 0.7941667, 0.35000002, 1)
+material = SubResource("ShaderMaterial_8bxk8")
+texture = ExtResource("1_dukm3")
+region_rect = Rect2(0, -4.121601, 90.350204, 52.1216)
