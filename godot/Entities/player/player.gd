@@ -173,7 +173,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		else:
 			combo = "1"
 			
-func spawn_crescent_slash(direction, count = 1):
+func spawn_crescent_slash(direction):
 	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item and not PlayerStat.is_player_hit:
 			# 1. 기준 위치 잡기 (플레이어의 중심 혹은 무기 위치)
 		var center_pos = global_position # 혹은 $AimPivot/SpawnPoint.global_position
@@ -189,9 +189,9 @@ func spawn_crescent_slash(direction, count = 1):
 		# 4. 정렬 시작점 계산 (짝수 개수일 때도 중앙이 맞도록)
 		# 예: 2개일 때 -> -0.5, +0.5 위치
 		# 예: 3개일 때 -> -1, 0, +1 위치
-		var start_offset = -(spacing * (count - 1)) / 2.0
+		var start_offset = -(spacing * (MasterSkill.crescnet_count - 1)) / 2.0
 		$AimPivot.rotation = direction.angle()
-		for i in range(count):
+		for i in range(MasterSkill.crescnet_count):
 			var projectile = CRESCENT_SLASH.instantiate()
 			var offset = side_vector * (start_offset + (i * spacing))
 			projectile.global_position = center_pos + offset
@@ -208,14 +208,16 @@ func spawn_crescent_slash(direction, count = 1):
 
 func spawn_speer():
 	if PlayerStat.player_inv.items[1] == MasterSkill.speer_item:
-		var ysort = get_tree().current_scene.get_node("Ysort")
-		var mouse_pos = get_global_mouse_position()
-		
-		var speer_instance = SPEER.instantiate()
-		speer_instance.rotation_degrees = current_speer_angle
-		speer_instance.global_position = mouse_pos
-		
-		ysort.add_child(speer_instance)
+		for i in range(MasterSkill.speer_count):
+			var ysort = get_tree().current_scene.get_node("Ysort")
+			var mouse_pos = get_global_mouse_position()
+			
+			var speer_instance = SPEER.instantiate()
+			speer_instance.rotation_degrees = current_speer_angle
+			speer_instance.global_position = mouse_pos
+			
+			ysort.add_child(speer_instance)
+			
 	
 
 			
@@ -226,30 +228,28 @@ func _on_animated_sprite_2d_frame_changed():
 	if anim == "up_attack1" or anim == "up_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
-			spawn_crescent_slash(Vector2(0,-1), MasterSkill.crescnet_count)
+			spawn_crescent_slash(Vector2(0,-1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
-			spawn_crescent_slash(Vector2(0,1), MasterSkill.crescnet_count)
+			spawn_crescent_slash(Vector2(0,1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
-			spawn_crescent_slash(Vector2(-1,0), MasterSkill.crescnet_count)
+			spawn_crescent_slash(Vector2(-1,0))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
-			for i in range(2):
-				spawn_crescent_slash(Vector2(1,0), MasterSkill.crescnet_count)
-			
+			spawn_crescent_slash(Vector2(1,0))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true

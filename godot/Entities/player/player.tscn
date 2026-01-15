@@ -639,8 +639,7 @@ script = ExtResource("2_ebec5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"up_attack1"
-frame = 3
+animation = &"idle"
 offset = Vector2(0, -20)
 
 [node name="AttackRange" type="Area2D" parent="."]

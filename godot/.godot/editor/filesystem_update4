@@ -1,6 +1,4 @@
 res://Entities/player/player.tscn
 res://UI/out_line_shine.gdshader
 res://UI/Outline.tres
-res://Scene/Dungeon/Room/Stage1_chest_Room.tscn
-res://Resources/Items/Speer.tres
-res://Entities/Chest/chest.gd
+res://Entities/player/player.gd
