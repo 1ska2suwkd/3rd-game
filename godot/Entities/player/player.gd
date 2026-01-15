@@ -211,13 +211,13 @@ func spawn_spear():
 			var ysort = get_tree().current_scene.get_node("Ysort")
 			var player_pos = global_position
 			var mouse_pos = get_global_mouse_position()
-			
+			const BASE_SPEAR_RANGE = 200
 			# 1. 플레이어에서 마우스까지의 벡터(방향과 거리)를 구함
 			var vector_to_mouse = mouse_pos - player_pos
 			# 2. 벡터의 길이를 사거리(attack_range)로 제한함
 			# - 마우스가 사거리 안이면: 원래 위치 그대로 (변화 없음)
 			# - 마우스가 사거리 밖이면: 방향은 같지만 길이는 딱 150이 됨 (가장 가까운 경계선)
-			var clamped_vector = vector_to_mouse.limit_length(PlayerStat.TotalAttackRange * 100)
+			var clamped_vector = vector_to_mouse.limit_length(BASE_SPEAR_RANGE + PlayerStat.TotalAttackRange * 10)
 			# 3. 최종 소환 위치 계산 (플레이어 위치 + 제한된 벡터)
 			var final_spawn_pos = player_pos + clamped_vector
 			var spear_instance = SPEAR.instantiate()

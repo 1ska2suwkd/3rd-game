@@ -4,6 +4,7 @@ extends Area2D
 var damage: int = 0
 var direction: Vector2 = Vector2.ZERO
 var start_position: Vector2
+const BASE_ATTACK_RANGE = 300
 
 func _ready() -> void:
 	start_position = global_position
@@ -11,7 +12,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	position += direction * speed * delta
 	
-	if start_position.distance_to(global_position) >= (PlayerStat.TotalAttackRange * 100): # attack_range가 플레이어한테 보일땐 한자리지만 실제로 거리계산을 할땐 값이 더 커야함
+	if start_position.distance_to(global_position) >= (BASE_ATTACK_RANGE + PlayerStat.TotalAttackRange * 10): # attack_range가 플레이어한테 보일땐 한자리지만 실제로 거리계산을 할땐 값이 더 커야함
 		queue_free()
 
 func _on_area_entered(area: Area2D) -> void:

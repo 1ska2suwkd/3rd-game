@@ -2,4 +2,4 @@
 extends Resource
 
 func apply():
-	PlayerStat.set_attack_range(2)
+	PlayerStat.set_attack_range(8)

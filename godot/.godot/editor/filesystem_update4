@@ -10,3 +10,6 @@ res://Autoload/all_item.gd
 res://projectiles/Spear/spear.gd
 res://projectiles/Spear/spear.tscn
 res://Resources/Items/Script/spear.gd
+res://projectiles/Crescent_Slash/Crescent_Slash.gd
+res://Resources/Items/Script/maid_costume.gd
+res://Scene/Village/Village.tscn
