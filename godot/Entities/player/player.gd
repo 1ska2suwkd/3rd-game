@@ -37,11 +37,11 @@ func _ready():
 		hearts_list.append(child)
 	init_heart_display()
 
-	if Crescent_Slash:
+	if Crescent_Slash and MasterSkill.crescnet_count == 0:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
 		MasterSkill.crescnet_count += 1
 		EventBus.emit_signal("update_inv_ui")
-	if spear:
+	if spear and MasterSkill.spear_count == 0:
 		PlayerStat.player_inv.items[1] = MasterSkill.spear_item
 		MasterSkill.spear_count += 1
 		EventBus.emit_signal("update_inv_ui")
@@ -209,16 +209,25 @@ func spawn_spear():
 	if PlayerStat.player_inv.items[1] == MasterSkill.spear_item:
 		for i in range(MasterSkill.spear_count):
 			var ysort = get_tree().current_scene.get_node("Ysort")
+			var player_pos = global_position
 			var mouse_pos = get_global_mouse_position()
+			
+			# 1. 플레이어에서 마우스까지의 벡터(방향과 거리)를 구함
+			var vector_to_mouse = mouse_pos - player_pos
+			# 2. 벡터의 길이를 사거리(attack_range)로 제한함
+			# - 마우스가 사거리 안이면: 원래 위치 그대로 (변화 없음)
+			# - 마우스가 사거리 밖이면: 방향은 같지만 길이는 딱 150이 됨 (가장 가까운 경계선)
+			var clamped_vector = vector_to_mouse.limit_length(PlayerStat.TotalAttackRange * 100)
+			# 3. 최종 소환 위치 계산 (플레이어 위치 + 제한된 벡터)
+			var final_spawn_pos = player_pos + clamped_vector
 			var spear_instance = SPEAR.instantiate()
 			spear_instance.rotation_degrees = current_spear_angle
-			spear_instance.global_position = mouse_pos
+			spear_instance.global_position = final_spawn_pos
 			
 			ysort.add_child(spear_instance)
 			
 			await get_tree().create_timer(0.1).timeout
 
-			
 func _on_animated_sprite_2d_frame_changed():
 	var anim = $AnimatedSprite2D.animation
 	var frame = $AnimatedSprite2D.frame
@@ -286,33 +295,3 @@ func _on_pickup_area_area_entered(area: Area2D) -> void:
 	if area.has_method("use_item"):
 		area.use_item()
 		EventBus.emit_signal("update_inv_ui")
-
-#
-#func _unhandled_input(event: InputEvent) -> void:
-	## 마우스 왼쪽 클릭 시
-	#if event.is_action_pressed("attack"):
-		#spawn_spear()
-
-#func spawn_spear_at_target():
-	#var mouse_pos = get_global_mouse_position()
-	#var player_pos = global_position
-	#
-	## 1. 플레이어에서 마우스까지의 벡터(방향과 거리)를 구함
-	#var vector_to_mouse = mouse_pos - player_pos
-	#
-	## 2. ★핵심★ 벡터의 길이를 사거리(attack_range)로 제한함
-	## - 마우스가 사거리 안이면: 원래 위치 그대로 (변화 없음)
-	## - 마우스가 사거리 밖이면: 방향은 같지만 길이는 딱 150이 됨 (가장 가까운 경계선)
-	#var clamped_vector = vector_to_mouse.limit_length(attack_range)
-	#
-	## 3. 최종 소환 위치 계산 (플레이어 위치 + 제한된 벡터)
-	#var final_spawn_pos = player_pos + clamped_vector
-	#
-	## 4. 창 소환 로직
-	#var spear = spear_scene.instantiate()
-	#spear.global_position = final_spawn_pos
-	#
-	# (선택) 창의 각도를 플레이어->마우스 방향으로 회전시키고 싶다면:
-	# spear.rotation = vector_to_mouse.angle() 
-	
-	#get_tree().current_scene.add_child(spear)
