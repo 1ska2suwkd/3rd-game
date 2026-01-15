@@ -1,5 +1,6 @@
-CenterContainer
+HBoxContainer
 Control
+CenterContainer
 VBoxContainer
 TextureRect
 HSeparator

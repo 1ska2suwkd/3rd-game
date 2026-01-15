@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5iindhkdc5w2"]
+[gd_scene load_steps=7 format=3 uid="uid://d4feu2qbg3q0o"]
 
 [ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_jnfef"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_ycgtw"]

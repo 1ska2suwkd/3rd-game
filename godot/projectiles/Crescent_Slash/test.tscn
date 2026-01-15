@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cosq5u28oc7dk"]
 
-[ext_resource type="PackedScene" uid="uid://5iindhkdc5w2" path="res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn" id="1_b0hfr"]
+[ext_resource type="Script" uid="uid://eobgagu6v1l2" path="res://projectiles/Crescent_Slash/test.gd" id="1_ovevi"]
 
 [node name="Control" type="CenterContainer"]
 anchors_preset = 15
@@ -8,13 +8,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ovevi")
 
 [node name="Control" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Control" type="Control" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-
-[node name="rigth_Crescent_Slash" parent="Control/Control" instance=ExtResource("1_b0hfr")]
