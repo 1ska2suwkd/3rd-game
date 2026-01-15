@@ -14,7 +14,8 @@ func _ready() -> void:
 	Setup()
 
 func Setup():
-	var RandomItemNumber = randi_range(0,4)
+	#var RandomItemNumber = randi_range(0,4)
+	var RandomItemNumber = 0
 	
 	item_data = AllItem.all_item[RandomItemNumber]
 	
