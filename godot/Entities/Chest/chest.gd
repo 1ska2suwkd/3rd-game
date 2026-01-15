@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 
 func OpenChest():
 	if opend:	return
-	#opend = true
+	opend = true
 	EventBus.emit_signal("hide_hint_ui")
 	
 	chest.material = null

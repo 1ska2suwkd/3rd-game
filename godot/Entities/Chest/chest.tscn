@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cb5fh02u6w3s4" path="res://assets/Image/UI/Icons/Space.png" id="4_6sw53"]
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://UI/HintUI/show_hint_ui.tscn" id="4_trab4"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="6_62urf"]
-[ext_resource type="Texture2D" uid="uid://5r43nb2h5bsu" path="res://assets/1011.png" id="7_ewdpn"]
+[ext_resource type="Texture2D" uid="uid://bhrpv4nr88syh" path="res://assets/Image/Effects/epic_beam.png" id="7_ewdpn"]
 [ext_resource type="Texture2D" uid="uid://c1kbrgcdudhnv" path="res://assets/wizard.png" id="8_ewdpn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yx8lr"]

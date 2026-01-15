@@ -1,12 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768457266
+::res://::1768462282
 ::res://Animation/::1768194299
 Bushe.tres::SpriteFrames::4658800495734613869::1768193879::0::1::::<><><>0<>0<><>::uid://dilmb8kedegjf::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png<>uid://bnp7a3sprinfj::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe2.png<>uid://cis70snc6a3uy::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png<>uid://dklhpn2itgq4j::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe4.png
 Particle Fx.tres::SpriteFrames::1101409837482173693::1768194185::0::1::::<><><>0<>0<><>::uid://d8wbp0mr8op::::res://assets/Tiny Swords (Free Pack)/Particle FX/Dust_01.png<>uid://bjny11kks7ns3::::res://assets/Tiny Swords (Free Pack)/Particle FX/Dust_02.png<>uid://bbfeeyv54ppm7::::res://assets/Tiny Swords (Free Pack)/Particle FX/Explosion_01.png<>uid://yxp1gfi6ruut::::res://assets/Tiny Swords (Free Pack)/Particle FX/Explosion_02.png<>uid://rj2yxh2jkpht::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_01.png<>uid://b2lysufheu1en::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_02.png<>uid://d261hqrlo3k6i::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_03.png<>uid://cetugt4oq00sl::::res://assets/Tiny Swords (Free Pack)/Particle FX/Water Splash.png
 Water_Rocks.tres::SpriteFrames::1233597677129968605::1768194299::0::1::::<><><>0<>0<><>::uid://xstrockltyop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_01.png<>uid://bo6hawdfbnd20::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_02.png<>uid://c5ppsint3lqop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_03.png<>uid://bu7vogyl62sim::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png
-::res://assets/::1768458827
-883.png::CompressedTexture2D::2928955054386985657::1768458163::1768458155::1::::<><><>0<>0<>7aeb21600d31a6652c28bf8309fa547d<>res://.godot/imported/883.png-04b47c5e11ba34cfba0338634d7c2658.ctex::
-1011.png::CompressedTexture2D::2142571211565200252::1768458827::1768458827::1::::<><><>0<>0<>70f34e90a545b6ac2e91c1ea93b653bd<>res://.godot/imported/1011.png-9d997e305397e552eb7ab552b29a580c.ctex::
+::res://assets/::1768462144
 wizard.png::CompressedTexture2D::6618486473397660707::1764473396::1768190812::1::::<><><>0<>0<>abac73cf277670c450d9af395ea9e8d3<>res://.godot/imported/wizard.png-c08e5bdb364d3250895ef06ff7827261.ctex::
 ::res://assets/enemy/::1768190793
 ::res://assets/enemy/Harpoon Fish/::1768190813
@@ -94,7 +92,8 @@ Objects.png::CompressedTexture2D::6568169849680330535::1764759106::1768190812::1
 Water_coasts.png::CompressedTexture2D::6794071839419603974::1764759106::1768190812::1::::<><><>0<>0<>7dfd4efbf11c07980cef61e122039b6d<>res://.godot/imported/Water_coasts.png-9742ef728a0ed4618428e1deb39d653d.ctex::
 water_detilazation.png::CompressedTexture2D::7141351344152939502::1764759106::1768190812::1::::<><><>0<>0<>9d79122eb48f84732ec0fcc7bd57f657<>res://.godot/imported/water_detilazation.png-c2d62e83ed81495b3bcf06baa57fd638.ctex::
 water_detilazation_v2.png::CompressedTexture2D::144040783689714413::1764759106::1768190812::1::::<><><>0<>0<>9d116b85759e28dcfd7a717acd7e0e3b<>res://.godot/imported/water_detilazation_v2.png-5b5e249314d54f43b09a91babe3996b7.ctex::
-::res://assets/Image/Effects/::1768190793
+::res://assets/Image/Effects/::1768462161
+epic_beam.png::CompressedTexture2D::2913786811619275255::1768458827::1768462161::1::::<><><>0<>0<>6e26f3e34dbd86a6d6d5b818b9c8b1fa<>res://.godot/imported/epic_beam.png-481167d265b717a1f5cd30c28ea2ca28.ctex::
 ::res://assets/Image/Effects/Explosion/::1768190812
 Explosions.png::CompressedTexture2D::2132288913217287598::1764473388::1768190812::1::::<><><>0<>0<>778cf5badfc732efe0ed5441c3715af2<>res://.godot/imported/Explosions.png-8ed632cfe6ec269c2e2e83598f2d41fb.ctex::
 ::res://assets/Image/Effects/Fire/::1768190812
@@ -221,7 +220,7 @@ Warrior_Run.png::CompressedTexture2D::6509445555000517479::1764473390::176819081
 Warrior_Yellow.png::CompressedTexture2D::5181125742850262928::1764473390::1768190814::1::::<><><>0<>0<>0c161d749b7bde058efbefc586611721<>res://.godot/imported/Warrior_Yellow.png-20aab5d049e6aa5a8c42480c174f6770.ctex::
 ::res://assets/Image/Item/::1768457266
 64x64.png::CompressedTexture2D::2401421369732269695::1764473392::1768190815::1::::<><><>0<>0<>e8af3df27269ff2966153ce542c6a847<>res://.godot/imported/64x64.png-18f32ebb4a4db66c221ccff839e5d09a.ctex::
-::res://assets/Image/Item/ingame_texture/::1768461853
+::res://assets/Image/Item/ingame_texture/::1768462074
 1권.png::CompressedTexture2D::3222129541594784253::1764473390::1768457262::1::::<><><>0<>0<>af40917c9811e7e131fb03f42cde72b4<>res://.godot/imported/1권.png-dea7c3324bd24e895e75e38825264cea.ctex::
 2권.png::CompressedTexture2D::4677905146652729198::1764473390::1768457262::1::::<><><>0<>0<>1f34da782adf200fa15e4237366e9b11<>res://.godot/imported/2권.png-de1e5bb4d142ff2004eb02dae3d0d761.ctex::
 crescent_slash.png::CompressedTexture2D::8026870942225643888::1768462070::1768462074::1::::<><><>0<>0<>aafedff5e60fa17e1a0cc9e2656f09b8<>res://.godot/imported/crescent_slash.png-834c58489aa63e0b40e13c017301a628.ctex::
@@ -1052,8 +1051,8 @@ Speer.tres::Resource/Item::5917626750941664087::1768461441::0::1::::<><><>0<>0<>
 ::res://Resources/Items/Scene/::1768457781
 CrescnetSlash_item.tscn::PackedScene::8779341367509550005::1768457781::0::1::::<><><>0<>0<><>::uid://bkkxryh6mj82t::::res://assets/Image/Skill/Sword_attack_vfx.png<>uid://bkcnjjf8u38h5::::res://UI/out_line_shine.gdshader
 ItemScene.tscn::PackedScene::5322815958039639240::1768457268::0::1::::<><><>0<>0<><>::uid://dphy1o3sw5nov::::res://Resources/Items/Script/add_Item.gd<>uid://bl53adhx1qcun::::res://assets/Image/Item/ingame_texture/1권.png
-::res://Resources/Items/Script/::1768461818
-add_Item.gd::GDScript::8228049767825987125::1768461818::0::1::::<>Area2D<><>0<>0<><>::
+::res://Resources/Items/Script/::1768462165
+add_Item.gd::GDScript::8228049767825987125::1768462165::0::1::::<>Area2D<><>0<>0<><>::
 atk_damage_book.gd::GDScript::8756746768949715285::1768190727::0::1::::<>Resource<><>0<>0<><>::
 atk_speed_book.gd::GDScript::6675752161162496418::1768190727::0::1::::<>Resource<><>0<>0<><>::
 crescent_slash.gd::GDScript::381637816013685714::1768454883::0::1::::<>Resource<><>0<>0<><>::
