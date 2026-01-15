@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://be4cdt0bxxe8q"]
+[gd_scene load_steps=38 format=3 uid="uid://be4cdt0bxxe8q"]
 
 [ext_resource type="Script" uid="uid://53wvjdmdq8yb" path="res://Entities/Chest/chest.gd" id="1_yx8lr"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://UI/Outline.tres" id="2_bfsuy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://UI/HintUI/show_hint_ui.tscn" id="4_trab4"]
 [ext_resource type="Texture2D" uid="uid://ccaj1enjwh0ya" path="res://assets/Image/Texture/Light Texture.png" id="6_62urf"]
 [ext_resource type="Texture2D" uid="uid://5r43nb2h5bsu" path="res://assets/1011.png" id="7_ewdpn"]
+[ext_resource type="Texture2D" uid="uid://c1kbrgcdudhnv" path="res://assets/wizard.png" id="8_ewdpn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yx8lr"]
 atlas = ExtResource("3_bfsuy")
@@ -146,6 +147,14 @@ region = Rect2(640, 0, 64, 64)
 atlas = ExtResource("7_ewdpn")
 region = Rect2(704, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0kig"]
+atlas = ExtResource("8_ewdpn")
+region = Rect2(118, 61, 88, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmdof"]
+atlas = ExtResource("8_ewdpn")
+region = Rect2(118, 60, 88, 1)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_r0kig"]
 animations = [{
 "frames": [{
@@ -169,12 +178,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4b2vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0kig")
 }],
 "loop": false,
 "name": &"effect",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmdof")
+}],
 "loop": false,
 "name": &"hide",
 "speed": 5.0
@@ -217,10 +232,10 @@ tracks/2/path = NodePath("PointLight2D:energy")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0]
+"values": [0.0, 1.0, 1.0, 0.0]
 }
 
 [sub_resource type="Animation" id="Animation_xjbnx"]
@@ -310,7 +325,7 @@ region_rect = Rect2(40, 104, 48, 16)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(0, -92.00001)
+position = Vector2(0, -56.00001)
 scale = Vector2(10, 10)
 color = Color(0.73, 0.58400005, 0, 1)
 energy = 0.0
@@ -319,7 +334,7 @@ texture = ExtResource("6_62urf")
 [node name="EpicBeam" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(4.838736, 4.9172873, 0, 1)
 z_index = 1
-position = Vector2(0, -92.00001)
+position = Vector2(0, -56.00001)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_r0kig")
 animation = &"hide"

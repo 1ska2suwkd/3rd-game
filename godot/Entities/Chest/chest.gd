@@ -22,11 +22,9 @@ func _process(_delta: float) -> void:
 
 func OpenChest():
 	if opend:	return
-	opend = true
-	open_animation.play("open_chest")
+	#opend = true
 	EventBus.emit_signal("hide_hint_ui")
 	
-	await open_animation.animation_finished
 	chest.material = null
 	
 	var item = item_scene.instantiate()
@@ -35,6 +33,9 @@ func OpenChest():
 	item.global_position = global_position
 	item.global_position.y += -50
 	ysort.add_child(item)
+	
+	open_animation.play("open_chest")
+	await open_animation.animation_finished
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
