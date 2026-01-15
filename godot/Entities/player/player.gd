@@ -218,7 +218,7 @@ func spawn_speer():
 			
 			ysort.add_child(speer_instance)
 			
-	
+			await get_tree().create_timer(0.1).timeout
 
 			
 func _on_animated_sprite_2d_frame_changed():
