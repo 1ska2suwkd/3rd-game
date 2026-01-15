@@ -17,6 +17,7 @@ func _on_buy_skill_pressed() -> void:
 	if PlayerStat.gold >= CRESCENTSLASH_PRISE and not PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
 		PlayerStat.set_gold(-CRESCENTSLASH_PRISE)
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
+		MasterSkill.crescnet_count += 1
 		EventBus.update_inv_ui.emit()
 		Check.show()
 

@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6kvplh1nn74i"]
-
-[ext_resource type="PackedScene" uid="uid://d4feu2qbg3q0o" path="res://projectiles/Crescent_Slash/XCrescent_Slash.tscn" id="1_tky3i"]
-
-[node name="CrescentSlash" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-
-[node name="Crescent_Slash" parent="." instance=ExtResource("1_tky3i")]

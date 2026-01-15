@@ -11,3 +11,5 @@ res://projectiles/Crescent_Slash/XCrescent_Slash.tscn
 res://projectiles/Crescent_Slash/CrescentSlash.tscn
 res://projectiles/Crescent_Slash/crescent_slash.gd
 res://Entities/player/player.gd
+res://Entities/Master/Skill/Master_Skill.gd
+res://Entities/Master/Script/master_skilltree.gd

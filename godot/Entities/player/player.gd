@@ -40,9 +40,11 @@ func _ready():
 
 	if Crescent_Slash:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
+		MasterSkill.crescnet_count += 1
 		EventBus.emit_signal("update_inv_ui")
 	if speer:
 		PlayerStat.player_inv.items[1] = MasterSkill.speer_item
+		MasterSkill.crescnet_count += 1
 		EventBus.emit_signal("update_inv_ui")
 	
 	attack_range_collision.scale *= PlayerStat.TotalAttackRange
@@ -177,7 +179,7 @@ func spawn_crescent_slash(direction, count = 1):
 		var center_pos = global_position # 혹은 $AimPivot/SpawnPoint.global_position
 
 		# 2. 투사체 사이의 간격 설정
-		var spacing = 40.0 # 투사체끼리 40픽셀 떨어짐
+		var spacing = 20.0 # 투사체끼리 40픽셀 떨어짐
 
 		# 3. 진행 방향의 '수직 벡터(옆 방향)' 구하기 (핵심!)
 		# 오른쪽으로 쏠 땐 (0, 1)이 되어 위아래로 벌어짐
@@ -224,21 +226,21 @@ func _on_animated_sprite_2d_frame_changed():
 	if anim == "up_attack1" or anim == "up_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
-			spawn_crescent_slash(Vector2(0,-1))
+			spawn_crescent_slash(Vector2(0,-1), MasterSkill.crescnet_count)
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
-			spawn_crescent_slash(Vector2(0,1))
+			spawn_crescent_slash(Vector2(0,1), MasterSkill.crescnet_count)
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
-			spawn_crescent_slash(Vector2(-1,0))
+			spawn_crescent_slash(Vector2(-1,0), MasterSkill.crescnet_count)
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
@@ -246,7 +248,7 @@ func _on_animated_sprite_2d_frame_changed():
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
 			for i in range(2):
-				spawn_crescent_slash(Vector2(1,0), 2)
+				spawn_crescent_slash(Vector2(1,0), MasterSkill.crescnet_count)
 			
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
