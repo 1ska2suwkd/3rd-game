@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://i0xdmshbv3fg" path="res://Components/Dungeon/Door/SouthDoor.tscn" id="18_mlwnb"]
 [ext_resource type="PackedScene" uid="uid://dlnu4ml2tv30m" path="res://Components/Dungeon/Door/EastDoor.tscn" id="19_ylfab"]
 [ext_resource type="PackedScene" uid="uid://b0gmv70x8j0jq" path="res://Components/Dungeon/Door/WestDoor.tscn" id="20_kybqi"]
-[ext_resource type="PackedScene" uid="uid://cosq5u28oc7dk" path="res://projectiles/Crescent_Slash/test.tscn" id="22_ynk6m"]
+[ext_resource type="PackedScene" uid="uid://cosq5u28oc7dk" path="res://projectiles/Crescent_Slash/Sort_CrescenSlash.tscn" id="22_ynk6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hjre"]
 texture = ExtResource("9_c8sjk")

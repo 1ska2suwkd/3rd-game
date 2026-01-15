@@ -18,11 +18,7 @@ var knockback_time := 0.0
 var hearts_list : Array[TextureRect]
 
 
-const SLASH_UP = preload("res://projectiles/Crescent_Slash/up_Crescent_Slash.tscn")
-const SLASH_DOWN = preload("res://projectiles/Crescent_Slash/down_Crescent_Slash.tscn")
-const SLASH_LEFT = preload("res://projectiles/Crescent_Slash/left_Crescent_Slash.tscn")
-const SLASH_RIGHT = preload("res://projectiles/Crescent_Slash/right_Crescent_Slash.tscn")
-
+const CRESCENT_SLASH = preload("res://projectiles/Crescent_Slash/Sort_CrescenSlash.tscn")
 const SPEER = preload("res://projectiles/Speer/speer.tscn")
 
 @onready var INVENTORY_UI = $UI/InventoryUi
@@ -175,9 +171,15 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		else:
 			combo = "1"
 			
-func spawn_crescent_slash(scene_resource: PackedScene, direction):
+func spawn_crescent_slash(origin_symmetry: bool, direction):
 	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item and not PlayerStat.is_player_hit:
-		var projectile = scene_resource.instantiate()
+		
+		if direction.x == 0: # YCrescent
+			
+			
+			
+		
+		var projectile = CRESCENT_SLASH.instantiate()
 		projectile.global_position = global_position
 		projectile.damage = PlayerStat.TotalDamage
 		projectile.direction = direction
@@ -209,28 +211,28 @@ func _on_animated_sprite_2d_frame_changed():
 	if anim == "up_attack1" or anim == "up_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
-			spawn_crescent_slash(SLASH_UP, Vector2(0,-1))
+			spawn_crescent_slash(false, Vector2(0,-1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
-			spawn_crescent_slash(SLASH_DOWN, Vector2(0,1))
+			spawn_crescent_slash(true, Vector2(0,1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
-			spawn_crescent_slash(SLASH_LEFT, Vector2(-1,0))
+			spawn_crescent_slash(true, Vector2(-1,0))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
-			spawn_crescent_slash(SLASH_RIGHT, Vector2(1,0))
+			spawn_crescent_slash(false, Vector2(1,0))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true

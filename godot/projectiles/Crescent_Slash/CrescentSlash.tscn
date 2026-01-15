@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6kvplh1nn74i"]
+
+[ext_resource type="Script" uid="uid://dqg5d2kilc2pf" path="res://projectiles/Crescent_Slash/crescent_slash.gd" id="1_kqmda"]
+[ext_resource type="PackedScene" uid="uid://d4feu2qbg3q0o" path="res://projectiles/Crescent_Slash/XCrescent_Slash.tscn" id="1_tky3i"]
+[ext_resource type="PackedScene" uid="uid://cghss6xuwxyxi" path="res://projectiles/Crescent_Slash/YCrescent_Slash.tscn" id="2_kqmda"]
+
+[node name="CrescentSlash" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kqmda")
+
+[node name="xCrescent_Slash" parent="." instance=ExtResource("1_tky3i")]
+
+[node name="yCrescent_Slash" parent="." instance=ExtResource("2_kqmda")]
+position = Vector2(1, 0)
+
+[node name="AimPivot" type="Marker2D" parent="."]
