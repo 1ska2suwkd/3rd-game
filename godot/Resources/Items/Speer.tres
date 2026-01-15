@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cqksph5wptsyx"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cqksph5wptsyx"]
 
 [ext_resource type="Script" uid="uid://d2fmqj4n272q4" path="res://Resources/Items/Script/speer.gd" id="1_p4cgo"]
 [ext_resource type="Script" uid="uid://bwn7cbk2vsf0k" path="res://Resources/Custom_Resources/Item.gd" id="1_unqow"]
+[ext_resource type="Texture2D" uid="uid://b1ncq8flh363r" path="res://assets/Image/Item/ingame_texture/speer.png" id="2_2r05n"]
+[ext_resource type="Texture2D" uid="uid://dihtkruq6koqb" path="res://assets/Image/Item/inventory_texture/speer_item.png" id="3_n0w6e"]
 
 [resource]
 script = ExtResource("1_unqow")
@@ -9,4 +11,6 @@ item_number = 2
 item_grade = 4
 item_name = "Speer"
 effect_script = ExtResource("1_p4cgo")
+item_inventory_texture = ExtResource("3_n0w6e")
+item_ingame_texture = ExtResource("2_2r05n")
 metadata/_custom_type_script = "uid://bwn7cbk2vsf0k"

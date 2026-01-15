@@ -34,8 +34,13 @@ func OpenChest():
 	item.global_position.y += -50
 	ysort.add_child(item)
 	
-	open_animation.play("open_chest")
-	await open_animation.animation_finished
+	# 아이템 등급이 레전드리면 에픽빔
+	if not item.item_data.item_grade == item.item_data.ItemGrade.LEGENDARY:
+		open_animation.play("open_chest")
+		await open_animation.animation_finished
+	elif item.item_data.item_grade == item.item_data.ItemGrade.LEGENDARY:
+		open_animation.play("epic_open_chest")
+		await open_animation.animation_finished
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and not opend:
