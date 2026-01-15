@@ -18,7 +18,7 @@ var knockback_time := 0.0
 var hearts_list : Array[TextureRect]
 
 
-const CRESCENT_SLASH = preload("res://projectiles/Crescent_Slash/Sort_CrescenSlash.tscn")
+const CRESCENT_SLASH = preload("res://projectiles/Crescent_Slash/XCrescent_Slash.tscn")
 const SPEER = preload("res://projectiles/Speer/speer.tscn")
 
 @onready var INVENTORY_UI = $UI/InventoryUi
@@ -171,24 +171,37 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		else:
 			combo = "1"
 			
-func spawn_crescent_slash(origin_symmetry: bool, direction):
+func spawn_crescent_slash(direction, count = 1):
 	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item and not PlayerStat.is_player_hit:
-		
-		if direction.x == 0: # YCrescent
-			
-			
-			
-		
-		var projectile = CRESCENT_SLASH.instantiate()
-		projectile.global_position = global_position
-		projectile.damage = PlayerStat.TotalDamage
-		projectile.direction = direction
-		var ysort = get_tree().current_scene.get_node("Ysort")
-		if ysort:
-			ysort.add_child(projectile)
-		else:
-			push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
-			get_tree().current_scene.add_child(projectile)
+			# 1. 기준 위치 잡기 (플레이어의 중심 혹은 무기 위치)
+		var center_pos = global_position # 혹은 $AimPivot/SpawnPoint.global_position
+
+		# 2. 투사체 사이의 간격 설정
+		var spacing = 40.0 # 투사체끼리 40픽셀 떨어짐
+
+		# 3. 진행 방향의 '수직 벡터(옆 방향)' 구하기 (핵심!)
+		# 오른쪽으로 쏠 땐 (0, 1)이 되어 위아래로 벌어짐
+		# 위로 쏠 땐 (1, 0)이 되어 좌우로 벌어짐
+		var side_vector = Vector2(-direction.y, direction.x)
+
+		# 4. 정렬 시작점 계산 (짝수 개수일 때도 중앙이 맞도록)
+		# 예: 2개일 때 -> -0.5, +0.5 위치
+		# 예: 3개일 때 -> -1, 0, +1 위치
+		var start_offset = -(spacing * (count - 1)) / 2.0
+		$AimPivot.rotation = direction.angle()
+		for i in range(count):
+			var projectile = CRESCENT_SLASH.instantiate()
+			var offset = side_vector * (start_offset + (i * spacing))
+			projectile.global_position = center_pos + offset
+			projectile.global_rotation = $AimPivot.rotation
+			projectile.damage = PlayerStat.TotalDamage
+			projectile.direction = direction
+			var ysort = get_tree().current_scene.get_node("Ysort")
+			if ysort:
+				ysort.add_child(projectile)
+			else:
+				push_warning("⚠️ YSort 노드를 찾을 수 없습니다. current_scene에 직접 추가합니다.")
+				get_tree().current_scene.add_child(projectile)
 
 
 func spawn_speer():
@@ -211,28 +224,30 @@ func _on_animated_sprite_2d_frame_changed():
 	if anim == "up_attack1" or anim == "up_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/UpAttack.disabled = false
-			spawn_crescent_slash(false, Vector2(0,-1))
+			spawn_crescent_slash(Vector2(0,-1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/UpAttack.disabled = true
 	elif anim == "down_attack1" or anim == "down_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/DownAttack.disabled = false
-			spawn_crescent_slash(true, Vector2(0,1))
+			spawn_crescent_slash(Vector2(0,1))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/DownAttack.disabled = true
 	elif anim == "left_attack1" or anim == "left_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/LeftAttack.disabled = false
-			spawn_crescent_slash(true, Vector2(-1,0))
+			spawn_crescent_slash(Vector2(-1,0))
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/LeftAttack.disabled = true
 	elif anim == "right_attack1" or anim == "right_attack2":
 		if frame == 3:  # 타격 시작 프레임
 			$AttackCollision/RightAttack.disabled = false
-			spawn_crescent_slash(false, Vector2(1,0))
+			for i in range(2):
+				spawn_crescent_slash(Vector2(1,0), 2)
+			
 			spawn_speer()
 		elif frame == 5:  # 타격 종료 프레임
 			$AttackCollision/RightAttack.disabled = true

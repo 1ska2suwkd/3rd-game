@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d4feu2qbg3q0o"]
 
-[ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash_mover.gd" id="1_jnfef"]
+[ext_resource type="Script" uid="uid://qhaigmqmbham" path="res://projectiles/Crescent_Slash/Crescent_Slash.gd" id="1_jnfef"]
 [ext_resource type="Texture2D" uid="uid://ltuccisr41tr" path="res://assets/Image/Texture/Particle Texture.png" id="2_ycgtw"]
 [ext_resource type="PackedScene" uid="uid://cgseahk0epolb" path="res://projectiles/Crescent_Slash/sprite_crescent_slash.tscn" id="3_ypb0s"]
 
@@ -22,7 +22,7 @@ collision_mask = 66
 script = ExtResource("1_jnfef")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(196, 0)
+position = Vector2(131, 2)
 amount = 30
 texture = ExtResource("2_ycgtw")
 lifetime = 0.1
@@ -38,10 +38,10 @@ color_ramp = SubResource("Gradient_q5bs7")
 
 [node name="CrescentSlash" parent="." instance=ExtResource("3_ypb0s")]
 scale = Vector2(-2, 1.215)
-offset = Vector2(-74, 0)
+offset = Vector2(-43, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(155, 0)
+position = Vector2(90, 2)
 rotation = 1.5707964
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_ypb0s")

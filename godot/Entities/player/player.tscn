@@ -627,7 +627,12 @@ scale = Vector2(1, 0.986045)
 collision_mask = 67
 script = ExtResource("1_onrkg")
 Crescent_Slash = true
-speer = null
+
+[node name="AimPivot" type="Marker2D" parent="."]
+position = Vector2(0, -10)
+
+[node name="spawn_point" type="Marker2D" parent="AimPivot"]
+position = Vector2(57, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_ebec5")
@@ -635,7 +640,8 @@ script = ExtResource("2_ebec5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_h6w8y")
-animation = &"idle"
+animation = &"up_attack1"
+frame = 3
 offset = Vector2(0, -20)
 
 [node name="AttackRange" type="Area2D" parent="."]
