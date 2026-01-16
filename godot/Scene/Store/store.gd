@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var gold: AnimatedSprite2D = $Deco/Gold
-@onready var rubber_duck: AnimatedSprite2D = $Deco/Rubber_duck
+@onready var gold: AnimatedSprite2D = $Ysort/Deco/Gold
+@onready var rubber_duck: AnimatedSprite2D = $Ysort/Deco/Rubber_duck
 
 
 func _ready() -> void:
