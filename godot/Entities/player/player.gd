@@ -32,6 +32,11 @@ const SPEAR = preload("res://projectiles/Spear/spear.tscn")
 
 
 func _ready():
+	# 던전 패치 할때 필요 
+	# 플레이어 위치를 플레이어가 관리
+	# 문을 들어가면 씬 매니저에서 어떤 페이드 아웃을 쏠 건지 등등
+	#position = global.player_next_position
+	
 	PlayerStat.attacking = false
 	var hearts_parent = $UI/PlayerUI/Hearts
 	for child in hearts_parent.get_children():

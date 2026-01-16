@@ -11,7 +11,7 @@ var room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
 var player_position_x = 0
 var player_position_y = 0
-var player_flip_h = null
+var player_flip_h = false
 
 var random_number_generator = RandomNumberGenerator.new()
 var probabilities = [1.0, 0.1, 0.05]

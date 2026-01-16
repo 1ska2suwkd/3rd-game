@@ -36,12 +36,10 @@ func _ready() -> void:
 		player.global_position = global.player_next_position
 		global.player_next_position = Vector2.ZERO
 		
-		#player 스프라이트 방향 불러오기 [있는 경우에만]
-		if not global.player_flip_h == null:
-			var player_animated_sprite = player.get_node_or_null("AnimatedSprite2D")
-			if player_animated_sprite:
-				player_animated_sprite.flip_h = global.player_flip_h
-				global.player_flip_h = null
+		#player 스프라이트 방향 불러오기
+		var player_animated_sprite = player.get_node_or_null("AnimatedSprite2D")
+		if player_animated_sprite:
+			player_animated_sprite.flip_h = global.player_flip_h
 			
 		
 	outline_material.set_shader_parameter("outline_size", 3)
@@ -52,7 +50,8 @@ func _process(_delta):
 		if Input.is_action_just_pressed("Interaction"):
 			SceneManager.change_scene("res://Scene/Dungeon/Room/Room0.tscn")
 	elif ready_store:
-		pass
+		if Input.is_action_just_pressed("Interaction"):
+			SceneManager.change_scene("res://Scene/Store/Store.tscn")
 
 # Dungeon 메서드
 func _on_area_2d_body_entered(body): 

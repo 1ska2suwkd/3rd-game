@@ -269,7 +269,7 @@ tile_set = SubResource("TileSet_gu3v2")
 [node name="Ysort" type="Node2D" parent="."]
 
 [node name="player" parent="Ysort" instance=ExtResource("2_vkhlw")]
-position = Vector2(0, -130)
+position = Vector2(0, -59)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Ysort"]
 position = Vector2(2, -449)
