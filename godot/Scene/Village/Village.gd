@@ -15,7 +15,7 @@ func _ready() -> void:
 	if global.first_enter_village:
 		
 		player.get_node("AnimatedSprite2D").flip_h = true
-		player.global_position = Vector2(-1037.0, 217.0)
+		player.global_position = global.MASTER_FRONT
 		
 		var master_textbox = master_textbox_scene.instantiate()
 		master_textbox.queue_text("우리 마을.. 원래는 시끌시끌하고 강한 사람도 많았는데...")
@@ -32,7 +32,17 @@ func _ready() -> void:
 		
 		global.first_enter_village = false
 	else:
-		player.global_position = Vector2(0, 0)
+		#player 위치정보 불러오기
+		player.global_position = global.player_next_position
+		global.player_next_position = Vector2.ZERO
+		
+		#player 스프라이트 방향 불러오기 [있는 경우에만]
+		if not global.player_flip_h == null:
+			var player_animated_sprite = player.get_node_or_null("AnimatedSprite2D")
+			if player_animated_sprite:
+				player_animated_sprite.flip_h = global.player_flip_h
+				global.player_flip_h = null
+			
 		
 	outline_material.set_shader_parameter("outline_size", 3)
 	Master_sprite.material = null

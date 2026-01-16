@@ -1,7 +1,7 @@
 extends Node
 
 var start_game = false
-var first_enter_village = true
+var first_enter_village = false # 튜토리얼이 끝날 때  true로 변경됨
 var current_scene = "Village"
 var transition_scene = false
 var last_num = 0
@@ -11,7 +11,7 @@ var room_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 
 var player_position_x = 0
 var player_position_y = 0
-var player_flip_h = false
+var player_flip_h = null
 
 var random_number_generator = RandomNumberGenerator.new()
 var probabilities = [1.0, 0.1, 0.05]
@@ -20,6 +20,11 @@ var room_count = 0
 
 # textbox 관련 변수
 var is_stop = false
+
+# 위치 관련 변수
+var player_next_position: Vector2 = Vector2.ZERO
+const STORE_FRONT = Vector2(614, 40)
+const MASTER_FRONT = Vector2(-1037.0, 217.0)
 
 func _ready():
 	#clear_room_count = 5

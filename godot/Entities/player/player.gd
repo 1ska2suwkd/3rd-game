@@ -1,5 +1,6 @@
 # player.gd
 extends CharacterBody2D
+class_name Player
 
 @export var Crescent_Slash: bool = false
 @export var spear: bool = false

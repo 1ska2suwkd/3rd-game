@@ -77,6 +77,7 @@ func FinishTextbox():
 		
 		QuestUIAnimation.play("ShowTutorialUI")
 	else:
+		global.first_enter_village = true
 		SceneManager.change_scene("res://Scene/Village/Village.tscn")
 		global.init_game()
 
