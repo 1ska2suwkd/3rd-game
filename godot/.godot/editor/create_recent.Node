@@ -1,4 +1,5 @@
 CollisionShape2D
+Node2D
 Area2D
 RichTextLabel
 Label
@@ -6,7 +7,6 @@ Panel
 MarginContainer
 Control
 TextureRect
-Node2D
 AnimatedSprite2D
 CharacterBody2D
 TileMapLayer

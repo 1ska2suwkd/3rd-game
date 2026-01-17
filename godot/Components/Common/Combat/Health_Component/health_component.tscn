@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://drenvy30uh7mq"]
 
-[ext_resource type="Script" uid="uid://bxtmptgoila5o" path="res://Components/Common/Health_Component/health_component.gd" id="1_dav1h"]
+[ext_resource type="Script" uid="uid://bxtmptgoila5o" path="res://Components/Common/Combat/Health_Component/health_component.gd" id="1_dav1h"]
 
 [node name="HealthComponent" type="Node2D" node_paths=PackedStringArray("death_component")]
 script = ExtResource("1_dav1h")

@@ -1,3 +1,4 @@
+res://Components/Common/Dialogue/TalkArea
 res://Entities/Pex
 res://Resources/DialogueData
 res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck
@@ -19,4 +20,3 @@ res://assets/Image/Factions/Knights/Troops/Warrior/Red
 res://assets/Image/Factions/Knights/Troops/Warrior/Blue
 res://Components/Enemies/Particle
 res://Components/Enemies/UI/Healthbar_Coponent
-res://Entities/enemies/Bosses/Buta

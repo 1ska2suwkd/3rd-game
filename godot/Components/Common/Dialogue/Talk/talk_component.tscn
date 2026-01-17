@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://do4whn4b3tm08"]
+
+[ext_resource type="Script" uid="uid://c8fvtnop8bv7a" path="res://Components/Common/Dialogue/Talk/talk_component.gd" id="1_rslt3"]
+
+[node name="TalkComponent" type="Node2D"]
+script = ExtResource("1_rslt3")

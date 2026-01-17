@@ -10,3 +10,7 @@ res://Resources/DialogueData/Master.tres
 res://Entities/Master/Script/master.gd
 res://Entities/Pex/pex.tscn
 res://Scene/Store/store_master.gd
+res://Components/Common/Interaction/interaction_component.tscn
+res://Components/Common/Interaction/interaction_component.gd
+res://Components/Common/Dialogue/Talk/talk_component.gd
+res://Components/Common/Dialogue/Talk/talk_component.tscn
