@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://r3s5ke6jwqsb"]
+
+[ext_resource type="Texture2D" uid="uid://imnusce2yajv" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Texture.png" id="1_6sys4"]
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_uk2m2"]
+
+[resource]
+script = ExtResource("1_uk2m2")
+character_name = "맞서니"
+character_texture = ExtResource("1_6sys4")
+dialogue_text = "짬인지해라"
+metadata/_custom_type_script = "uid://dqvtnd51yut11"

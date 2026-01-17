@@ -3,3 +3,10 @@ res://UI/Outline.tres
 res://UI/out_line_shine.gdshader
 res://Resources/Custom_Resources/DialogueData.gd
 res://Resources/DialogueData/Pex.tres
+res://UI/TextBox/Text_Box_UI.tscn
+res://UI/TextBox/Master/master_textbox.gd
+res://UI/TextBox/text_box_ui.gd
+res://Resources/DialogueData/Master.tres
+res://Entities/Master/Script/master.gd
+res://Entities/Pex/pex.tscn
+res://Scene/Store/store_master.gd

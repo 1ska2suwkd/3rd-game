@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://jhfb8t67wj8y"]
+[gd_scene load_steps=47 format=4 uid="uid://jhfb8t67wj8y"]
 
 [ext_resource type="Texture2D" uid="uid://bgbw5hjq5cllr" path="res://assets/Image/Tile/Store/Wall & Floor/store_floor.png" id="1_5aawj"]
 [ext_resource type="Script" uid="uid://brjvc1ilf3732" path="res://Scene/Store/store.gd" id="1_eeuru"]
@@ -12,12 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://b41yytyfdt8cq" path="res://assets/Image/Tile/Store/Wall & Floor/store_wall08.png" id="9_gepg6"]
 [ext_resource type="Texture2D" uid="uid://b3rshboxf6t2r" path="res://assets/Image/Tile/Store/Wall & Floor/background.png" id="9_rqdr0"]
 [ext_resource type="Texture2D" uid="uid://b8x0hw4moftod" path="res://assets/Image/Tile/Store/table.png" id="10_gepg6"]
-[ext_resource type="Script" uid="uid://b1miwjsn46afs" path="res://Scene/Store/store_master.gd" id="11_3iwtk"]
-[ext_resource type="Texture2D" uid="uid://oyxge35vxiiy" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Idle Gold.png" id="11_5fg2m"]
 [ext_resource type="Texture2D" uid="uid://ce703kwuyci3f" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Tools/Tool_04.png" id="15_vcc0p"]
+[ext_resource type="PackedScene" uid="uid://i2h30kjs5md8" path="res://Entities/Pex/pex.tscn" id="16_vcc0p"]
 [ext_resource type="Texture2D" uid="uid://dektfprcmpvr1" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Gold/Gold Stones/Gold Stone 1_Highlight.png" id="18_7v4d0"]
 [ext_resource type="Texture2D" uid="uid://b8sju6w4nv3wh" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Meat Resource/Meat Resource.png" id="18_vcc0p"]
 [ext_resource type="Texture2D" uid="uid://biuhpgloxhgr0" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck/Rubber duck.png" id="19_bkp2m"]
+[ext_resource type="PackedScene" uid="uid://066c1ayexldc" path="res://Entities/Master/master.tscn" id="19_k7sto"]
 [ext_resource type="Script" uid="uid://df4or5g4f67f6" path="res://Scene/Store/exit_point.gd" id="19_vcc0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg3t1"]
@@ -167,71 +167,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3iwtk"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gu3v2"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nod3f"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7fxgt"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pnbaw"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eeuru"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(960, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcc0p"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(1152, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bkp2m"]
-atlas = ExtResource("11_5fg2m")
-region = Rect2(1344, 0, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_k7sto"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3iwtk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gu3v2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nod3f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7fxgt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pnbaw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eeuru")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vcc0p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bkp2m")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7v4d0"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7sto"]
+size = Vector2(156, 41)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7fxgt"]
 texture = ExtResource("10_gepg6")
@@ -302,24 +239,23 @@ offset = Vector2(0, -44)
 [node name="player" parent="Ysort" instance=ExtResource("2_vkhlw")]
 position = Vector2(0, -59)
 
-[node name="Pex" type="CharacterBody2D" parent="Ysort"]
+[node name="Pex" parent="Ysort" instance=ExtResource("16_vcc0p")]
 position = Vector2(5, -459)
-script = ExtResource("11_3iwtk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ysort/Pex"]
-sprite_frames = SubResource("SpriteFrames_k7sto")
-animation = &"idle"
-frame_progress = 0.56053746
-speed_scale = 0.7
+[node name="Area2D2" type="Area2D" parent="Ysort/Pex"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Pex"]
-shape = SubResource("CircleShape2D_7v4d0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Pex/Area2D2"]
+position = Vector2(10, 129.5)
+shape = SubResource("RectangleShape2D_k7sto")
 
 [node name="Interiors" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
 scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AAAAAO3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_pnbaw")
+
+[node name="Master" parent="Ysort" instance=ExtResource("19_k7sto")]
+position = Vector2(-401, -278)
 
 [node name="Trigger" type="Node2D" parent="."]
 

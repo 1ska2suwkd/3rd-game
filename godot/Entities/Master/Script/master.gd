@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var outline_material := preload("res://UI/Outline.tres")
+@onready var outline_material := preload("res://Shaders/Outline.tres")
 @onready var Master_sprite := $StaticBody2D/Master_Animation
 
 

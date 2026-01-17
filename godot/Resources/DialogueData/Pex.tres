@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://j1c8dwj1cn1"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://j1c8dwj1cn1"]
 
 [ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_nijf0"]
+[ext_resource type="Texture2D" uid="uid://cjvws4i2kqise" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Texture.png" id="1_ux5r1"]
 
 [resource]
 script = ExtResource("1_nijf0")
 character_name = "Pex"
+character_texture = ExtResource("1_ux5r1")
+dialogue_lines = Array[String](["안녕! \"펙스\"의 상점의 온 걸 환영해", "여기선 너의 기본적인 스탯들을 향상 시킬 수 있어"])
 metadata/_custom_type_script = "uid://dqvtnd51yut11"

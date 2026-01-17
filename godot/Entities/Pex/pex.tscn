@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://i2h30kjs5md8"]
+
+[ext_resource type="Script" uid="uid://b1miwjsn46afs" path="res://Scene/Store/store_master.gd" id="1_vpdc7"]
+[ext_resource type="Texture2D" uid="uid://oyxge35vxiiy" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Idle Gold.png" id="2_hx6mb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iwtk"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu3v2"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nod3f"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fxgt"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnbaw"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeuru"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcc0p"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkp2m"]
+atlas = ExtResource("2_hx6mb")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k7sto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iwtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu3v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nod3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fxgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnbaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeuru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcc0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkp2m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7v4d0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vpdc7"]
+radius = 107.47
+
+[node name="Pex" type="CharacterBody2D"]
+script = ExtResource("1_vpdc7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k7sto")
+animation = &"idle"
+frame_progress = 0.56053746
+speed_scale = 0.7
+offset = Vector2(0, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_7v4d0")
+
+[node name="TalkArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkArea"]
+position = Vector2(0, -22)
+shape = SubResource("CircleShape2D_vpdc7")
+
+[connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
+[connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

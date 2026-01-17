@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768622617
+::res://::1768622706
 ::res://Animation/::1768620436
 Bushe.tres::SpriteFrames::4658800495734613869::1768620436::0::1::::<><><>0<>0<><>::uid://dilmb8kedegjf::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png<>uid://bnp7a3sprinfj::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe2.png<>uid://cis70snc6a3uy::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png<>uid://dklhpn2itgq4j::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe4.png
 Particle Fx.tres::SpriteFrames::1101409837482173693::1768620436::0::1::::<><><>0<>0<><>::uid://d8wbp0mr8op::::res://assets/Tiny Swords (Free Pack)/Particle FX/Dust_01.png<>uid://bjny11kks7ns3::::res://assets/Tiny Swords (Free Pack)/Particle FX/Dust_02.png<>uid://bbfeeyv54ppm7::::res://assets/Tiny Swords (Free Pack)/Particle FX/Explosion_01.png<>uid://yxp1gfi6ruut::::res://assets/Tiny Swords (Free Pack)/Particle FX/Explosion_02.png<>uid://rj2yxh2jkpht::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_01.png<>uid://b2lysufheu1en::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_02.png<>uid://d261hqrlo3k6i::::res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_03.png<>uid://cetugt4oq00sl::::res://assets/Tiny Swords (Free Pack)/Particle FX/Water Splash.png
 Water_Rocks.tres::SpriteFrames::1233597677129968605::1768620436::0::1::::<><><>0<>0<><>::uid://xstrockltyop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_01.png<>uid://bo6hawdfbnd20::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_02.png<>uid://c5ppsint3lqop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_03.png<>uid://bu7vogyl62sim::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png
-::res://assets/::1768622085
+::res://assets/::1768622706
 wizard.png::CompressedTexture2D::6618486473397660707::1764473396::1768190812::1::::<><><>0<>0<>abac73cf277670c450d9af395ea9e8d3<>res://.godot/imported/wizard.png-c08e5bdb364d3250895ef06ff7827261.ctex::
 ::res://assets/enemy/::1768622058
 ::res://assets/enemy/Harpoon Fish/::1768622057
@@ -199,12 +199,13 @@ Pawn_Red.png::CompressedTexture2D::6261538675095445466::1764473390::1768190812::
 ::res://assets/Image/Factions/Knights/Troops/Pawn/Yellow/::1768622062
 Pawn_Yellow.png::CompressedTexture2D::5016452771594236038::1764473390::1768190812::1::::<><><>0<>0<>8a6dbe42bec783d08b697c2c561b52b9<>res://.godot/imported/Pawn_Yellow.png-71e097bb8d8dc87a851724cf4f3f7844.ctex::
 ::res://assets/Image/Factions/Knights/Troops/Warrior/::1768622062
-::res://assets/Image/Factions/Knights/Troops/Warrior/black/::1768622062
+::res://assets/Image/Factions/Knights/Troops/Warrior/black/::1768624150
 Warrior_Attack1.png::CompressedTexture2D::3479659795707999706::1764473390::1768190812::1::::<><><>0<>0<>e1829adfc5d2e096ac58207e18200d11<>res://.godot/imported/Warrior_Attack1.png-a870928f8251f57064f9d835a4e374cb.ctex::
 Warrior_Attack2.png::CompressedTexture2D::735085593224337419::1764473390::1768190814::1::::<><><>0<>0<>44e9220c3974a96436e74ef466ebcc92<>res://.godot/imported/Warrior_Attack2.png-553963e9c5f3b06fbe62f57f6c0c719f.ctex::
 Warrior_Guard.png::CompressedTexture2D::2461382789563523900::1764473390::1768190814::1::::<><><>0<>0<>8c7c01772d2d29b4fec6e513457fe41b<>res://.godot/imported/Warrior_Guard.png-3a8c94e2a2f6a5295de1fa2ac714265a.ctex::
 Warrior_Idle.png::CompressedTexture2D::3618499747717642041::1764473390::1768190814::1::::<><><>0<>0<>451182694f665e0fedc38c6146da7a1f<>res://.godot/imported/Warrior_Idle.png-fa0e48ed410cb0fe471402d2d44b40db.ctex::
 Warrior_Run.png::CompressedTexture2D::3904569083805112659::1764473390::1768190814::1::::<><><>0<>0<>fb5ca1a6946a6c9a8583e647e55a901a<>res://.godot/imported/Warrior_Run.png-f5180af178b4928a1ef998528113daf1.ctex::
+Warrior_Texture.png::CompressedTexture2D::587109267665716151::1768624169::1768624171::1::::<><><>0<>0<>1440b74a2dfb03ba99b0950ddaea4ba4<>res://.godot/imported/Warrior_Texture.png-07617fd35e5b90a2178d4e2dd13d3b75.ctex::
 ::res://assets/Image/Factions/Knights/Troops/Warrior/Blue/::1768622062
 Warrior_Blue.png::CompressedTexture2D::105869890243116122::1764473390::1768190814::1::::<><><>0<>0<>83596cf3c0373009ebb61825206cb179<>res://.godot/imported/Warrior_Blue.png-6459617545af58edabaee02e43eb2e6f.ctex::
 ::res://assets/Image/Factions/Knights/Troops/Warrior/Purple/::1768622062
@@ -706,7 +707,7 @@ Pawn_Run Meat.png::CompressedTexture2D::1309217581219559622::1768192812::1768192
 Pawn_Run Pickaxe.png::CompressedTexture2D::3839960749163099325::1768192812::1768192808::1::::<><><>0<>0<>707ddbce663191d709e64215bd5f5837<>res://.godot/imported/Pawn_Run Pickaxe.png-631540e0a9b7c97ee3a93e784ecd569e.ctex::
 Pawn_Run Wood.png::CompressedTexture2D::6845877572595263454::1768192812::1768192808::1::::<><><>0<>0<>bbc147940cbdcf1aa17368837f1c24af<>res://.godot/imported/Pawn_Run Wood.png-ca72dcb57330592c12f8e824fd4605da.ctex::
 Pawn_Run.png::CompressedTexture2D::3501632828610118499::1768192812::1768192808::1::::<><><>0<>0<>da52bd00235b9b556f69debc49970e20<>res://.godot/imported/Pawn_Run.png-3a142272e7d9ef773f53b6f72764bcd6.ctex::
-Pawn_Texture.png::CompressedTexture2D::5449262347871247240::1768622478::1768622482::1::::<><><>0<>0<>f3b91e75b976f961849d81044fcc98d4<>res://.godot/imported/Pawn_Texture.png-15b1e76848ad5bad6f21aa225bd8197f.ctex::
+Pawn_Texture.png::CompressedTexture2D::5449262347871247240::1768622684::1768622482::1::::<><><>0<>0<>f3b91e75b976f961849d81044fcc98d4<>res://.godot/imported/Pawn_Texture.png-15b1e76848ad5bad6f21aa225bd8197f.ctex::
 ::res://assets/Tiny Swords (Free Pack)/Units/Black Units/Warrior/::1768622078
 Warrior_Attack1.png::CompressedTexture2D::9128212034041662357::1768192812::1768192808::1::::<><><>0<>0<>47501851b2f6b68116af672586d623f2<>res://.godot/imported/Warrior_Attack1.png-dc4e2d15d9a81e59b40c61780a9fe2e8.ctex::
 Warrior_Attack2.png::CompressedTexture2D::17069476927799953::1768192812::1768192808::1::::<><><>0<>0<>e6fdba9686b8b348efb7075ef19527e0<>res://.godot/imported/Warrior_Attack2.png-b47d0262053e5b7149d3e253889611d9.ctex::
@@ -1008,9 +1009,9 @@ SkullStat.tres::Resource/EnemyStat::3705315658695452216::1768620436::0::1::::<><
 turtle.gd::GDScript::5797395560280854691::1768620436::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Turtle.tscn::PackedScene::7616988552887289897::1768620436::0::1::::<><><>0<>0<><>::uid://ml86fs1uhoev::::res://assets/enemy/Turtle/Turtle_Guard_In.png<>uid://couki1dh63g56::::res://Entities/enemies/Common/Turtle/turtle.gd<>uid://c06k0cly6ri2k::::res://assets/enemy/Turtle/Turtle_Guard_Out.png<>uid://cra10rpls4p4t::::res://Entities/enemies/Common/Turtle/TurtleStat.tres<>uid://c4frg82cidujv::::res://assets/enemy/Turtle/Turtle_Idle.png<>uid://djldeh1x5j82j::::res://assets/enemy/Turtle/Turtle_Walk.png<>uid://dc3v1kmk4vbwx::::res://Components/Enemies/Locomotion/Movement_Component/movement_component.tscn<>uid://cwj7bijrp7jiv::::res://Components/Enemies/Locomotion/Wander_Component/wander_component.tscn<>uid://k76vye5mtty1::::res://Components/Common/Knockback_Component/knockback_component.tscn<>uid://bh4cj0nfj8sr6::::res://Components/Enemies/ItemDropComponent/ItemDropComponent.tscn<>uid://drenvy30uh7mq::::res://Components/Common/Health_Component/health_component.tscn<>uid://fxfo6y3umxis::::res://PickUp/gold.tscn<>uid://y7a41xekksbp::::res://Components/Common/Hitbox_Component/hitbox_component.tscn<>uid://bcp8se18liu1::::res://Components/Common/Death_Component/death_component.tscn<>uid://cqmc7ebhwjn8f::::res://Components/Enemies/Combat/ContactDamage_Component/contact_damage_component.tscn<>uid://bj01s28atb4fl::::res://Components/Enemies/Particle/death_particle_component.tscn<>uid://b2elanspxh4oy::::res://Particle/EnemyDeadParticle.tscn
 TurtleStat.tres::Resource/EnemyStat::5967675912486323665::1768620436::0::1::::<><><>0<>0<><>::uid://bs4gp3tfxx3ks::::res://Resources/Custom_Resources/EnemyStat.gd
-::res://Entities/Master/::1768620436
+::res://Entities/Master/::1768622639
 master.tscn::PackedScene::1820603966394048908::1768620436::0::1::::<><><>0<>0<><>::uid://ybq6ecj1ipej::::res://Entities/Master/Script/master.gd<>uid://brs3frqe6x4in::::res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png<>uid://bu3ky04tqmsk7::::res://UI/HintUI/show_hint_ui.tscn<>uid://cb5fh02u6w3s4::::res://assets/Image/UI/Icons/Space.png
-Master_Skilltree.tscn::PackedScene::2779353368158546252::1768620436::0::1::::<><><>0<>0<><>::uid://cu6oa557x2x8l::::res://Entities/Master/Script/master_skilltree.gd<>uid://brs3frqe6x4in::::res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png<>uid://coqypbnlh4yoo::::res://assets/Image/UI/Icons/slash_icon.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf<>uid://dshu5thlwkh74::::res://assets/Image/UI/Buttons/Button_Blue_3Slides.png<>uid://68eug8cjicig::::res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_03.png<>uid://ilaqimmd4up0::::res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png<>uid://0bvcg5qjn0hv::::res://assets/Image/UI/Icons/check.png<>uid://b5grtfllhwruo::::res://UI/exit_button.tscn
+Master_Skilltree.tscn::PackedScene::2779353368158546252::1768622638::0::1::::<><><>0<>0<><>::uid://cu6oa557x2x8l::::res://Entities/Master/Script/master_skilltree.gd<>uid://brs3frqe6x4in::::res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png<>uid://coqypbnlh4yoo::::res://assets/Image/UI/Icons/slash_icon.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf<>uid://dshu5thlwkh74::::res://assets/Image/UI/Buttons/Button_Blue_3Slides.png<>uid://68eug8cjicig::::res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_03.png<>uid://ilaqimmd4up0::::res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png<>uid://0bvcg5qjn0hv::::res://assets/Image/UI/Icons/check.png<>uid://b5grtfllhwruo::::res://UI/Button/exit_button.tscn
 ::res://Entities/Master/Script/::1768620436
 master.gd::GDScript::1687623670189157069::1768620436::0::1::::<>Node2D<><>0<>0<><>::
 master_skilltree.gd::GDScript::6241465611951828369::1768620436::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -1056,8 +1057,8 @@ DialogueData.gd::GDScript::8326812525434788026::1768622258::0::1::::DialogueData
 EnemyStat.gd::GDScript::3710079413174527198::1768620437::0::1::::EnemyStat<>Resource<><>0<>0<><>::
 inventory.gd::GDScript::1191514674727569280::1768620437::0::1::::Inventory<>Resource<><>0<>0<><>::
 Item.gd::GDScript::3959358739115855152::1768620437::0::1::::Item<>Resource<><>0<>0<><>::
-::res://Resources/DialogueData/::1768622258
-Pex.tres::Resource/DialogueData::20163352103874876::1768622258::0::1::::<><><>0<>0<><>::uid://dqvtnd51yut11::::res://Resources/Custom_Resources/DialogueData.gd
+::res://Resources/DialogueData/::1768623966
+Pex.tres::Resource/DialogueData::20163352103874876::1768623966::0::1::::<><><>0<>0<><>::uid://dqvtnd51yut11::::res://Resources/Custom_Resources/DialogueData.gd<>uid://cjvws4i2kqise::::res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Texture.png
 ::res://Resources/Inventory/::1768620437
 Player_Inventory.tres::Resource/Inventory::3504782232794961178::1768620437::0::1::::<><><>0<>0<><>::uid://bwn7cbk2vsf0k::::res://Resources/Custom_Resources/Item.gd<>uid://q8gcp640llee::::res://Resources/Custom_Resources/inventory.gd<>uid://cflmkcmlowg63::::res://Resources/Items/ATK_damage_book.tres<>uid://l4bx2lbja41o::::res://Resources/Items/ATK_speed_book.tres<>uid://73kkj3o3rn4x::::res://Resources/Items/maid_costume.tres<>uid://8bjyk62ro1ic::::res://Resources/Items/Piercing_Attack.tres
 ::res://Resources/Items/::1768620437
@@ -1125,11 +1126,11 @@ Outline.tres::ShaderMaterial::3405774997274516088::1768622191::0::1::::<><><>0<>
 out_line_shine.gdshader::Shader::3093243750594060560::1768622191::0::1::::<><><>0<>0<><>::
 ::res://TileMap/::1768620437
 Water_deco.tres::TileSet::7358636020393896074::1768620437::0::1::::<><><>0<>0<><>::uid://xstrockltyop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_01.png<>uid://bo6hawdfbnd20::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_02.png<>uid://c5ppsint3lqop::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_03.png<>uid://bu7vogyl62sim::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png<>uid://biuhpgloxhgr0::::res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck/Rubber duck.png
-::res://UI/::1768622617
+::res://UI/::1768622638
+Room_Probability.tscn::PackedScene::3951109718682852163::1768620437::0::1::::<><><>0<>0<><>::uid://ns7sgsx5p2p7::::res://UI/Script/room_probability.gd<>uid://1g5iwlpyomlw::::res://assets/Image/UI/Icons/icon_skull.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf<>uid://dxywnl7teh6eh::::res://assets/Image/UI/Icons/icon_chest.png
+::res://UI/Button/::1768622638
 exit_button.gd::GDScript::4558733323801806322::1768620437::0::1::::<>CanvasLayer<><>0<>0<><>::
 exit_button.tscn::PackedScene::4505538658439282490::1768620437::0::1::::<><><>0<>0<><>::uid://bjejavlx38hpb::::res://assets/Image/UI/Icons/Regular_01.png<>uid://083hgjpb8mun::::res://assets/Image/UI/Icons/Pressed_01.png<>uid://dfxyyefstgcd5::::res://assets/Image/UI/Icons/Disable_01.png
-Room_Probability.tscn::PackedScene::3951109718682852163::1768620437::0::1::::<><><>0<>0<><>::uid://ns7sgsx5p2p7::::res://UI/Script/room_probability.gd<>uid://1g5iwlpyomlw::::res://assets/Image/UI/Icons/icon_skull.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf<>uid://dxywnl7teh6eh::::res://assets/Image/UI/Icons/icon_chest.png
-::res://UI/Button/::0
 ::res://UI/HintUI/::1768620437
 show_hint_ui.gd::GDScript::7667908288035921333::1768620437::0::1::::<>Panel<><>0<>0<><>::
 show_hint_ui.tscn::PackedScene::3848651521317033532::1768620437::0::1::::<><><>0<>0<><>::uid://dhinlgthhfkgj::::res://UI/HintUI/show_hint_ui.gd
@@ -1145,8 +1146,9 @@ Mouse.tscn::PackedScene::6876270496316275879::1768620437::0::1::::<><><>0<>0<><>
 inventory_ui.gd::GDScript::8410355042670488932::1768620437::0::1::::<>Control<><>0<>0<><>::
 player_stat_ui.gd::GDScript::9139610450452310135::1768620437::0::1::::<>CanvasLayer<><>0<>0<><>::
 room_probability.gd::GDScript::951589198958618434::1768620437::0::1::::<>Control<><>0<>0<><>::
-::res://UI/TextBox/::1768622576
-Text_Box_UI.tscn::PackedScene::3237472107892249494::1768622573::0::1::::<><><>0<>0<><>::uid://c45kvyg36b31a::::res://UI/TextBox/Master/master_textbox.gd<>uid://brs3frqe6x4in::::res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf
-::res://UI/TextBox/Master/::1768622576
-master_textbox.gd::GDScript::6870895108253522780::1768620437::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://UI/TextBox/::1768624108
+text_box_ui.gd::GDScript::617986737788459201::1768624108::0::1::::<>CanvasLayer<><>0<>0<><>::
+Text_Box_UI.tscn::PackedScene::3237472107892249494::1768623966::0::1::::<><><>0<>0<><>::uid://i2mfe5adigur::::res://UI/TextBox/text_box_ui.gd<>uid://j1c8dwj1cn1::::res://Resources/DialogueData/Pex.tres<>uid://cjvws4i2kqise::::res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Texture.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf
+::res://UI/TextBox/Master/::1768623572
+master_textbox.gd::GDScript::6870895108253522780::1768623572::0::1::::<>CanvasLayer<><>0<>0<><>::
 Master_Text_Box.tscn::PackedScene::4850843155145107330::1768621473::0::1::::<><><>0<>0<><>::uid://c45kvyg36b31a::::res://UI/TextBox/Master/master_textbox.gd<>uid://brs3frqe6x4in::::res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png<>uid://bluohanf8106y::::res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf
