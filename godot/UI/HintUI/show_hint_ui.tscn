@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bu3ky04tqmsk7"]
+[gd_scene load_steps=8 format=3 uid="uid://bu3ky04tqmsk7"]
 
 [ext_resource type="Script" uid="uid://dhinlgthhfkgj" path="res://UI/HintUI/show_hint_ui.gd" id="1_uvcjc"]
+[ext_resource type="Texture2D" uid="uid://cb5fh02u6w3s4" path="res://assets/Image/UI/Icons/Space.png" id="2_nlgxs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trab4"]
 bg_color = Color(1, 0.972549, 0.9882353, 1)
@@ -22,23 +23,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_vboe5"]
-resource_name = "show"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_nlgxs"]
@@ -57,6 +42,22 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_vboe5"]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nlgxs"]
 _data = {
 &"RESET": SubResource("Animation_uvcjc"),
@@ -65,7 +66,6 @@ _data = {
 }
 
 [node name="ShowHintUI" type="Panel"]
-modulate = Color(1, 1, 1, 0)
 z_index = 10
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,7 +74,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -870.0
 offset_top = -490.0
-offset_right = -794.0
+offset_right = -791.0
 offset_bottom = -456.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -85,3 +85,21 @@ script = ExtResource("1_uvcjc")
 libraries = {
 &"": SubResource("AnimationLibrary_nlgxs")
 }
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+use_top_left = true
+
+[node name="Sprite2D" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_nlgxs")

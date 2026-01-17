@@ -1,8 +1,10 @@
 extends Panel
 
+@export var interaction_component: InteractionComponent
+
 func _ready() -> void:
-	EventBus.show_hint_ui.connect(showUI)
-	EventBus.hide_hint_ui.connect(hideUI)
+	interaction_component.on_body_enter.connect(showUI)
+	interaction_component.on_body_exit.connect(hideUI)
 
 func showUI():
 	$AnimationPlayer.play("show")

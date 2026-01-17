@@ -1,9 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://066c1ayexldc"]
+[gd_scene load_steps=14 format=3 uid="uid://066c1ayexldc"]
 
 [ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://Entities/Master/Script/master.gd" id="1_ju63l"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_3eukt"]
-[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://UI/HintUI/show_hint_ui.tscn" id="3_pb4ul"]
-[ext_resource type="Texture2D" uid="uid://cb5fh02u6w3s4" path="res://assets/Image/UI/Icons/Space.png" id="4_em2ta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgrc2"]
 radius = 14.0
@@ -103,19 +101,6 @@ offset = Vector2(0, -10)
 position = Vector2(1.0000191, 81)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("CircleShape2D_bv0wd")
-
-[node name="ShowHintUI" parent="." instance=ExtResource("3_pb4ul")]
-offset_left = -41.0
-offset_top = -38.0
-offset_right = 40.0
-offset_bottom = -1.0
-
-[node name="Sprite2D" type="Sprite2D" parent="ShowHintUI"]
-position = Vector2(42, 18)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("4_em2ta")
-region_enabled = true
-region_rect = Rect2(40, 104, 48, 16)
 
 [connection signal="body_entered" from="Talk_to_Master" to="." method="_on_talk_to_master_body_entered"]
 [connection signal="body_exited" from="Talk_to_Master" to="." method="_on_talk_to_master_body_exited"]

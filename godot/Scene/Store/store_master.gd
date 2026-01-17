@@ -15,10 +15,8 @@ func _ready() -> void:
 	
 	
 func player_in() -> void:
-	EventBus.emit_signal("show_hint_ui")
 	sprite.material = outline_material
 
 
 func player_out() -> void:
-	EventBus.emit_signal("hide_hint_ui")
 	sprite.material = null
