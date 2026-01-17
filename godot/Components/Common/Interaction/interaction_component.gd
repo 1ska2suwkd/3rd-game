@@ -6,8 +6,6 @@ signal press_interaction()
 signal on_body_enter()
 signal on_body_exit()
 
-func _ready() -> void:
-	pass
 
 func _input(event: InputEvent) -> void:
 	if is_player_in_area and event.is_action_pressed("Interaction") and not global.is_stop:

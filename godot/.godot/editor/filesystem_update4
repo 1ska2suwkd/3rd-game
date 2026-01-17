@@ -12,3 +12,7 @@ res://Components/Shader/outline_shader_component.gd
 res://Scene/Store/store_master.gd
 res://Components/Shader/outline_shader_component.tscn
 res://Components/HintUI/show_hint_ui.tscn
+res://Scene/Village/Village.gd
+res://Resources/Items/Script/add_Item.gd
+res://Entities/Chest/chest.tscn
+res://Entities/Chest/chest.gd

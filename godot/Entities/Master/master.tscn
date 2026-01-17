@@ -111,6 +111,7 @@ shape = SubResource("CircleShape2D_bv0wd")
 [node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("4_e3upe")]
 interaction_component = NodePath("../InteractionComponent")
 outline_material = ExtResource("5_gjuu7")
+outline_size = 3
 sprite = NodePath("../StaticBody2D/Master_Animation")
 
 [node name="ShowHintUI" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("6_gjuu7")]

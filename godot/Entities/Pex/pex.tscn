@@ -120,4 +120,5 @@ interaction_component = NodePath("../InteractionComponent")
 [node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("7_m6ff5")]
 interaction_component = NodePath("../InteractionComponent")
 outline_material = ExtResource("9_hvyo8")
+outline_size = 3
 sprite = NodePath("../AnimatedSprite2D")

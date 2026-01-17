@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var outline_material := preload("res://UI/Outline.tres")
+@onready var outline_material := preload("res://Shaders/Outline.tres")
 @onready var Master_sprite := $Ysort/Master/StaticBody2D/Master_Animation
 @onready var Dungeon_sprite := $Dungeon/Dungeon
 @onready var Store_sprite := $Ysort/Store/store

@@ -3,7 +3,7 @@ extends Area2D
 #@export var exdata: Resource
 @onready var Sprite = $CollisionShape2D/Sprite2D
 @onready var spawn_animation = $AnimationPlayer
-@onready var item_out_line_shine_shader = preload("res://UI/out_line_shine.gdshader")
+@onready var item_out_line_shine_shader = preload("res://Shaders/out_line_shine.gdshader")
 var item_number: int
 var item_data: Resource
 var item_script

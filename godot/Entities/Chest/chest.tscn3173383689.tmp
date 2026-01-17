@@ -306,10 +306,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx8lr"]
 size = Vector2(240, 200)
 
-[node name="Chest" type="StaticBody2D" node_paths=PackedStringArray("interaction_component")]
+[node name="Chest" type="StaticBody2D"]
 collision_layer = 64
 script = ExtResource("1_yx8lr")
-interaction_component = NodePath("InteractionComponent")
 
 [node name="Chest" type="AnimatedSprite2D" parent="."]
 material = ExtResource("2_bfsuy")
