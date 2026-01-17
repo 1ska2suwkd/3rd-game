@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://jhfb8t67wj8y"]
+[gd_scene load_steps=46 format=4 uid="uid://jhfb8t67wj8y"]
 
 [ext_resource type="Texture2D" uid="uid://bgbw5hjq5cllr" path="res://assets/Image/Tile/Store/Wall & Floor/store_floor.png" id="1_5aawj"]
 [ext_resource type="Script" uid="uid://brjvc1ilf3732" path="res://Scene/Store/store.gd" id="1_eeuru"]
@@ -167,9 +167,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7sto"]
-size = Vector2(156, 41)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7fxgt"]
 texture = ExtResource("10_gepg6")
 0:0/size_in_atlas = Vector2i(12, 8)
@@ -240,13 +237,7 @@ offset = Vector2(0, -44)
 position = Vector2(0, -59)
 
 [node name="Pex" parent="Ysort" instance=ExtResource("16_vcc0p")]
-position = Vector2(5, -459)
-
-[node name="Area2D2" type="Area2D" parent="Ysort/Pex"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Pex/Area2D2"]
-position = Vector2(10, 129.5)
-shape = SubResource("RectangleShape2D_k7sto")
+position = Vector2(5, -442)
 
 [node name="Interiors" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true

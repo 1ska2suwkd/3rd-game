@@ -1,7 +1,7 @@
-CenterContainer
-TextureRect
 CollisionShape2D
 Node2D
+CenterContainer
+TextureRect
 Area2D
 RichTextLabel
 Label
@@ -12,4 +12,3 @@ AnimatedSprite2D
 CharacterBody2D
 TileMapLayer
 AnimationPlayer
-PointLight2D

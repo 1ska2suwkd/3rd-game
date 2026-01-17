@@ -1,7 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://066c1ayexldc"]
+[gd_scene load_steps=18 format=3 uid="uid://066c1ayexldc"]
 
 [ext_resource type="Script" uid="uid://ybq6ecj1ipej" path="res://Entities/Master/Script/master.gd" id="1_ju63l"]
 [ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_3eukt"]
+[ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="3_t2bor"]
+[ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="4_e3upe"]
+[ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="5_gjuu7"]
+[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="6_gjuu7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kgrc2"]
 radius = 14.0
@@ -74,9 +78,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_bv0wd"]
 radius = 107.46627
 
-[node name="Master" type="Node2D"]
+[node name="Master" type="Node2D" node_paths=PackedStringArray("interaction_component")]
 y_sort_enabled = true
 script = ExtResource("1_ju63l")
+interaction_component = NodePath("InteractionComponent")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 y_sort_enabled = true
@@ -91,16 +96,26 @@ shape = SubResource("CapsuleShape2D_kgrc2")
 position = Vector2(1, 69)
 sprite_frames = SubResource("SpriteFrames_bifhp")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.287592
 speed_scale = 2.0
 offset = Vector2(0, -10)
 
-[node name="Talk_to_Master" type="Area2D" parent="."]
+[node name="InteractionComponent" parent="." instance=ExtResource("3_t2bor")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_to_Master"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionComponent"]
 position = Vector2(1.0000191, 81)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("CircleShape2D_bv0wd")
 
-[connection signal="body_entered" from="Talk_to_Master" to="." method="_on_talk_to_master_body_entered"]
-[connection signal="body_exited" from="Talk_to_Master" to="." method="_on_talk_to_master_body_exited"]
+[node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("4_e3upe")]
+interaction_component = NodePath("../InteractionComponent")
+outline_material = ExtResource("5_gjuu7")
+sprite = NodePath("../StaticBody2D/Master_Animation")
+
+[node name="ShowHintUI" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("6_gjuu7")]
+offset_left = -39.0
+offset_top = -37.0
+offset_right = 40.0
+offset_bottom = -3.0
+interaction_component = NodePath("../InteractionComponent")

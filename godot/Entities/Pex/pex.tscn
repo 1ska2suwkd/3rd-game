@@ -1,11 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://i2h30kjs5md8"]
+[gd_scene load_steps=21 format=3 uid="uid://i2h30kjs5md8"]
 
 [ext_resource type="Script" uid="uid://b1miwjsn46afs" path="res://Scene/Store/store_master.gd" id="1_vpdc7"]
 [ext_resource type="Texture2D" uid="uid://oyxge35vxiiy" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Idle Gold.png" id="2_hx6mb"]
 [ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="3_k84on"]
 [ext_resource type="Resource" uid="uid://j1c8dwj1cn1" path="res://Resources/DialogueData/Pex.tres" id="4_lvj2u"]
 [ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="4_t4kmx"]
-[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://UI/HintUI/show_hint_ui.tscn" id="6_lvj2u"]
+[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="6_lvj2u"]
+[ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="7_m6ff5"]
+[ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="9_hvyo8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3iwtk"]
 atlas = ExtResource("2_hx6mb")
@@ -76,13 +78,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvj2u"]
 radius = 105.0
 
-[node name="Pex" type="CharacterBody2D" node_paths=PackedStringArray("interaction_component")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6ff5"]
+size = Vector2(156, 41)
+
+[node name="Pex" type="CharacterBody2D"]
 script = ExtResource("1_vpdc7")
-interaction_component = NodePath("InteractionComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k7sto")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.56053746
 speed_scale = 0.7
 offset = Vector2(0, -26)
@@ -101,9 +106,18 @@ interaction_component = NodePath("../InteractionComponent")
 position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_lvj2u")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionComponent"]
+position = Vector2(10, 120)
+shape = SubResource("RectangleShape2D_m6ff5")
+
 [node name="ShowHintUI" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("6_lvj2u")]
 offset_left = -38.0
 offset_top = -102.0
 offset_right = 38.0
 offset_bottom = -68.0
 interaction_component = NodePath("../InteractionComponent")
+
+[node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("7_m6ff5")]
+interaction_component = NodePath("../InteractionComponent")
+outline_material = ExtResource("9_hvyo8")
+sprite = NodePath("../AnimatedSprite2D")

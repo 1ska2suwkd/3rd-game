@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bu3ky04tqmsk7"]
 
-[ext_resource type="Script" uid="uid://dhinlgthhfkgj" path="res://UI/HintUI/show_hint_ui.gd" id="1_uvcjc"]
+[ext_resource type="Script" uid="uid://dhinlgthhfkgj" path="res://Components/UI/HintUI/show_hint_ui.gd" id="1_uvcjc"]
 [ext_resource type="Texture2D" uid="uid://cb5fh02u6w3s4" path="res://assets/Image/UI/Icons/Space.png" id="2_nlgxs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trab4"]

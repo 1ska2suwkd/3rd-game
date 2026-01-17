@@ -9,8 +9,5 @@ signal EndTextBox()
 #Inventory signal
 signal update_inv_ui()
 
-#Animation
-signal show_hint_ui()
-signal hide_hint_ui()
 
 signal enemy_die()

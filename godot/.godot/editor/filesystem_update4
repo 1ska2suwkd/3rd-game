@@ -4,3 +4,11 @@ res://Shaders/out_line_shine.gdshader
 res://Components/Common/Interaction/interaction_component.gd
 res://Entities/Pex/pex.tscn
 res://UI/HintUI/show_hint_ui.tscn
+res://UI/HintUI/show_hint_ui.gd
+res://Scene/Store/Store.tscn
+res://Autoload/SceneManager/event_bus.gd
+res://Entities/Master/Script/master.gd
+res://Components/Shader/outline_shader_component.gd
+res://Scene/Store/store_master.gd
+res://Components/Shader/outline_shader_component.tscn
+res://Components/HintUI/show_hint_ui.tscn
