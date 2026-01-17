@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var Crescent_Slash: bool = false
-@export var spear: bool = false
+@export var Spear: bool = false 
 
 var dead = false
 
@@ -37,19 +37,23 @@ func _ready():
 	# 문을 들어가면 씬 매니저에서 어떤 페이드 아웃을 쏠 건지 등등
 	#position = global.player_next_position
 	
+	MasterSkill.has_crescent = Crescent_Slash
+	MasterSkill.has_spear = Spear
+	
+	
 	PlayerStat.attacking = false
 	var hearts_parent = $UI/PlayerUI/Hearts
 	for child in hearts_parent.get_children():
 		hearts_list.append(child)
 	init_heart_display()
 
-	if Crescent_Slash and MasterSkill.crescnet_count == 0:
+	if MasterSkill.has_crescent and MasterSkill.crescnet_count == 0:
 		PlayerStat.player_inv.items[0] = MasterSkill.Crescent_Slash_item
-		MasterSkill.crescnet_count += 1
+		MasterSkill.crescnet_count = 1
 		EventBus.emit_signal("update_inv_ui")
-	if spear and MasterSkill.spear_count == 0:
+	if MasterSkill.has_spear and MasterSkill.spear_count == 0:
 		PlayerStat.player_inv.items[1] = MasterSkill.spear_item
-		MasterSkill.spear_count += 1
+		MasterSkill.spear_count = 1
 		EventBus.emit_signal("update_inv_ui")
 	
 	attack_range_collision.scale *= PlayerStat.TotalAttackRange
@@ -76,8 +80,7 @@ func init_heart_display():
 
 func take_damage(p_damage:int):
 	PlayerStat.hp -= p_damage
-	if not PlayerStat.is_player_hit:
-		PlayerStat.is_player_hit = true
+	PlayerStat.is_player_hit += 1
 	if PlayerStat.hp <= 0:
 		is_dead()
 		
@@ -179,7 +182,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 			combo = "1"
 			
 func spawn_crescent_slash(direction):
-	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item and not PlayerStat.is_player_hit:
+	if PlayerStat.player_inv.items[0] == MasterSkill.Crescent_Slash_item:
 			# 1. 기준 위치 잡기 (플레이어의 중심 혹은 무기 위치)
 		var center_pos = global_position # 혹은 $AimPivot/SpawnPoint.global_position
 
@@ -196,7 +199,8 @@ func spawn_crescent_slash(direction):
 		# 예: 3개일 때 -> -1, 0, +1 위치
 		var start_offset = -(spacing * (MasterSkill.crescnet_count - 1)) / 2.0
 		$AimPivot.rotation = direction.angle()
-		for i in range(MasterSkill.crescnet_count):
+		# crescent 개수 - 맞은 횟수 (맞을수록 개수가 줄어듦)
+		for i in range(MasterSkill.crescnet_count - PlayerStat.is_player_hit):
 			var projectile = CRESCENT_SLASH.instantiate()
 			var offset = side_vector * (start_offset + (i * spacing))
 			projectile.global_position = center_pos + offset

@@ -24,10 +24,12 @@ var ItemAttackRange = 0
 var TotalAttackRange = PlayerAttackRange + ItemAttackRange
 
 
-var is_player_hit = false # 방에서 한 대라도 맞으면 스승 기술을 없애기 위한 변수
+var is_player_hit = 0 # 방에서 맞은 횟수 체크용
 var attacking = false
 
 func InitPlayerStat():
+	is_player_hit = 0
+	
 	TotalDamage = PlayerDamage
 	ItemDamage = 0
 	

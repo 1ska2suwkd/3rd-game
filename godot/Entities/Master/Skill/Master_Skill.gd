@@ -5,3 +5,6 @@ extends Node
 
 var crescnet_count:int = 0
 var spear_count:int = 0
+
+var has_crescent: bool = false
+var has_spear: bool = false

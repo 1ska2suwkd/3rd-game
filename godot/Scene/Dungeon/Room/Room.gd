@@ -9,7 +9,8 @@ func _ready() -> void:
 	
 	var enemies = get_tree().get_nodes_in_group("enemy")
 	enemy_count = len(enemies)
-	print(enemy_count)
+	
+	PlayerStat.is_player_hit = 0
 	
 	$Ysort/player.position.x = global.player_position_x
 	$Ysort/player.position.y = global.player_position_y

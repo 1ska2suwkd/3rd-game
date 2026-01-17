@@ -40,6 +40,8 @@ func init_game():
 	room_count = 0
 	player_position_x = 0
 	player_position_y = 0
+	MasterSkill.crescnet_count = 0
+	MasterSkill.spear_count = 0
 	
 	for i in len(PlayerStat.player_inv.items):
 		PlayerStat.player_inv.items[i] = null
@@ -68,7 +70,6 @@ func change_scene(scene_path):
 	if transition_scene == true:
 		get_tree().call_deferred("change_scene_to_file", scene_path)
 		finish_change_scenes()
-		PlayerStat.is_player_hit = false
 	
 
 func finish_change_scenes():
