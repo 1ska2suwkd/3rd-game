@@ -302,17 +302,17 @@ offset = Vector2(0, -44)
 [node name="player" parent="Ysort" instance=ExtResource("2_vkhlw")]
 position = Vector2(0, -59)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Ysort"]
+[node name="Pex" type="CharacterBody2D" parent="Ysort"]
 position = Vector2(5, -459)
 script = ExtResource("11_3iwtk")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ysort/CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ysort/Pex"]
 sprite_frames = SubResource("SpriteFrames_k7sto")
 animation = &"idle"
 frame_progress = 0.56053746
 speed_scale = 0.7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/Pex"]
 shape = SubResource("CircleShape2D_7v4d0")
 
 [node name="Interiors" type="TileMapLayer" parent="Ysort"]

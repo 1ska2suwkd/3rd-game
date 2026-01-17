@@ -1,12 +1,5 @@
 res://Scene/Store/Store.tscn
-res://UI/out_line_shine.gdshader
 res://UI/Outline.tres
-res://Scene/Store/store.gd
-res://Scene/Store/exit_point.gd
-res://Scene/Village/Village.tscn
-res://Autoload/global.gd
-res://Scene/Village/Village.gd
-res://UI/TextBox/Master/Master_Text_Box.tscn
-res://Scene/TutorialScene/Script/tutorial_scene.gd
-res://Entities/player/player.gd
-res://Entities/player/player.tscn
+res://UI/out_line_shine.gdshader
+res://Resources/Custom_Resources/DialogueData.gd
+res://Resources/DialogueData/Pex.tres

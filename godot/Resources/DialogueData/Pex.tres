@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://j1c8dwj1cn1"]
+
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_nijf0"]
+
+[resource]
+script = ExtResource("1_nijf0")
+character_name = "Pex"
+metadata/_custom_type_script = "uid://dqvtnd51yut11"
