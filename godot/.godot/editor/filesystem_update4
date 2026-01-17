@@ -16,3 +16,6 @@ res://Scene/Village/Village.gd
 res://Resources/Items/Script/add_Item.gd
 res://Entities/Chest/chest.tscn
 res://Entities/Chest/chest.gd
+res://Resources/DialogueData/Pex.tres
+res://Entities/Master/Script/tutorial_master.gd
+res://Entities/player/player.tscn

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_nijf0")
-character_name = "Pex"
+character_name = "펙스"
 character_texture = ExtResource("1_ux5r1")
 dialogue_lines = Array[String](["안녕! \"펙스\"의 상점의 온 걸 환영해", "여기선 너의 기본적인 스탯들을 향상 시킬 수 있어"])
 metadata/_custom_type_script = "uid://dqvtnd51yut11"
