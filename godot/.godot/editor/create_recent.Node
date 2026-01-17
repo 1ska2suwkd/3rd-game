@@ -1,4 +1,6 @@
 CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 Node2D
 CenterContainer
 TextureRect
@@ -8,7 +10,5 @@ Label
 Panel
 MarginContainer
 Control
-AnimatedSprite2D
-CharacterBody2D
 TileMapLayer
 AnimationPlayer

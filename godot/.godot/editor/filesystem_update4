@@ -9,3 +9,10 @@ res://Entities/Master/Script/master_skilltree.gd
 res://Autoload/global.gd
 res://Entities/player/playerStat.gd
 res://Scene/Dungeon/Room/Room.gd
+res://Scene/Village/Village.tscn
+res://Resources/DialogueData/void.tres
+res://Scene/Store/Store.tscn
+res://Entities/Master/master.tscn
+res://Entities/Void/void.tscn
+res://Resources/DialogueData/Pex.tres
+res://Resources/DialogueData/spear_man.tres

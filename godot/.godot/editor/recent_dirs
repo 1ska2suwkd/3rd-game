@@ -1,6 +1,10 @@
+res://Resources/DialogueData
+res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer
+res://assets/Tiny Swords (Free Pack)/Units/Purple Units/Monk
+res://Entities/Void
+res://assets/Tiny Swords (Free Pack)/Units/Red Units/Warrior
 res://Components/Shader
 res://Entities/Pex
-res://Resources/DialogueData
 res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck
 res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Gold/Gold Stones
 res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn
@@ -16,7 +20,3 @@ res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water
 res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes
 res://assets/Tiny Swords (Free Pack)/Particle FX
 res://Scene/StartGameScene
-res://assets/Image/Factions/Knights/Troops/Warrior/Red
-res://assets/Image/Factions/Knights/Troops/Warrior/Blue
-res://Components/Enemies/Particle
-res://Components/Enemies/UI/Healthbar_Coponent

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://dere3gfxhvhly"]
+
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_4s0r2"]
+[ext_resource type="Texture2D" uid="uid://cfdi35as7o2ye" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_texture.png" id="1_y5vqs"]
+
+[resource]
+script = ExtResource("1_4s0r2")
+character_name = "스피어"
+character_texture = ExtResource("1_y5vqs")
+dialogue_lines = Array[String](["기술 알려줄게"])
+metadata/_custom_type_script = "uid://dqvtnd51yut11"

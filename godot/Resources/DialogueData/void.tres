@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://clrfxmgf1t0qi"]
+
+[ext_resource type="Texture2D" uid="uid://b418v73pqe38a" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Warrior/Wariior_red_texture.png" id="1_86bge"]
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_nclxu"]
+
+[resource]
+script = ExtResource("1_nclxu")
+character_name = "보이드"
+character_texture = ExtResource("1_86bge")
+dialogue_lines = Array[String](["어 그래 너가 신보기구나!", "나는 보이드야 반가워"])
+metadata/_custom_type_script = "uid://dqvtnd51yut11"

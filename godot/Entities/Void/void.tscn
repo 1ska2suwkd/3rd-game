@@ -1,0 +1,116 @@
+[gd_scene load_steps=19 format=3 uid="uid://dx1nwsbmk117l"]
+
+[ext_resource type="Texture2D" uid="uid://cu8gqr7suo8u1" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Warrior/Warrior_Idle.png" id="1_o8g8p"]
+[ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="2_tp01j"]
+[ext_resource type="Resource" uid="uid://clrfxmgf1t0qi" path="res://Resources/DialogueData/void.tres" id="3_syx7u"]
+[ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="3_warrg"]
+[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="4_tp01j"]
+[ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="6_gndj0"]
+[ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="7_l3nut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q42gp"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syx7u"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gndj0"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3nut"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyorq"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ommkq"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbv4b"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_advmg"]
+atlas = ExtResource("1_o8g8p")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsoea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q42gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syx7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gndj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3nut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyorq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ommkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbv4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_advmg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4x766"]
+radius = 14.0
+height = 42.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kl2gv"]
+radius = 107.46627
+
+[node name="Void" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nsoea")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_4x766")
+
+[node name="TalkComponent" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("2_tp01j")]
+dialogue_data = ExtResource("3_syx7u")
+interaction_component = NodePath("../InteractionComponent")
+
+[node name="InteractionComponent" parent="." instance=ExtResource("3_warrg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionComponent"]
+scale = Vector2(1.0000001, 1)
+shape = SubResource("CircleShape2D_kl2gv")
+
+[node name="ShowHintUI" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("4_tp01j")]
+offset_left = -39.0
+offset_top = -119.0
+offset_right = 40.0
+offset_bottom = -85.0
+interaction_component = NodePath("../InteractionComponent")
+
+[node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("6_gndj0")]
+interaction_component = NodePath("../InteractionComponent")
+outline_material = ExtResource("7_l3nut")
+outline_size = 3
+sprite = NodePath("../AnimatedSprite2D")
