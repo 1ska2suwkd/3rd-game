@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://68eug8cjicig" path="res://assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_03.png" id="5_ds1gf"]
 [ext_resource type="Texture2D" uid="uid://ilaqimmd4up0" path="res://assets/Image/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="6_w3niy"]
 [ext_resource type="Texture2D" uid="uid://0bvcg5qjn0hv" path="res://assets/Image/UI/Icons/check.png" id="7_w3niy"]
-[ext_resource type="PackedScene" uid="uid://b5grtfllhwruo" path="res://UI/exit_button.tscn" id="9_jwj7w"]
+[ext_resource type="PackedScene" uid="uid://b5grtfllhwruo" path="res://UI/Button/exit_button.tscn" id="9_jwj7w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dgr8"]
 bg_color = Color(0.2627451, 0.2509804, 0.33333334, 1)

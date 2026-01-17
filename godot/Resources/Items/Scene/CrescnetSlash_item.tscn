@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxc1p756uid7j"]
 
 [ext_resource type="Texture2D" uid="uid://bkkxryh6mj82t" path="res://assets/Image/Skill/Sword_attack_vfx.png" id="1_dukm3"]
-[ext_resource type="Shader" uid="uid://bkcnjjf8u38h5" path="res://UI/out_line_shine.gdshader" id="1_jl5kh"]
+[ext_resource type="Shader" uid="uid://bkcnjjf8u38h5" path="res://Shaders/out_line_shine.gdshader" id="1_jl5kh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8bxk8"]
 shader = ExtResource("1_jl5kh")

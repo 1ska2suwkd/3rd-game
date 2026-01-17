@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmeixswuhncqw"]
+
+[ext_resource type="Script" uid="uid://c45kvyg36b31a" path="res://UI/TextBox/Master/master_textbox.gd" id="1_0hbpj"]
+[ext_resource type="Texture2D" uid="uid://brs3frqe6x4in" path="res://assets/Image/Factions/Knights/Troops/Warrior/black/Warrior_Idle.png" id="2_wnf7j"]
+[ext_resource type="FontFile" uid="uid://bluohanf8106y" path="res://assets/Image/UI/Font/GeekbleMalang2TTF.ttf" id="3_nu3qu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03uyg"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_deu3w"]
+font = ExtResource("3_nu3qu")
+font_size = 40
+
+[node name="TextBox" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_0hbpj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2678.0
+offset_top = -1657.0
+offset_right = 3795.0
+offset_bottom = 2982.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = -756.0
+offset_right = 1019.40405
+offset_bottom = 527.0
+grow_vertical = 0
+texture = ExtResource("2_wnf7j")
+region_rect = Rect2(0, 0, 200, 192)
+
+[node name="TextboxContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -297.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_03uyg")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "*"
+label_settings = SubResource("LabelSettings_deu3w")
+
+[node name="Text" type="RichTextLabel" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "안녕하세요 용사님 ㅋㅋ"
+fit_content = true
+scroll_active = false
+autowrap_mode = 1
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "v"
+label_settings = SubResource("LabelSettings_deu3w")
