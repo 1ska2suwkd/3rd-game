@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var dialogue_data: DialogueData
+@export var conversation_sequence: Array[DialogueData]
 @export var interaction_component: InteractionComponent
 
 
@@ -8,7 +8,8 @@ func _ready() -> void:
 	interaction_component.press_interaction.connect(spawn_textbox)
 	
 func spawn_textbox():
-	var textbox = preload("res://UI/TextBox/Text_Box_UI.tscn").instantiate()
+	#var textbox = preload("res://UI/TextBox/Text_Box_UI.tscn").instantiate()
 	
-	textbox.dialogue_data = dialogue_data
-	get_tree().current_scene.add_child(textbox)
+	DialogueManager.dialogues = conversation_sequence
+	DialogueManager.dialogue_start.emit()
+	#get_tree().current_scene.add_child(textbox)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://jhfb8t67wj8y"]
+[gd_scene load_steps=67 format=4 uid="uid://jhfb8t67wj8y"]
 
 [ext_resource type="Texture2D" uid="uid://bgbw5hjq5cllr" path="res://assets/Image/Tile/Store/Wall & Floor/store_floor.png" id="1_5aawj"]
 [ext_resource type="Script" uid="uid://brjvc1ilf3732" path="res://Scene/Store/store.gd" id="1_eeuru"]
@@ -22,7 +22,6 @@
 [ext_resource type="Script" uid="uid://df4or5g4f67f6" path="res://Scene/Store/exit_point.gd" id="19_vcc0p"]
 [ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="20_bg58d"]
 [ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="22_i1p3y"]
-[ext_resource type="Resource" uid="uid://dere3gfxhvhly" path="res://Resources/DialogueData/spear_man.tres" id="22_n1pur"]
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="23_50hlk"]
 [ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="24_cgxn0"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="25_i1p3y"]
@@ -370,7 +369,6 @@ position = Vector2(2, 9)
 shape = SubResource("CircleShape2D_0ujls")
 
 [node name="TalkComponent" parent="Ysort/CharacterBody2D" node_paths=PackedStringArray("interaction_component") instance=ExtResource("20_bg58d")]
-dialogue_data = ExtResource("22_n1pur")
 interaction_component = NodePath("../InteractionComponent")
 
 [node name="ShowHintUI" parent="Ysort/CharacterBody2D" node_paths=PackedStringArray("interaction_component") instance=ExtResource("23_50hlk")]

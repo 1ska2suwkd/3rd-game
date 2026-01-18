@@ -1,3 +1,4 @@
+res://Autoload/DialogueManager
 res://Resources/DialogueData
 res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer
 res://assets/Tiny Swords (Free Pack)/Units/Purple Units/Monk
@@ -19,4 +20,3 @@ res://Animation
 res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water
 res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes
 res://assets/Tiny Swords (Free Pack)/Particle FX
-res://Scene/StartGameScene

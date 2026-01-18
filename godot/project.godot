@@ -23,6 +23,7 @@ AllItem="*res://Autoload/all_item.gd"
 global="*res://Autoload/global.gd"
 SceneManager="*res://Autoload/SceneManager/Scene_Manager.tscn"
 Mouse="*res://UI/Mouse/Mouse.tscn"
+DialogueManager="*res://Autoload/DialogueManager/DialogueManager.gd"
 
 [debug]
 

@@ -47,11 +47,12 @@ func _process(_delta: float) -> void:
 		State.FINISHED:
 			if Input.is_action_just_pressed("Interaction"):
 				change_state(State.READY)
-				if text_queue.is_empty():
+				if text_queue.is_empty() and DialogueManager.dialogues.is_empty():
 					hide_textbox()
 					global.is_stop = false
-					EventBus.emit_signal("EndTextBox")
+					#EventBus.emit_signal("EndTextBox")
 				else:
+					DialogueManager.dialogue_end.emit()
 					start_symbol.text = ""
 					text.text = ""
 					end_symbol.text = ""

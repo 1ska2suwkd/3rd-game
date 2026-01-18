@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://dx1nwsbmk117l"]
+[gd_scene load_steps=21 format=3 uid="uid://dx1nwsbmk117l"]
 
 [ext_resource type="Texture2D" uid="uid://cu8gqr7suo8u1" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Warrior/Warrior_Idle.png" id="1_o8g8p"]
 [ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="2_tp01j"]
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="3_l3nut"]
 [ext_resource type="Resource" uid="uid://clrfxmgf1t0qi" path="res://Resources/DialogueData/void.tres" id="3_syx7u"]
 [ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="3_warrg"]
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="4_tp01j"]
+[ext_resource type="Resource" uid="uid://dere3gfxhvhly" path="res://Resources/DialogueData/spear_man.tres" id="5_cyorq"]
 [ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="6_gndj0"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="7_l3nut"]
 
@@ -93,7 +95,7 @@ rotation = -1.57079
 shape = SubResource("CapsuleShape2D_4x766")
 
 [node name="TalkComponent" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("2_tp01j")]
-dialogue_data = ExtResource("3_syx7u")
+conversation_sequence = Array[ExtResource("3_l3nut")]([ExtResource("3_syx7u"), ExtResource("5_cyorq")])
 interaction_component = NodePath("../InteractionComponent")
 
 [node name="InteractionComponent" parent="." instance=ExtResource("3_warrg")]
