@@ -1,0 +1,146 @@
+[gd_scene load_steps=26 format=3 uid="uid://csyr6bqjd4olq"]
+
+[ext_resource type="Texture2D" uid="uid://dwux1mrv7g3uu" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_Idle.png" id="1_35reo"]
+[ext_resource type="Script" uid="uid://cq3s336dwnlq0" path="res://Entities/개종/개종.gd" id="1_miljf"]
+[ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="2_miljf"]
+[ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="3_xyqd8"]
+[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="4_sdmre"]
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="5_5chwh"]
+[ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="5_6mauv"]
+[ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="6_5chwh"]
+[ext_resource type="Resource" uid="uid://bp3itiobwo4u7" path="res://Resources/DialogueData/개종_open_skilltree.tres" id="6_bxgef"]
+[ext_resource type="PackedScene" uid="uid://i5gilq2x3ptk" path="res://Components/UI/OpenSkillTree/개종/개종_open_skilltree.tscn" id="10_exgyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07wgl"]
+atlas = ExtResource("1_35reo")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go3ow"]
+atlas = ExtResource("1_35reo")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewqrs"]
+atlas = ExtResource("1_35reo")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6asd5"]
+atlas = ExtResource("1_35reo")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayyt1"]
+atlas = ExtResource("1_35reo")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44x6c"]
+atlas = ExtResource("1_35reo")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7m7x"]
+atlas = ExtResource("1_35reo")
+region = Rect2(1920, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttnlf"]
+atlas = ExtResource("1_35reo")
+region = Rect2(2240, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oamm"]
+atlas = ExtResource("1_35reo")
+region = Rect2(2560, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3ein"]
+atlas = ExtResource("1_35reo")
+region = Rect2(2880, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obnwu"]
+atlas = ExtResource("1_35reo")
+region = Rect2(3200, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miitu"]
+atlas = ExtResource("1_35reo")
+region = Rect2(3520, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vo4hq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07wgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go3ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewqrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6asd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayyt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44x6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7m7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttnlf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oamm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3ein")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obnwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miitu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2jmm5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ujls"]
+radius = 107.0
+
+[node name="개종" type="CharacterBody2D"]
+script = ExtResource("1_miljf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vo4hq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2jmm5")
+
+[node name="InteractionComponent" parent="." instance=ExtResource("2_miljf")]
+
+[node name="InteractionCollision" type="CollisionShape2D" parent="InteractionComponent"]
+position = Vector2(2, 9)
+shape = SubResource("CircleShape2D_0ujls")
+
+[node name="TalkComponent" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("3_xyqd8")]
+conversation_sequence = Array[ExtResource("5_5chwh")]([ExtResource("6_bxgef")])
+interaction_component = NodePath("../InteractionComponent")
+
+[node name="ShowHintUI" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("4_sdmre")]
+offset_left = -43.0
+offset_top = -80.0
+offset_right = 36.0
+offset_bottom = -46.0
+interaction_component = NodePath("../InteractionComponent")
+
+[node name="OutlineShaderComponent" parent="." node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("5_6mauv")]
+interaction_component = NodePath("../InteractionComponent")
+outline_material = ExtResource("6_5chwh")
+outline_size = 3
+sprite = NodePath("../AnimatedSprite2D")
+
+[node name="개종OpenSkilltree" parent="." node_paths=PackedStringArray("talk_component") instance=ExtResource("10_exgyx")]
+talk_component = NodePath("../TalkComponent")

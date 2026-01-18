@@ -8,5 +8,5 @@ script = ExtResource("1_nclxu")
 character_name = "보이드"
 character_texture = ExtResource("1_86bge")
 dialogue_lines = Array[String](["안녕 나는 [color=red]보이드[/color]야
-너는 신보기 맞지?", "맞서니한테 너가 중앙통제던전에 들어간다고 들었어 ", "중앙통제던전은 정말 위험한 곳이야 준비를 꼼꼼하게 하고 가는 게 좋아", "그치? "])
+너는 신보기 맞지?", "맞서니한테 너가 중앙통제던전에 들어간다고 들었어 ", "중앙통제던전은 정말 위험한 곳이야 준비를 꼼꼼하게 하고 가는 게 좋아", "그치??  개종?"])
 metadata/_custom_type_script = "uid://dqvtnd51yut11"

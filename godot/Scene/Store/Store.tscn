@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://jhfb8t67wj8y"]
+[gd_scene load_steps=48 format=4 uid="uid://jhfb8t67wj8y"]
 
 [ext_resource type="Texture2D" uid="uid://bgbw5hjq5cllr" path="res://assets/Image/Tile/Store/Wall & Floor/store_floor.png" id="1_5aawj"]
 [ext_resource type="Script" uid="uid://brjvc1ilf3732" path="res://Scene/Store/store.gd" id="1_eeuru"]
@@ -18,13 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://dx1nwsbmk117l" path="res://Entities/Void/void.tscn" id="18_bkp2m"]
 [ext_resource type="Texture2D" uid="uid://b8sju6w4nv3wh" path="res://assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Meat Resource/Meat Resource.png" id="18_vcc0p"]
 [ext_resource type="Texture2D" uid="uid://biuhpgloxhgr0" path="res://assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck/Rubber duck.png" id="19_bkp2m"]
-[ext_resource type="Texture2D" uid="uid://dwux1mrv7g3uu" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_Idle.png" id="19_h0cxg"]
+[ext_resource type="PackedScene" uid="uid://csyr6bqjd4olq" path="res://Entities/개종/개종.tscn" id="19_k7sto"]
 [ext_resource type="Script" uid="uid://df4or5g4f67f6" path="res://Scene/Store/exit_point.gd" id="19_vcc0p"]
-[ext_resource type="PackedScene" uid="uid://do4whn4b3tm08" path="res://Components/Common/Dialogue/Talk/talk_component.tscn" id="20_bg58d"]
-[ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="22_i1p3y"]
-[ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="23_50hlk"]
-[ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="24_cgxn0"]
-[ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="25_i1p3y"]
+[ext_resource type="Script" uid="uid://cq3s336dwnlq0" path="res://Entities/개종/개종.gd" id="20_7v4d0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg3t1"]
 texture = ExtResource("1_5aawj")
@@ -184,103 +180,6 @@ texture = ExtResource("10_gepg6")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7fxgt")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_07wgl"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(0, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_go3ow"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(320, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ewqrs"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(640, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6asd5"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(960, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ayyt1"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(1280, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44x6c"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(1600, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j7m7x"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(1920, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttnlf"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(2240, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1oamm"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(2560, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o3ein"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(2880, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_obnwu"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(3200, 0, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_miitu"]
-atlas = ExtResource("19_h0cxg")
-region = Rect2(3520, 0, 320, 320)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vo4hq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_07wgl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_go3ow")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ewqrs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6asd5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ayyt1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44x6c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j7m7x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ttnlf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1oamm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o3ein")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_obnwu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_miitu")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2jmm5"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0ujls"]
-radius = 47.127487
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkp2m"]
 size = Vector2(128, 25)
 
@@ -322,6 +221,7 @@ offset = Vector2(0, -135)
 position = Vector2(-61, -368)
 sprite_frames = SubResource("SpriteFrames_n2k1a")
 animation = &"idle"
+autoplay = "idle"
 offset = Vector2(0, -42)
 
 [node name="MeatResource" type="Sprite2D" parent="Ysort/Deco"]
@@ -334,6 +234,7 @@ y_sort_enabled = true
 position = Vector2(109, -367)
 sprite_frames = SubResource("SpriteFrames_07wgl")
 animation = &"idle"
+autoplay = "idle"
 offset = Vector2(0, -44)
 
 [node name="player" parent="Ysort" instance=ExtResource("2_vkhlw")]
@@ -349,40 +250,11 @@ tile_map_data = PackedByteArray("AAAAAO3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_pnbaw")
 
 [node name="Void" parent="Ysort" instance=ExtResource("18_bkp2m")]
-position = Vector2(-357, -157)
+position = Vector2(-405, -263)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Ysort"]
-position = Vector2(-195, -196)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ysort/CharacterBody2D"]
-sprite_frames = SubResource("SpriteFrames_vo4hq")
-animation = &"idle"
-autoplay = "idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/CharacterBody2D"]
-shape = SubResource("CircleShape2D_2jmm5")
-
-[node name="InteractionComponent" parent="Ysort/CharacterBody2D" instance=ExtResource("22_i1p3y")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/CharacterBody2D/InteractionComponent"]
-position = Vector2(2, 9)
-shape = SubResource("CircleShape2D_0ujls")
-
-[node name="TalkComponent" parent="Ysort/CharacterBody2D" node_paths=PackedStringArray("interaction_component") instance=ExtResource("20_bg58d")]
-interaction_component = NodePath("../InteractionComponent")
-
-[node name="ShowHintUI" parent="Ysort/CharacterBody2D" node_paths=PackedStringArray("interaction_component") instance=ExtResource("23_50hlk")]
-offset_left = -43.0
-offset_top = -80.0
-offset_right = 36.0
-offset_bottom = -46.0
-interaction_component = NodePath("../InteractionComponent")
-
-[node name="OutlineShaderComponent" parent="Ysort/CharacterBody2D" node_paths=PackedStringArray("interaction_component", "sprite") instance=ExtResource("24_cgxn0")]
-interaction_component = NodePath("../InteractionComponent")
-outline_material = ExtResource("25_i1p3y")
-outline_size = 3
-sprite = NodePath("../AnimatedSprite2D")
+[node name="개종" parent="Ysort" instance=ExtResource("19_k7sto")]
+position = Vector2(-324, -309)
+script = ExtResource("20_7v4d0")
 
 [node name="Trigger" type="Node2D" parent="."]
 

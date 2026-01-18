@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://i5gilq2x3ptk"]
+
+[ext_resource type="Script" uid="uid://dro7qvexph2by" path="res://Components/UI/OpenSkillTree/개종/개종_open_skilltree.gd" id="1_8j38v"]
+
+[node name="개종OpenSkilltree" type="Node2D"]
+script = ExtResource("1_8j38v")

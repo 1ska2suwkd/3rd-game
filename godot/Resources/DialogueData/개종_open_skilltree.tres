@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://bp3itiobwo4u7"]
+
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="1_blxar"]
+[ext_resource type="Texture2D" uid="uid://cfdi35as7o2ye" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_texture.png" id="1_bu288"]
+
+[resource]
+script = ExtResource("1_blxar")
+character_name = "개종"
+character_texture = ExtResource("1_bu288")
+dialogue_lines = Array[String](["대가는 충분히 가져왔겠지?"])
+metadata/_custom_type_script = "uid://dqvtnd51yut11"

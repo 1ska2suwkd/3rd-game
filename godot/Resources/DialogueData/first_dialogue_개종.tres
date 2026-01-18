@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=3 format=3 uid="uid://dere3gfxhvhly"]
+
+[ext_resource type="Texture2D" uid="uid://cfdi35as7o2ye" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/Lancer_texture.png" id="1_602do"]
+[ext_resource type="Script" uid="uid://dqvtnd51yut11" path="res://Resources/Custom_Resources/DialogueData.gd" id="2_c5haa"]
+
+[resource]
+script = ExtResource("2_c5haa")
+character_name = "개종"
+character_texture = ExtResource("1_602do")
+dialogue_lines = Array[String](["흥..", "적당한 대가를 가져오면 기술을 알려주겠다."])
+metadata/_custom_type_script = "uid://dqvtnd51yut11"

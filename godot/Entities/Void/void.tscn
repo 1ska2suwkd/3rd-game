@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://clrfxmgf1t0qi" path="res://Resources/DialogueData/void.tres" id="3_syx7u"]
 [ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="3_warrg"]
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="4_tp01j"]
-[ext_resource type="Resource" uid="uid://dere3gfxhvhly" path="res://Resources/DialogueData/spear_man.tres" id="5_cyorq"]
+[ext_resource type="Resource" uid="uid://dere3gfxhvhly" path="res://Resources/DialogueData/first_dialogue_개종.tres" id="5_cyorq"]
 [ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="6_gndj0"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="7_l3nut"]
 

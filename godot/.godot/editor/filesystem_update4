@@ -14,3 +14,11 @@ res://Components/Common/Dialogue/TalkFinished/finish_talk_component.gd
 res://Components/Common/Dialogue/TalkFinished/open_store_component.tscn
 res://Components/UI/RemoveInteractionUI/remove_interaction_UI.tscn
 res://Components/UI/RemoveInteractionUI/remove_interaction_ui.gd
+res://Resources/DialogueData/first_dialogue_spear_man.tres
+res://Resources/DialogueData/first_dialogue_개종.tres
+res://Scene/Store/store.gd
+res://Entities/개종/개종.gd
+res://Entities/개종/개종.tscn
+res://Resources/DialogueData/개종_open_skilltree.tres
+res://Components/UI/OpenSkillTree/개종/개종_open_skilltree.gd
+res://Components/UI/OpenSkillTree/개종/개종_open_skilltree.tscn
