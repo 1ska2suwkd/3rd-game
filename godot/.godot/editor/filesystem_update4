@@ -9,3 +9,8 @@ res://Components/Common/Dialogue/Talk/talk_component.gd
 res://UI/TextBox/text_box_ui.gd
 res://Scene/Store/store_master.gd
 res://Entities/Pex/pex.tscn
+res://Components/Common/Dialogue/TalkFinished/finish_talk_component.tscn
+res://Components/Common/Dialogue/TalkFinished/finish_talk_component.gd
+res://Components/Common/Dialogue/TalkFinished/open_store_component.tscn
+res://Components/UI/RemoveInteractionUI/remove_interaction_UI.tscn
+res://Components/UI/RemoveInteractionUI/remove_interaction_ui.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://i2h30kjs5md8"]
+[gd_scene load_steps=23 format=3 uid="uid://i2h30kjs5md8"]
 
 [ext_resource type="Script" uid="uid://b1miwjsn46afs" path="res://Scene/Store/store_master.gd" id="1_vpdc7"]
 [ext_resource type="Texture2D" uid="uid://oyxge35vxiiy" path="res://assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/Pawn_Idle Gold.png" id="2_hx6mb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://j1c8dwj1cn1" path="res://Resources/DialogueData/Pex.tres" id="4_lvj2u"]
 [ext_resource type="PackedScene" uid="uid://bs8gpx6t4os15" path="res://Components/Common/Interaction/interaction_component.tscn" id="4_t4kmx"]
 [ext_resource type="PackedScene" uid="uid://bu3ky04tqmsk7" path="res://Components/UI/HintUI/show_hint_ui.tscn" id="6_lvj2u"]
+[ext_resource type="PackedScene" uid="uid://qbrewa4nxty" path="res://Components/UI/OpenStoreUI/open_store_component.tscn" id="6_qfd3u"]
 [ext_resource type="PackedScene" uid="uid://cti34quak63yn" path="res://Components/Shader/outline_shader_component.tscn" id="7_m6ff5"]
 [ext_resource type="Material" uid="uid://bor1u72pbdixc" path="res://Shaders/Outline.tres" id="9_hvyo8"]
 
@@ -82,9 +83,8 @@ radius = 105.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6ff5"]
 size = Vector2(156, 41)
 
-[node name="Pex" type="CharacterBody2D" node_paths=PackedStringArray("talk_component")]
+[node name="Pex" type="CharacterBody2D"]
 script = ExtResource("1_vpdc7")
-talk_component = NodePath("TalkComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k7sto")
@@ -101,6 +101,9 @@ shape = SubResource("CircleShape2D_7v4d0")
 [node name="TalkComponent" parent="." node_paths=PackedStringArray("interaction_component") instance=ExtResource("3_k84on")]
 conversation_sequence = Array[ExtResource("4_hvyo8")]([ExtResource("4_lvj2u")])
 interaction_component = NodePath("../InteractionComponent")
+
+[node name="FinishTalkComponent" parent="." node_paths=PackedStringArray("talk_component") instance=ExtResource("6_qfd3u")]
+talk_component = NodePath("../TalkComponent")
 
 [node name="InteractionComponent" parent="." instance=ExtResource("4_t4kmx")]
 
