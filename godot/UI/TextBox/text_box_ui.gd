@@ -4,7 +4,8 @@ const CHAR_READ_RATE = 0.1
 
 var tween
 
-@export var dialogue_data: DialogueData
+var dialogue_data: DialogueData
+signal finished_current_dialogue
 
 @onready var textbox_container = $TextboxContainer
 @onready var background = $ColorRect
@@ -26,18 +27,25 @@ var current_state = State.READY
 
 func _ready() -> void:
 	hide_textbox()
-	character_texture.texture = dialogue_data.character_texture
+
+func start(data: DialogueData):
+	dialogue_data = data
 	
+	character_texture.texture = dialogue_data.character_texture
+	charater_name_label.text = dialogue_data.character_name
+	
+	text_queue.clear()
 	for i in dialogue_data.dialogue_lines:
 		text_queue.append(i)
+		
+	global.is_stop = true
+	display_text()
 
 
 func _process(_delta: float) -> void:
 	match current_state:
 		State.READY:
-			if not text_queue.is_empty():
-				global.is_stop = true
-				display_text()
+			pass
 		State.READING:
 			if Input.is_action_just_pressed("Interaction"):
 				text.visible_ratio = 1.0
@@ -46,16 +54,16 @@ func _process(_delta: float) -> void:
 				change_state(State.FINISHED)
 		State.FINISHED:
 			if Input.is_action_just_pressed("Interaction"):
-				change_state(State.READY)
-				if text_queue.is_empty() and DialogueManager.dialogues.is_empty():
-					hide_textbox()
-					global.is_stop = false
-					#EventBus.emit_signal("EndTextBox")
+				#change_state(State.READY)
+				if text_queue.is_empty():
+					finished_current_dialogue.emit()
+					queue_free()
 				else:
-					DialogueManager.dialogue_end.emit()
 					start_symbol.text = ""
 					text.text = ""
 					end_symbol.text = ""
+					
+					display_text()
 
 
 func queue_text(next_text):
@@ -79,7 +87,6 @@ func show_textbox():
 	character_texture.show()
 	charater_name_container.show()
 	start_symbol.text = "*"
-	charater_name_label.text = dialogue_data.character_name
 
 func display_text():
 	var next_text = text_queue.pop_front()

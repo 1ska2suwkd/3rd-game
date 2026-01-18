@@ -10,6 +10,5 @@ func _ready() -> void:
 func spawn_textbox():
 	#var textbox = preload("res://UI/TextBox/Text_Box_UI.tscn").instantiate()
 	
-	DialogueManager.dialogues = conversation_sequence
-	DialogueManager.dialogue_start.emit()
+	DialogueManager.start_dialogue(conversation_sequence)
 	#get_tree().current_scene.add_child(textbox)
