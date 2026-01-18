@@ -7,3 +7,5 @@ res://UI/TextBox/Text_Box_UI.tscn
 res://Autoload/DialogueManager/DialogueManager.gd
 res://Components/Common/Dialogue/Talk/talk_component.gd
 res://UI/TextBox/text_box_ui.gd
+res://Scene/Store/store_master.gd
+res://Entities/Pex/pex.tscn

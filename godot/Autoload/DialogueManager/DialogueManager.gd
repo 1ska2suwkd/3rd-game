@@ -3,18 +3,16 @@ extends Node
 var dialogues: Array[DialogueData] = []
 var text_box_scene = preload("res://UI/TextBox/Text_Box_UI.tscn")
 
-#signal dialogue_start()
-#signal dialogue_end()
+var on_sequence_finished: Callable = Callable()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#dialogue_start.connect(check_dialogue)
-	#dialogue_end.connect(check_dialogue)
 	pass
 	
-func start_dialogue(sequence: Array[DialogueData]):
+func start_dialogue(sequence: Array[DialogueData], callback: Callable = Callable()):
 	dialogues = sequence.duplicate() # 데이터 복사
-	check_dialogue() # 첫 대화 시작
+	on_sequence_finished = callback # 받아온 시그널 저장
+	
+	check_dialogue() # 첫 대화 시작	
 	
 func check_dialogue():
 	if dialogues.is_empty():
@@ -29,4 +27,7 @@ func check_dialogue():
 
 func end_textbox():
 	global.is_stop = false
-	EventBus.EndTextBox.emit()
+	
+	if on_sequence_finished.is_valid():
+		on_sequence_finished.call()
+		on_sequence_finished = Callable() # 실행 후 초기화
